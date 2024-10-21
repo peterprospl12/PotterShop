@@ -1,0 +1,38 @@
+name: PrestaShop CI with Docker Compose
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+    branches:
+      - main
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      # Checkout the code from your repository
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      # Set up Docker (this is automatically available on ubuntu-latest)
+      - name: Set up Docker Compose
+        run: |
+          docker-compose --version
+
+      # Run docker-compose to start the services
+      - name: Start services with docker-compose
+        run: |
+          docker-compose up -d
+
+      # Run basic tests (adjust for your project)
+      - name: Run tests
+        run: |
+          curl --retry 5 --retry-connrefused --retry-delay 5 http://localhost:8080
+
+      # Optionally, stop and clean up the Docker containers after the test
+      - name: Stop and remove Docker containers
+        run: |
+          docker-compose down
