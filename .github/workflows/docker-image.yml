@@ -26,9 +26,12 @@ jobs:
           docker-compose --version
 
       # Run docker-compose to start the services
-      - name: Start services with docker-compose
+      - name: Run curl with retry
         run: |
-          docker-compose up -d
+          for i in {1..5}; do
+            curl -O localhost:8080 && break
+            sleep 10
+          done
 
       # Run basic tests (adjust for your project)
       - name: Run tests
