@@ -1,21 +1,22 @@
-name: Check for Linked Issue
+name: Check Linked Issue
 
 on:
-  pull_request_target:
-    types: [opened, edited, reopened, synchronize]
+  pull_request:
+    types: [opened, edited]
 
 jobs:
-  check_pull_requests:
+  check-linked-issue:
     runs-on: ubuntu-latest
-    name: Check for Linked Issue
-    permissions:
-        issues: read
-        pull-requests: write
     steps:
-      - uses: nearform-actions/github-action-check-linked-issues@v1
-        id: check-linked-issues
-        with:
-          exclude-branches: "release/**, dependabot/**"
-      # OPTIONAL: Use the output from the `check-linked-issues` step
-      - name: Get the output
-        run: echo "How many linked issues? ${{ steps.check-linked-issues.outputs.linked_issues_count }}"
+    - name: Check if PR description contains linked issue
+      uses: actions/github-script@v6
+      with:
+        script: |
+          const prBody = context.payload.pull_request.body || "";
+          const issuePattern = /(?:close[sd]?|fix[esd]?|resolve[sd]?|#\d+)/gi;
+          
+          if (!issuePattern.test(prBody)) {
+            core.setFailed("Pull request does not link to any issue.");
+          } else {
+            console.log("PR description contains a linked issue.");
+          }
