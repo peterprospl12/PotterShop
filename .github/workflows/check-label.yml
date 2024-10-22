@@ -1,0 +1,26 @@
+name: Check PR Label
+
+on:
+  pull_request:
+    types: [opened, edited, labeled, unlabeled, synchronize]
+
+jobs:
+  check-label:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Check for labels
+        id: label-check
+        run: |
+          if [ "$(jq -r '.pull_request.labels | length' "$GITHUB_EVENT_PATH")" -eq "0" ]; then
+            echo "No labels found on the pull request"
+            exit 1
+          else
+            echo "Labels found on the pull request"
+          fi
+
+      - name: Fail if no labels
+        if: ${{ steps.label-check.outcome == 'failure' }}
+        run: |
+          echo "Pull request must have at least one label!"
+          exit 1
