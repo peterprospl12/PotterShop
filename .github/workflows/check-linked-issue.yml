@@ -1,28 +1,21 @@
 name: Check for Linked Issue
 
 on:
-  pull_request:
-    types: [opened, edited, synchronize]
+  pull_request_target:
+    types: [opened, edited, reopened, synchronize]
 
 jobs:
-  check-linked-issue:
+  check_pull_requests:
     runs-on: ubuntu-latest
-
+    name: Check for Linked Issue
+    permissions:
+        issues: read
+        pull-requests: write
     steps:
-      - name: Check for linked issue in PR description
-        id: issue-check
-        run: |
-          pr_body=$(jq -r '.pull_request.body' "$GITHUB_EVENT_PATH")
-          linked_issue=$(echo "$pr_body" | grep -E -i '(fixes|closes|resolves) #[0-9]+' || true)
-          if [ -z "$linked_issue" ]; then
-            echo "No linked issue found"
-            exit 1
-          else
-            echo "Linked issue found: $linked_issue"
-          fi
-
-      - name: Fail if no linked issue
-        if: ${{ steps.issue-check.outcome == 'failure' }}
-        run: |
-          echo "Pull request must reference an issue!"
-          exit 1
+      - uses: nearform-actions/github-action-check-linked-issues@v1
+        id: check-linked-issues
+        with:
+          exclude-branches: "release/**, dependabot/**"
+      # OPTIONAL: Use the output from the `check-linked-issues` step
+      - name: Get the output
+        run: echo "How many linked issues? ${{ steps.check-linked-issues.outputs.linked_issues_count }}"
