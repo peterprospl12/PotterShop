@@ -12,7 +12,8 @@ jobs:
       - name: Check for linked issue in PR description
         id: issue-check
         run: |
-          linked_issue=$(echo "$GITHUB_EVENT_PATH" | jq -r '.pull_request.body' | grep -E -i '(fixes|closes|resolves) #[0-9]+' || true)
+          pr_body=$(jq -r '.pull_request.body' "$GITHUB_EVENT_PATH")
+          linked_issue=$(echo "$pr_body" | grep -E -i '(fixes|closes|resolves) #[0-9]+' || true)
           if [ -z "$linked_issue" ]; then
             echo "No linked issue found"
             exit 1
