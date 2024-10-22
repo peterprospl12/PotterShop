@@ -1,0 +1,27 @@
+name: Check for Linked Issue
+
+on:
+  pull_request:
+    types: [opened, edited, synchronize]
+
+jobs:
+  check-linked-issue:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Check for linked issue in PR description
+        id: issue-check
+        run: |
+          linked_issue=$(echo "$GITHUB_EVENT_PATH" | jq -r '.pull_request.body' | grep -E -i '(fixes|closes|resolves) #[0-9]+' || true)
+          if [ -z "$linked_issue" ]; then
+            echo "No linked issue found"
+            exit 1
+          else
+            echo "Linked issue found: $linked_issue"
+          fi
+
+      - name: Fail if no linked issue
+        if: ${{ steps.issue-check.outcome == 'failure' }}
+        run: |
+          echo "Pull request must reference an issue!"
+          exit 1
