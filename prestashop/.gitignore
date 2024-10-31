@@ -1,0 +1,39 @@
+# Ignoruj katalogi cache i logów
+/var/cache/*
+/var/logs/*
+/app/cache/*
+/app/logs/*
+/var/tmp/*
+
+# Ignoruj katalogi z danymi na potrzeby tłumaczeń, a także cache zasobów frontendu
+/themes/*/cache/*
+/translations/cldr/*
+
+# Ignoruj folder z plikami przesłanymi przez użytkowników
+/upload/*
+/img/tmp/*
+/img/cms/*
+/img/p/*  # Produktowe obrazy przesyłane przez użytkowników
+
+# Ignoruj pliki konfiguracji środowiskowego
+/app/config/parameters.php
+/app/config/parameters.yml
+
+# Ignoruj lokalne konfiguracje i pliki IDE
+/.idea/
+/*.swp
+/.vscode/
+/nbproject/
+
+# Ignoruj zainstalowane wtyczki vendor i kompilacje frontendu (np. node_modules)
+/vendor/
+/node_modules/
+
+# Ignoruj pliki tymczasowe i backupy
+*.bak
+*.tmp
+*.log
+*.cache
+
+# Ignoruj dziwny plik .rnd z folderu admina
+/admin*/.rnd
