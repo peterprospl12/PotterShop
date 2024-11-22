@@ -11,6 +11,7 @@ services:
       - prestashop-net
     volumes:
       - db_data:/var/lib/mysql
+      - ./data/:/docker-entrypoint-initdb.d/
 
   prestashop:
     image: prestashop/prestashop:1.7.8
