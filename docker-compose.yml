@@ -18,10 +18,12 @@ services:
     image: prestashop/prestashop:1.7.8
     container_name: prestashop
     environment:
+      PS_INSTALL_AUTO: "0"
       DB_SERVER: mariadb
       DB_NAME: prestashop
       DB_USER: prestashop_user
       DB_PASSWORD: secure_password
+      PS_DEV_MODE: "1"
     ports:
       - "8080:80"
     networks:
