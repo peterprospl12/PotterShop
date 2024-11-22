@@ -10,7 +10,7 @@ services:
     networks:
       - prestashop-net
     volumes:
-      - db_data:/var/lib/mysql
+      - ./mariadb:/var/lib/mysql
       - ./data/:/docker-entrypoint-initdb.d/
 
   prestashop:
@@ -46,6 +46,3 @@ services:
 
 networks:
   prestashop-net:
-
-volumes:
-  db_data:
