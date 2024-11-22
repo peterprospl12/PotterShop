@@ -5,10 +5,8 @@ services:
     environment:
       MYSQL_ROOT_PASSWORD: prestashop
       MYSQL_DATABASE: prestashop
-      MYSQL_USER: prestashop_user
-      MYSQL_PASSWORD: secure_password
     ports:
-      - "3307:3306"
+      - "3306:3306"
     networks:
       - prestashop-net
     volumes:
@@ -18,12 +16,12 @@ services:
     image: prestashop/prestashop:1.7.8
     container_name: prestashop
     environment:
-      PS_INSTALL_AUTO: "0"
       DB_SERVER: mariadb
       DB_NAME: prestashop
-      DB_USER: prestashop_user
-      DB_PASSWORD: secure_password
-      PS_DEV_MODE: "1"
+      DB_USER: root
+      DB_PASSWORD: root
+      PS_INSTALL_AUTO: 0
+      PS_DEV_MODE: 1
     ports:
       - "8080:80"
     networks:
