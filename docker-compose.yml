@@ -3,7 +3,7 @@ services:
     image: mariadb
     container_name: mariadb
     environment:
-      MYSQL_ROOT_PASSWORD: prestashop
+      MYSQL_ROOT_PASSWORD: root
       MYSQL_DATABASE: prestashop
     ports:
       - "3306:3306"
