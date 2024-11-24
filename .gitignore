@@ -55,4 +55,4 @@ Thumbs.db
 *.iml
 .idea/
 .vscode/
-~/vscode-root
+~/.vscode-root
