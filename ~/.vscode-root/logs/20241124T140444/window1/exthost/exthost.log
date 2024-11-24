@@ -1,0 +1,176 @@
+2024-11-24 14:04:46.228 [info] Extension host with pid 4745 started
+2024-11-24 14:04:46.228 [info] Skipping acquiring lock for /home/tomasz/Pulpit/PotterShop/~/.vscode-root/User/workspaceStorage/d98da4f0eeef084a2648281c8a3eb43a.
+2024-11-24 14:04:46.515 [info] ExtensionService#_doActivateExtension vscode.emmet, startup: false, activationEvent: 'onLanguage'
+2024-11-24 14:04:46.545 [info] ExtensionService#_doActivateExtension vscode.php-language-features, startup: false, activationEvent: 'onLanguage:php'
+2024-11-24 14:04:46.566 [info] ExtensionService#_doActivateExtension DEVSENSE.intelli-php-vscode, startup: false, activationEvent: 'onLanguage:php'
+2024-11-24 14:04:46.645 [info] ExtensionService#_doActivateExtension DEVSENSE.phptools-vscode, startup: false, activationEvent: 'onLanguage:php'
+2024-11-24 14:04:47.278 [info] ExtensionService#_doActivateExtension vscode.git-base, startup: true, activationEvent: '*', root cause: vscode.git
+2024-11-24 14:04:47.335 [info] ExtensionService#_doActivateExtension vscode.git, startup: true, activationEvent: '*'
+2024-11-24 14:04:47.468 [info] ExtensionService#_doActivateExtension vscode.github, startup: true, activationEvent: '*'
+2024-11-24 14:04:47.674 [info] Eager extensions activated
+2024-11-24 14:04:47.755 [info] ExtensionService#_doActivateExtension vscode.debug-auto-launch, startup: false, activationEvent: 'onStartupFinished'
+2024-11-24 14:04:47.759 [info] ExtensionService#_doActivateExtension vscode.merge-conflict, startup: false, activationEvent: 'onStartupFinished'
+2024-11-24 14:04:48.065 [warning] [Decorations] CAPPING events from decorations provider vscode.git 3281
+2024-11-24 14:04:48.638 [info] ExtensionService#_doActivateExtension vscode.github-authentication, startup: false, activationEvent: 'onAuthenticationRequest:github'
+2024-11-24 14:04:48.891 [warning] [Decorations] CAPPING events from decorations provider vscode.git 3282
+2024-11-24 14:05:00.374 [info] ExtensionService#_doActivateExtension vscode.html-language-features, startup: false, activationEvent: 'api', root cause: DEVSENSE.phptools-vscode
+2024-11-24 14:05:01.863 [warning] [Decorations] CAPPING events from decorations provider vscode.git 3284
+2024-11-24 14:05:07.244 [warning] [Decorations] CAPPING events from decorations provider vscode.git 3287
+2024-11-24 14:05:12.462 [warning] [Decorations] CAPPING events from decorations provider vscode.git 3299
+2024-11-24 14:05:17.704 [warning] [Decorations] CAPPING events from decorations provider vscode.git 3302
+2024-11-24 14:05:38.640 [info] ExtensionService#_doActivateExtension GitHub.copilot, startup: false, activationEvent: 'onStartupFinished'
+2024-11-24 14:05:39.404 [info] ExtensionService#_doActivateExtension GitHub.copilot-chat, startup: false, activationEvent: 'onStartupFinished'
+2024-11-24 14:05:49.563 [warning] [Decorations] CAPPING events from decorations provider vscode.git 3337
+2024-11-24 14:05:56.345 [warning] [Decorations] CAPPING events from decorations provider vscode.git 3336
+2024-11-24 14:06:01.537 [warning] [Decorations] CAPPING events from decorations provider vscode.git 3336
+2024-11-24 14:06:06.789 [warning] [Decorations] CAPPING events from decorations provider vscode.git 3336
+2024-11-24 14:06:12.012 [warning] [Decorations] CAPPING events from decorations provider vscode.git 3336
+2024-11-24 14:06:17.217 [warning] [Decorations] CAPPING events from decorations provider vscode.git 3336
+2024-11-24 14:06:22.438 [warning] [Decorations] CAPPING events from decorations provider vscode.git 3336
+2024-11-24 14:06:27.639 [warning] [Decorations] CAPPING events from decorations provider vscode.git 3336
+2024-11-24 14:06:56.294 [warning] [Decorations] CAPPING events from decorations provider vscode.git 3336
+2024-11-24 14:07:01.471 [warning] [Decorations] CAPPING events from decorations provider vscode.git 3336
+2024-11-24 14:07:01.821 [error] Error: Cancelled
+    at i (/usr/share/code/resources/app/extensions/github-authentication/dist/extension.js:1:232913)
+    at a.GitHubServer.login (/usr/share/code/resources/app/extensions/github-authentication/dist/extension.js:1:233476)
+    at a.GitHubAuthenticationProvider.createSession (/usr/share/code/resources/app/extensions/github-authentication/dist/extension.js:1:228761)
+    at tw.$createSession (file:///usr/share/code/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:116:3467) github.copilotChat.signIn {"value":"GitHub.copilot-chat","_lower":"github.copilot-chat"}
+2024-11-24 14:07:01.823 [error] Error: Cancelled
+    at i (/usr/share/code/resources/app/extensions/github-authentication/dist/extension.js:1:232913)
+    at a.GitHubServer.login (/usr/share/code/resources/app/extensions/github-authentication/dist/extension.js:1:233476)
+    at a.GitHubAuthenticationProvider.createSession (/usr/share/code/resources/app/extensions/github-authentication/dist/extension.js:1:228761)
+    at tw.$createSession (file:///usr/share/code/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:116:3467) github.copilotChat.signIn {"value":"GitHub.copilot-chat","_lower":"github.copilot-chat"}
+2024-11-24 14:07:01.823 [error] Error: Cancelled
+    at i (/usr/share/code/resources/app/extensions/github-authentication/dist/extension.js:1:232913)
+    at a.GitHubServer.login (/usr/share/code/resources/app/extensions/github-authentication/dist/extension.js:1:233476)
+    at a.GitHubAuthenticationProvider.createSession (/usr/share/code/resources/app/extensions/github-authentication/dist/extension.js:1:228761)
+    at tw.$createSession (file:///usr/share/code/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:116:3467) github.copilotChat.signIn {"value":"GitHub.copilot-chat","_lower":"github.copilot-chat"}
+2024-11-24 14:07:01.824 [error] Error: Cancelled
+    at i (/usr/share/code/resources/app/extensions/github-authentication/dist/extension.js:1:232913)
+    at a.GitHubServer.login (/usr/share/code/resources/app/extensions/github-authentication/dist/extension.js:1:233476)
+    at a.GitHubAuthenticationProvider.createSession (/usr/share/code/resources/app/extensions/github-authentication/dist/extension.js:1:228761)
+    at tw.$createSession (file:///usr/share/code/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:116:3467) github.copilotChat.signIn {"value":"GitHub.copilot-chat","_lower":"github.copilot-chat"}
+2024-11-24 14:07:06.736 [warning] [Decorations] CAPPING events from decorations provider vscode.git 3336
+2024-11-24 14:07:12.394 [warning] [Decorations] CAPPING events from decorations provider vscode.git 3336
+2024-11-24 14:07:17.802 [warning] [Decorations] CAPPING events from decorations provider vscode.git 3336
+2024-11-24 14:07:23.168 [warning] [Decorations] CAPPING events from decorations provider vscode.git 3336
+2024-11-24 14:07:28.400 [warning] [Decorations] CAPPING events from decorations provider vscode.git 3336
+2024-11-24 14:08:51.445 [warning] [Decorations] CAPPING events from decorations provider vscode.git 3336
+2024-11-24 14:08:56.670 [warning] [Decorations] CAPPING events from decorations provider vscode.git 3336
+2024-11-24 14:09:02.425 [warning] [Decorations] CAPPING events from decorations provider vscode.git 3348
+2024-11-24 14:09:07.711 [warning] [Decorations] CAPPING events from decorations provider vscode.git 3348
+2024-11-24 14:09:12.947 [warning] [Decorations] CAPPING events from decorations provider vscode.git 3348
+2024-11-24 14:09:18.181 [warning] [Decorations] CAPPING events from decorations provider vscode.git 3358
+2024-11-24 14:09:23.392 [warning] [Decorations] CAPPING events from decorations provider vscode.git 3358
+2024-11-24 14:09:26.487 [info] ExtensionService#_doActivateExtension ecmel.vscode-html-css, startup: false, activationEvent: 'onStartupFinished'
+2024-11-24 14:09:28.728 [warning] [Decorations] CAPPING events from decorations provider vscode.git 3362
+2024-11-24 14:09:33.964 [warning] [Decorations] CAPPING events from decorations provider vscode.git 3363
+2024-11-24 14:09:39.199 [warning] [Decorations] CAPPING events from decorations provider vscode.git 3368
+2024-11-24 14:09:44.473 [warning] [Decorations] CAPPING events from decorations provider vscode.git 3368
+2024-11-24 14:09:57.432 [warning] [Decorations] CAPPING events from decorations provider vscode.git 3368
+2024-11-24 14:10:02.645 [warning] [Decorations] CAPPING events from decorations provider vscode.git 3368
+2024-11-24 14:10:07.892 [warning] [Decorations] CAPPING events from decorations provider vscode.git 3368
+2024-11-24 14:10:09.767 [error] Error: Cancelled
+    at i (/usr/share/code/resources/app/extensions/github-authentication/dist/extension.js:1:232913)
+    at a.GitHubServer.login (/usr/share/code/resources/app/extensions/github-authentication/dist/extension.js:1:233476)
+    at a.GitHubAuthenticationProvider.createSession (/usr/share/code/resources/app/extensions/github-authentication/dist/extension.js:1:228761)
+    at tw.$createSession (file:///usr/share/code/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:116:3467) github.copilotChat.signIn {"value":"GitHub.copilot-chat","_lower":"github.copilot-chat"}
+2024-11-24 14:10:13.065 [warning] [Decorations] CAPPING events from decorations provider vscode.git 3368
+2024-11-24 14:10:44.762 [warning] [Decorations] CAPPING events from decorations provider vscode.git 3368
+2024-11-24 14:10:49.957 [warning] [Decorations] CAPPING events from decorations provider vscode.git 3368
+2024-11-24 14:10:54.352 [error] [ecmel.vscode-html-css] provider FAILED
+2024-11-24 14:10:54.352 [error] undefined
+2024-11-24 14:10:54.414 [error] [DEVSENSE.phptools-vscode] provider FAILED
+2024-11-24 14:10:54.425 [error] TypeError: Cannot read properties of null (reading 'tags')
+    at A (/root/.vscode/extensions/devsense.phptools-vscode-1.53.16379-linux-x64/out/src/extension.js:105:46585)
+    at UC.resolveCompletionItem (file:///usr/share/code/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:137:140216)
+2024-11-24 14:10:54.453 [error] [ecmel.vscode-html-css] provider FAILED
+2024-11-24 14:10:54.453 [error] undefined
+2024-11-24 14:10:54.469 [error] [DEVSENSE.phptools-vscode] provider FAILED
+2024-11-24 14:10:54.469 [error] TypeError: Cannot read properties of null (reading 'tags')
+    at A (/root/.vscode/extensions/devsense.phptools-vscode-1.53.16379-linux-x64/out/src/extension.js:105:46585)
+    at UC.resolveCompletionItem (file:///usr/share/code/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:137:140216)
+2024-11-24 14:10:54.635 [error] [ecmel.vscode-html-css] provider FAILED
+2024-11-24 14:10:54.635 [error] undefined
+2024-11-24 14:10:54.654 [error] [DEVSENSE.phptools-vscode] provider FAILED
+2024-11-24 14:10:54.654 [error] TypeError: Cannot read properties of null (reading 'tags')
+    at A (/root/.vscode/extensions/devsense.phptools-vscode-1.53.16379-linux-x64/out/src/extension.js:105:46585)
+    at UC.resolveCompletionItem (file:///usr/share/code/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:137:140216)
+2024-11-24 14:10:55.131 [warning] [Decorations] CAPPING events from decorations provider vscode.git 3368
+2024-11-24 14:11:19.133 [warning] [Decorations] CAPPING events from decorations provider vscode.git 3369
+2024-11-24 14:11:24.413 [warning] [Decorations] CAPPING events from decorations provider vscode.git 3369
+2024-11-24 14:11:47.927 [warning] [Decorations] CAPPING events from decorations provider vscode.git 3369
+2024-11-24 14:11:53.164 [warning] [Decorations] CAPPING events from decorations provider vscode.git 3369
+2024-11-24 14:11:58.371 [warning] [Decorations] CAPPING events from decorations provider vscode.git 3370
+2024-11-24 14:12:03.613 [warning] [Decorations] CAPPING events from decorations provider vscode.git 3370
+2024-11-24 14:12:08.855 [warning] [Decorations] CAPPING events from decorations provider vscode.git 3370
+2024-11-24 14:12:14.094 [warning] [Decorations] CAPPING events from decorations provider vscode.git 3370
+2024-11-24 14:12:36.013 [warning] [Decorations] CAPPING events from decorations provider vscode.git 3370
+2024-11-24 14:12:41.214 [warning] [Decorations] CAPPING events from decorations provider vscode.git 3370
+2024-11-24 14:12:46.451 [warning] [Decorations] CAPPING events from decorations provider vscode.git 3370
+2024-11-24 14:12:51.689 [warning] [Decorations] CAPPING events from decorations provider vscode.git 3370
+2024-11-24 14:12:56.880 [warning] [Decorations] CAPPING events from decorations provider vscode.git 3370
+2024-11-24 14:13:02.076 [warning] [Decorations] CAPPING events from decorations provider vscode.git 3370
+2024-11-24 14:13:10.264 [warning] [Decorations] CAPPING events from decorations provider vscode.git 3370
+2024-11-24 14:13:15.461 [warning] [Decorations] CAPPING events from decorations provider vscode.git 3370
+2024-11-24 14:13:20.637 [warning] [Decorations] CAPPING events from decorations provider vscode.git 3370
+2024-11-24 14:13:25.861 [warning] [Decorations] CAPPING events from decorations provider vscode.git 3371
+2024-11-24 14:13:31.050 [warning] [Decorations] CAPPING events from decorations provider vscode.git 3370
+2024-11-24 14:13:36.260 [warning] [Decorations] CAPPING events from decorations provider vscode.git 3370
+2024-11-24 14:13:41.450 [warning] [Decorations] CAPPING events from decorations provider vscode.git 3370
+2024-11-24 14:13:47.133 [warning] [Decorations] CAPPING events from decorations provider vscode.git 3370
+2024-11-24 14:13:48.575 [error] [ecmel.vscode-html-css] provider FAILED
+2024-11-24 14:13:48.575 [error] undefined
+2024-11-24 14:13:52.369 [warning] [Decorations] CAPPING events from decorations provider vscode.git 3370
+2024-11-24 14:14:35.413 [warning] [Decorations] CAPPING events from decorations provider vscode.git 3370
+2024-11-24 14:14:40.646 [warning] [Decorations] CAPPING events from decorations provider vscode.git 3382
+2024-11-24 14:14:45.872 [warning] [Decorations] CAPPING events from decorations provider vscode.git 3394
+2024-11-24 14:14:51.074 [warning] [Decorations] CAPPING events from decorations provider vscode.git 3398
+2024-11-24 14:14:56.320 [warning] [Decorations] CAPPING events from decorations provider vscode.git 3406
+2024-11-24 14:15:01.480 [warning] [Decorations] CAPPING events from decorations provider vscode.git 3410
+2024-11-24 14:15:06.737 [warning] [Decorations] CAPPING events from decorations provider vscode.git 3415
+2024-11-24 14:15:11.941 [warning] [Decorations] CAPPING events from decorations provider vscode.git 3423
+2024-11-24 14:15:14.877 [error] [ecmel.vscode-html-css] provider FAILED
+2024-11-24 14:15:14.877 [error] undefined
+2024-11-24 14:15:15.936 [error] [ecmel.vscode-html-css] provider FAILED
+2024-11-24 14:15:15.936 [error] undefined
+2024-11-24 14:15:15.959 [error] [ecmel.vscode-html-css] provider FAILED
+2024-11-24 14:15:15.960 [error] undefined
+2024-11-24 14:15:17.166 [warning] [Decorations] CAPPING events from decorations provider vscode.git 3424
+2024-11-24 14:15:20.535 [error] [ecmel.vscode-html-css] provider FAILED
+2024-11-24 14:15:20.535 [error] undefined
+2024-11-24 14:15:20.538 [error] [ecmel.vscode-html-css] provider FAILED
+2024-11-24 14:15:20.538 [error] undefined
+2024-11-24 14:15:20.548 [error] [ecmel.vscode-html-css] provider FAILED
+2024-11-24 14:15:20.548 [error] undefined
+2024-11-24 14:15:22.557 [warning] [Decorations] CAPPING events from decorations provider vscode.git 3423
+2024-11-24 14:15:27.796 [warning] [Decorations] CAPPING events from decorations provider vscode.git 3423
+2024-11-24 14:16:03.404 [warning] [Decorations] CAPPING events from decorations provider vscode.git 3423
+2024-11-24 14:16:04.965 [error] [ecmel.vscode-html-css] provider FAILED
+2024-11-24 14:16:04.965 [error] undefined
+2024-11-24 14:16:08.575 [warning] [Decorations] CAPPING events from decorations provider vscode.git 3424
+2024-11-24 14:16:13.823 [warning] [Decorations] CAPPING events from decorations provider vscode.git 3424
+2024-11-24 14:16:18.990 [warning] [Decorations] CAPPING events from decorations provider vscode.git 3424
+2024-11-24 14:16:24.261 [warning] [Decorations] CAPPING events from decorations provider vscode.git 3424
+2024-11-24 14:16:29.514 [warning] [Decorations] CAPPING events from decorations provider vscode.git 3424
+2024-11-24 14:16:33.298 [info] ExtensionService#_doActivateExtension aswinkumar863.smarty-template-support, startup: false, activationEvent: 'onLanguage:smarty'
+2024-11-24 14:16:34.855 [warning] [Decorations] CAPPING events from decorations provider vscode.git 3424
+2024-11-24 14:16:40.065 [warning] [Decorations] CAPPING events from decorations provider vscode.git 3424
+2024-11-24 14:16:45.278 [warning] [Decorations] CAPPING events from decorations provider vscode.git 3425
+2024-11-24 14:16:50.454 [warning] [Decorations] CAPPING events from decorations provider vscode.git 3425
+2024-11-24 14:16:55.718 [warning] [Decorations] CAPPING events from decorations provider vscode.git 3425
+2024-11-24 14:17:07.904 [warning] [Decorations] CAPPING events from decorations provider vscode.git 3425
+2024-11-24 14:17:13.079 [warning] [Decorations] CAPPING events from decorations provider vscode.git 3425
+2024-11-24 14:17:18.232 [warning] [Decorations] CAPPING events from decorations provider vscode.git 3425
+2024-11-24 14:17:23.416 [warning] [Decorations] CAPPING events from decorations provider vscode.git 3425
+2024-11-24 14:17:25.909 [info] ExtensionService#_doActivateExtension vscode.configuration-editing, startup: false, activationEvent: 'onLanguage:jsonc'
+2024-11-24 14:17:25.925 [info] ExtensionService#_doActivateExtension vscode.json-language-features, startup: false, activationEvent: 'onLanguage:jsonc'
+2024-11-24 14:17:25.996 [info] ExtensionService#_doActivateExtension vscode.typescript-language-features, startup: false, activationEvent: 'onLanguage:jsonc'
+2024-11-24 14:17:28.625 [warning] [Decorations] CAPPING events from decorations provider vscode.git 3427
+2024-11-24 14:17:33.860 [warning] [Decorations] CAPPING events from decorations provider vscode.git 3427
+2024-11-24 14:17:39.125 [warning] [Decorations] CAPPING events from decorations provider vscode.git 3428
+2024-11-24 14:18:38.396 [warning] [Decorations] CAPPING events from decorations provider vscode.git 3428
+2024-11-24 14:19:09.554 [warning] [Decorations] CAPPING events from decorations provider vscode.git 3429
+2024-11-24 14:19:38.152 [warning] [Decorations] CAPPING events from decorations provider vscode.git 3429
+2024-11-24 14:19:50.013 [warning] [Decorations] CAPPING events from decorations provider vscode.git 3429
+2024-11-24 14:19:55.352 [warning] [Decorations] CAPPING events from decorations provider vscode.git 3429

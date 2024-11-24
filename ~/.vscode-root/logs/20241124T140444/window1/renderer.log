@@ -1,0 +1,63 @@
+2024-11-24 14:04:45.617 [info] Started local extension host with pid 4745.
+2024-11-24 14:04:47.073 [error] [Extension Host] /bin/sh: 1: php: not found
+2024-11-24 14:04:47.406 [info] Settings Sync: Updating due to initialize
+2024-11-24 14:04:47.409 [info] Settings Sync: Updating authentication providers. Authentication Providers from store: [{"id":"github","scopes":["user:email"]},{"id":"microsoft","scopes":["openid","profile","email","offline_access"]}]
+2024-11-24 14:04:47.410 [info] Settings Sync: Authentication providers updated []
+2024-11-24 14:04:47.445 [info] Settings Sync: Updating authentication providers. Authentication Providers from store: [{"id":"github","scopes":["user:email"]},{"id":"microsoft","scopes":["openid","profile","email","offline_access"]}]
+2024-11-24 14:04:47.447 [info] Settings Sync: Authentication providers updated ["github"]
+2024-11-24 14:04:47.448 [info] Settings Sync: Updating authentication providers. Authentication Providers from store: [{"id":"github","scopes":["user:email"]},{"id":"microsoft","scopes":["openid","profile","email","offline_access"]}]
+2024-11-24 14:04:47.448 [info] Settings Sync: Authentication providers updated ["github"]
+2024-11-24 14:04:47.449 [info] Settings Sync: Updating authentication providers. Authentication Providers from store: [{"id":"github","scopes":["user:email"]},{"id":"microsoft","scopes":["openid","profile","email","offline_access"]}]
+2024-11-24 14:04:47.449 [info] Settings Sync: Authentication providers updated ["github","microsoft"]
+2024-11-24 14:04:47.451 [info] Settings Sync: Updating authentication providers. Authentication Providers from store: [{"id":"github","scopes":["user:email"]},{"id":"microsoft","scopes":["openid","profile","email","offline_access"]}]
+2024-11-24 14:04:47.451 [info] Settings Sync: Authentication providers updated ["github","microsoft"]
+2024-11-24 14:04:47.468 [info] Settings Sync: Updating due to declared authentication providers changed
+2024-11-24 14:04:47.469 [info] Settings Sync: Updating authentication providers. Authentication Providers from store: [{"id":"github","scopes":["user:email"]},{"id":"microsoft","scopes":["openid","profile","email","offline_access"]}]
+2024-11-24 14:04:47.470 [info] Settings Sync: Authentication providers updated ["github","microsoft"]
+2024-11-24 14:04:47.470 [info] Settings Sync: Updating due to declared authentication providers changed
+2024-11-24 14:04:47.470 [info] Settings Sync: Updating authentication providers. Authentication Providers from store: [{"id":"github","scopes":["user:email"]},{"id":"microsoft","scopes":["openid","profile","email","offline_access"]}]
+2024-11-24 14:04:47.471 [info] Settings Sync: Authentication providers updated ["github","microsoft"]
+2024-11-24 14:04:48.382 [info] [perf] Render performance baseline is 48ms
+2024-11-24 14:04:48.715 [info] Settings Sync: Updating authentication providers. Authentication Providers from store: [{"id":"github","scopes":["user:email"]},{"id":"microsoft","scopes":["openid","profile","email","offline_access"]}]
+2024-11-24 14:04:48.715 [info] Settings Sync: Authentication providers updated ["github","microsoft"]
+2024-11-24 14:05:00.315 [error] [Extension Host] Received response message without id. No further error information provided.
+2024-11-24 14:05:40.542 [error] No default agent registered: CodeExpectedError: No default agent registered
+    at MUe.R (vscode-file://vscode-app/usr/share/code/resources/app/out/vs/workbench/workbench.desktop.main.js:1938:25036)
+2024-11-24 14:06:59.906 [error] [Extension Host] [auth] auth: CopilotAuthError: GitHub login failed
+    at authShowWarnings (/root/.vscode/extensions/github.copilot-1.245.0/extension/src/auth.ts:144:15)
+    at oae.getCopilotToken (/root/.vscode/extensions/github.copilot-1.245.0/extension/src/auth.ts:174:33)
+    at attemptAuthentication (/root/.vscode/extensions/github.copilot-1.245.0/extension/src/auth.ts:58:9) {
+  cause: undefined
+}
+2024-11-24 14:06:59.907 [error] [Extension Host] [auth] GitHub login failed
+2024-11-24 14:07:01.826 [error] Cancelled: Error: Cancelled
+    at Y0.h (file:///usr/share/code/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:114:33180)
+2024-11-24 14:07:02.413 [error] [Extension Host] [auth] Retrying auth
+2024-11-24 14:07:03.787 [error] [Extension Host] [auth] auth: Error: User did not consent to login.
+    at K6t.w (vscode-file://vscode-app/usr/share/code/resources/app/out/vs/workbench/workbench.desktop.main.js:649:64454)
+    at async K6t.$getSession (vscode-file://vscode-app/usr/share/code/resources/app/out/vs/workbench/workbench.desktop.main.js:649:65158)
+2024-11-24 14:07:03.795 [error] [Extension Host] [auth] User did not consent to login.
+2024-11-24 14:07:12.351 [error] [Extension Host] Received response message without id. No further error information provided.
+2024-11-24 14:07:25.334 [error] [Extension Host] Received response message without id. No further error information provided.
+2024-11-24 14:08:56.708 [error] [network] #13: https://marketplace.visualstudio.com/_apis/public/gallery/extensionquery - error POST Canceled
+2024-11-24 14:10:09.770 [error] Cancelled: Error: Cancelled
+    at Y0.h (file:///usr/share/code/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:114:33180)
+2024-11-24 14:10:44.807 [error] [Extension Host] Received response message without id. No further error information provided.
+2024-11-24 14:10:54.353 [error] An unknown error occurred. Please consult the log for more details.
+2024-11-24 14:12:36.023 [error] [Extension Host] Received response message without id. No further error information provided.
+2024-11-24 14:12:45.430 [error] [Extension Host] Received response message without id. No further error information provided.
+2024-11-24 14:12:56.910 [error] [Extension Host] Received response message without id. No further error information provided.
+2024-11-24 14:12:58.891 [error] [Extension Host] Received response message without id. No further error information provided.
+2024-11-24 14:13:01.508 [error] [Extension Host] Received response message without id. No further error information provided.
+2024-11-24 14:13:31.529 [error] [Extension Host] Received response message without id. No further error information provided.
+2024-11-24 14:13:42.735 [error] [Extension Host] Received response message without id. No further error information provided.
+2024-11-24 14:13:48.579 [error] An unknown error occurred. Please consult the log for more details.
+2024-11-24 14:13:51.478 [error] [Extension Host] Received response message without id. No further error information provided.
+2024-11-24 14:15:14.880 [error] An unknown error occurred. Please consult the log for more details.
+2024-11-24 14:15:15.938 [error] An unknown error occurred. Please consult the log for more details.
+2024-11-24 14:15:20.538 [error] An unknown error occurred. Please consult the log for more details.
+2024-11-24 14:15:23.991 [error] [Extension Host] Received response message without id. No further error information provided.
+2024-11-24 14:15:25.467 [error] [Extension Host] Received response message without id. No further error information provided.
+2024-11-24 14:16:04.987 [error] An unknown error occurred. Please consult the log for more details.
+2024-11-24 14:17:15.148 [error] [Extension Host] Received response message without id. No further error information provided.
+2024-11-24 14:17:17.825 [error] [Extension Host] Received response message without id. No further error information provided.

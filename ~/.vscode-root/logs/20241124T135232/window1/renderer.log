@@ -1,0 +1,27 @@
+2024-11-24 13:52:33.400 [info] Started local extension host with pid 34747.
+2024-11-24 13:52:35.238 [info] Settings Sync: Updating due to initialize
+2024-11-24 13:52:35.238 [info] Settings Sync: Updating authentication providers. Authentication Providers from store: [{"id":"github","scopes":["user:email"]},{"id":"microsoft","scopes":["openid","profile","email","offline_access"]}]
+2024-11-24 13:52:35.239 [info] Settings Sync: Authentication providers updated []
+2024-11-24 13:52:35.257 [info] Settings Sync: Updating authentication providers. Authentication Providers from store: [{"id":"github","scopes":["user:email"]},{"id":"microsoft","scopes":["openid","profile","email","offline_access"]}]
+2024-11-24 13:52:35.257 [info] Settings Sync: Authentication providers updated ["github"]
+2024-11-24 13:52:35.257 [info] Settings Sync: Updating authentication providers. Authentication Providers from store: [{"id":"github","scopes":["user:email"]},{"id":"microsoft","scopes":["openid","profile","email","offline_access"]}]
+2024-11-24 13:52:35.257 [info] Settings Sync: Authentication providers updated ["github"]
+2024-11-24 13:52:35.257 [info] Settings Sync: Updating authentication providers. Authentication Providers from store: [{"id":"github","scopes":["user:email"]},{"id":"microsoft","scopes":["openid","profile","email","offline_access"]}]
+2024-11-24 13:52:35.257 [info] Settings Sync: Authentication providers updated ["github","microsoft"]
+2024-11-24 13:52:35.258 [info] Settings Sync: Updating authentication providers. Authentication Providers from store: [{"id":"github","scopes":["user:email"]},{"id":"microsoft","scopes":["openid","profile","email","offline_access"]}]
+2024-11-24 13:52:35.258 [info] Settings Sync: Authentication providers updated ["github","microsoft"]
+2024-11-24 13:52:35.277 [info] Settings Sync: Updating due to declared authentication providers changed
+2024-11-24 13:52:35.277 [info] Settings Sync: Updating authentication providers. Authentication Providers from store: [{"id":"github","scopes":["user:email"]},{"id":"microsoft","scopes":["openid","profile","email","offline_access"]}]
+2024-11-24 13:52:35.277 [info] Settings Sync: Authentication providers updated ["github","microsoft"]
+2024-11-24 13:52:35.277 [info] Settings Sync: Updating due to declared authentication providers changed
+2024-11-24 13:52:35.278 [info] Settings Sync: Updating authentication providers. Authentication Providers from store: [{"id":"github","scopes":["user:email"]},{"id":"microsoft","scopes":["openid","profile","email","offline_access"]}]
+2024-11-24 13:52:35.278 [info] Settings Sync: Authentication providers updated ["github","microsoft"]
+2024-11-24 13:52:35.471 [error] [Extension Host] /bin/sh: 1: php: not found
+2024-11-24 13:52:36.431 [info] [perf] Render performance baseline is 33ms
+2024-11-24 13:52:42.416 [info] Settings Sync: Updating authentication providers. Authentication Providers from store: [{"id":"github","scopes":["user:email"]},{"id":"microsoft","scopes":["openid","profile","email","offline_access"]}]
+2024-11-24 13:52:42.416 [info] Settings Sync: Authentication providers updated ["github","microsoft"]
+2024-11-24 13:53:15.760 [error] [Extension Host] Received response message without id. No further error information provided.
+2024-11-24 13:53:18.384 [error] [Extension Host] Received response message without id. No further error information provided.
+2024-11-24 13:54:22.425 [error] [Extension Host] Received response message without id. No further error information provided.
+2024-11-24 13:54:25.525 [error] [Extension Host] Received response message without id. No further error information provided.
+2024-11-24 13:54:27.883 [error] [Extension Host] Received response message without id. No further error information provided.

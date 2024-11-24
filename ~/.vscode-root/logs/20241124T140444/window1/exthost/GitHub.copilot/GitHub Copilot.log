@@ -1,0 +1,14 @@
+2024-11-24 14:05:40.290 [info] [certificates] Removed 1 expired certificates
+2024-11-24 14:06:59.891 [info] [auth] GitHub login failed
+2024-11-24 14:06:59.897 [error] [auth] auth: CopilotAuthError: GitHub login failed
+    at authShowWarnings (/root/.vscode/extensions/github.copilot-1.245.0/extension/src/auth.ts:144:15)
+    at oae.getCopilotToken (/root/.vscode/extensions/github.copilot-1.245.0/extension/src/auth.ts:174:33)
+    at attemptAuthentication (/root/.vscode/extensions/github.copilot-1.245.0/extension/src/auth.ts:58:9) {
+  cause: undefined
+}
+2024-11-24 14:06:59.897 [error] [auth] GitHub login failed
+2024-11-24 14:07:02.411 [error] [auth] Retrying auth
+2024-11-24 14:07:03.788 [error] [auth] auth: Error: User did not consent to login.
+    at K6t.w (vscode-file://vscode-app/usr/share/code/resources/app/out/vs/workbench/workbench.desktop.main.js:649:64454)
+    at async K6t.$getSession (vscode-file://vscode-app/usr/share/code/resources/app/out/vs/workbench/workbench.desktop.main.js:649:65158)
+2024-11-24 14:07:03.788 [error] [auth] User did not consent to login.
