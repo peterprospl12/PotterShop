@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: mariadb:3306
--- Generation Time: Lis 24, 2024 at 11:35 PM
+-- Generation Time: Lis 24, 2024 at 11:53 PM
 -- Wersja serwera: 11.5.2-MariaDB-ubu2404
 -- Wersja PHP: 8.2.8
 
@@ -3194,8 +3194,8 @@ INSERT INTO `ps_configuration` (`id_configuration`, `id_shop_group`, `id_shop`, 
 (87, NULL, NULL, 'PS_SMARTY_FORCE_COMPILE', '2', '0000-00-00 00:00:00', '2024-11-25 00:26:53'),
 (88, NULL, NULL, 'PS_DISTANCE_UNIT', 'km', '0000-00-00 00:00:00', '0000-00-00 00:00:00'),
 (89, NULL, NULL, 'PS_STORES_DISPLAY_CMS', '1', '0000-00-00 00:00:00', '0000-00-00 00:00:00'),
-(90, NULL, NULL, 'SHOP_LOGO_WIDTH', '100', '0000-00-00 00:00:00', '2024-11-22 18:37:44'),
-(91, NULL, NULL, 'SHOP_LOGO_HEIGHT', '28', '0000-00-00 00:00:00', '2024-11-22 18:37:44'),
+(90, NULL, NULL, 'SHOP_LOGO_WIDTH', '1093', '0000-00-00 00:00:00', '2024-11-25 00:51:47'),
+(91, NULL, NULL, 'SHOP_LOGO_HEIGHT', '312', '0000-00-00 00:00:00', '2024-11-25 00:51:47'),
 (92, NULL, NULL, 'EDITORIAL_IMAGE_WIDTH', '530', '0000-00-00 00:00:00', '0000-00-00 00:00:00'),
 (93, NULL, NULL, 'EDITORIAL_IMAGE_HEIGHT', '228', '0000-00-00 00:00:00', '0000-00-00 00:00:00'),
 (94, NULL, NULL, 'PS_STATSDATA_CUSTOMER_PAGESVIEWS', '0', '0000-00-00 00:00:00', '0000-00-00 00:00:00'),
@@ -3220,7 +3220,7 @@ INSERT INTO `ps_configuration` (`id_configuration`, `id_shop_group`, `id_shop`, 
 (113, NULL, NULL, 'PS_COOKIE_SAMESITE', 'Lax', '0000-00-00 00:00:00', '0000-00-00 00:00:00'),
 (114, NULL, NULL, 'PS_USE_ECOTAX', '0', '0000-00-00 00:00:00', '0000-00-00 00:00:00'),
 (115, NULL, NULL, 'PS_CANONICAL_REDIRECT', '1', '0000-00-00 00:00:00', '0000-00-00 00:00:00'),
-(116, NULL, NULL, 'PS_IMG_UPDATE_TIME', '1324977642', '0000-00-00 00:00:00', '0000-00-00 00:00:00'),
+(116, NULL, NULL, 'PS_IMG_UPDATE_TIME', '1732492318', '0000-00-00 00:00:00', '2024-11-25 00:51:58'),
 (117, NULL, NULL, 'PS_BACKUP_DROP_TABLE', '1', '0000-00-00 00:00:00', '0000-00-00 00:00:00'),
 (118, NULL, NULL, 'PS_OS_CHEQUE', '1', '0000-00-00 00:00:00', '0000-00-00 00:00:00'),
 (119, NULL, NULL, 'PS_OS_PAYMENT', '2', '0000-00-00 00:00:00', '0000-00-00 00:00:00'),
@@ -3344,8 +3344,8 @@ INSERT INTO `ps_configuration` (`id_configuration`, `id_shop_group`, `id_shop`, 
 (237, NULL, NULL, 'PS_SHOP_EMAIL', 'presta@presta.com', '0000-00-00 00:00:00', '2024-11-22 18:37:45'),
 (238, NULL, NULL, 'PS_MAIL_METHOD', '1', '0000-00-00 00:00:00', '0000-00-00 00:00:00'),
 (239, NULL, NULL, 'PS_SHOP_ACTIVITY', '9', '0000-00-00 00:00:00', '2024-11-22 18:37:44'),
-(240, NULL, NULL, 'PS_LOGO', 'logo.png', '0000-00-00 00:00:00', '0000-00-00 00:00:00'),
-(241, NULL, NULL, 'PS_FAVICON', 'favicon.ico', '0000-00-00 00:00:00', '0000-00-00 00:00:00'),
+(240, NULL, NULL, 'PS_LOGO', 'logo-1732492307.jpg', '0000-00-00 00:00:00', '2024-11-25 00:51:47'),
+(241, NULL, NULL, 'PS_FAVICON', 'favicon.ico', '0000-00-00 00:00:00', '2024-11-25 00:51:58'),
 (242, NULL, NULL, 'PS_STORES_ICON', 'logo_stores.png', '0000-00-00 00:00:00', '0000-00-00 00:00:00'),
 (243, NULL, NULL, 'PS_ROOT_CATEGORY', '1', '0000-00-00 00:00:00', '0000-00-00 00:00:00'),
 (244, NULL, NULL, 'PS_HOME_CATEGORY', '2', '0000-00-00 00:00:00', '0000-00-00 00:00:00'),
@@ -3523,7 +3523,9 @@ INSERT INTO `ps_configuration` (`id_configuration`, `id_shop_group`, `id_shop`, 
 (425, NULL, NULL, 'PS_LAYERED_INDEXED', '1', '2024-11-22 18:39:06', '2024-11-22 18:39:06'),
 (426, NULL, NULL, 'ONBOARDINGV2_SHUT_DOWN', '1', '2024-11-22 18:39:44', '2024-11-22 18:39:44'),
 (427, NULL, NULL, 'PS_CCCJS_VERSION', '1', '2024-11-25 00:27:30', '2024-11-25 00:27:30'),
-(428, NULL, NULL, 'PS_CCCCSS_VERSION', '1', '2024-11-25 00:27:30', '2024-11-25 00:27:30');
+(428, NULL, NULL, 'PS_CCCCSS_VERSION', '1', '2024-11-25 00:27:30', '2024-11-25 00:27:30'),
+(429, NULL, NULL, 'PS_LOGO_MAIL', 'logo_mail-1732492307.jpg', '2024-11-25 00:51:47', '2024-11-25 00:51:47'),
+(430, NULL, NULL, 'PS_LOGO_INVOICE', 'logo_invoice-1732492307.jpg', '2024-11-25 00:51:47', '2024-11-25 00:51:47');
 
 -- --------------------------------------------------------
 
@@ -3581,7 +3583,13 @@ INSERT INTO `ps_configuration_kpi` (`id_configuration_kpi`, `id_shop_group`, `id
 (33, NULL, NULL, 'DASHGOALS_AVG_CART_VALUE_11_2024', '80', '2024-11-22 18:37:49', '2024-11-22 18:37:49'),
 (34, NULL, NULL, 'DASHGOALS_TRAFFIC_12_2024', '600', '2024-11-22 18:37:49', '2024-11-22 18:37:49'),
 (35, NULL, NULL, 'DASHGOALS_CONVERSION_12_2024', '2', '2024-11-22 18:37:49', '2024-11-22 18:37:49'),
-(36, NULL, NULL, 'DASHGOALS_AVG_CART_VALUE_12_2024', '80', '2024-11-22 18:37:49', '2024-11-22 18:37:49');
+(36, NULL, NULL, 'DASHGOALS_AVG_CART_VALUE_12_2024', '80', '2024-11-22 18:37:49', '2024-11-22 18:37:49'),
+(37, NULL, NULL, 'MAIN_COUNTRY', NULL, '2024-11-25 00:52:46', '2024-11-25 00:52:46'),
+(38, NULL, NULL, 'MAIN_COUNTRY_EXPIRE', NULL, '2024-11-25 00:52:46', '2024-11-25 00:52:46'),
+(39, NULL, NULL, 'ENABLED_LANGUAGES', '1', '2024-11-25 00:52:46', '2024-11-25 00:52:46'),
+(40, NULL, NULL, 'ENABLED_LANGUAGES_EXPIRE', '1732492426', '2024-11-25 00:52:46', '2024-11-25 00:52:46'),
+(41, NULL, NULL, 'FRONTOFFICE_TRANSLATIONS', '0%', '2024-11-25 00:52:46', '2024-11-25 00:52:46'),
+(42, NULL, NULL, 'FRONTOFFICE_TRANSLATIONS_EXPIRE', '1732492486', '2024-11-25 00:52:46', '2024-11-25 00:52:46');
 
 -- --------------------------------------------------------
 
@@ -3595,6 +3603,14 @@ CREATE TABLE `ps_configuration_kpi_lang` (
   `value` text DEFAULT NULL,
   `date_upd` datetime DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_uca1400_ai_ci;
+
+--
+-- Dumping data for table `ps_configuration_kpi_lang`
+--
+
+INSERT INTO `ps_configuration_kpi_lang` (`id_configuration_kpi`, `id_lang`, `value`, `date_upd`) VALUES
+(37, 1, 'Brak zamówień', '2024-11-25 00:52:46'),
+(38, 1, '1732578766', '2024-11-25 00:52:46');
 
 -- --------------------------------------------------------
 
@@ -16185,13 +16201,13 @@ ALTER TABLE `ps_cms_role`
 -- AUTO_INCREMENT for table `ps_configuration`
 --
 ALTER TABLE `ps_configuration`
-  MODIFY `id_configuration` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=429;
+  MODIFY `id_configuration` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=431;
 
 --
 -- AUTO_INCREMENT for table `ps_configuration_kpi`
 --
 ALTER TABLE `ps_configuration_kpi`
-  MODIFY `id_configuration_kpi` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=37;
+  MODIFY `id_configuration_kpi` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=43;
 
 --
 -- AUTO_INCREMENT for table `ps_connections`
