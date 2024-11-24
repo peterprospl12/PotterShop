@@ -1,7 +1,0 @@
-{
-    "redhat.telemetry.enabled": true,
-    "php.validate.executablePath": "",
-    "files.associations": {
-        "*.tpl": "php"
-    }
-}
