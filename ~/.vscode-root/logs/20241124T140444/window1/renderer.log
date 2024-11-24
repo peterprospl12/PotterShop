@@ -61,3 +61,15 @@
 2024-11-24 14:16:04.987 [error] An unknown error occurred. Please consult the log for more details.
 2024-11-24 14:17:15.148 [error] [Extension Host] Received response message without id. No further error information provided.
 2024-11-24 14:17:17.825 [error] [Extension Host] Received response message without id. No further error information provided.
+2024-11-24 16:49:12.557 [error] [Extension Host] /bin/sh: 1: php: not found
+2024-11-24 16:49:12.588 [error] [Extension Host] /bin/sh: 1: php: not found
+2024-11-24 16:49:12.590 [error] [Extension Host] /bin/sh: 1: php: not found
+2024-11-24 16:49:12.603 [error] [Extension Host] /bin/sh: 1: php: not found
+2024-11-24 16:49:12.621 [error] [Extension Host] /bin/sh: 1: php: not found
+2024-11-24 16:49:12.641 [error] [Extension Host] /bin/sh: 1: php: not found
+2024-11-24 16:49:12.661 [error] [Extension Host] /bin/sh: 1: php: not found
+2024-11-24 16:49:12.678 [error] [Extension Host] /bin/sh: 1: php: not found
+2024-11-24 16:49:12.697 [error] [Extension Host] /bin/sh: 1: php: not found
+2024-11-24 16:49:12.716 [error] [Extension Host] /bin/sh: 1: php: not found
+2024-11-24 16:49:12.734 [error] [Extension Host] /bin/sh: 1: php: not found
+2024-11-24 19:00:56.072 [error] [File Watcher] Unexpected error stopping watcher: Unable to remove watcher: Zły argument (path: /home/tomasz/Pulpit/PotterShop)

@@ -21,3 +21,5 @@
 2024-11-24 14:11:52.489 [info] Added views:workbench.views.extensions.installed,extensions.recommendedList in workbench.view.extensions
 2024-11-24 14:14:38.109 [info] Removed views:extensions.recommendedList,workbench.views.extensions.installed from workbench.view.extensions
 2024-11-24 14:14:38.120 [info] Added views:workbench.views.extensions.marketplace in workbench.view.extensions
+2024-11-24 19:00:55.883 [info] Removed views:workbench.scm.history from workbench.view.scm
+2024-11-24 19:00:55.884 [info] Removed views:workbench.view.testing from workbench.view.extension.test
