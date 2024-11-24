@@ -174,3 +174,5 @@
 2024-11-24 14:19:38.152 [warning] [Decorations] CAPPING events from decorations provider vscode.git 3429
 2024-11-24 14:19:50.013 [warning] [Decorations] CAPPING events from decorations provider vscode.git 3429
 2024-11-24 14:19:55.352 [warning] [Decorations] CAPPING events from decorations provider vscode.git 3429
+2024-11-24 14:21:50.676 [warning] [Decorations] CAPPING events from decorations provider vscode.git 3429
+2024-11-24 14:27:34.155 [info] ExtensionService#_doActivateExtension vscode.css-language-features, startup: false, activationEvent: 'onLanguage:css'

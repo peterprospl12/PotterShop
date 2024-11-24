@@ -35,7 +35,7 @@
   </div>
 
   <p class="h4 text-uppercase block-contact-title hidden-sm-down">{l s='Store information' d='Shop.Theme.Global'}</p>
-  <div id="contact-infos" class="collapse contact-infos-font-class">
+  <div id="contact-infos" class="collapse" style="font-family: 'DM Sans',sans-serif; font-size: 13px;">
     {$contact_infos.address.formatted nofilter}
     {if $contact_infos.phone}
       <br>
