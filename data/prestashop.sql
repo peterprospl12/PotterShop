@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: mariadb:3306
--- Generation Time: Lis 24, 2024 at 11:53 PM
+-- Generation Time: Lis 25, 2024 at 10:50 PM
 -- Wersja serwera: 11.5.2-MariaDB-ubu2404
 -- Wersja PHP: 8.2.8
 
@@ -617,6 +617,26 @@ INSERT INTO `ps_access` (`id_profile`, `id_authorization_role`) VALUES
 (1, 834),
 (1, 835),
 (1, 836),
+(1, 841),
+(1, 842),
+(1, 843),
+(1, 844),
+(1, 845),
+(1, 846),
+(1, 847),
+(1, 848),
+(1, 849),
+(1, 850),
+(1, 851),
+(1, 852),
+(1, 853),
+(1, 854),
+(1, 855),
+(1, 856),
+(1, 861),
+(1, 862),
+(1, 863),
+(1, 864),
 (2, 9),
 (2, 10),
 (2, 11),
@@ -1192,6 +1212,16 @@ CREATE TABLE `ps_admin_filter` (
   `filter_id` varchar(191) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
+--
+-- Dumping data for table `ps_admin_filter`
+--
+
+INSERT INTO `ps_admin_filter` (`id`, `employee`, `shop`, `controller`, `action`, `filter`, `filter_id`) VALUES
+(1, 1, 1, '', '', '{\"limit\":10,\"orderBy\":\"id_request_sql\",\"sortOrder\":\"desc\",\"filters\":[]}', 'sql_request'),
+(2, 1, 1, '', '', '{\"orderBy\":\"position\",\"sortOrder\":\"asc\",\"limit\":50,\"filters\":{\"id_cms_category_parent\":1}}', 'cms_page_category'),
+(3, 1, 1, '', '', '{\"orderBy\":\"position\",\"sortOrder\":\"asc\",\"limit\":50,\"filters\":{\"id_cms_category_parent\":1}}', 'cms_page'),
+(4, 1, 1, 'contacts', 'index', '{\"limit\":10,\"orderBy\":\"id_contact\",\"sortOrder\":\"asc\",\"filters\":[]}', '');
+
 -- --------------------------------------------------------
 
 --
@@ -1514,6 +1544,10 @@ INSERT INTO `ps_authorization_role` (`id_authorization_role`, `slug`) VALUES
 (544, 'ROLE_MOD_MODULE_PRODUCTCOMMENTS_DELETE'),
 (542, 'ROLE_MOD_MODULE_PRODUCTCOMMENTS_READ'),
 (543, 'ROLE_MOD_MODULE_PRODUCTCOMMENTS_UPDATE'),
+(857, 'ROLE_MOD_MODULE_PS_ACCOUNTS_CREATE'),
+(860, 'ROLE_MOD_MODULE_PS_ACCOUNTS_DELETE'),
+(858, 'ROLE_MOD_MODULE_PS_ACCOUNTS_READ'),
+(859, 'ROLE_MOD_MODULE_PS_ACCOUNTS_UPDATE'),
 (545, 'ROLE_MOD_MODULE_PS_BANNER_CREATE'),
 (548, 'ROLE_MOD_MODULE_PS_BANNER_DELETE'),
 (546, 'ROLE_MOD_MODULE_PS_BANNER_READ'),
@@ -1566,6 +1600,10 @@ INSERT INTO `ps_authorization_role` (`id_authorization_role`, `slug`) VALUES
 (588, 'ROLE_MOD_MODULE_PS_EMAILSUBSCRIPTION_DELETE'),
 (586, 'ROLE_MOD_MODULE_PS_EMAILSUBSCRIPTION_READ'),
 (587, 'ROLE_MOD_MODULE_PS_EMAILSUBSCRIPTION_UPDATE'),
+(865, 'ROLE_MOD_MODULE_PS_EVENTBUS_CREATE'),
+(868, 'ROLE_MOD_MODULE_PS_EVENTBUS_DELETE'),
+(866, 'ROLE_MOD_MODULE_PS_EVENTBUS_READ'),
+(867, 'ROLE_MOD_MODULE_PS_EVENTBUS_UPDATE'),
 (813, 'ROLE_MOD_MODULE_PS_FACEBOOK_CREATE'),
 (816, 'ROLE_MOD_MODULE_PS_FACEBOOK_DELETE'),
 (814, 'ROLE_MOD_MODULE_PS_FACEBOOK_READ'),
@@ -1738,6 +1776,10 @@ INSERT INTO `ps_authorization_role` (`id_authorization_role`, `slug`) VALUES
 (776, 'ROLE_MOD_TAB_ADMINAJAXPS_BUYBUTTONLITE_DELETE'),
 (774, 'ROLE_MOD_TAB_ADMINAJAXPS_BUYBUTTONLITE_READ'),
 (775, 'ROLE_MOD_TAB_ADMINAJAXPS_BUYBUTTONLITE_UPDATE'),
+(841, 'ROLE_MOD_TAB_ADMINAJAXPSACCOUNTS_CREATE'),
+(844, 'ROLE_MOD_TAB_ADMINAJAXPSACCOUNTS_DELETE'),
+(842, 'ROLE_MOD_TAB_ADMINAJAXPSACCOUNTS_READ'),
+(843, 'ROLE_MOD_TAB_ADMINAJAXPSACCOUNTS_UPDATE'),
 (809, 'ROLE_MOD_TAB_ADMINAJAXPSFACEBOOK_CREATE'),
 (812, 'ROLE_MOD_TAB_ADMINAJAXPSFACEBOOK_DELETE'),
 (810, 'ROLE_MOD_TAB_ADMINAJAXPSFACEBOOK_READ'),
@@ -1826,6 +1868,10 @@ INSERT INTO `ps_authorization_role` (`id_authorization_role`, `slug`) VALUES
 (516, 'ROLE_MOD_TAB_ADMINDASHGOALS_DELETE'),
 (514, 'ROLE_MOD_TAB_ADMINDASHGOALS_READ'),
 (515, 'ROLE_MOD_TAB_ADMINDASHGOALS_UPDATE'),
+(845, 'ROLE_MOD_TAB_ADMINDEBUGPSACCOUNTS_CREATE'),
+(848, 'ROLE_MOD_TAB_ADMINDEBUGPSACCOUNTS_DELETE'),
+(846, 'ROLE_MOD_TAB_ADMINDEBUGPSACCOUNTS_READ'),
+(847, 'ROLE_MOD_TAB_ADMINDEBUGPSACCOUNTS_UPDATE'),
 (85, 'ROLE_MOD_TAB_ADMINDELIVERYSLIP_CREATE'),
 (88, 'ROLE_MOD_TAB_ADMINDELIVERYSLIP_DELETE'),
 (86, 'ROLE_MOD_TAB_ADMINDELIVERYSLIP_READ'),
@@ -1894,6 +1940,14 @@ INSERT INTO `ps_authorization_role` (`id_authorization_role`, `slug`) VALUES
 (144, 'ROLE_MOD_TAB_ADMINLOCALIZATION_DELETE'),
 (142, 'ROLE_MOD_TAB_ADMINLOCALIZATION_READ'),
 (143, 'ROLE_MOD_TAB_ADMINLOCALIZATION_UPDATE'),
+(861, 'ROLE_MOD_TAB_ADMINLOGIN_CREATE'),
+(864, 'ROLE_MOD_TAB_ADMINLOGIN_DELETE'),
+(862, 'ROLE_MOD_TAB_ADMINLOGIN_READ'),
+(863, 'ROLE_MOD_TAB_ADMINLOGIN_UPDATE'),
+(853, 'ROLE_MOD_TAB_ADMINLOGINPSACCOUNTS_CREATE'),
+(856, 'ROLE_MOD_TAB_ADMINLOGINPSACCOUNTS_DELETE'),
+(854, 'ROLE_MOD_TAB_ADMINLOGINPSACCOUNTS_READ'),
+(855, 'ROLE_MOD_TAB_ADMINLOGINPSACCOUNTS_UPDATE'),
 (145, 'ROLE_MOD_TAB_ADMINLOGS_CREATE'),
 (148, 'ROLE_MOD_TAB_ADMINLOGS_DELETE'),
 (146, 'ROLE_MOD_TAB_ADMINLOGS_READ'),
@@ -1950,6 +2004,10 @@ INSERT INTO `ps_authorization_role` (`id_authorization_role`, `slug`) VALUES
 (172, 'ROLE_MOD_TAB_ADMINMODULESUPDATES_DELETE'),
 (170, 'ROLE_MOD_TAB_ADMINMODULESUPDATES_READ'),
 (171, 'ROLE_MOD_TAB_ADMINMODULESUPDATES_UPDATE'),
+(849, 'ROLE_MOD_TAB_ADMINOAUTH2PSACCOUNTS_CREATE'),
+(852, 'ROLE_MOD_TAB_ADMINOAUTH2PSACCOUNTS_DELETE'),
+(850, 'ROLE_MOD_TAB_ADMINOAUTH2PSACCOUNTS_READ'),
+(851, 'ROLE_MOD_TAB_ADMINOAUTH2PSACCOUNTS_UPDATE'),
 (181, 'ROLE_MOD_TAB_ADMINORDERMESSAGE_CREATE'),
 (184, 'ROLE_MOD_TAB_ADMINORDERMESSAGE_DELETE'),
 (182, 'ROLE_MOD_TAB_ADMINORDERMESSAGE_READ'),
@@ -2928,11 +2986,20 @@ CREATE TABLE `ps_cms` (
 --
 
 INSERT INTO `ps_cms` (`id_cms`, `id_cms_category`, `position`, `active`, `indexation`) VALUES
-(1, 1, 0, 1, 0),
-(2, 1, 1, 1, 0),
-(3, 1, 2, 1, 0),
-(4, 1, 3, 1, 0),
-(5, 1, 4, 1, 0);
+(1, 1, 3, 1, 0),
+(2, 1, 6, 1, 0),
+(3, 1, 0, 1, 0),
+(4, 1, 12, 1, 0),
+(5, 1, 2, 1, 0),
+(6, 1, 1, 1, 0),
+(7, 1, 4, 1, 0),
+(8, 1, 5, 1, 0),
+(9, 1, 7, 1, 0),
+(10, 1, 8, 1, 0),
+(11, 1, 9, 1, 0),
+(12, 1, 10, 1, 0),
+(13, 1, 11, 1, 0),
+(14, 1, 13, 1, 0);
 
 -- --------------------------------------------------------
 
@@ -3023,11 +3090,20 @@ CREATE TABLE `ps_cms_lang` (
 --
 
 INSERT INTO `ps_cms_lang` (`id_cms`, `id_lang`, `id_shop`, `meta_title`, `head_seo_title`, `meta_description`, `meta_keywords`, `content`, `link_rewrite`) VALUES
-(1, 1, 1, 'Delivery', '', 'Our terms and conditions of delivery', 'conditions, delivery, delay, shipment, pack', '<h2>Shipments and returns</h2><h3>Your pack shipment</h3><p>Packages are generally dispatched within 2 days after receipt of payment and are shipped via UPS with tracking and drop-off without signature. If you prefer delivery by UPS Extra with required signature, an additional cost will be applied, so please contact us before choosing this method. Whichever shipment choice you make, we will provide you with a link to track your package online.</p><p>Shipping fees include handling and packing fees as well as postage costs. Handling fees are fixed, whereas transport fees vary according to total weight of the shipment. We advise you to group your items in one order. We cannot group two distinct orders placed separately, and shipping fees will apply to each of them. Your package will be dispatched at your own risk, but special care is taken to protect fragile objects.<br /><br />Boxes are amply sized and your items are well-protected.</p>', 'delivery'),
-(2, 1, 1, 'Legal Notice', '', 'Legal notice', 'notice, legal, credits', '<h2>Legal</h2><h3>Credits</h3><p>Concept and production:</p><p>This Web site was created using <a href=\"http://www.prestashop.com\">PrestaShop</a>&trade; open-source software.</p>', 'legal-notice'),
-(3, 1, 1, 'Terms and conditions of use', '', 'Our terms and conditions of use', 'conditions, terms, use, sell', '<h2>Your terms and conditions of use</h2><h3>Rule 1</h3><p>Here is the rule 1 content</p>\r\n<h3>Rule 2</h3><p>Here is the rule 2 content</p>\r\n<h3>Rule 3</h3><p>Here is the rule 3 content</p>', 'terms-and-conditions-of-use'),
-(4, 1, 1, 'About us', '', 'Learn more about us', 'about us, informations', '<h2>About us</h2>\r\n<h3>Our company</h3><p>Our company</p>\r\n<h3>Our team</h3><p>Our team</p>\r\n<h3>Informations</h3><p>Informations</p>', 'about-us'),
-(5, 1, 1, 'Secure payment', '', 'Our secure payment mean', 'secure payment, ssl, visa, mastercard, paypal', '<h2>Secure payment</h2>\r\n<h3>Our secure payment</h3><p>With SSL</p>\r\n<h3>Using Visa/Mastercard/Paypal</h3><p>About this services</p>', 'secure-payment');
+(1, 1, 1, 'Czas i koszty dostawy', '', 'Informacje o kosztach i czasie dostawy w naszym sklepie', 'conditions, delivery, delay, shipment, pack, dostawy, czas, dostarczanie, dowóz', '<h2>Czas i koszty dostawy</h2>\n<div class=\"resetcss\">1. Po wysyłce zamówienia jego status zostanie zaktualizowany na „Wysłane”, a potwierdzenie zmiany statusu zostanie wysłane na skrzynkę mailową Klienta wraz z linkiem do śledzenia przesyłki.</div>\n<p>2. Czas realizacji zamówienia (wraz z dostawą) wynosi od 2 do 4 dni roboczych od momentu zaksięgowania płatności na naszym koncie. <br />Uwaga! Przy płatności przelewem internetowym, czas otrzymania paczki wydłuża się o czas realizacji przelewu, a w przypadku płatności ratalnej - o czas przygotowania i podpisania umowy ratalnej.</p>\n<p>3. W chwili odbioru Klient zobowiązany jest sprawdzić stan przesyłki. W przypadku stwierdzenia jej uszkodzenia zobowiązany jest zgłosić ten fakt dostawcy i niezwłocznie skontaktować się ze Sprzedającym. Więcej na ten temat znajdziesz w sekcji <a href=\"https://pottermania.pl/pl/i/Zwroty/14\">zwroty</a></p>\n<p>4. Dla zamówień powyżej <strong>150 zł</strong> koszt wysyłki jest <strong>darmowy</strong>!</p>\n<p> </p>\n<p style=\"text-align:center;\"><img alt=\"\" height=\"400\" src=\"https://pottermania.pl/userdata/public/assets//Projekt%20bez%20nazwy-23.jpg\" width=\"500\" /></p>\n<p></p>', 'czas-i-koszty-dostawy'),
+(2, 1, 1, 'Regulamin Sklepu', '', 'Regulamin sklepu pottermania.', 'notice, legal, credits, regulamin, regulamin sklepu, zasady', '<p>TODO</p>', 'regulamin-sklepu'),
+(3, 1, 1, 'Reklamacje', '', 'Nasze zasady reklamacji.', 'reklamacje', '<div class=\"innerbox\">\n<div class=\"resetcss\">\n<p><span style=\"font-family:verdana, geneva, sans-serif;\"><strong>Jak dokonać reklamacji w naszym sklepie?</strong> </span></p>\n<ol>\n<li><span style=\"font-family:verdana, geneva, sans-serif;\">Pisemnie na adres firmy:</span></li>\n</ol>\n<p style=\"padding-left:60px;\"><span style=\"font-family:verdana, geneva, sans-serif;\">POTTERMANIA</span><br /><span style=\"font-family:verdana, geneva, sans-serif;\">Mateusz Pabian</span><br /><span style=\"font-family:verdana, geneva, sans-serif;\">ul. Kokoryczki 5A/55</span><br /><span style=\"font-family:verdana, geneva, sans-serif;\">04-191 Warszawa<strong> </strong></span></p>\n<ol>\n<li><span style=\"font-family:verdana, geneva, sans-serif;\">W formie elektronicznej na adres: kontakt<span class=\"color_light\">@pottermania.pl</span>,     </span></li>\n<li><span style=\"font-family:verdana, geneva, sans-serif;\">W formie telefonicznej pod numerem telefonu: 664 243 296  </span><br /><br /></li>\n</ol>\n<p><span style=\"font-family:verdana, geneva, sans-serif;\">Zachęcamy do skorzystania z naszego <a href=\"http://localhost:8080/upload/pdf/Formularz-reklamacji-Pottermania.pdf\"><strong>formularza reklamacji</strong></a>.</span><br /><br /></p>\n<p><span style=\"font-family:verdana, geneva, sans-serif;\">   4.  Jeśli pismo reklamacyjne przygotowane jest samodzielnie, zaleca się podanie przez Klienta w opisie reklamacji:</span></p>\n<ul>\n<li><span style=\"font-family:verdana, geneva, sans-serif;\">numeru zamówienia;</span></li>\n<li><span style=\"font-family:verdana, geneva, sans-serif;\">informacji i okoliczności dotyczących okoliczności reklamacji, w szczególności daty ujawnienia niezgodności towaru z umową (wady);</span></li>\n<li><span style=\"font-family:verdana, geneva, sans-serif;\">pożądanego sposobu rozstrzygnięcia reklamacji: wymiana, zwrot kosztów lub obniżenie ceny;</span></li>\n<li><span style=\"font-family:verdana, geneva, sans-serif;\">danych kontaktowych składającego reklamację;</span></li>\n<li><span style=\"font-family:verdana, geneva, sans-serif;\">adresu, pod którym można ewentualnie odebrać towar – ułatwi to nam i przyspieszy rozpatrzenie reklamacji.  </span></li>\n</ul>\n<p><span style=\"font-family:verdana, geneva, sans-serif;\">   5. Odpowiemy na Twoją reklamację najszybciej, jak będzie to możliwe, nie później niż w terminie 14 dni od dnia jej otrzymania.</span></p>\n<p><span style=\"font-family:verdana, geneva, sans-serif;\"> </span></p>\n<p><span style=\"font-family:verdana, geneva, sans-serif;\"><strong>Chcesz dowiedzieć się więcej o procedurze reklamacji? Zapoznaj się z naszym <a href=\"http://localhost:8080/content/2-regulamin-sklepu\">Regulaminem</a> .  </strong></span></p>\n</div>\n</div>', 'reklamacje'),
+(4, 1, 1, 'O Mnie', '', 'Dowiedz się więcej o mnie!', 'about us, informations, o nas, informacje, o mnir, o mnir, o mnie', '<p>TODO</p>', 'o-mnie'),
+(5, 1, 1, 'Formy płatności', '', 'Formy płatności dostepne w naszym sklepie.', 'secure payment, ssl, visa, mastercard, paypal, payment methods, metody płatności, płatności', '<h2>Formy płatności</h2>\n<p><span style=\"font-size:11pt;\"><strong>Dostępne formy płatności</strong> </span> </p>\n<table style=\"width:1059px;\">\n<tbody>\n<tr style=\"height:51px;\">\n<td style=\"width:123.671875px;height:51px;\"><img alt=\"\" class=\"fr-dii fr-fil fr-draggable\" src=\"https://www.mediaexpert.pl/media/cache/resolve/filemanager_original/images/mediaexpert/centrum_informacyjne/ikony/payment_normal.png\" /></td>\n<td style=\"width:926.328125px;height:51px;\">\n<div><strong>Płatność przelewem</strong> - wysyłka towaru następuje po zaksięgowaniu środków na naszym koncie bankowym.</div>\n</td>\n</tr>\n<tr style=\"height:50px;\">\n<td style=\"width:123.671875px;height:50px;\"> <img alt=\"\" class=\"fr-dii fr-fil fr-draggable\" src=\"https://www.mediaexpert.pl/media/cache/resolve/filemanager_original/images/mediaexpert/centrum_informacyjne/ikony/blik.png\" /></td>\n<td style=\"width:926.328125px;height:50px;\"><strong>Blik</strong> - System płatności mobilnych, dzięki któremu możesz zapłacić za zakupy używając aplikacji na Twoim smartfonie. Wybierz ikonkę BLIK w aplikacji Twojego banku, wygeneruj jednorazowy kod i wprowadź go w trakcie realizacji płatności - gotowe! Koszt płatności zależy od wartości zamówienia i jest wyświetlany przy tej opcji płatności.</td>\n</tr>\n<tr style=\"height:50px;\">\n<td style=\"width:123.671875px;height:50px;text-align:left;\"><img alt=\"\" height=\"60\" src=\"https://pottermania.pl/userdata/public/assets/images/apple-pay-logo.png\" width=\"113\" /></td>\n<td style=\"width:926.328125px;height:50px;\"><strong><strong>Apple Pay</strong> - </strong>Szybka i bezpieczna płatność kartą płatniczą za pomocą Apple Pay. Dodaj kartę do swojego konta Apple i płać dwoma kliknięciami - wpłata zostanie zaksięgowana natychmiast</td>\n</tr>\n<tr style=\"height:51px;\">\n<td style=\"width:123.671875px;height:51px;text-align:left;\"> <img alt=\"\" height=\"53\" src=\"https://pottermania.pl/userdata/public/assets/images/google-pay-logo.jpg\" width=\"101\" /></td>\n<td style=\"width:926.328125px;height:51px;\"><strong>Google Pay</strong> - Szybka i bezpieczna płatność kartą płatniczą za pomocą Google Pay. Dodaj kartę do swojego konta Google i płać dwoma kliknięciami - wpłata zostanie zaksięgowana natychmiast.</td>\n</tr>\n<tr style=\"height:51px;\">\n<td style=\"width:123.671875px;height:51px;\"> <img alt=\"\" class=\"fr-dii fr-fil fr-draggable\" src=\"https://www.mediaexpert.pl/media/cache/resolve/filemanager_original/images/mediaexpert/centrum_informacyjne/ikony/credit_card.png\" /></td>\n<td style=\"width:926.328125px;height:51px;\"><strong>Karta płatnicza</strong> - Płatność kartą w systemie Przelewy24 lub Blue Media. W trosce o bezpieczeństwo, obsługujemy wyłącznie płatności kartami zabezpieczonymi mechanizmem 3-D Secure. Przed dokonaniem zakupu upewnij się czy Twój bank udostępnia taką możliwość oraz czy limit na karcie nie przekracza wartości zamówienia. Płatność zostanie zaksięgowana natychmiast.</td>\n</tr>\n<tr style=\"height:51px;\">\n<td style=\"width:123.671875px;height:51px;\"> <img alt=\"\" height=\"37\" src=\"https://pottermania.pl/userdata/public/assets/images/przelewy24-logo.png\" width=\"106\" /></td>\n<td style=\"width:926.328125px;height:51px;\"><strong>Przelewy24</strong> - Płatność kartą lub szybkim przelewem internetowym w jednym z wybranych banków. Zamówienie zostanie skompletowane i wysłane po zaksięgowaniu wpłaty.</td>\n</tr>\n<tr style=\"height:51px;\">\n<td style=\"width:123.671875px;height:51px;\"><img alt=\"\" height=\"32\" src=\"https://pottermania.pl/userdata/public/assets//shoper-p-atnos-ci-logo-poziome%403x.png\" width=\"116\" /></td>\n<td style=\"width:926.328125px;height:51px;\"><strong><strong><strong>Shoper Płatności </strong></strong></strong>- Płatność kartą lub szybkim przelewem internetowym w jednym z wybranych banków. Zamówienie zostanie skompletowane i wysłane po zaksięgowaniu wpłaty.</td>\n</tr>\n<tr style=\"height:31px;\">\n<td style=\"width:123.671875px;height:31px;\"> <img alt=\"\" class=\"fr-dii fr-fil fr-draggable\" src=\"https://www.mediaexpert.pl/media/cache/resolve/filemanager_original/icons/logo_PayPo__1.png\" /></td>\n<td style=\"width:926.328125px;height:31px;\"><strong>PayPo </strong>-  możliwość zapłacenia za zakupy w terminie do 30 dni od daty złożenia zamówienia. Sprawdź więcej informacji <a href=\"https://paypo.pl\" target=\"_blank\" rel=\"noreferrer noopener\">tutaj</a>.</td>\n</tr>\n<tr style=\"height:68px;\">\n<td style=\"width:123.671875px;height:68px;\"> <img alt=\"\" class=\"fr-dii fr-fil fr-draggable\" src=\"https://www.mediaexpert.pl/media/cache/resolve/filemanager_original/images/mediaexpert/centrum_informacyjne/ikony/installment.png\" /><br /><br /></td>\n<td style=\"width:926.328125px;height:68px;\"><strong>Raty</strong> - zamówienia w kwocie od 100 zł do 7750 zł możesz spłacać w dogodnych dla Ciebie ratach za pośrednictwem Alior Bank SA.</td>\n</tr>\n</tbody>\n</table>\n<h3 style=\"text-align:center;\"> </h3>\n<h2 style=\"text-align:center;\"><span style=\"font-family:verdana, geneva, sans-serif;font-size:18pt;\"><strong>Dane do przelewu:</strong></span></h2>\n<p style=\"text-align:center;\"><span style=\"font-family:verdana, geneva, sans-serif;font-size:12pt;\">42 1160 2202 0000 0005 5648 6623</span></p>\n<p style=\"text-align:center;\"><span style=\"font-family:verdana, geneva, sans-serif;font-size:12pt;\">POTTERMANIA Mateusz Pabian</span></p>\n<p style=\"text-align:center;\"><span style=\"font-family:verdana, geneva, sans-serif;font-size:12pt;\">ul. Kokoryczki 5A/55</span></p>\n<p style=\"text-align:center;\"><span style=\"font-family:verdana, geneva, sans-serif;font-size:12pt;\">04-191 Warszawa</span></p>\n<p></p>', 'formy-platnosci'),
+(6, 1, 1, 'Zwroty', '', 'Nasza polityka zwrotów.', '', '<h1>Zwroty</h1>\n<div class=\"innerbox\">\n<div class=\"resetcss\">\n<p><strong>Jak dokonać zwrotu w naszym sklepie?</strong> </p>\n<p><span style=\"color:#808080;\">Nie masz pewności czy zakupiony produkt spełni Twoje oczekiwania? W naszym sklepie dajmy Ci aż <span style=\"color:#737272;\"><strong>100 dni</strong></span> na zwrot zakupionych towarów. Aby odstąpić od umowy i zwrócić zakupiony u nas produkt, skorzystaj z <strong><a href=\"https://szybkiezwroty.pl/pl/Pottermania\" target=\"_blank\" rel=\"noreferrer noopener\">szybkich zwrotów</a></strong> lub wypełnij <strong><a href=\"http://localhost:8080/upload/pdf/Formularz-reklamacji-Pottermania.pdf\">formularz zwrotów</a></strong></span><span style=\"color:#808080;\"> ręcznie i wyślij go na nasz adres wraz ze zwracanym produktem/produktami: </span></p>\n<p style=\"padding-left:30px;\"><span style=\"color:#808080;\"><span class=\"pl_grey14\"><span class=\"pl_grey14\"><span style=\"color:#808080;\">POTTERMANIA<br /></span></span></span></span><span style=\"color:#808080;\"><span class=\"pl_grey14\"><span class=\"pl_grey14\"><span style=\"color:#808080;\">POTTERMANIA Mateusz Pabian</span><span style=\"color:#808080;\"><br />Kokoryczki 5A/55<br /></span><span style=\"color:#808080;\">04-191 Warszawa</span></span></span></span></p>\n<p><span style=\"color:#808080;\"><span class=\"pl_grey14\"><span class=\"pl_grey14\">W przypadku wybrania opcji \'szybki zwrot\' opłata za dokonanie zwrotu to tylko 9 zł przy czym nie musisz jej płacić z góry - zostanie ona odliczona od kwoty, którą zwrócimy Tobie za odesłany towar. </span></span></span></p>\n<p><span style=\"color:#808080;\"><span class=\"pl_grey14\"><span class=\"pl_grey14\">Do paczki z formularzem i zwracanym produktem/produktami dołącz także </span></span>wszystkie otrzymane z nim/nimi akcesoria. Nie musisz dołączać paragonu lub faktury, ponieważ została przesłana do Ciebie elektronicznie.</span><span style=\"color:#808080;\"><strong><strong><span class=\"pl_grey14\"><strong><strong><span class=\"pl_grey14\"><br /></span></strong></strong></span></strong></strong></span></p>\n<p> </p>\n<p><strong>Chcesz dowiedzieć się więcej o procedurze zwrotów? Zapoznaj się z naszym <a href=\"http://localhost:8080/content/2-regulamin-sklepu\">Regulaminem</a> .  </strong></p>\n</div>\n</div>\n<p></p>', 'zwroty'),
+(7, 1, 1, 'Polityka Prywatności', '', 'Nasza polityka prywatności.', 'private policy, polityka prywatności, polityka prywatynosci, prywatnosc, dane osobowe', '<p>TODO</p>', 'polityka-prywatnosci'),
+(8, 1, 1, 'Regulamin Promocji BLACKDAYS w Pottermanii', '', 'Regulamin Promocji BLACKDAYS w Pottermanii!', 'promocje, blackdays, blackweek, black friday', '<p>TODO</p>', 'Regulamin-Promocji-BLACKDAYS-w-Pottermanii'),
+(9, 1, 1, 'Regulamin Programu Lojalnościowego', '', 'Regulamin programu lojalnościowego Pottermania!', 'promocje, regulamin, program lolajnosciowy', '<p>TODO</p>', 'harry-potter-regulamin-programu-lojalnosciowego'),
+(10, 1, 1, 'List z Hogwartu', '', 'Zarówno Ty jak i Twój bliski możecie dostać list z Hogwartu!  Dokładamy wszelkich starań aby zakupy na Pottermanii były prawdziwie magicznym doświadczeniem. Dlatego do każdego zamówienia dokładamy personalizowaną kopertę z pieczęcią Hogwartu. Dzięki temu każdy kto otrzyma swoją paczuszkę może przez chwilę poczuć się jak czarodziej, któremu zbłąkana sowa przyniosła spóźniony list informujący o przyjęciu do Szkoły Magii i Czarodziejstwa - kto by nie chciał się tak poczuć? :D', '', '<p>TODO</p>', 'harry-potter-list-z-hogwartu'),
+(11, 1, 1, 'Magiczne Prezenty', '', '', '', '<p>TODO cały moduł</p>', 'harry-potter-magiczne-prezenty'),
+(12, 1, 1, 'Opinie Trustmate', '', '', '', '<p>TODO cały moduł trzeba zrobić</p>', 'opinie'),
+(13, 1, 1, 'Kontakt', '', '', '', '<p>TODO</p>', 'dane-kontaktowe'),
+(14, 1, 1, 'Blog', '', 'Blog o harrym potterze', 'blog, harry potter, harry potter blog', '<p>TODO cały moduł trzeba zrobić</p>', 'blog');
 
 -- --------------------------------------------------------
 
@@ -3082,7 +3158,16 @@ INSERT INTO `ps_cms_shop` (`id_cms`, `id_shop`) VALUES
 (2, 1),
 (3, 1),
 (4, 1),
-(5, 1);
+(5, 1),
+(6, 1),
+(7, 1),
+(8, 1),
+(9, 1),
+(10, 1),
+(11, 1),
+(12, 1),
+(13, 1),
+(14, 1);
 
 -- --------------------------------------------------------
 
@@ -3465,7 +3550,7 @@ INSERT INTO `ps_configuration` (`id_configuration`, `id_shop_group`, `id_shop`, 
 (367, NULL, NULL, 'PSGDPR_CUSTOMER_FORM', NULL, '2024-11-22 18:38:41', '2024-11-22 18:38:41'),
 (368, NULL, NULL, 'PSGDPR_ANONYMOUS_CUSTOMER', '1', '2024-11-22 18:38:41', '2024-11-22 18:38:41'),
 (369, NULL, NULL, 'PSGDPR_ANONYMOUS_ADDRESS', '1', '2024-11-22 18:38:41', '2024-11-22 18:38:41'),
-(370, NULL, NULL, 'PS_MBO_SHOP_ADMIN_UUID', '60466f0e-9690-423c-9194-505c79f4b126', '2024-11-22 18:38:41', '2024-11-22 18:38:41'),
+(370, NULL, NULL, 'PS_MBO_SHOP_ADMIN_UUID', 'c3b87d24-02dd-4e4d-8756-8a936055da6c', '2024-11-22 18:38:41', '2024-11-25 16:28:02'),
 (371, NULL, NULL, 'CONF_PS_CHECKOUT_FIXED', '0.2', '2024-11-22 18:38:42', '2024-11-22 18:38:42'),
 (372, NULL, NULL, 'CONF_PS_CHECKOUT_VAR', '2', '2024-11-22 18:38:42', '2024-11-22 18:38:42'),
 (373, NULL, NULL, 'CONF_PS_CHECKOUT_FIXED_FOREIGN', '0.2', '2024-11-22 18:38:42', '2024-11-22 18:38:42'),
@@ -3522,10 +3607,23 @@ INSERT INTO `ps_configuration` (`id_configuration`, `id_shop_group`, `id_shop`, 
 (424, NULL, NULL, 'PS_LAYERED_FILTER_BY_DEFAULT_CATEGORY', '0', '2024-11-22 18:39:06', '2024-11-22 18:39:06'),
 (425, NULL, NULL, 'PS_LAYERED_INDEXED', '1', '2024-11-22 18:39:06', '2024-11-22 18:39:06'),
 (426, NULL, NULL, 'ONBOARDINGV2_SHUT_DOWN', '1', '2024-11-22 18:39:44', '2024-11-22 18:39:44'),
-(427, NULL, NULL, 'PS_CCCJS_VERSION', '1', '2024-11-25 00:27:30', '2024-11-25 00:27:30'),
-(428, NULL, NULL, 'PS_CCCCSS_VERSION', '1', '2024-11-25 00:27:30', '2024-11-25 00:27:30'),
+(427, NULL, NULL, 'PS_CCCJS_VERSION', '4', '2024-11-25 00:27:30', '2024-11-25 22:47:09'),
+(428, NULL, NULL, 'PS_CCCCSS_VERSION', '4', '2024-11-25 00:27:30', '2024-11-25 22:47:09'),
 (429, NULL, NULL, 'PS_LOGO_MAIL', 'logo_mail-1732492307.jpg', '2024-11-25 00:51:47', '2024-11-25 00:51:47'),
-(430, NULL, NULL, 'PS_LOGO_INVOICE', 'logo_invoice-1732492307.jpg', '2024-11-25 00:51:47', '2024-11-25 00:51:47');
+(430, NULL, NULL, 'PS_LOGO_INVOICE', 'logo_invoice-1732492307.jpg', '2024-11-25 00:51:47', '2024-11-25 00:51:47'),
+(431, NULL, NULL, 'CONTACTFORM_SEND_CONFIRMATION_EMAIL', '1', '2024-11-25 16:37:55', '2024-11-25 16:37:55'),
+(432, NULL, NULL, 'CONTACTFORM_SEND_NOTIFICATION_EMAIL', '1', '2024-11-25 16:37:55', '2024-11-25 16:37:55'),
+(433, NULL, NULL, 'PS_ACCOUNTS_ACCOUNTS_CLIENT_FAILURE_COUNT', '0', '2024-11-25 18:17:15', '2024-11-25 18:17:15'),
+(434, NULL, NULL, 'PS_ACCOUNTS_ACCOUNTS_CLIENT_LAST_FAILURE_TIME', NULL, '2024-11-25 18:17:15', '2024-11-25 18:17:15'),
+(435, NULL, NULL, 'PS_ACCOUNTS_RSA_PRIVATE_KEY', '-----BEGIN RSA PRIVATE KEY-----\r\nMIICXgIBAAKBgQDouLooQ9UlaRJTKyHQb9skOWbO8ucFzgvkGqUeun8h4pXikLBA\r\nhpSVFnzkir0HYXcdr1e9XPdxSNL+LYZGC2zdZxWB36RQYkC5j/FnewMN4+Pu5rDk\r\ntZR+SuxsPKnTXnSnKspqph1/xE3asf+Ry6+IL7j5LjmhrZvaJbKaTd3oYwIDAQAB\r\nAoGBAIf5hyuHlr5pCf/2L6et84jS0TMR0dIedewtdVTi+u09iv36NEE/YQlLPmX6\r\nekAZvpNlpApMi3dxaXaB+vZqLoyBN1E5vy5ZEcR/9rZ6XyfTnJ8rs+IbchgOVn4n\r\nmGLJYJpAmgCNTcESikm6Fnw/JV8QavRzu9lvLs1+3RSbJCaBAkEA9KktEFdCow4W\r\nXoL/AvCBzJCILPynLl25nKs3wMRRlDt7vJst5Q9CQBMC8czdJpTgVa/obW/fhWuP\r\nOoMDA27DEQJBAPOB5Un9cUdJVLGwyrYhIjOWxa8Dfb1rGwAl5fSzB3X2t/NwBnIt\r\nrECvJDQK3xLJ2orW1qAAJMLBTy+ubmakTDMCQQCT4N14DwYcABvNLGhuomgR+RoV\r\n9vAlukjCRUsBnKeibQGxUio/VSW6DMOu2yCgfUPLBvP5kbEMt6Juv1lG7d/BAkEA\r\n1caAxE8y5rFzIDgkDnbSLtY7oGUBO4zO/HdJBWUytJYvchE0J4L/SR45O1Mb+cOq\r\nD9+CNp9JpozM9wA8vfGZTwJAVyZezTDa86pDN65tq+OE1kTbeRw9elkQyWK6mMhm\r\nGdYq3AYADA477kr/FosWKaduQasZNnpQjtW/qJZgJAs+3A==\r\n-----END RSA PRIVATE KEY-----', '2024-11-25 18:17:15', '2024-11-25 18:17:15'),
+(436, NULL, NULL, 'PS_ACCOUNTS_RSA_PUBLIC_KEY', '-----BEGIN RSA PUBLIC KEY-----\r\nMIGJAoGBAOi4uihD1SVpElMrIdBv2yQ5Zs7y5wXOC+QapR66fyHileKQsECGlJUW\r\nfOSKvQdhdx2vV71c93FI0v4thkYLbN1nFYHfpFBiQLmP8Wd7Aw3j4+7msOS1lH5K\r\n7Gw8qdNedKcqymqmHX/ETdqx/5HLr4gvuPkuOaGtm9olsppN3ehjAgMBAAE=\r\n-----END RSA PUBLIC KEY-----', '2024-11-25 18:17:15', '2024-11-25 18:17:15'),
+(437, NULL, NULL, 'PS_ACCOUNTS_LAST_UPGRADE', '7.0.8', '2024-11-25 18:17:15', '2024-11-25 18:17:15'),
+(438, NULL, NULL, 'PS_PSX_FIREBASE_ID_TOKEN', NULL, '2024-11-25 18:17:15', '2024-11-25 18:17:15'),
+(439, NULL, NULL, 'PS_PSX_FIREBASE_REFRESH_DATE', '2024-11-25 18:17:15', '2024-11-25 18:17:15', '2024-11-25 18:17:15'),
+(440, NULL, NULL, 'PS_ACCOUNTS_FIREBASE_ID_TOKEN', NULL, '2024-11-25 18:17:15', '2024-11-25 18:17:15'),
+(441, NULL, NULL, 'PS_ACCOUNTS_ACCESS_TOKEN', NULL, '2024-11-25 18:17:16', '2024-11-25 18:17:16'),
+(442, NULL, NULL, 'PS_SHOWCASECARD_CMS_PAGES_CLOSED', '1', '2024-11-25 18:35:02', '2024-11-25 18:35:02'),
+(443, NULL, NULL, 'PS_ACCOUNTS_FIREBASE_REFRESH_TOKEN', NULL, '2024-11-25 22:44:26', '2024-11-25 23:47:27');
 
 -- --------------------------------------------------------
 
@@ -3642,8 +3740,8 @@ INSERT INTO `ps_configuration_lang` (`id_configuration`, `id_lang`, `value`, `da
 (293, 1, 'Moje listy życzeń', '2024-11-22 18:37:49'),
 (294, 1, 'Moja lista życzeń', '2024-11-22 18:37:49'),
 (295, 1, 'Utwórz nową listę', '2024-11-22 18:37:49'),
-(316, 1, 'sale70.png', '2024-11-22 18:37:50'),
-(317, 1, '', '2024-11-22 18:37:50'),
+(316, 1, '4623db775ea1d5e07c29ada64b6ce1db.png', '2024-11-25 22:12:40'),
+(317, 1, 'http://localhost:8080/content/5-formy-platnosci', '2024-11-25 22:12:40'),
 (318, 1, '', '2024-11-22 18:37:50'),
 (327, 1, 'Udostępnione przez Ciebie dane osobowe są wykorzystywane w celu udzielania odpowiedzi na zapytania, przetwarzania zamówień lub umożliwiania dostępu do konkretnych informacji. Przysługuje Ci prawo do modyfikowania oraz usuwania wszelkich danych osobowych zamieszczonych na stronie „Moje konto”.', '2024-11-22 18:37:50'),
 (329, 1, 'Możesz zrezygnować w każdej chwili. W tym celu należy odnaleźć szczegóły w naszej informacji prawnej.', '2024-11-22 18:37:51'),
@@ -3675,7 +3773,23 @@ INSERT INTO `ps_connections` (`id_connections`, `id_shop_group`, `id_shop`, `id_
 (1, 1, 1, 1, 1, 2130706433, '2024-11-22 18:39:01', 'https://www.prestashop.com'),
 (2, 1, 1, 3, 1, 2886860801, '2024-11-22 18:39:51', ''),
 (3, 1, 1, 4, 1, 2886860801, '2024-11-24 11:43:29', ''),
-(4, 1, 1, 4, 1, 2886860801, '2024-11-25 00:22:56', '');
+(4, 1, 1, 4, 1, 2886860801, '2024-11-25 00:22:56', ''),
+(5, 1, 1, 4, 1, 2886860801, '2024-11-25 16:25:28', ''),
+(6, 1, 1, 5, 1, 2886860801, '2024-11-25 16:26:50', ''),
+(7, 1, 1, 4, 2, 2886860801, '2024-11-25 17:48:16', ''),
+(8, 1, 1, 4, 1, 2886860801, '2024-11-25 18:19:45', ''),
+(9, 1, 1, 4, 2, 2886860801, '2024-11-25 19:11:24', ''),
+(10, 1, 1, 6, 3, 2886860801, '2024-11-25 19:50:19', ''),
+(11, 1, 1, 4, 3, 2886860801, '2024-11-25 19:53:16', ''),
+(12, 1, 1, 4, 1, 2886860801, '2024-11-25 20:24:02', ''),
+(13, 1, 1, 4, 1, 2886860801, '2024-11-25 20:55:24', ''),
+(14, 1, 1, 4, 1, 2886860801, '2024-11-25 22:46:47', ''),
+(15, 1, 1, 7, 1, 2886860801, '2024-11-25 22:48:23', ''),
+(16, 1, 1, 8, 1, 2886860801, '2024-11-25 22:50:00', ''),
+(17, 1, 1, 9, 1, 2886860801, '2024-11-25 23:15:18', ''),
+(18, 1, 1, 10, 4, 2886860801, '2024-11-25 23:27:57', ''),
+(19, 1, 1, 4, 5, 2886860801, '2024-11-25 23:29:11', ''),
+(20, 1, 1, 11, 4, 2886860801, '2024-11-25 23:48:45', '');
 
 -- --------------------------------------------------------
 
@@ -3710,7 +3824,144 @@ CREATE TABLE `ps_connections_source` (
 --
 
 INSERT INTO `ps_connections_source` (`id_connections_source`, `id_connections`, `http_referer`, `request_uri`, `keywords`, `date_add`) VALUES
-(1, 2, 'http://localhost:8080/', 'localhost:8080/home-accessories/6-mug-the-best-is-yet-to-come.html', '', '2024-11-22 18:39:53');
+(1, 2, 'http://localhost:8080/', 'localhost:8080/home-accessories/6-mug-the-best-is-yet-to-come.html', '', '2024-11-22 18:39:53'),
+(2, 5, 'http://localhost:8080/', 'localhost:8080/content/4-about-us', '', '2024-11-25 16:38:39'),
+(3, 5, 'http://localhost:8080/admin044berh2x/index.php/modules/link-widget/list?_token=Ha35OELMoCjGuB-3wPm8OIf6S-whp50Fo0xCf9MoSzg', 'localhost:8080/favicon.ico', '', '2024-11-25 16:39:12'),
+(4, 5, 'http://localhost:8080/', 'localhost:8080/kontakt', '', '2024-11-25 16:45:24'),
+(5, 5, 'http://localhost:8080/', 'localhost:8080/kontakt', '', '2024-11-25 16:45:37'),
+(6, 5, 'http://localhost:8080/', 'localhost:8080/kontakt', '', '2024-11-25 16:46:27'),
+(7, 5, 'http://localhost:8080/kontakt', 'localhost:8080/promocje', '', '2024-11-25 16:50:55'),
+(8, 5, 'http://localhost:8080/', 'localhost:8080/kontakt', '', '2024-11-25 16:50:59'),
+(9, 5, 'http://localhost:8080/kontakt', 'localhost:8080/promocje', '', '2024-11-25 16:51:41'),
+(10, 5, 'http://localhost:8080/', 'localhost:8080/kontakt', '', '2024-11-25 16:51:42'),
+(11, 5, 'http://localhost:8080/kontakt', 'localhost:8080/', '', '2024-11-25 17:05:41'),
+(12, 5, 'http://localhost:8080/', 'localhost:8080/promocje', '', '2024-11-25 17:21:50'),
+(13, 5, 'http://localhost:8080/kontakt', 'localhost:8080/', '', '2024-11-25 17:21:52'),
+(14, 5, 'http://localhost:8080/', 'localhost:8080/content/2-legal-notice', '', '2024-11-25 17:21:54'),
+(15, 5, 'http://localhost:8080/kontakt', 'localhost:8080/', '', '2024-11-25 17:22:00'),
+(16, 5, 'http://localhost:8080/', 'localhost:8080/Mapa%20strony', '', '2024-11-25 17:23:59'),
+(17, 5, 'http://localhost:8080/Mapa%20strony', 'localhost:8080/', '', '2024-11-25 17:25:13'),
+(18, 5, 'http://localhost:8080/', 'localhost:8080/promocje', '', '2024-11-25 17:25:30'),
+(19, 5, 'http://localhost:8080/Mapa%20strony', 'localhost:8080/', '', '2024-11-25 17:25:32'),
+(20, 5, 'http://localhost:8080/', 'localhost:8080/nowe-produkty', '', '2024-11-25 17:25:35'),
+(21, 5, 'http://localhost:8080/nowe-produkty', 'localhost:8080/najczesciej-kupowane', '', '2024-11-25 17:26:08'),
+(22, 5, 'http://localhost:8080/', 'localhost:8080/nowe-produkty', '', '2024-11-25 17:26:14'),
+(23, 5, 'http://localhost:8080/nowe-produkty', 'localhost:8080/content/1-delivery', '', '2024-11-25 17:26:44'),
+(24, 5, 'http://localhost:8080/', 'localhost:8080/nowe-produkty', '', '2024-11-25 17:26:52'),
+(25, 5, 'http://localhost:8080/nowe-produkty', 'localhost:8080/nowe-produkty', '', '2024-11-25 17:26:53'),
+(26, 5, 'http://localhost:8080/Mapa%20strony', 'localhost:8080/', '', '2024-11-25 17:26:55'),
+(27, 5, 'http://localhost:8080/', 'localhost:8080/najczesciej-kupowane', '', '2024-11-25 17:26:56'),
+(28, 5, 'http://localhost:8080/Mapa%20strony', 'localhost:8080/', '', '2024-11-25 17:26:58'),
+(29, 5, 'http://localhost:8080/', 'localhost:8080/kontakt', '', '2024-11-25 17:26:59'),
+(30, 5, 'http://localhost:8080/Mapa%20strony', 'localhost:8080/', '', '2024-11-25 17:27:00'),
+(31, 5, 'http://localhost:8080/', 'localhost:8080/content/4-about-us', '', '2024-11-25 17:27:01'),
+(32, 5, 'http://localhost:8080/Mapa%20strony', 'localhost:8080/', '', '2024-11-25 17:27:03'),
+(33, 5, 'http://localhost:8080/', 'localhost:8080/content/1-delivery', '', '2024-11-25 17:27:12'),
+(34, 5, 'http://localhost:8080/Mapa%20strony', 'localhost:8080/', '', '2024-11-25 17:27:16'),
+(35, 5, 'http://localhost:8080/Mapa%20strony', 'localhost:8080/', '', '2024-11-25 17:36:07'),
+(36, 5, 'http://localhost:8080/', 'localhost:8080/content/3-terms-and-conditions-of-use', '', '2024-11-25 17:36:18'),
+(37, 5, 'http://localhost:8080/Mapa%20strony', 'localhost:8080/', '', '2024-11-25 17:36:20'),
+(38, 5, 'http://localhost:8080/', 'localhost:8080/kontakt', '', '2024-11-25 17:36:52'),
+(39, 5, 'http://localhost:8080/Mapa%20strony', 'localhost:8080/', '', '2024-11-25 17:36:54'),
+(40, 5, 'http://localhost:8080/', 'localhost:8080/kontakt', '', '2024-11-25 17:37:07'),
+(41, 5, 'http://localhost:8080/kontakt', 'localhost:8080/content/3-terms-and-conditions-of-use', '', '2024-11-25 17:39:23'),
+(42, 5, 'http://localhost:8080/', 'localhost:8080/kontakt', '', '2024-11-25 17:39:24'),
+(43, 5, 'http://localhost:8080/kontakt', 'localhost:8080/nasze-sklepy', '', '2024-11-25 17:41:04'),
+(44, 5, 'http://localhost:8080/', 'localhost:8080/kontakt', '', '2024-11-25 17:41:07'),
+(45, 5, 'http://localhost:8080/', 'localhost:8080/kontakt', '', '2024-11-25 17:42:39'),
+(46, 5, 'http://localhost:8080/kontakt', 'localhost:8080/logowanie?back=history', '', '2024-11-25 17:47:51'),
+(47, 5, 'http://localhost:8080/', 'localhost:8080/kontakt', '', '2024-11-25 17:47:57'),
+(48, 7, 'http://localhost:8080/logowanie?back=history', 'localhost:8080/', '', '2024-11-25 17:48:18'),
+(49, 7, 'http://localhost:8080/admin044berh2x/index.php/modules/link-widget/list?_token=Ha35OELMoCjGuB-3wPm8OIf6S-whp50Fo0xCf9MoSzg', 'localhost:8080/favicon.ico', '', '2024-11-25 17:49:06'),
+(50, 7, 'http://localhost:8080/', 'localhost:8080/logowanie?back=my-account', '', '2024-11-25 17:49:18'),
+(51, 7, 'http://localhost:8080/logowanie?back=history', 'localhost:8080/', '', '2024-11-25 17:49:23'),
+(52, 7, 'http://localhost:8080/logowanie?back=history', 'localhost:8080/', '', '2024-11-25 17:50:43'),
+(53, 7, 'http://localhost:8080/', 'localhost:8080/content/5-secure-payment', '', '2024-11-25 17:50:56'),
+(54, 7, 'http://localhost:8080/logowanie?back=history', 'localhost:8080/', '', '2024-11-25 17:51:01'),
+(55, 7, 'http://localhost:8080/', 'localhost:8080/promocje', '', '2024-11-25 17:51:05'),
+(56, 7, 'http://localhost:8080/logowanie?back=history', 'localhost:8080/', '', '2024-11-25 17:51:06'),
+(57, 7, 'http://localhost:8080/', 'localhost:8080/content/5-secure-payment', '', '2024-11-25 17:51:31'),
+(58, 7, 'http://localhost:8080/logowanie?back=history', 'localhost:8080/', '', '2024-11-25 17:51:33'),
+(59, 7, 'http://localhost:8080/logowanie?back=history', 'localhost:8080/', '', '2024-11-25 17:53:13'),
+(60, 7, 'http://localhost:8080/', 'localhost:8080/content/2-regulamin-sklepu', '', '2024-11-25 17:58:43'),
+(61, 7, 'http://localhost:8080/content/2-regulamin-sklepu', 'localhost:8080/kontakt', '', '2024-11-25 18:08:21'),
+(62, 7, 'http://localhost:8080/content/2-regulamin-sklepu', 'localhost:8080/kontakt', '', '2024-11-25 18:09:37'),
+(63, 7, 'http://localhost:8080/kontakt', 'localhost:8080/kontakt', '', '2024-11-25 18:10:44'),
+(64, 7, 'http://localhost:8080/kontakt', 'localhost:8080/kontakt', '', '2024-11-25 18:11:28'),
+(65, 7, 'http://localhost:8080/kontakt', 'localhost:8080/content/4-o-nas', '', '2024-11-25 18:12:12'),
+(66, 7, 'http://localhost:8080/', 'localhost:8080/logowanie?back=my-account', '', '2024-11-25 18:27:29'),
+(67, 7, 'http://localhost:8080/', 'localhost:8080/logowanie?back=my-account', '', '2024-11-25 18:27:37'),
+(68, 7, 'http://localhost:8080/admin044berh2x/index.php/modules/link-widget/edit/2?_token=Ha35OELMoCjGuB-3wPm8OIf6S-whp50Fo0xCf9MoSzg', 'localhost:8080/', '', '2024-11-25 18:38:02'),
+(69, 7, 'http://localhost:8080/logowanie?back=my-account', 'localhost:8080/content/1-czas-i-koszty-dostawy', '', '2024-11-25 18:43:26'),
+(70, 9, 'http://localhost:8080/', 'localhost:8080/kontakt', '', '2024-11-25 19:31:36'),
+(71, 9, 'http://localhost:8080/kontakt', 'localhost:8080/promocje', '', '2024-11-25 19:31:51'),
+(72, 11, 'http://localhost:8080/kontakt', 'localhost:8080/', '', '2024-11-25 20:17:53'),
+(73, 11, 'http://localhost:8080/kontakt', 'localhost:8080/', '', '2024-11-25 20:19:08'),
+(74, 11, 'http://localhost:8080/kontakt', 'localhost:8080/', '', '2024-11-25 20:20:16'),
+(75, 11, 'http://localhost:8080/kontakt', 'localhost:8080/', '', '2024-11-25 20:20:45'),
+(76, 11, 'http://localhost:8080/kontakt', 'localhost:8080/', '', '2024-11-25 20:21:18'),
+(77, 11, 'http://localhost:8080/kontakt', 'localhost:8080/', '', '2024-11-25 20:21:40'),
+(78, 11, 'http://localhost:8080/kontakt', 'localhost:8080/', '', '2024-11-25 20:22:31'),
+(79, 11, 'http://localhost:8080/kontakt', 'localhost:8080/', '', '2024-11-25 20:23:05'),
+(80, 12, 'http://localhost:8080/kontakt', 'localhost:8080/promocje', '', '2024-11-25 20:45:45'),
+(81, 12, 'http://localhost:8080/kontakt', 'localhost:8080/promocje', '', '2024-11-25 20:51:47'),
+(82, 13, 'http://localhost:8080/', 'localhost:8080/', '', '2024-11-25 22:44:15'),
+(83, 13, 'http://localhost:8080/kontakt', 'localhost:8080/promocje', '', '2024-11-25 22:44:18'),
+(84, 13, 'http://localhost:8080/kontakt', 'localhost:8080/promocje', '', '2024-11-25 22:45:51'),
+(85, 13, 'http://localhost:8080/kontakt', 'localhost:8080/promocje', '', '2024-11-25 22:45:54'),
+(86, 13, 'http://localhost:8080/kontakt', 'localhost:8080/promocje', '', '2024-11-25 22:46:00'),
+(87, 13, 'http://localhost:8080/kontakt', 'localhost:8080/promocje', '', '2024-11-25 22:46:05'),
+(88, 13, 'http://localhost:8080/kontakt', 'localhost:8080/promocje', '', '2024-11-25 22:46:10'),
+(89, 13, 'http://localhost:8080/kontakt', 'localhost:8080/promocje', '', '2024-11-25 22:46:17'),
+(90, 13, 'http://localhost:8080/kontakt', 'localhost:8080/promocje', '', '2024-11-25 22:46:19'),
+(91, 14, 'http://localhost:8080/', 'localhost:8080/content/5-formy-platnosci', '', '2024-11-25 23:12:28'),
+(92, 14, 'http://localhost:8080/', 'localhost:8080/content/5-formy-platnosci', '', '2024-11-25 23:12:42'),
+(93, 14, 'http://localhost:8080/content/5-formy-platnosci', 'localhost:8080/', '', '2024-11-25 23:12:47'),
+(94, 14, 'http://localhost:8080/', 'localhost:8080/content/5-formy-platnosci', '', '2024-11-25 23:12:50'),
+(95, 14, 'http://localhost:8080/content/5-formy-platnosci', 'localhost:8080/', '', '2024-11-25 23:12:52'),
+(96, 14, 'http://localhost:8080/content/5-formy-platnosci', 'localhost:8080/', '', '2024-11-25 23:13:42'),
+(97, 14, 'http://localhost:8080/content/5-formy-platnosci', 'localhost:8080/', '', '2024-11-25 23:16:16'),
+(98, 14, 'http://localhost:8080/', 'localhost:8080/content/3-reklamacje', '', '2024-11-25 23:16:37'),
+(99, 14, 'http://localhost:8080/content/3-reklamacje', 'localhost:8080/content/2-regulamin-sklepu', '', '2024-11-25 23:18:45'),
+(100, 14, 'http://localhost:8080/', 'localhost:8080/content/3-reklamacje', '', '2024-11-25 23:22:38'),
+(101, 14, 'http://localhost:8080/', 'localhost:8080/content/3-reklamacje', '', '2024-11-25 23:22:45'),
+(102, 14, 'http://localhost:8080/content/3-reklamacje', 'localhost:8080/content/2-regulamin-sklepu', '', '2024-11-25 23:22:59'),
+(103, 14, 'http://localhost:8080/', 'localhost:8080/content/3-reklamacje', '', '2024-11-25 23:23:00'),
+(104, 14, 'http://localhost:8080/', 'localhost:8080/content/3-reklamacje', '', '2024-11-25 23:24:31'),
+(105, 14, 'http://localhost:8080/', 'localhost:8080/content/3-reklamacje', '', '2024-11-25 23:25:10'),
+(106, 14, 'http://localhost:8080/', 'localhost:8080/content/3-reklamacje', '', '2024-11-25 23:25:52'),
+(107, 14, 'http://localhost:8080/', 'localhost:8080/content/3-reklamacje', '', '2024-11-25 23:25:55'),
+(108, 14, 'http://localhost:8080/', 'localhost:8080/content/3-reklamacje', '', '2024-11-25 23:26:02'),
+(109, 14, 'http://localhost:8080/', 'localhost:8080/content/3-reklamacje', '', '2024-11-25 23:27:48'),
+(110, 14, 'http://localhost:8080/content/3-reklamacje', 'localhost:8080/content/2-regulamin-sklepu', '', '2024-11-25 23:32:32'),
+(111, 14, 'http://localhost:8080/content/2-regulamin-sklepu', 'localhost:8080/content/3-reklamacje', '', '2024-11-25 23:32:41'),
+(112, 14, 'http://localhost:8080/content/3-reklamacje', 'localhost:8080/content/2-regulamin-sklepu', '', '2024-11-25 23:32:43'),
+(113, 14, 'http://localhost:8080/content/3-reklamacje', 'localhost:8080/content/2-regulamin-sklepu', '', '2024-11-25 23:35:03'),
+(114, 14, 'http://localhost:8080/content/3-reklamacje', 'localhost:8080/content/2-regulamin-sklepu', '', '2024-11-25 23:35:08'),
+(115, 14, 'http://localhost:8080/content/3-reklamacje', 'localhost:8080/content/2-regulamin-sklepu', '', '2024-11-25 23:35:18'),
+(116, 14, 'http://localhost:8080/content/2-regulamin-sklepu', 'localhost:8080/content/3-reklamacje', '', '2024-11-25 23:35:50'),
+(117, 14, 'http://localhost:8080/content/2-regulamin-sklepu', 'localhost:8080/content/3-reklamacje', '', '2024-11-25 23:35:53'),
+(118, 14, 'http://localhost:8080/content/2-regulamin-sklepu', 'localhost:8080/content/3-reklamacje', '', '2024-11-25 23:35:59'),
+(119, 14, 'http://localhost:8080/content/3-reklamacje', 'localhost:8080/content/regulamin-sklepu', '', '2024-11-25 23:36:00'),
+(120, 14, 'http://localhost:8080/content/2-regulamin-sklepu', 'localhost:8080/content/3-reklamacje', '', '2024-11-25 23:36:01'),
+(121, 14, 'http://localhost:8080/content/3-reklamacje', 'localhost:8080/content/3-reklamacje', '', '2024-11-25 23:36:03'),
+(122, 14, 'http://localhost:8080/content/3-reklamacje', 'localhost:8080/content/2-regulamin-sklepu', '', '2024-11-25 23:36:05'),
+(123, 14, 'http://localhost:8080/content/3-reklamacje', 'localhost:8080/content/3-reklamacje', '', '2024-11-25 23:36:07'),
+(124, 14, 'http://localhost:8080/content/3-reklamacje', 'localhost:8080/content/3-reklamacje', '', '2024-11-25 23:36:13'),
+(125, 14, 'http://localhost:8080/content/3-reklamacje', 'localhost:8080/content/6-zwroty', '', '2024-11-25 23:36:16'),
+(126, 14, 'http://localhost:8080/content/6-zwroty', 'localhost:8080/content/6-zwroty', '', '2024-11-25 23:36:31'),
+(127, 14, 'http://localhost:8080/content/6-zwroty', 'localhost:8080/content/3-reklamacje', '', '2024-11-25 23:37:20'),
+(128, 14, 'http://localhost:8080/content/6-zwroty', 'localhost:8080/content/3-reklamacje', '', '2024-11-25 23:38:16'),
+(129, 14, 'http://localhost:8080/content/3-reklamacje', 'localhost:8080/content/2-regulamin-sklepu', '', '2024-11-25 23:38:18'),
+(130, 14, 'http://localhost:8080/content/3-reklamacje', 'localhost:8080/content/2-regulamin-sklepu', '', '2024-11-25 23:42:20'),
+(131, 14, 'http://localhost:8080/content/2-regulamin-sklepu', 'localhost:8080/content/6-zwroty', '', '2024-11-25 23:42:21'),
+(132, 14, 'http://localhost:8080/content/2-regulamin-sklepu', 'localhost:8080/content/6-zwroty', '', '2024-11-25 23:42:27'),
+(133, 14, 'http://localhost:8080/content/6-zwroty', 'localhost:8080/content/2-regulamin-sklepu', '', '2024-11-25 23:42:30'),
+(134, 14, 'http://localhost:8080/content/2-regulamin-sklepu', 'localhost:8080/content/6-zwroty', '', '2024-11-25 23:42:32'),
+(135, 14, 'http://localhost:8080/content/6-zwroty', 'localhost:8080/content/5-formy-platnosci', '', '2024-11-25 23:42:46'),
+(136, 14, 'http://localhost:8080/content/6-zwroty', 'localhost:8080/content/5-formy-platnosci', '', '2024-11-25 23:43:17'),
+(137, 14, 'http://localhost:8080/content/5-formy-platnosci', 'localhost:8080/content/1-czas-i-koszty-dostawy', '', '2024-11-25 23:43:41'),
+(138, 14, 'http://localhost:8080/content/5-formy-platnosci', 'localhost:8080/content/1-czas-i-koszty-dostawy', '', '2024-11-25 23:44:06');
 
 -- --------------------------------------------------------
 
@@ -4943,7 +5194,22 @@ CREATE TABLE `ps_employee` (
 --
 
 INSERT INTO `ps_employee` (`id_employee`, `id_profile`, `id_lang`, `lastname`, `firstname`, `email`, `passwd`, `last_passwd_gen`, `stats_date_from`, `stats_date_to`, `stats_compare_from`, `stats_compare_to`, `stats_compare_option`, `preselect_date_range`, `bo_color`, `bo_theme`, `bo_css`, `default_tab`, `bo_width`, `bo_menu`, `active`, `optin`, `id_last_order`, `id_last_customer_message`, `id_last_customer`, `last_connection_date`, `reset_password_token`, `reset_password_validity`, `has_enabled_gravatar`) VALUES
-(1, 1, 1, 'Dziekański', 'Dziekan', 'presta@presta.com', '$2y$10$9FA73SQpoOomFYCEzKZyqeoPI6NjpIZN4Plhyx4FD0kt4QgNp8AXa', '2024-11-22 12:37:45', '2024-10-22', '2024-11-22', '0000-00-00', '0000-00-00', 1, NULL, NULL, 'default', 'theme.css', 1, 0, 1, 1, NULL, 5, 0, 2, '2024-11-24', NULL, '0000-00-00 00:00:00', 0);
+(1, 1, 1, 'Dziekański', 'Dziekan', 'presta@presta.com', '$2y$10$9FA73SQpoOomFYCEzKZyqeoPI6NjpIZN4Plhyx4FD0kt4QgNp8AXa', '2024-11-22 12:37:45', '2024-10-22', '2024-11-22', '0000-00-00', '0000-00-00', 1, NULL, NULL, 'default', 'theme.css', 1, 0, 1, 1, NULL, 5, 0, 2, '2024-11-25', NULL, '0000-00-00 00:00:00', 0);
+
+-- --------------------------------------------------------
+
+--
+-- Struktura tabeli dla tabeli `ps_employee_account`
+--
+
+CREATE TABLE `ps_employee_account` (
+  `id_employee_account` int(11) NOT NULL,
+  `id_employee` int(11) NOT NULL,
+  `email` varchar(64) NOT NULL,
+  `uid` varchar(64) NOT NULL,
+  `date_add` datetime NOT NULL,
+  `date_upd` datetime NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 -- --------------------------------------------------------
 
@@ -4982,6 +5248,70 @@ CREATE TABLE `ps_employee_shop` (
 
 INSERT INTO `ps_employee_shop` (`id_employee`, `id_shop`) VALUES
 (1, 1);
+
+-- --------------------------------------------------------
+
+--
+-- Struktura tabeli dla tabeli `ps_eventbus_deleted_objects`
+--
+
+CREATE TABLE `ps_eventbus_deleted_objects` (
+  `type` varchar(50) NOT NULL,
+  `id_object` int(10) UNSIGNED NOT NULL,
+  `id_shop` int(10) UNSIGNED NOT NULL,
+  `created_at` datetime NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb3 COLLATE=utf8mb3_uca1400_ai_ci;
+
+-- --------------------------------------------------------
+
+--
+-- Struktura tabeli dla tabeli `ps_eventbus_incremental_sync`
+--
+
+CREATE TABLE `ps_eventbus_incremental_sync` (
+  `type` varchar(50) NOT NULL,
+  `id_object` int(10) UNSIGNED NOT NULL,
+  `id_shop` int(10) UNSIGNED NOT NULL,
+  `lang_iso` varchar(3) NOT NULL,
+  `created_at` datetime NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb3 COLLATE=utf8mb3_uca1400_ai_ci;
+
+-- --------------------------------------------------------
+
+--
+-- Struktura tabeli dla tabeli `ps_eventbus_job`
+--
+
+CREATE TABLE `ps_eventbus_job` (
+  `job_id` varchar(200) NOT NULL,
+  `created_at` datetime NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb3 COLLATE=utf8mb3_uca1400_ai_ci;
+
+-- --------------------------------------------------------
+
+--
+-- Struktura tabeli dla tabeli `ps_eventbus_live_sync`
+--
+
+CREATE TABLE `ps_eventbus_live_sync` (
+  `shop_content` varchar(50) NOT NULL,
+  `last_change_at` datetime NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb3 COLLATE=utf8mb3_uca1400_ai_ci;
+
+-- --------------------------------------------------------
+
+--
+-- Struktura tabeli dla tabeli `ps_eventbus_type_sync`
+--
+
+CREATE TABLE `ps_eventbus_type_sync` (
+  `type` varchar(50) NOT NULL,
+  `offset` int(10) UNSIGNED NOT NULL DEFAULT 0,
+  `id_shop` int(10) UNSIGNED NOT NULL,
+  `lang_iso` varchar(3) DEFAULT NULL,
+  `full_sync_finished` tinyint(1) NOT NULL DEFAULT 0,
+  `last_sync_date` datetime NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb3 COLLATE=utf8mb3_uca1400_ai_ci;
 
 -- --------------------------------------------------------
 
@@ -5338,7 +5668,14 @@ INSERT INTO `ps_guest` (`id_guest`, `id_operating_system`, `id_web_browser`, `id
 (1, 0, 0, 2, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, '', 0),
 (2, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, '', 0),
 (3, 8, 3, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'pl', 0),
-(4, 8, 3, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'pl', 0);
+(4, 8, 3, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'pl', 0),
+(5, 8, 3, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'pl', 0),
+(6, 8, 3, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'pl', 0),
+(7, 8, 3, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'pl', 0),
+(8, 8, 3, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'pl', 0),
+(9, 8, 3, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'pl', 0),
+(10, 8, 3, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'pl', 0),
+(11, 8, 3, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'pl', 0);
 
 -- --------------------------------------------------------
 
@@ -6177,7 +6514,63 @@ INSERT INTO `ps_hook` (`id_hook`, `name`, `title`, `description`, `active`, `pos
 (750, 'actionFacebookCallPixel', 'actionFacebookCallPixel', '', 1, 1),
 (751, 'displayFooterAfter', 'displayFooterAfter', '', 1, 1),
 (752, 'displayReassurance', 'displayReassurance', '', 1, 1),
-(753, 'displayCrossSellingShoppingCart', '', '', 1, 1);
+(753, 'displayCrossSellingShoppingCart', '', '', 1, 1),
+(754, 'displayAccountUpdateWarning', 'Display account update warning', 'Show a warning message when the user wants to update his shop configuration', 1, 1),
+(755, 'actionShopAccountLinkAfter', 'Shop linked event', 'Shop linked with PrestaShop Account', 1, 1),
+(756, 'actionShopAccountUnlinkAfter', 'Shop unlinked event', 'Shop unlinked with PrestaShop Account', 1, 1),
+(757, 'actionShopAccessTokenRefreshAfter', 'Shop access token refreshed event', 'Shop access token refreshed event', 1, 1),
+(758, 'actionObjectEmployeeDeleteAfter', 'actionObjectEmployeeDeleteAfter', '', 1, 1),
+(759, 'actionObjectShopDeleteBefore', 'actionObjectShopDeleteBefore', '', 1, 1),
+(760, 'actionObjectShopUpdateAfter', 'actionObjectShopUpdateAfter', '', 1, 1),
+(761, 'displayBackOfficeEmployeeMenu', 'displayBackOfficeEmployeeMenu', '', 1, 1),
+(762, 'actionObjectCarrierAddAfter', 'actionObjectCarrierAddAfter', '', 1, 1),
+(763, 'actionObjectCarrierDeleteAfter', 'actionObjectCarrierDeleteAfter', '', 1, 1),
+(764, 'actionObjectCarrierUpdateAfter', 'actionObjectCarrierUpdateAfter', '', 1, 1),
+(765, 'actionObjectCartAddAfter', 'actionObjectCartAddAfter', '', 1, 1),
+(766, 'actionObjectCartUpdateAfter', 'actionObjectCartUpdateAfter', '', 1, 1),
+(767, 'actionObjectCartRuleAddAfter', 'actionObjectCartRuleAddAfter', '', 1, 1),
+(768, 'actionObjectCartRuleDeleteAfter', 'actionObjectCartRuleDeleteAfter', '', 1, 1),
+(769, 'actionObjectCartRuleUpdateAfter', 'actionObjectCartRuleUpdateAfter', '', 1, 1),
+(770, 'actionObjectCombinationDeleteAfter', 'actionObjectCombinationDeleteAfter', '', 1, 1),
+(771, 'actionObjectCountryAddAfter', 'actionObjectCountryAddAfter', '', 1, 1),
+(772, 'actionObjectCountryDeleteAfter', 'actionObjectCountryDeleteAfter', '', 1, 1),
+(773, 'actionObjectCountryUpdateAfter', 'actionObjectCountryUpdateAfter', '', 1, 1),
+(774, 'actionObjectCurrencyAddAfter', 'actionObjectCurrencyAddAfter', '', 1, 1),
+(775, 'actionObjectCurrencyUpdateAfter', 'actionObjectCurrencyUpdateAfter', '', 1, 1),
+(776, 'actionObjectCustomerAddAfter', 'actionObjectCustomerAddAfter', '', 1, 1),
+(777, 'actionObjectCustomerDeleteAfter', 'actionObjectCustomerDeleteAfter', '', 1, 1),
+(778, 'actionObjectCustomerUpdateAfter', 'actionObjectCustomerUpdateAfter', '', 1, 1),
+(779, 'actionObjectImageAddAfter', 'actionObjectImageAddAfter', '', 1, 1),
+(780, 'actionObjectImageDeleteAfter', 'actionObjectImageDeleteAfter', '', 1, 1),
+(781, 'actionObjectImageUpdateAfter', 'actionObjectImageUpdateAfter', '', 1, 1),
+(782, 'actionObjectLanguageDeleteAfter', 'actionObjectLanguageDeleteAfter', '', 1, 1),
+(783, 'actionObjectLanguageUpdateAfter', 'actionObjectLanguageUpdateAfter', '', 1, 1),
+(784, 'actionObjectOrderAddAfter', 'actionObjectOrderAddAfter', '', 1, 1),
+(785, 'actionObjectOrderUpdateAfter', 'actionObjectOrderUpdateAfter', '', 1, 1),
+(786, 'actionObjectSpecificPriceAddAfter', 'actionObjectSpecificPriceAddAfter', '', 1, 1),
+(787, 'actionObjectSpecificPriceDeleteAfter', 'actionObjectSpecificPriceDeleteAfter', '', 1, 1),
+(788, 'actionObjectSpecificPriceUpdateAfter', 'actionObjectSpecificPriceUpdateAfter', '', 1, 1),
+(789, 'actionObjectStateAddAfter', 'actionObjectStateAddAfter', '', 1, 1),
+(790, 'actionObjectStateDeleteAfter', 'actionObjectStateDeleteAfter', '', 1, 1),
+(791, 'actionObjectStateUpdateAfter', 'actionObjectStateUpdateAfter', '', 1, 1),
+(792, 'actionObjectStockAddAfter', 'actionObjectStockAddAfter', '', 1, 1),
+(793, 'actionObjectStockUpdateAfter', 'actionObjectStockUpdateAfter', '', 1, 1),
+(794, 'actionObjectStoreAddAfter', 'actionObjectStoreAddAfter', '', 1, 1),
+(795, 'actionObjectStoreDeleteAfter', 'actionObjectStoreDeleteAfter', '', 1, 1),
+(796, 'actionObjectStoreUpdateAfter', 'actionObjectStoreUpdateAfter', '', 1, 1),
+(797, 'actionObjectTaxAddAfter', 'actionObjectTaxAddAfter', '', 1, 1),
+(798, 'actionObjectTaxDeleteAfter', 'actionObjectTaxDeleteAfter', '', 1, 1),
+(799, 'actionObjectTaxRulesGroupAddAfter', 'actionObjectTaxRulesGroupAddAfter', '', 1, 1),
+(800, 'actionObjectTaxRulesGroupDeleteAfter', 'actionObjectTaxRulesGroupDeleteAfter', '', 1, 1),
+(801, 'actionObjectTaxRulesGroupUpdateAfter', 'actionObjectTaxRulesGroupUpdateAfter', '', 1, 1),
+(802, 'actionObjectTaxUpdateAfter', 'actionObjectTaxUpdateAfter', '', 1, 1),
+(803, 'actionObjectWishlistAddAfter', 'actionObjectWishlistAddAfter', '', 1, 1),
+(804, 'actionObjectWishlistDeleteAfter', 'actionObjectWishlistDeleteAfter', '', 1, 1),
+(805, 'actionObjectWishlistUpdateAfter', 'actionObjectWishlistUpdateAfter', '', 1, 1),
+(806, 'actionObjectZoneAddAfter', 'actionObjectZoneAddAfter', '', 1, 1),
+(807, 'actionObjectZoneDeleteAfter', 'actionObjectZoneDeleteAfter', '', 1, 1),
+(808, 'actionObjectZoneUpdateAfter', 'actionObjectZoneUpdateAfter', '', 1, 1),
+(809, 'actionObjectEmployeeAddAfter', 'actionObjectEmployeeAddAfter', '', 1, 1);
 
 -- --------------------------------------------------------
 
@@ -6429,6 +6822,64 @@ INSERT INTO `ps_hook_module` (`id_module`, `id_shop`, `id_hook`, `position`) VAL
 (62, 1, 713, 1),
 (62, 1, 714, 1),
 (62, 1, 715, 1),
+(63, 1, 115, 1),
+(63, 1, 171, 1),
+(63, 1, 754, 1),
+(63, 1, 755, 1),
+(63, 1, 756, 1),
+(63, 1, 758, 1),
+(63, 1, 759, 1),
+(63, 1, 760, 1),
+(63, 1, 761, 1),
+(64, 1, 316, 1),
+(64, 1, 762, 1),
+(64, 1, 763, 1),
+(64, 1, 764, 1),
+(64, 1, 765, 1),
+(64, 1, 766, 1),
+(64, 1, 767, 1),
+(64, 1, 768, 1),
+(64, 1, 769, 1),
+(64, 1, 770, 1),
+(64, 1, 771, 1),
+(64, 1, 772, 1),
+(64, 1, 773, 1),
+(64, 1, 774, 1),
+(64, 1, 775, 1),
+(64, 1, 776, 1),
+(64, 1, 777, 1),
+(64, 1, 778, 1),
+(64, 1, 779, 1),
+(64, 1, 780, 1),
+(64, 1, 781, 1),
+(64, 1, 782, 1),
+(64, 1, 783, 1),
+(64, 1, 784, 1),
+(64, 1, 785, 1),
+(64, 1, 786, 1),
+(64, 1, 787, 1),
+(64, 1, 788, 1),
+(64, 1, 789, 1),
+(64, 1, 790, 1),
+(64, 1, 791, 1),
+(64, 1, 792, 1),
+(64, 1, 793, 1),
+(64, 1, 794, 1),
+(64, 1, 795, 1),
+(64, 1, 796, 1),
+(64, 1, 797, 1),
+(64, 1, 798, 1),
+(64, 1, 799, 1),
+(64, 1, 800, 1),
+(64, 1, 801, 1),
+(64, 1, 802, 1),
+(64, 1, 803, 1),
+(64, 1, 804, 1),
+(64, 1, 805, 1),
+(64, 1, 806, 1),
+(64, 1, 807, 1),
+(64, 1, 808, 1),
+(64, 1, 809, 1),
 (3, 1, 682, 2),
 (4, 1, 688, 2),
 (5, 1, 689, 2),
@@ -6458,6 +6909,26 @@ INSERT INTO `ps_hook_module` (`id_module`, `id_shop`, `id_hook`, `position`) VAL
 (59, 1, 735, 2),
 (60, 1, 746, 2),
 (62, 1, 14, 2),
+(63, 1, 140, 2),
+(63, 1, 740, 2),
+(63, 1, 742, 2),
+(63, 1, 743, 2),
+(64, 1, 144, 2),
+(64, 1, 696, 2),
+(64, 1, 718, 2),
+(64, 1, 719, 2),
+(64, 1, 720, 2),
+(64, 1, 724, 2),
+(64, 1, 725, 2),
+(64, 1, 726, 2),
+(64, 1, 727, 2),
+(64, 1, 728, 2),
+(64, 1, 729, 2),
+(64, 1, 730, 2),
+(64, 1, 731, 2),
+(64, 1, 732, 2),
+(64, 1, 739, 2),
+(64, 1, 758, 2),
 (4, 1, 682, 3),
 (5, 1, 688, 3),
 (6, 1, 689, 3),
@@ -6491,6 +6962,7 @@ INSERT INTO `ps_hook_module` (`id_module`, `id_shop`, `id_hook`, `position`) VAL
 (39, 1, 55, 5),
 (59, 1, 16, 5),
 (59, 1, 683, 5),
+(63, 1, 71, 5),
 (40, 1, 55, 6),
 (54, 1, 682, 6),
 (60, 1, 16, 6),
@@ -7266,8 +7738,12 @@ CREATE TABLE `ps_link_block` (
 --
 
 INSERT INTO `ps_link_block` (`id_link_block`, `id_hook`, `position`, `content`) VALUES
-(1, 41, 0, '{\"cms\":[false],\"product\":[\"prices-drop\",\"new-products\",\"best-sales\"],\"static\":[false],\"category\":[false]}'),
-(2, 41, 1, '{\"cms\":[\"1\",\"2\",\"3\",\"4\",\"5\"],\"product\":[false],\"static\":[\"contact\",\"sitemap\",\"stores\"],\"category\":[false]}');
+(1, 41, 0, '{\"cms\":[\"3\",\"6\"],\"static\":[false],\"product\":[false],\"category\":[false]}'),
+(2, 41, 1, '{\"cms\":[false],\"static\":[false],\"product\":[false],\"category\":[false]}'),
+(3, 41, 0, '{\"cms\":{\"1\":\"5\",\"2\":\"1\"},\"static\":[false],\"product\":[false],\"category\":[false]}'),
+(4, 41, 0, '{\"cms\":[\"7\",\"8\",\"2\",\"9\",\"10\"],\"static\":[false],\"product\":[false],\"category\":[false]}'),
+(5, 41, 0, '{\"cms\":[\"11\"],\"static\":[false],\"product\":[\"prices-drop\"],\"category\":[\"3\",\"8\"]}'),
+(6, 41, 0, '{\"cms\":[\"12\",\"13\",\"4\",\"14\"],\"static\":[false],\"product\":[false],\"category\":[false]}');
 
 -- --------------------------------------------------------
 
@@ -7287,8 +7763,12 @@ CREATE TABLE `ps_link_block_lang` (
 --
 
 INSERT INTO `ps_link_block_lang` (`id_link_block`, `id_lang`, `name`, `custom_content`) VALUES
-(1, 1, 'Produkty', NULL),
-(2, 1, 'Nasza firma', NULL);
+(1, 1, 'Pomoc', NULL),
+(2, 1, 'Moje konto', '[{\"title\":\"Twoje zam\\u00f3wienia\",\"url\":\"http:\\/\\/localhost:8080\\/historia-zamowien\"},{\"title\":\"Ustawienia konta\",\"url\":\"http:\\/\\/localhost:8080\\/moje-konto\"}]'),
+(3, 1, 'Płatność i dostawa', NULL),
+(4, 1, 'Informacje', NULL),
+(5, 1, 'Kategorie', '[{\"title\":\"Nowo\\u015bci\",\"url\":\"http:\\/\\/localhost:8080\\/nowe-produkty\"}]'),
+(6, 1, 'O nas', '[{\"title\":\"Formularz kontaktowy\",\"url\":\"http:\\/\\/localhost:8080\\/kontakt\"}]');
 
 -- --------------------------------------------------------
 
@@ -7308,7 +7788,11 @@ CREATE TABLE `ps_link_block_shop` (
 
 INSERT INTO `ps_link_block_shop` (`id_link_block`, `id_shop`, `position`) VALUES
 (1, 1, 0),
-(2, 1, 1);
+(2, 1, 1),
+(3, 1, 2),
+(4, 1, 3),
+(5, 1, 4),
+(6, 1, 5);
 
 -- --------------------------------------------------------
 
@@ -7566,7 +8050,19 @@ INSERT INTO `ps_log` (`id_log`, `severity`, `error_code`, `message`, `object_typ
 (227, 1, 0, 'Protect vendor folder in module ps_facetedsearch', '', 0, 1, NULL, 1, 0, 1, '2024-11-22 18:39:07', '2024-11-22 18:39:07'),
 (228, 1, 0, 'Module ps_facetedsearch has no vendor folder', '', 0, 1, NULL, 1, 0, 1, '2024-11-22 18:39:07', '2024-11-22 18:39:07'),
 (229, 1, 0, 'Połączenie z panelem administracyjnym z 172.18.0.1', '', 0, NULL, NULL, 1, 1, 1, '2024-11-22 18:39:39', '2024-11-22 18:39:39'),
-(230, 1, 0, 'Połączenie z panelem administracyjnym z 172.18.0.1', '', 0, NULL, NULL, 1, 1, 1, '2024-11-24 11:52:51', '2024-11-24 11:52:51');
+(230, 1, 0, 'Połączenie z panelem administracyjnym z 172.18.0.1', '', 0, NULL, NULL, 1, 1, 1, '2024-11-24 11:52:51', '2024-11-24 11:52:51'),
+(231, 1, 0, 'Protect vendor folder in module ps_customeraccountlinks', '', 0, 1, NULL, 1, 0, 1, '2024-11-25 16:40:28', '2024-11-25 16:40:28'),
+(232, 1, 0, 'Module ps_customeraccountlinks has no vendor folder', '', 0, 1, NULL, 1, 0, 1, '2024-11-25 16:40:28', '2024-11-25 16:40:28'),
+(233, 1, 0, 'Protect vendor folder in module ps_contactinfo', '', 0, 1, NULL, 1, 0, 1, '2024-11-25 16:46:13', '2024-11-25 16:46:13'),
+(234, 1, 0, 'Module ps_contactinfo has no vendor folder', '', 0, 1, NULL, 1, 0, 1, '2024-11-25 16:46:13', '2024-11-25 16:46:13'),
+(235, 1, 0, 'Protect vendor folder in module ps_customeraccountlinks', '', 0, 1, NULL, 1, 0, 1, '2024-11-25 16:46:21', '2024-11-25 16:46:21'),
+(236, 1, 0, 'Module ps_customeraccountlinks has no vendor folder', '', 0, 1, NULL, 1, 0, 1, '2024-11-25 16:46:21', '2024-11-25 16:46:21'),
+(237, 3, 0, 'No result was found for query although at least one row was expected.', '', 0, 1, NULL, 1, 0, 1, '2024-11-25 18:05:41', '2024-11-25 18:05:41'),
+(238, 3, 0, 'No result was found for query although at least one row was expected.', '', 0, 1, NULL, 1, 0, 1, '2024-11-25 18:05:52', '2024-11-25 18:05:52'),
+(239, 3, 0, 'No result was found for query although at least one row was expected.', '', 0, 1, NULL, 1, 0, 1, '2024-11-25 18:06:05', '2024-11-25 18:06:05'),
+(240, 3, 0, 'No result was found for query although at least one row was expected.', '', 0, 1, NULL, 1, 0, 1, '2024-11-25 18:06:17', '2024-11-25 18:06:17'),
+(241, 1, 0, 'Protect vendor folder in module ps_accounts', '', 0, 1, NULL, 1, 0, 1, '2024-11-25 18:17:15', '2024-11-25 18:17:15'),
+(242, 1, 0, 'Protect vendor folder in module ps_eventbus', '', 0, 1, NULL, 1, 0, 1, '2024-11-25 22:44:36', '2024-11-25 22:44:36');
 
 -- --------------------------------------------------------
 
@@ -7880,7 +8376,9 @@ INSERT INTO `ps_module` (`id_module`, `name`, `active`, `version`) VALUES
 (59, 'ps_facebook', 1, '1.38.2'),
 (60, 'psxmarketingwithgoogle', 1, '1.74.10'),
 (61, 'blockreassurance', 1, '5.1.4'),
-(62, 'ps_facetedsearch', 1, '3.14.1');
+(62, 'ps_facetedsearch', 1, '3.14.1'),
+(63, 'ps_accounts', 1, '7.0.8'),
+(64, 'ps_eventbus', 1, '3.2.1');
 
 -- --------------------------------------------------------
 
@@ -8141,7 +8639,15 @@ INSERT INTO `ps_module_access` (`id_profile`, `id_authorization_role`) VALUES
 (1, 837),
 (1, 838),
 (1, 839),
-(1, 840);
+(1, 840),
+(1, 857),
+(1, 858),
+(1, 859),
+(1, 860),
+(1, 865),
+(1, 866),
+(1, 867),
+(1, 868);
 
 -- --------------------------------------------------------
 
@@ -8613,7 +9119,13 @@ INSERT INTO `ps_module_group` (`id_module`, `id_shop`, `id_group`) VALUES
 (61, 1, 3),
 (62, 1, 1),
 (62, 1, 2),
-(62, 1, 3);
+(62, 1, 3),
+(63, 1, 1),
+(63, 1, 2),
+(63, 1, 3),
+(64, 1, 1),
+(64, 1, 2),
+(64, 1, 3);
 
 -- --------------------------------------------------------
 
@@ -8628,6 +9140,17 @@ CREATE TABLE `ps_module_history` (
   `date_add` datetime NOT NULL,
   `date_upd` datetime NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+--
+-- Dumping data for table `ps_module_history`
+--
+
+INSERT INTO `ps_module_history` (`id`, `id_employee`, `id_module`, `date_add`, `date_upd`) VALUES
+(1, 1, 2, '2024-11-25 16:37:37', '2024-11-25 16:39:37'),
+(2, 1, 28, '2024-11-25 16:38:15', '2024-11-25 18:20:51'),
+(3, 1, 15, '2024-11-25 16:39:46', '2024-11-25 18:20:15'),
+(4, 1, 20, '2024-11-25 16:40:51', '2024-11-25 23:13:20'),
+(5, 1, 12, '2024-11-25 16:42:39', '2024-11-25 23:44:58');
 
 -- --------------------------------------------------------
 
@@ -8674,12 +9197,9 @@ INSERT INTO `ps_module_shop` (`id_module`, `id_shop`, `enable_device`) VALUES
 (12, 1, 3),
 (13, 1, 7),
 (14, 1, 7),
-(15, 1, 7),
 (16, 1, 7),
 (17, 1, 7),
-(18, 1, 7),
 (19, 1, 7),
-(20, 1, 7),
 (21, 1, 7),
 (22, 1, 7),
 (24, 1, 7),
@@ -8720,7 +9240,9 @@ INSERT INTO `ps_module_shop` (`id_module`, `id_shop`, `enable_device`) VALUES
 (59, 1, 7),
 (60, 1, 7),
 (61, 1, 7),
-(62, 1, 7);
+(62, 1, 7),
+(63, 1, 7),
+(64, 1, 7);
 
 -- --------------------------------------------------------
 
@@ -9321,7 +9843,11 @@ CREATE TABLE `ps_page` (
 --
 
 INSERT INTO `ps_page` (`id_page`, `id_page_type`, `id_object`) VALUES
-(1, 1, NULL);
+(1, 1, NULL),
+(2, 2, NULL),
+(3, 3, NULL),
+(4, 4, NULL),
+(5, 5, NULL);
 
 -- --------------------------------------------------------
 
@@ -9354,7 +9880,11 @@ CREATE TABLE `ps_page_type` (
 --
 
 INSERT INTO `ps_page_type` (`id_page_type`, `name`) VALUES
-(1, 'index');
+(2, 'authentication'),
+(4, 'cms'),
+(3, 'contact'),
+(1, 'index'),
+(5, 'pagenotfound');
 
 -- --------------------------------------------------------
 
@@ -12780,7 +13310,12 @@ INSERT INTO `ps_tab` (`id_tab`, `id_parent`, `position`, `module`, `class_name`,
 (148, -1, 11, 'ps_facebook', 'AdminAjaxPsfacebook', '', 1, 1, 0, '', NULL, NULL),
 (149, 146, 2, 'psxmarketingwithgoogle', 'AdminPsxMktgWithGoogleModule', '', 1, 1, 0, '', NULL, NULL),
 (150, -1, 12, 'psxmarketingwithgoogle', 'AdminAjaxPsxMktgWithGoogle', '', 1, 1, 0, '', NULL, NULL),
-(151, 0, 6, 'blockreassurance', 'AdminBlockListing', '', 0, 1, 0, '', NULL, NULL);
+(151, 0, 6, 'blockreassurance', 'AdminBlockListing', '', 0, 1, 0, '', NULL, NULL),
+(152, 0, 7, 'ps_accounts', 'AdminAjaxPsAccounts', '', 0, 1, 0, '', NULL, NULL),
+(153, 0, 8, 'ps_accounts', 'AdminDebugPsAccounts', '', 0, 1, 0, '', NULL, NULL),
+(154, 0, 9, 'ps_accounts', 'AdminOAuth2PsAccounts', '', 0, 1, 0, '', NULL, NULL),
+(155, 0, 10, 'ps_accounts', 'AdminLoginPsAccounts', '', 0, 1, 0, '', NULL, NULL),
+(156, 0, 11, 'ps_accounts', 'AdminLogin', '', 0, 1, 0, '', NULL, NULL);
 
 -- --------------------------------------------------------
 
@@ -12945,7 +13480,12 @@ INSERT INTO `ps_tab_lang` (`id_tab`, `id_lang`, `name`) VALUES
 (148, 1, 'ps_facebook'),
 (149, 1, 'Google'),
 (150, 1, 'psxmarketingwithgoogle'),
-(151, 1, 'AdminBlockListing');
+(151, 1, 'AdminBlockListing'),
+(152, 1, 'AdminAjaxPsAccounts (Konto PrestaShop)'),
+(153, 1, 'AdminDebugPsAccounts (Konto PrestaShop)'),
+(154, 1, 'AdminOAuth2PsAccounts (Konto PrestaShop)'),
+(155, 1, 'AdminLoginPsAccounts (Konto PrestaShop)'),
+(156, 1, 'AdminLogin');
 
 -- --------------------------------------------------------
 
@@ -13887,6 +14427,16 @@ CREATE TABLE `ps_translation` (
   `theme` varchar(32) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
+--
+-- Dumping data for table `ps_translation`
+--
+
+INSERT INTO `ps_translation` (`id_translation`, `id_lang`, `key`, `translation`, `domain`, `theme`) VALUES
+(1, 1, 'Wpisz adres e-mail', 'Wpisz adres e-mail', 'ShopFormsLabels', 'child_classic'),
+(2, 1, '', ' ', 'ShopThemeActions', 'child_classic'),
+(3, 1, 'Odbierz 5% na pierwsze zakupy. Zapisując się do newslettera otrzymasz informacje o aktualnych promocjach i nowościach, a także ciekawostki ze świata Harrego Pottera.', 'Odbierz 5% na pierwsze zakupy. Zapisując się do newslettera otrzymasz informacje o aktualnych promocjach i nowościach, a także ciekawostki ze świata Harrego Pottera.', 'ShopThemeGlobal', 'child_classic'),
+(4, 1, 'Sklep internetowy Shoper.pl', 'Sklep internetowy Shoper.pl', 'messages', 'child_classic');
+
 -- --------------------------------------------------------
 
 --
@@ -14690,6 +15240,12 @@ ALTER TABLE `ps_employee`
   ADD KEY `id_profile` (`id_profile`);
 
 --
+-- Indeksy dla tabeli `ps_employee_account`
+--
+ALTER TABLE `ps_employee_account`
+  ADD PRIMARY KEY (`id_employee_account`);
+
+--
 -- Indeksy dla tabeli `ps_employee_session`
 --
 ALTER TABLE `ps_employee_session`
@@ -14701,6 +15257,24 @@ ALTER TABLE `ps_employee_session`
 ALTER TABLE `ps_employee_shop`
   ADD PRIMARY KEY (`id_employee`,`id_shop`),
   ADD KEY `id_shop` (`id_shop`);
+
+--
+-- Indeksy dla tabeli `ps_eventbus_deleted_objects`
+--
+ALTER TABLE `ps_eventbus_deleted_objects`
+  ADD PRIMARY KEY (`type`,`id_object`,`id_shop`);
+
+--
+-- Indeksy dla tabeli `ps_eventbus_incremental_sync`
+--
+ALTER TABLE `ps_eventbus_incremental_sync`
+  ADD PRIMARY KEY (`type`,`id_object`,`id_shop`,`lang_iso`);
+
+--
+-- Indeksy dla tabeli `ps_eventbus_live_sync`
+--
+ALTER TABLE `ps_eventbus_live_sync`
+  ADD PRIMARY KEY (`shop_content`);
 
 --
 -- Indeksy dla tabeli `ps_fb_category_match`
@@ -16087,7 +16661,7 @@ ALTER TABLE `ps_address`
 -- AUTO_INCREMENT for table `ps_admin_filter`
 --
 ALTER TABLE `ps_admin_filter`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 
 --
 -- AUTO_INCREMENT for table `ps_alias`
@@ -16129,7 +16703,7 @@ ALTER TABLE `ps_attribute_impact`
 -- AUTO_INCREMENT for table `ps_authorization_role`
 --
 ALTER TABLE `ps_authorization_role`
-  MODIFY `id_authorization_role` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=841;
+  MODIFY `id_authorization_role` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=869;
 
 --
 -- AUTO_INCREMENT for table `ps_blockwishlist_statistics`
@@ -16177,7 +16751,7 @@ ALTER TABLE `ps_category`
 -- AUTO_INCREMENT for table `ps_cms`
 --
 ALTER TABLE `ps_cms`
-  MODIFY `id_cms` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+  MODIFY `id_cms` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=15;
 
 --
 -- AUTO_INCREMENT for table `ps_cms_category`
@@ -16201,7 +16775,7 @@ ALTER TABLE `ps_cms_role`
 -- AUTO_INCREMENT for table `ps_configuration`
 --
 ALTER TABLE `ps_configuration`
-  MODIFY `id_configuration` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=431;
+  MODIFY `id_configuration` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=444;
 
 --
 -- AUTO_INCREMENT for table `ps_configuration_kpi`
@@ -16213,13 +16787,13 @@ ALTER TABLE `ps_configuration_kpi`
 -- AUTO_INCREMENT for table `ps_connections`
 --
 ALTER TABLE `ps_connections`
-  MODIFY `id_connections` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+  MODIFY `id_connections` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=21;
 
 --
 -- AUTO_INCREMENT for table `ps_connections_source`
 --
 ALTER TABLE `ps_connections_source`
-  MODIFY `id_connections_source` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id_connections_source` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=139;
 
 --
 -- AUTO_INCREMENT for table `ps_contact`
@@ -16300,6 +16874,12 @@ ALTER TABLE `ps_employee`
   MODIFY `id_employee` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
+-- AUTO_INCREMENT for table `ps_employee_account`
+--
+ALTER TABLE `ps_employee_account`
+  MODIFY `id_employee_account` int(11) NOT NULL AUTO_INCREMENT;
+
+--
 -- AUTO_INCREMENT for table `ps_employee_session`
 --
 ALTER TABLE `ps_employee_session`
@@ -16345,7 +16925,7 @@ ALTER TABLE `ps_group_reduction`
 -- AUTO_INCREMENT for table `ps_guest`
 --
 ALTER TABLE `ps_guest`
-  MODIFY `id_guest` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+  MODIFY `id_guest` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
 
 --
 -- AUTO_INCREMENT for table `ps_homeslider`
@@ -16363,7 +16943,7 @@ ALTER TABLE `ps_homeslider_slides`
 -- AUTO_INCREMENT for table `ps_hook`
 --
 ALTER TABLE `ps_hook`
-  MODIFY `id_hook` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=754;
+  MODIFY `id_hook` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=810;
 
 --
 -- AUTO_INCREMENT for table `ps_hook_alias`
@@ -16429,19 +17009,19 @@ ALTER TABLE `ps_linksmenutop`
 -- AUTO_INCREMENT for table `ps_link_block`
 --
 ALTER TABLE `ps_link_block`
-  MODIFY `id_link_block` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `id_link_block` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
 
 --
 -- AUTO_INCREMENT for table `ps_link_block_shop`
 --
 ALTER TABLE `ps_link_block_shop`
-  MODIFY `id_link_block` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `id_link_block` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
 
 --
 -- AUTO_INCREMENT for table `ps_log`
 --
 ALTER TABLE `ps_log`
-  MODIFY `id_log` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=231;
+  MODIFY `id_log` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=243;
 
 --
 -- AUTO_INCREMENT for table `ps_mail`
@@ -16477,13 +17057,13 @@ ALTER TABLE `ps_meta`
 -- AUTO_INCREMENT for table `ps_module`
 --
 ALTER TABLE `ps_module`
-  MODIFY `id_module` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=63;
+  MODIFY `id_module` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=65;
 
 --
 -- AUTO_INCREMENT for table `ps_module_history`
 --
 ALTER TABLE `ps_module_history`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 
 --
 -- AUTO_INCREMENT for table `ps_module_preference`
@@ -16573,7 +17153,7 @@ ALTER TABLE `ps_order_state`
 -- AUTO_INCREMENT for table `ps_page`
 --
 ALTER TABLE `ps_page`
-  MODIFY `id_page` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id_page` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 
 --
 -- AUTO_INCREMENT for table `ps_pagenotfound`
@@ -16585,7 +17165,7 @@ ALTER TABLE `ps_pagenotfound`
 -- AUTO_INCREMENT for table `ps_page_type`
 --
 ALTER TABLE `ps_page_type`
-  MODIFY `id_page_type` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id_page_type` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 
 --
 -- AUTO_INCREMENT for table `ps_product`
@@ -16855,7 +17435,7 @@ ALTER TABLE `ps_supply_order_state`
 -- AUTO_INCREMENT for table `ps_tab`
 --
 ALTER TABLE `ps_tab`
-  MODIFY `id_tab` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=152;
+  MODIFY `id_tab` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=157;
 
 --
 -- AUTO_INCREMENT for table `ps_tab_module_preference`
@@ -16897,7 +17477,7 @@ ALTER TABLE `ps_timezone`
 -- AUTO_INCREMENT for table `ps_translation`
 --
 ALTER TABLE `ps_translation`
-  MODIFY `id_translation` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id_translation` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 
 --
 -- AUTO_INCREMENT for table `ps_warehouse`

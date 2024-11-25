@@ -1722,11 +1722,11 @@
             "folder": "file:///home/tomasz/Pulpit/PotterShop",
             "backupPath": "/home/tomasz/Pulpit/PotterShop/~/.vscode-root/Backups/5fc8829d09cf0f19090a8ac55e8c578a",
             "uiState": {
-                "mode": 0,
-                "x": 3,
-                "y": 156,
-                "width": 1024,
-                "height": 768
+                "mode": 1,
+                "x": 0,
+                "y": 32,
+                "width": 960,
+                "height": 1008
             }
         },
         "openedWindows": []
