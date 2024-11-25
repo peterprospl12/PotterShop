@@ -1,0 +1,153 @@
+2024-11-25 20:14:32.571 [info] Using the Electron fetcher.
+2024-11-25 20:14:32.571 [info] Initializing Git extension service.
+2024-11-25 20:14:32.571 [info] Successfully activated the vscode.git extension.
+2024-11-25 20:14:32.571 [info] Enablement state of the vscode.git extension: true.
+2024-11-25 20:14:32.571 [info] Successfully registered Git commit message provider.
+2024-11-25 20:14:32.920 [warning] GitHub login failed
+2024-11-25 20:14:32.927 [error] Error: GitHubLoginFailed
+    at iE._authShowWarnings (/root/.vscode/extensions/github.copilot-chat-0.22.4/dist/extension.js:613:3586)
+    at iE.getCopilotToken (/root/.vscode/extensions/github.copilot-chat-0.22.4/dist/extension.js:613:2135)
+    at jk.getCopilotToken (/root/.vscode/extensions/github.copilot-chat-0.22.4/dist/extension.js:282:37843)
+    at EN.waitForChatEnabled (/root/.vscode/extensions/github.copilot-chat-0.22.4/dist/extension.js:611:3181)
+    at EN.run (/root/.vscode/extensions/github.copilot-chat-0.22.4/dist/extension.js:611:2900)
+    at eE.askToUpgradeAuthPermissions (/root/.vscode/extensions/github.copilot-chat-0.22.4/dist/extension.js:611:2338): Failed to get copilot token
+2024-11-25 20:14:32.927 [error] You are not signed in to GitHub. Please sign in to use Copilot.
+2024-11-25 20:14:32.927 [warning] [LanguageModelAccess] LanguageModel/Embeddings are not available without auth token
+2024-11-25 20:14:32.927 [error] Error: GitHubLoginFailed
+    at iE._authShowWarnings (/root/.vscode/extensions/github.copilot-chat-0.22.4/dist/extension.js:613:3586)
+    at iE.getCopilotToken (/root/.vscode/extensions/github.copilot-chat-0.22.4/dist/extension.js:613:2135)
+    at jk.getCopilotToken (/root/.vscode/extensions/github.copilot-chat-0.22.4/dist/extension.js:282:37843)
+    at fE._getAuthSession (/root/.vscode/extensions/github.copilot-chat-0.22.4/dist/extension.js:628:2597)
+    at t (/root/.vscode/extensions/github.copilot-chat-0.22.4/dist/extension.js:628:631)
+    at fE._registerLanguageModels (/root/.vscode/extensions/github.copilot-chat-0.22.4/dist/extension.js:628:1810)
+    at async Promise.all (index 0)
+    at async Promise.allSettled (index 0)
+    at Ev.waitForActivationBlockers (/root/.vscode/extensions/github.copilot-chat-0.22.4/dist/extension.js:282:25616)
+    at /root/.vscode/extensions/github.copilot-chat-0.22.4/dist/extension.js:1817:4068
+    at qPt (/root/.vscode/extensions/github.copilot-chat-0.22.4/dist/extension.js:1817:3881)
+    at B0.n (file:///usr/share/code/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:114:4447)
+    at B0.m (file:///usr/share/code/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:114:4410)
+    at B0.l (file:///usr/share/code/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:114:3866)
+2024-11-25 20:14:32.927 [warning] [LanguageModelAccess] LanguageModel/Embeddings are not available without auth token
+2024-11-25 20:14:32.927 [error] Error: GitHubLoginFailed
+    at iE._authShowWarnings (/root/.vscode/extensions/github.copilot-chat-0.22.4/dist/extension.js:613:3586)
+    at iE.getCopilotToken (/root/.vscode/extensions/github.copilot-chat-0.22.4/dist/extension.js:613:2135)
+    at jk.getCopilotToken (/root/.vscode/extensions/github.copilot-chat-0.22.4/dist/extension.js:282:37843)
+    at fE._getAuthSession (/root/.vscode/extensions/github.copilot-chat-0.22.4/dist/extension.js:628:2597)
+    at t (/root/.vscode/extensions/github.copilot-chat-0.22.4/dist/extension.js:628:2060)
+    at fE._registerEmbeddings (/root/.vscode/extensions/github.copilot-chat-0.22.4/dist/extension.js:628:2559)
+    at async Promise.all (index 1)
+    at async Promise.allSettled (index 0)
+    at Ev.waitForActivationBlockers (/root/.vscode/extensions/github.copilot-chat-0.22.4/dist/extension.js:282:25616)
+    at /root/.vscode/extensions/github.copilot-chat-0.22.4/dist/extension.js:1817:4068
+    at qPt (/root/.vscode/extensions/github.copilot-chat-0.22.4/dist/extension.js:1817:3881)
+    at B0.n (file:///usr/share/code/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:114:4447)
+    at B0.m (file:///usr/share/code/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:114:4410)
+    at B0.l (file:///usr/share/code/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:114:3866)
+2024-11-25 20:14:32.927 [info] activationBlocker from 'languageModelAccess' took for 290ms
+2024-11-25 20:14:32.939 [warning] GitHub login failed
+2024-11-25 20:14:32.940 [info] copilot token chat_enabled: undefined, sku: 
+2024-11-25 20:14:32.949 [warning] GitHub login failed
+2024-11-25 20:14:32.952 [error] You are not signed in to GitHub. Please sign in to use Copilot.
+2024-11-25 20:14:32.953 [warning] [LanguageModelAccess] LanguageModel/Embeddings are not available without auth token
+2024-11-25 20:14:32.953 [error] Error: GitHubLoginFailed
+    at iE._authShowWarnings (/root/.vscode/extensions/github.copilot-chat-0.22.4/dist/extension.js:613:3586)
+    at iE.getCopilotToken (/root/.vscode/extensions/github.copilot-chat-0.22.4/dist/extension.js:613:2135)
+    at jk.getCopilotToken (/root/.vscode/extensions/github.copilot-chat-0.22.4/dist/extension.js:282:37843)
+    at fE._getAuthSession (/root/.vscode/extensions/github.copilot-chat-0.22.4/dist/extension.js:628:2597)
+    at t (/root/.vscode/extensions/github.copilot-chat-0.22.4/dist/extension.js:628:2060)
+2024-11-25 20:14:32.953 [warning] [LanguageModelAccess] LanguageModel/Embeddings are not available without auth token
+2024-11-25 20:14:32.953 [error] Error: GitHubLoginFailed
+    at iE._authShowWarnings (/root/.vscode/extensions/github.copilot-chat-0.22.4/dist/extension.js:613:3586)
+    at iE.getCopilotToken (/root/.vscode/extensions/github.copilot-chat-0.22.4/dist/extension.js:613:2135)
+    at jk.getCopilotToken (/root/.vscode/extensions/github.copilot-chat-0.22.4/dist/extension.js:282:37843)
+    at fE._getAuthSession (/root/.vscode/extensions/github.copilot-chat-0.22.4/dist/extension.js:628:2597)
+    at t (/root/.vscode/extensions/github.copilot-chat-0.22.4/dist/extension.js:628:631)
+2024-11-25 20:29:38.000 [info] copilot token chat_enabled: undefined, sku: 
+2024-11-25 20:29:38.000 [warning] [LanguageModelAccess] LanguageModel/Embeddings are not available without auth token
+2024-11-25 20:29:38.000 [error] Timed out waiting for authentication provider to register
+2024-11-25 20:29:38.001 [warning] [LanguageModelAccess] LanguageModel/Embeddings are not available without auth token
+2024-11-25 20:29:38.001 [error] Timed out waiting for authentication provider to register
+2024-11-25 20:29:43.006 [error] GitHub Copilot could not connect to server. Extension activation failed: "Timed out waiting for authentication provider to register"
+2024-11-25 20:29:43.006 [warning] [LanguageModelAccess] LanguageModel/Embeddings are not available without auth token
+2024-11-25 20:29:43.024 [error] Timed out waiting for authentication provider to register
+2024-11-25 20:29:43.024 [warning] [LanguageModelAccess] LanguageModel/Embeddings are not available without auth token
+2024-11-25 20:29:43.024 [error] Timed out waiting for authentication provider to register
+2024-11-25 20:44:43.117 [warning] [LanguageModelAccess] LanguageModel/Embeddings are not available without auth token
+2024-11-25 20:44:43.117 [error] Timed out waiting for authentication provider to register
+2024-11-25 20:44:43.117 [warning] [LanguageModelAccess] LanguageModel/Embeddings are not available without auth token
+2024-11-25 20:44:43.119 [error] Timed out waiting for authentication provider to register
+2024-11-25 20:44:43.119 [warning] [LanguageModelAccess] LanguageModel/Embeddings are not available without auth token
+2024-11-25 20:44:43.119 [error] Timed out waiting for authentication provider to register
+2024-11-25 20:59:48.240 [warning] [LanguageModelAccess] LanguageModel/Embeddings are not available without auth token
+2024-11-25 20:59:48.240 [error] Timed out waiting for authentication provider to register
+2024-11-25 20:59:48.240 [warning] [LanguageModelAccess] LanguageModel/Embeddings are not available without auth token
+2024-11-25 20:59:48.240 [error] Timed out waiting for authentication provider to register
+2024-11-25 20:59:48.240 [warning] [LanguageModelAccess] LanguageModel/Embeddings are not available without auth token
+2024-11-25 20:59:48.240 [error] Timed out waiting for authentication provider to register
+2024-11-25 21:14:53.357 [warning] [LanguageModelAccess] LanguageModel/Embeddings are not available without auth token
+2024-11-25 21:14:53.357 [error] Timed out waiting for authentication provider to register
+2024-11-25 21:14:53.357 [warning] [LanguageModelAccess] LanguageModel/Embeddings are not available without auth token
+2024-11-25 21:14:53.357 [error] Timed out waiting for authentication provider to register
+2024-11-25 21:14:53.357 [warning] [LanguageModelAccess] LanguageModel/Embeddings are not available without auth token
+2024-11-25 21:14:53.357 [error] Timed out waiting for authentication provider to register
+2024-11-25 21:29:58.483 [warning] [LanguageModelAccess] LanguageModel/Embeddings are not available without auth token
+2024-11-25 21:29:58.483 [error] Timed out waiting for authentication provider to register
+2024-11-25 21:29:58.484 [warning] [LanguageModelAccess] LanguageModel/Embeddings are not available without auth token
+2024-11-25 21:29:58.484 [error] Timed out waiting for authentication provider to register
+2024-11-25 21:29:58.484 [warning] [LanguageModelAccess] LanguageModel/Embeddings are not available without auth token
+2024-11-25 21:29:58.484 [error] Timed out waiting for authentication provider to register
+2024-11-25 21:45:03.490 [warning] [LanguageModelAccess] LanguageModel/Embeddings are not available without auth token
+2024-11-25 21:45:03.490 [error] Timed out waiting for authentication provider to register
+2024-11-25 21:45:03.490 [warning] [LanguageModelAccess] LanguageModel/Embeddings are not available without auth token
+2024-11-25 21:45:03.490 [error] Timed out waiting for authentication provider to register
+2024-11-25 21:45:03.490 [warning] [LanguageModelAccess] LanguageModel/Embeddings are not available without auth token
+2024-11-25 21:45:03.490 [error] Timed out waiting for authentication provider to register
+2024-11-25 22:00:08.496 [warning] [LanguageModelAccess] LanguageModel/Embeddings are not available without auth token
+2024-11-25 22:00:08.496 [error] Timed out waiting for authentication provider to register
+2024-11-25 22:00:08.496 [warning] [LanguageModelAccess] LanguageModel/Embeddings are not available without auth token
+2024-11-25 22:00:08.496 [error] Timed out waiting for authentication provider to register
+2024-11-25 22:00:08.496 [warning] [LanguageModelAccess] LanguageModel/Embeddings are not available without auth token
+2024-11-25 22:00:08.496 [error] Timed out waiting for authentication provider to register
+2024-11-25 22:15:13.501 [warning] [LanguageModelAccess] LanguageModel/Embeddings are not available without auth token
+2024-11-25 22:15:13.502 [error] Timed out waiting for authentication provider to register
+2024-11-25 22:15:13.502 [warning] [LanguageModelAccess] LanguageModel/Embeddings are not available without auth token
+2024-11-25 22:15:13.502 [error] Timed out waiting for authentication provider to register
+2024-11-25 22:15:13.502 [warning] [LanguageModelAccess] LanguageModel/Embeddings are not available without auth token
+2024-11-25 22:15:13.502 [error] Timed out waiting for authentication provider to register
+2024-11-25 22:30:18.516 [warning] [LanguageModelAccess] LanguageModel/Embeddings are not available without auth token
+2024-11-25 22:30:18.517 [error] Timed out waiting for authentication provider to register
+2024-11-25 22:30:18.517 [warning] [LanguageModelAccess] LanguageModel/Embeddings are not available without auth token
+2024-11-25 22:30:18.517 [error] Timed out waiting for authentication provider to register
+2024-11-25 22:30:18.517 [warning] [LanguageModelAccess] LanguageModel/Embeddings are not available without auth token
+2024-11-25 22:30:18.517 [error] Timed out waiting for authentication provider to register
+2024-11-25 22:45:23.525 [warning] [LanguageModelAccess] LanguageModel/Embeddings are not available without auth token
+2024-11-25 22:45:23.525 [error] Timed out waiting for authentication provider to register
+2024-11-25 22:45:23.525 [warning] [LanguageModelAccess] LanguageModel/Embeddings are not available without auth token
+2024-11-25 22:45:23.525 [error] Timed out waiting for authentication provider to register
+2024-11-25 22:45:23.525 [warning] [LanguageModelAccess] LanguageModel/Embeddings are not available without auth token
+2024-11-25 22:45:23.525 [error] Timed out waiting for authentication provider to register
+2024-11-25 23:00:28.648 [warning] [LanguageModelAccess] LanguageModel/Embeddings are not available without auth token
+2024-11-25 23:00:28.649 [error] Timed out waiting for authentication provider to register
+2024-11-25 23:00:28.649 [warning] [LanguageModelAccess] LanguageModel/Embeddings are not available without auth token
+2024-11-25 23:00:28.649 [error] Timed out waiting for authentication provider to register
+2024-11-25 23:00:28.649 [warning] [LanguageModelAccess] LanguageModel/Embeddings are not available without auth token
+2024-11-25 23:00:28.649 [error] Timed out waiting for authentication provider to register
+2024-11-25 23:15:33.780 [warning] [LanguageModelAccess] LanguageModel/Embeddings are not available without auth token
+2024-11-25 23:15:33.780 [error] Timed out waiting for authentication provider to register
+2024-11-25 23:15:33.780 [warning] [LanguageModelAccess] LanguageModel/Embeddings are not available without auth token
+2024-11-25 23:15:33.780 [error] Timed out waiting for authentication provider to register
+2024-11-25 23:15:33.780 [warning] [LanguageModelAccess] LanguageModel/Embeddings are not available without auth token
+2024-11-25 23:15:33.780 [error] Timed out waiting for authentication provider to register
+2024-11-25 23:30:38.895 [warning] [LanguageModelAccess] LanguageModel/Embeddings are not available without auth token
+2024-11-25 23:30:38.895 [error] Timed out waiting for authentication provider to register
+2024-11-25 23:30:38.895 [warning] [LanguageModelAccess] LanguageModel/Embeddings are not available without auth token
+2024-11-25 23:30:38.895 [error] Timed out waiting for authentication provider to register
+2024-11-25 23:30:38.895 [warning] [LanguageModelAccess] LanguageModel/Embeddings are not available without auth token
+2024-11-25 23:30:38.895 [error] Timed out waiting for authentication provider to register
+2024-11-25 23:45:44.008 [warning] [LanguageModelAccess] LanguageModel/Embeddings are not available without auth token
+2024-11-25 23:45:44.008 [error] Timed out waiting for authentication provider to register
+2024-11-25 23:45:44.008 [warning] [LanguageModelAccess] LanguageModel/Embeddings are not available without auth token
+2024-11-25 23:45:44.008 [error] Timed out waiting for authentication provider to register
+2024-11-25 23:45:44.008 [warning] [LanguageModelAccess] LanguageModel/Embeddings are not available without auth token
+2024-11-25 23:45:44.008 [error] Timed out waiting for authentication provider to register
