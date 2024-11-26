@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: mariadb:3306
--- Generation Time: Lis 26, 2024 at 12:27 AM
+-- Generation Time: Lis 26, 2024 at 11:28 PM
 -- Wersja serwera: 11.5.2-MariaDB-ubu2404
 -- Wersja PHP: 8.2.8
 
@@ -2573,7 +2573,8 @@ INSERT INTO `ps_cart` (`id_cart`, `id_shop_group`, `id_shop`, `id_carrier`, `del
 (2, 1, 1, 2, '{\"3\":\"2,\"}', 1, 5, 5, 1, 2, 1, 'b44a6d9efd7a0076a0fbce6b15eaf3b1', 0, 0, '', 0, 0, '2024-11-22 18:39:00', '2024-11-22 18:39:00', NULL),
 (3, 1, 1, 2, '{\"3\":\"2,\"}', 1, 5, 5, 1, 2, 1, 'b44a6d9efd7a0076a0fbce6b15eaf3b1', 0, 0, '', 0, 0, '2024-11-22 18:39:00', '2024-11-22 18:39:00', NULL),
 (4, 1, 1, 2, '{\"3\":\"2,\"}', 1, 5, 5, 1, 2, 1, 'b44a6d9efd7a0076a0fbce6b15eaf3b1', 0, 0, '', 0, 0, '2024-11-22 18:39:00', '2024-11-22 18:39:00', NULL),
-(5, 1, 1, 2, '{\"3\":\"2,\"}', 1, 5, 5, 1, 2, 1, 'b44a6d9efd7a0076a0fbce6b15eaf3b1', 0, 0, '', 0, 0, '2024-11-22 18:39:00', '2024-11-22 18:39:00', NULL);
+(5, 1, 1, 2, '{\"3\":\"2,\"}', 1, 5, 5, 1, 2, 1, 'b44a6d9efd7a0076a0fbce6b15eaf3b1', 0, 0, '', 0, 0, '2024-11-22 18:39:00', '2024-11-22 18:39:00', NULL),
+(6, 1, 1, 0, '', 1, 0, 0, 1, 0, 4, '', 0, 0, '', 0, 0, '2024-11-26 20:37:16', '2024-11-26 20:41:26', NULL);
 
 -- --------------------------------------------------------
 
@@ -2614,7 +2615,8 @@ INSERT INTO `ps_cart_product` (`id_cart`, `id_product`, `id_address_delivery`, `
 (2, 8, 3, 1, 0, 0, 1, '0000-00-00 00:00:00'),
 (3, 16, 3, 1, 28, 0, 1, '0000-00-00 00:00:00'),
 (4, 16, 3, 1, 29, 0, 1, '0000-00-00 00:00:00'),
-(5, 10, 3, 1, 25, 0, 1, '0000-00-00 00:00:00');
+(5, 10, 3, 1, 25, 0, 1, '0000-00-00 00:00:00'),
+(6, 5, 0, 1, 19, 0, 1, '2024-11-26 20:41:26');
 
 -- --------------------------------------------------------
 
@@ -2989,7 +2991,7 @@ INSERT INTO `ps_cms` (`id_cms`, `id_cms_category`, `position`, `active`, `indexa
 (1, 1, 3, 1, 0),
 (2, 1, 6, 1, 0),
 (3, 1, 0, 1, 0),
-(4, 1, 12, 1, 0),
+(4, 1, 11, 1, 0),
 (5, 1, 2, 1, 0),
 (6, 1, 1, 1, 0),
 (7, 1, 4, 1, 0),
@@ -2997,9 +2999,7 @@ INSERT INTO `ps_cms` (`id_cms`, `id_cms_category`, `position`, `active`, `indexa
 (9, 1, 7, 1, 0),
 (10, 1, 8, 1, 0),
 (11, 1, 9, 1, 0),
-(12, 1, 10, 1, 0),
-(13, 1, 11, 1, 0),
-(14, 1, 13, 1, 0);
+(13, 1, 10, 1, 0);
 
 -- --------------------------------------------------------
 
@@ -3103,9 +3103,7 @@ INSERT INTO `ps_cms_lang` (`id_cms`, `id_lang`, `id_shop`, `meta_title`, `head_s
 INSERT INTO `ps_cms_lang` (`id_cms`, `id_lang`, `id_shop`, `meta_title`, `head_seo_title`, `meta_description`, `meta_keywords`, `content`, `link_rewrite`) VALUES
 (10, 1, 1, 'List z Hogwartu', '', 'Zarówno Ty jak i Twój bliski możecie dostać list z Hogwartu!  Dokładamy wszelkich starań aby zakupy na Pottermanii były prawdziwie magicznym doświadczeniem. Dlatego do każdego zamówienia dokładamy personalizowaną kopertę z pieczęcią Hogwartu. Dzięki temu każdy kto otrzyma swoją paczuszkę może przez chwilę poczuć się jak czarodziej, któremu zbłąkana sowa przyniosła spóźniony list informujący o przyjęciu do Szkoły Magii i Czarodziejstwa - kto by nie chciał się tak poczuć? :D', '', '<div class=\"innerbox\">\n<div class=\"resetcss\">\n<p><span style=\"font-size:12pt;\"><strong>Zarówno Ty jak i Twój bliski możecie dostać list z Hogwartu!</strong></span></p>\n<p style=\"text-align:justify;\">Dokładamy wszelkich starań aby zakupy na Pottermanii były prawdziwie magicznym doświadczeniem. Dlatego do każdego zamówienia dokładamy personalizowaną kopertę z pieczęcią Hogwartu. Dzięki temu każdy kto otrzyma swoją paczuszkę może przez chwilę poczuć się jak czarodziej, któremu zbłąkana sowa przyniosła spóźniony list informujący o przyjęciu do Szkoły Magii i Czarodziejstwa - kto by nie chciał się tak poczuć? :D</p>\n<p style=\"text-align:justify;\">I teraz uwaga! Taki <strong>list możemy dowolnie spersonalizować pod Wasze potrzeby!</strong> Jeśli kupujecie coś na prezent dla fana Harry\'ego to wystarczy, że podacie nam w komentarzu do zamówienia <strong>imię obdarowywanej osoby </strong>oraz <strong>okazję,</strong> a my zajmiemy się resztą! A jeśli masz własną inwencję twórczą i chcesz zaproponować treść listu to nic prostszego - wystarczy, że podasz w komentarzu do zamówienia dokładnie to, co mamy w nim umieścić :) </p>\n<p style=\"text-align:justify;\">Poniżej zamieszczamy filmik jak wyglądało pakowanie dla Was paczek na Święta:</p>\n<p><iframe width=\"300\" height=\"535\" class=\"video\" frameborder=\"0\" src=\"https://www.youtube.com/embed/bOcjpvN1LTs?si=R6ina-EuBrDLQgES\" title=\"YouTube video player\"></iframe></p>\n<p style=\"text-align:justify;\"> </p>\n</div>\n</div>', 'harry-potter-list-z-hogwartu'),
 (11, 1, 1, 'Magiczne Prezenty', '', '', '', '<p>TODO to i kategorie Kubki i Odzież jak wprowadzą produkty i kategorie</p>', 'harry-potter-magiczne-prezenty'),
-(12, 1, 1, 'Opinie Trustmate', '', '', '', '<p>TODO cały moduł trzeba zrobić</p>', 'opinie'),
-(13, 1, 1, 'Kontakt', '', '', '', '<p><strong><span style=\"font-family:georgia, palatino, serif;\"><span style=\"font-size:11pt;\"><span style=\"color:#808080;\">Adres</span></span></span></strong></p>\n<p><span style=\"font-family:georgia, palatino, serif;\"><span style=\"font-size:10pt;\"><span style=\"color:#808080;\">POTTERMANIA</span></span></span><span style=\"font-family:georgia, palatino, serif;\"><span style=\"font-size:10pt;\"><span style=\"color:#808080;\"><br /></span><span style=\"color:#808080;\"><br /></span><span style=\"color:#808080;\">04-191 Warszawa<br />NIP: 1133083913 </span><strong><span style=\"color:#808080;\"><br /></span></strong></span></span></p>\n<p><strong><span style=\"color:#808080;\"><span style=\"font-size:10pt;font-family:georgia, palatino, serif;\">Jesteśmy do Twojej dyspozycji: </span></span></strong></p>\n<p><span style=\"color:#808080;\"><span style=\"font-size:10pt;font-family:georgia, palatino, serif;\">Poniedziałek - niedziela:  9:00 - 18:00</span></span></p>\n<p><span style=\"color:#808080;\"><span style=\"font-size:10pt;font-family:georgia, palatino, serif;\"><strong>Kontakt telefoniczny:</strong> <a href=\"tel:+48664243296\">664 243 296</a></span><br /><span style=\"font-size:10pt;font-family:georgia, palatino, serif;\"><strong>Kontakt mailowy:</strong> <a href=\"mailto:kontakt@pottermania.pl\">kontakt@pottermania.pl</a></span></span></p>', 'dane-kontaktowe'),
-(14, 1, 1, 'Blog', '', 'Blog o harrym potterze', 'blog, harry potter, harry potter blog', '<p>TODO cały moduł trzeba zrobić</p>', 'blog');
+(13, 1, 1, 'Kontakt', '', '', '', '<p><strong><span style=\"font-family:georgia, palatino, serif;\"><span style=\"font-size:11pt;\"><span style=\"color:#808080;\">Adres</span></span></span></strong></p>\n<p><span style=\"font-family:georgia, palatino, serif;\"><span style=\"font-size:10pt;\"><span style=\"color:#808080;\">POTTERMANIA</span></span></span><span style=\"font-family:georgia, palatino, serif;\"><span style=\"font-size:10pt;\"><span style=\"color:#808080;\"><br /></span><span style=\"color:#808080;\"><br /></span><span style=\"color:#808080;\">04-191 Warszawa<br />NIP: 1133083913 </span><strong><span style=\"color:#808080;\"><br /></span></strong></span></span></p>\n<p><strong><span style=\"color:#808080;\"><span style=\"font-size:10pt;font-family:georgia, palatino, serif;\">Jesteśmy do Twojej dyspozycji: </span></span></strong></p>\n<p><span style=\"color:#808080;\"><span style=\"font-size:10pt;font-family:georgia, palatino, serif;\">Poniedziałek - niedziela:  9:00 - 18:00</span></span></p>\n<p><span style=\"color:#808080;\"><span style=\"font-size:10pt;font-family:georgia, palatino, serif;\"><strong>Kontakt telefoniczny:</strong> <a href=\"tel:+48664243296\">664 243 296</a></span><br /><span style=\"font-size:10pt;font-family:georgia, palatino, serif;\"><strong>Kontakt mailowy:</strong> <a href=\"mailto:kontakt@pottermania.pl\">kontakt@pottermania.pl</a></span></span></p>', 'dane-kontaktowe');
 
 -- --------------------------------------------------------
 
@@ -3167,9 +3165,7 @@ INSERT INTO `ps_cms_shop` (`id_cms`, `id_shop`) VALUES
 (9, 1),
 (10, 1),
 (11, 1),
-(12, 1),
-(13, 1),
-(14, 1);
+(13, 1);
 
 -- --------------------------------------------------------
 
@@ -3222,7 +3218,7 @@ INSERT INTO `ps_configuration` (`id_configuration`, `id_shop_group`, `id_shop`, 
 (28, NULL, NULL, 'PS_NB_DAYS_NEW_PRODUCT', '20', '0000-00-00 00:00:00', '0000-00-00 00:00:00'),
 (29, NULL, NULL, 'PS_SSL_ENABLED', NULL, '0000-00-00 00:00:00', '2024-11-26 01:20:42'),
 (30, NULL, NULL, 'PS_WEIGHT_UNIT', 'kg', '0000-00-00 00:00:00', '0000-00-00 00:00:00'),
-(31, NULL, NULL, 'PS_BLOCK_CART_AJAX', '1', '0000-00-00 00:00:00', '0000-00-00 00:00:00'),
+(31, NULL, NULL, 'PS_BLOCK_CART_AJAX', '1', '0000-00-00 00:00:00', '2024-11-26 20:28:24'),
 (32, NULL, NULL, 'PS_ORDER_RETURN', '0', '0000-00-00 00:00:00', '0000-00-00 00:00:00'),
 (33, NULL, NULL, 'PS_ORDER_RETURN_NB_DAYS', '14', '0000-00-00 00:00:00', '0000-00-00 00:00:00'),
 (34, NULL, NULL, 'PS_MAIL_TYPE', '3', '0000-00-00 00:00:00', '0000-00-00 00:00:00'),
@@ -3281,8 +3277,8 @@ INSERT INTO `ps_configuration` (`id_configuration`, `id_shop_group`, `id_shop`, 
 (87, NULL, NULL, 'PS_SMARTY_FORCE_COMPILE', '2', '0000-00-00 00:00:00', '2024-11-25 00:26:53'),
 (88, NULL, NULL, 'PS_DISTANCE_UNIT', 'km', '0000-00-00 00:00:00', '0000-00-00 00:00:00'),
 (89, NULL, NULL, 'PS_STORES_DISPLAY_CMS', '1', '0000-00-00 00:00:00', '0000-00-00 00:00:00'),
-(90, NULL, NULL, 'SHOP_LOGO_WIDTH', '1093', '0000-00-00 00:00:00', '2024-11-25 00:51:47'),
-(91, NULL, NULL, 'SHOP_LOGO_HEIGHT', '312', '0000-00-00 00:00:00', '2024-11-25 00:51:47'),
+(90, NULL, NULL, 'SHOP_LOGO_WIDTH', '1093', '0000-00-00 00:00:00', '2024-11-26 23:33:17'),
+(91, NULL, NULL, 'SHOP_LOGO_HEIGHT', '312', '0000-00-00 00:00:00', '2024-11-26 23:33:17'),
 (92, NULL, NULL, 'EDITORIAL_IMAGE_WIDTH', '530', '0000-00-00 00:00:00', '0000-00-00 00:00:00'),
 (93, NULL, NULL, 'EDITORIAL_IMAGE_HEIGHT', '228', '0000-00-00 00:00:00', '0000-00-00 00:00:00'),
 (94, NULL, NULL, 'PS_STATSDATA_CUSTOMER_PAGESVIEWS', '0', '0000-00-00 00:00:00', '0000-00-00 00:00:00'),
@@ -3307,7 +3303,7 @@ INSERT INTO `ps_configuration` (`id_configuration`, `id_shop_group`, `id_shop`, 
 (113, NULL, NULL, 'PS_COOKIE_SAMESITE', 'Lax', '0000-00-00 00:00:00', '0000-00-00 00:00:00'),
 (114, NULL, NULL, 'PS_USE_ECOTAX', '0', '0000-00-00 00:00:00', '0000-00-00 00:00:00'),
 (115, NULL, NULL, 'PS_CANONICAL_REDIRECT', '1', '0000-00-00 00:00:00', '0000-00-00 00:00:00'),
-(116, NULL, NULL, 'PS_IMG_UPDATE_TIME', '1732492318', '0000-00-00 00:00:00', '2024-11-25 00:51:58'),
+(116, NULL, NULL, 'PS_IMG_UPDATE_TIME', '1732660397', '0000-00-00 00:00:00', '2024-11-26 23:33:17'),
 (117, NULL, NULL, 'PS_BACKUP_DROP_TABLE', '1', '0000-00-00 00:00:00', '0000-00-00 00:00:00'),
 (118, NULL, NULL, 'PS_OS_CHEQUE', '1', '0000-00-00 00:00:00', '0000-00-00 00:00:00'),
 (119, NULL, NULL, 'PS_OS_PAYMENT', '2', '0000-00-00 00:00:00', '0000-00-00 00:00:00'),
@@ -3431,7 +3427,7 @@ INSERT INTO `ps_configuration` (`id_configuration`, `id_shop_group`, `id_shop`, 
 (237, NULL, NULL, 'PS_SHOP_EMAIL', 'presta@presta.com', '0000-00-00 00:00:00', '2024-11-22 18:37:45'),
 (238, NULL, NULL, 'PS_MAIL_METHOD', '1', '0000-00-00 00:00:00', '0000-00-00 00:00:00'),
 (239, NULL, NULL, 'PS_SHOP_ACTIVITY', '9', '0000-00-00 00:00:00', '2024-11-22 18:37:44'),
-(240, NULL, NULL, 'PS_LOGO', 'logo-1732492307.jpg', '0000-00-00 00:00:00', '2024-11-25 00:51:47'),
+(240, NULL, NULL, 'PS_LOGO', 'logo-1732660397.jpg', '0000-00-00 00:00:00', '2024-11-26 23:33:17'),
 (241, NULL, NULL, 'PS_FAVICON', 'favicon.ico', '0000-00-00 00:00:00', '2024-11-25 00:51:58'),
 (242, NULL, NULL, 'PS_STORES_ICON', 'logo_stores.png', '0000-00-00 00:00:00', '0000-00-00 00:00:00'),
 (243, NULL, NULL, 'PS_ROOT_CATEGORY', '1', '0000-00-00 00:00:00', '0000-00-00 00:00:00'),
@@ -3609,8 +3605,8 @@ INSERT INTO `ps_configuration` (`id_configuration`, `id_shop_group`, `id_shop`, 
 (424, NULL, NULL, 'PS_LAYERED_FILTER_BY_DEFAULT_CATEGORY', '0', '2024-11-22 18:39:06', '2024-11-22 18:39:06'),
 (425, NULL, NULL, 'PS_LAYERED_INDEXED', '1', '2024-11-22 18:39:06', '2024-11-22 18:39:06'),
 (426, NULL, NULL, 'ONBOARDINGV2_SHUT_DOWN', '1', '2024-11-22 18:39:44', '2024-11-22 18:39:44'),
-(427, NULL, NULL, 'PS_CCCJS_VERSION', '5', '2024-11-25 00:27:30', '2024-11-26 01:19:08'),
-(428, NULL, NULL, 'PS_CCCCSS_VERSION', '5', '2024-11-25 00:27:30', '2024-11-26 01:19:08'),
+(427, NULL, NULL, 'PS_CCCJS_VERSION', '6', '2024-11-25 00:27:30', '2024-11-26 16:14:31'),
+(428, NULL, NULL, 'PS_CCCCSS_VERSION', '6', '2024-11-25 00:27:30', '2024-11-26 16:14:31'),
 (429, NULL, NULL, 'PS_LOGO_MAIL', 'logo_mail-1732492307.jpg', '2024-11-25 00:51:47', '2024-11-25 00:51:47'),
 (430, NULL, NULL, 'PS_LOGO_INVOICE', 'logo_invoice-1732492307.jpg', '2024-11-25 00:51:47', '2024-11-25 00:51:47'),
 (431, NULL, NULL, 'CONTACTFORM_SEND_CONFIRMATION_EMAIL', '1', '2024-11-25 16:37:55', '2024-11-25 16:37:55'),
@@ -3625,8 +3621,20 @@ INSERT INTO `ps_configuration` (`id_configuration`, `id_shop_group`, `id_shop`, 
 (440, NULL, NULL, 'PS_ACCOUNTS_FIREBASE_ID_TOKEN', NULL, '2024-11-25 18:17:15', '2024-11-25 18:17:15'),
 (441, NULL, NULL, 'PS_ACCOUNTS_ACCESS_TOKEN', NULL, '2024-11-25 18:17:16', '2024-11-25 18:17:16'),
 (442, NULL, NULL, 'PS_SHOWCASECARD_CMS_PAGES_CLOSED', '1', '2024-11-25 18:35:02', '2024-11-25 18:35:02'),
-(443, NULL, NULL, 'PS_ACCOUNTS_FIREBASE_REFRESH_TOKEN', NULL, '2024-11-25 22:44:26', '2024-11-26 01:22:59'),
-(444, NULL, NULL, 'PS_ALLOW_HTML_IFRAME', '1', '2024-11-26 01:20:42', '2024-11-26 01:20:42');
+(443, NULL, NULL, 'PS_ACCOUNTS_FIREBASE_REFRESH_TOKEN', NULL, '2024-11-25 22:44:26', '2024-11-26 23:34:37'),
+(444, NULL, NULL, 'PS_ALLOW_HTML_IFRAME', '1', '2024-11-26 01:20:42', '2024-11-26 01:20:42'),
+(446, NULL, NULL, 'TRUSTMATE_HAVEACCOUNT', '1', '2024-11-26 15:55:12', '2024-11-26 15:55:12'),
+(448, NULL, NULL, 'TRUSTMATE_INSTANT_REVIEW', NULL, '2024-11-26 15:56:47', '2024-11-26 16:05:49'),
+(450, NULL, NULL, 'TRUSTMATE_LANGUAGE', '1', '2024-11-26 15:56:47', '2024-11-26 15:56:47'),
+(451, NULL, NULL, 'PS_WEBSERVICE', '1', '2024-11-26 15:56:47', '2024-11-26 15:56:47'),
+(452, NULL, NULL, 'TRUSTMATE_API_KEY_ID', NULL, '2024-11-26 15:56:47', '2024-11-26 16:05:44'),
+(454, NULL, NULL, 'TRUSTMATE_PRODUCT_FERRET2', '0', '2024-11-26 16:02:21', '2024-11-26 16:17:03'),
+(455, NULL, NULL, 'TRUSTMATE_ALPACA', '0', '2024-11-26 16:02:21', '2024-11-26 16:02:21'),
+(459, NULL, NULL, 'TRUSTMATE_LEMUR', '0', '2024-11-26 16:02:21', '2024-11-26 16:02:21'),
+(460, NULL, NULL, 'TRUSTMATE_OWL', '0', '2024-11-26 16:02:21', '2024-11-26 16:02:21'),
+(463, NULL, NULL, 'TRUSTMATE_HORNET_POSITION', 'DisplayProductPriceBlock@price', '2024-11-26 16:02:21', '2024-11-26 16:02:21'),
+(467, NULL, NULL, 'TRUSTMATE_BADGER', '0', '2024-11-26 16:02:21', '2024-11-26 16:02:21'),
+(469, NULL, NULL, 'TRUSTMATE_PRODUCT_FERRET', '0', '2024-11-26 16:02:21', '2024-11-26 16:02:21');
 
 -- --------------------------------------------------------
 
@@ -3795,7 +3803,24 @@ INSERT INTO `ps_connections` (`id_connections`, `id_shop_group`, `id_shop`, `id_
 (20, 1, 1, 11, 4, 2886860801, '2024-11-25 23:48:45', ''),
 (21, 1, 1, 4, 1, 2886860801, '2024-11-26 00:53:32', ''),
 (22, 1, 1, 12, 4, 2886860801, '2024-11-26 01:01:18', ''),
-(23, 1, 1, 13, 5, 2886860801, '2024-11-26 01:11:17', 'http://localhost:8080/upload/pdf/Formularz-reklamacji-Pottermania.pdf');
+(23, 1, 1, 13, 5, 2886860801, '2024-11-26 01:11:17', 'http://localhost:8080/upload/pdf/Formularz-reklamacji-Pottermania.pdf'),
+(24, 1, 1, 4, 1, 2886860801, '2024-11-26 14:59:52', ''),
+(25, 1, 1, 14, 1, 2886860801, '2024-11-26 15:27:16', ''),
+(26, 1, 1, 15, 1, 2886860801, '2024-11-26 15:28:04', ''),
+(27, 1, 1, 16, 1, 2886860801, '2024-11-26 16:11:15', ''),
+(28, 1, 1, 4, 4, 2886860801, '2024-11-26 16:14:24', ''),
+(29, 1, 1, 17, 1, 2886860801, '2024-11-26 16:28:48', ''),
+(30, 1, 1, 18, 6, 2886860801, '2024-11-26 20:53:06', ''),
+(31, 1, 1, 19, 6, 2886860801, '2024-11-26 20:58:02', ''),
+(32, 1, 1, 20, 6, 2886860801, '2024-11-26 21:17:24', ''),
+(33, 1, 1, 21, 1, 2886860801, '2024-11-26 21:30:52', ''),
+(34, 1, 1, 4, 5, 2886860801, '2024-11-26 21:32:44', ''),
+(35, 1, 1, 4, 5, 2886860801, '2024-11-26 22:03:58', ''),
+(36, 1, 1, 22, 1, 2886860801, '2024-11-26 22:33:48', ''),
+(37, 1, 1, 23, 1, 2886860801, '2024-11-26 22:41:49', ''),
+(38, 1, 1, 24, 4, 2886860801, '2024-11-26 23:18:25', ''),
+(39, 1, 1, 25, 4, 2886860801, '2024-11-26 23:22:15', ''),
+(40, 1, 1, 26, 1, 2886860801, '2024-11-27 00:12:26', '');
 
 -- --------------------------------------------------------
 
@@ -4023,7 +4048,447 @@ INSERT INTO `ps_connections_source` (`id_connections_source`, `id_connections`, 
 (191, 21, 'http://localhost:8080/content/12-opinie', 'localhost:8080/content/13-dane-kontaktowe', '', '2024-11-26 01:25:23'),
 (192, 21, 'http://localhost:8080/content/12-opinie', 'localhost:8080/content/13-dane-kontaktowe', '', '2024-11-26 01:25:44'),
 (193, 21, 'http://localhost:8080/content/13-dane-kontaktowe', 'localhost:8080/content/4-o-mnie', '', '2024-11-26 01:25:46'),
-(194, 21, 'http://localhost:8080/content/4-o-mnie', 'localhost:8080/content/14-blog', '', '2024-11-26 01:25:55');
+(194, 21, 'http://localhost:8080/content/4-o-mnie', 'localhost:8080/content/14-blog', '', '2024-11-26 01:25:55'),
+(195, 21, 'http://localhost:8080/content/14-blog', 'localhost:8080/content/13-dane-kontaktowe', '', '2024-11-26 01:30:26'),
+(196, 24, 'http://localhost:8080/', 'localhost:8080/content/5-formy-platnosci', '', '2024-11-26 14:59:55'),
+(197, 24, 'http://localhost:8080/content/5-formy-platnosci', 'localhost:8080/content/5-formy-platnosci', '', '2024-11-26 15:00:05'),
+(198, 24, 'http://localhost:8080/content/5-formy-platnosci', 'localhost:8080/logowanie?back=history', '', '2024-11-26 15:00:12'),
+(199, 24, 'http://localhost:8080/logowanie?back=history', 'localhost:8080/content/7-polityka-prywatnosci', '', '2024-11-26 15:00:15'),
+(200, 24, 'http://localhost:8080/content/7-polityka-prywatnosci', 'localhost:8080/nowe-produkty', '', '2024-11-26 15:00:19'),
+(201, 24, 'http://localhost:8080/nowe-produkty', 'localhost:8080/content/13-dane-kontaktowe', '', '2024-11-26 15:00:21'),
+(202, 24, 'http://localhost:8080/content/13-dane-kontaktowe', 'localhost:8080/content/12-opinie', '', '2024-11-26 15:00:26'),
+(203, 24, 'http://localhost:8080/content/12-opinie', 'localhost:8080/kontakt', '', '2024-11-26 15:00:28'),
+(204, 24, 'http://localhost:8080/kontakt', 'localhost:8080/', '', '2024-11-26 15:14:23'),
+(205, 24, 'http://localhost:8080/', 'localhost:8080/content/5-formy-platnosci', '', '2024-11-26 15:18:18'),
+(206, 24, 'http://localhost:8080/', 'localhost:8080/content/5-formy-platnosci', '', '2024-11-26 15:19:25'),
+(207, 24, 'http://localhost:8080/content/5-formy-platnosci', 'localhost:8080/', '', '2024-11-26 15:19:33'),
+(208, 24, 'http://localhost:8080/content/5-formy-platnosci', 'localhost:8080/', '', '2024-11-26 15:24:12'),
+(209, 24, 'http://localhost:8080/', 'localhost:8080/%7Bbase_dir%7Dksiazki', '', '2024-11-26 15:24:35'),
+(210, 24, 'http://localhost:8080/content/5-formy-platnosci', 'localhost:8080/', '', '2024-11-26 15:24:41'),
+(211, 24, 'http://localhost:8080/', 'localhost:8080/%7Bbase_dir%7Dksiazki', '', '2024-11-26 15:24:49'),
+(212, 24, 'http://localhost:8080/content/5-formy-platnosci', 'localhost:8080/', '', '2024-11-26 15:24:51'),
+(213, 24, 'http://localhost:8080/content/5-formy-platnosci', 'localhost:8080/', '', '2024-11-26 15:25:08'),
+(214, 24, 'http://localhost:8080/', 'localhost:8080/ksiazki', '', '2024-11-26 15:25:12'),
+(215, 24, 'http://localhost:8080/content/5-formy-platnosci', 'localhost:8080/', '', '2024-11-26 15:25:14'),
+(216, 24, 'http://localhost:8080/', 'localhost:8080/slodycze', '', '2024-11-26 15:25:15'),
+(217, 24, 'http://localhost:8080/content/5-formy-platnosci', 'localhost:8080/', '', '2024-11-26 15:25:17'),
+(218, 24, 'http://localhost:8080/', 'localhost:8080/ksiazki', '', '2024-11-26 15:25:18'),
+(219, 24, 'http://localhost:8080/content/5-formy-platnosci', 'localhost:8080/', '', '2024-11-26 15:25:20'),
+(220, 24, 'http://localhost:8080/content/5-formy-platnosci', 'localhost:8080/', '', '2024-11-26 15:25:41'),
+(221, 24, 'http://localhost:8080/', 'localhost:8080/kontakt', '', '2024-11-26 15:25:44'),
+(222, 24, 'http://localhost:8080/content/5-formy-platnosci', 'localhost:8080/', '', '2024-11-26 15:25:46'),
+(223, 24, 'http://localhost:8080/content/5-formy-platnosci', 'localhost:8080/', '', '2024-11-26 15:26:06'),
+(224, 24, 'http://localhost:8080/', 'localhost:8080/ubrania', '', '2024-11-26 15:26:10'),
+(225, 24, 'http://localhost:8080/content/5-formy-platnosci', 'localhost:8080/', '', '2024-11-26 15:26:12'),
+(226, 24, 'http://localhost:8080/', 'localhost:8080/kontakt', '', '2024-11-26 15:26:14'),
+(227, 24, 'http://localhost:8080/content/5-formy-platnosci', 'localhost:8080/', '', '2024-11-26 15:26:16'),
+(228, 24, 'http://localhost:8080/content/5-formy-platnosci', 'localhost:8080/', '', '2024-11-26 15:26:40'),
+(229, 24, 'http://localhost:8080/content/5-formy-platnosci', 'localhost:8080/', '', '2024-11-26 15:28:16'),
+(230, 24, 'http://localhost:8080/', 'localhost:8080/slodycze', '', '2024-11-26 15:28:20'),
+(231, 24, 'http://localhost:8080/content/5-formy-platnosci', 'localhost:8080/', '', '2024-11-26 15:28:22'),
+(232, 24, 'http://localhost:8080/content/5-formy-platnosci', 'localhost:8080/', '', '2024-11-26 15:29:40'),
+(233, 24, 'http://localhost:8080/content/5-formy-platnosci', 'localhost:8080/', '', '2024-11-26 15:30:01'),
+(234, 24, 'http://localhost:8080/content/5-formy-platnosci', 'localhost:8080/', '', '2024-11-26 15:31:55'),
+(235, 24, 'http://localhost:8080/', 'localhost:8080/slodycze', '', '2024-11-26 15:32:22'),
+(236, 24, 'http://localhost:8080/content/5-formy-platnosci', 'localhost:8080/', '', '2024-11-26 15:32:24'),
+(237, 24, 'http://localhost:8080/content/5-formy-platnosci', 'localhost:8080/', '', '2024-11-26 15:32:26'),
+(238, 24, 'http://localhost:8080/content/5-formy-platnosci', 'localhost:8080/', '', '2024-11-26 15:32:41'),
+(239, 24, 'http://localhost:8080/content/5-formy-platnosci', 'localhost:8080/', '', '2024-11-26 15:33:15'),
+(240, 24, 'http://localhost:8080/content/5-formy-platnosci', 'localhost:8080/', '', '2024-11-26 15:33:59'),
+(241, 24, 'http://localhost:8080/content/5-formy-platnosci', 'localhost:8080/', '', '2024-11-26 15:34:18'),
+(242, 24, 'http://localhost:8080/content/5-formy-platnosci', 'localhost:8080/', '', '2024-11-26 15:34:43'),
+(243, 24, 'http://localhost:8080/content/5-formy-platnosci', 'localhost:8080/', '', '2024-11-26 15:34:49'),
+(244, 24, 'http://localhost:8080/content/5-formy-platnosci', 'localhost:8080/', '', '2024-11-26 15:35:25'),
+(245, 24, 'http://localhost:8080/content/5-formy-platnosci', 'localhost:8080/', '', '2024-11-26 15:35:44'),
+(246, 24, 'http://localhost:8080/content/5-formy-platnosci', 'localhost:8080/', '', '2024-11-26 15:37:49'),
+(247, 24, 'http://localhost:8080/content/5-formy-platnosci', 'localhost:8080/', '', '2024-11-26 15:38:02'),
+(248, 24, 'http://localhost:8080/content/5-formy-platnosci', 'localhost:8080/', '', '2024-11-26 15:39:05'),
+(249, 24, 'http://localhost:8080/content/5-formy-platnosci', 'localhost:8080/', '', '2024-11-26 15:40:20'),
+(250, 24, 'http://localhost:8080/content/5-formy-platnosci', 'localhost:8080/', '', '2024-11-26 15:41:16'),
+(251, 24, 'http://localhost:8080/content/5-formy-platnosci', 'localhost:8080/', '', '2024-11-26 15:41:31'),
+(252, 24, 'http://localhost:8080/content/5-formy-platnosci', 'localhost:8080/', '', '2024-11-26 15:41:38'),
+(253, 24, 'http://localhost:8080/content/5-formy-platnosci', 'localhost:8080/', '', '2024-11-26 15:42:34'),
+(254, 24, 'http://localhost:8080/content/5-formy-platnosci', 'localhost:8080/', '', '2024-11-26 15:43:16'),
+(255, 24, 'http://localhost:8080/content/5-formy-platnosci', 'localhost:8080/', '', '2024-11-26 15:45:08'),
+(256, 24, 'http://localhost:8080/content/5-formy-platnosci', 'localhost:8080/', '', '2024-11-26 15:45:17'),
+(257, 24, 'http://localhost:8080/content/5-formy-platnosci', 'localhost:8080/', '', '2024-11-26 15:45:30'),
+(258, 24, 'http://localhost:8080/content/5-formy-platnosci', 'localhost:8080/', '', '2024-11-26 15:47:01'),
+(259, 24, 'http://localhost:8080/content/5-formy-platnosci', 'localhost:8080/', '', '2024-11-26 15:47:26'),
+(260, 24, 'http://localhost:8080/content/5-formy-platnosci', 'localhost:8080/', '', '2024-11-26 15:57:07'),
+(261, 24, 'http://localhost:8080/content/5-formy-platnosci', 'localhost:8080/', '', '2024-11-26 16:02:26'),
+(262, 24, 'http://localhost:8080/content/5-formy-platnosci', 'localhost:8080/', '', '2024-11-26 16:04:03'),
+(263, 24, 'http://localhost:8080/', 'localhost:8080/content/12-opinie', '', '2024-11-26 16:05:18'),
+(264, 24, 'http://localhost:8080/content/5-formy-platnosci', 'localhost:8080/', '', '2024-11-26 16:05:21'),
+(265, 24, 'http://localhost:8080/content/5-formy-platnosci', 'localhost:8080/', '', '2024-11-26 16:07:12'),
+(266, 24, 'http://localhost:8080/content/5-formy-platnosci', 'localhost:8080/', '', '2024-11-26 16:08:55'),
+(267, 24, 'http://localhost:8080/content/5-formy-platnosci', 'localhost:8080/', '', '2024-11-26 16:10:49'),
+(268, 24, 'http://localhost:8080/', 'localhost:8080/content/12-opinie', '', '2024-11-26 16:12:39'),
+(269, 24, 'http://localhost:8080/', 'localhost:8080/content/12-opinie', '', '2024-11-26 16:13:32'),
+(270, 24, 'http://localhost:8080/', 'localhost:8080/content/12-opinie', '', '2024-11-26 16:13:33'),
+(271, 24, 'http://localhost:8080/', 'localhost:8080/content/12-opinie', '', '2024-11-26 16:13:43'),
+(272, 24, 'http://localhost:8080/', 'localhost:8080/content/12-opinie', '', '2024-11-26 16:14:07'),
+(273, 24, 'http://localhost:8080/', 'localhost:8080/content/12-opinie', '', '2024-11-26 16:14:15'),
+(274, 28, 'http://localhost:8080/index.php?controller=404', 'localhost:8080/', '', '2024-11-26 16:20:37'),
+(275, 28, 'http://localhost:8080/index.php?controller=404', 'localhost:8080/', '', '2024-11-26 16:26:59'),
+(276, 28, 'http://localhost:8080/index.php?controller=404', 'localhost:8080/', '', '2024-11-26 16:39:15'),
+(277, 28, 'http://localhost:8080/index.php?controller=404', 'localhost:8080/', '', '2024-11-26 16:39:56'),
+(278, 28, 'http://localhost:8080/', 'localhost:8080/logowanie?back=my-account', '', '2024-11-26 16:52:24'),
+(279, 28, 'http://localhost:8080/', 'localhost:8080/logowanie?back=my-account', '', '2024-11-26 16:54:37'),
+(280, 28, 'http://localhost:8080/logowanie?back=my-account', 'localhost:8080/logowanie?back=my-account', '', '2024-11-26 16:55:03'),
+(281, 28, 'http://localhost:8080/logowanie?back=my-account', 'localhost:8080/logowanie?back=my-account', '', '2024-11-26 16:55:18'),
+(282, 28, 'http://localhost:8080/logowanie?back=my-account', 'localhost:8080/logowanie?back=my-account', '', '2024-11-26 16:57:46'),
+(283, 28, 'http://localhost:8080/logowanie?back=my-account', 'localhost:8080/logowanie?back=my-account', '', '2024-11-26 16:59:35'),
+(284, 28, 'http://localhost:8080/logowanie?back=my-account', 'localhost:8080/logowanie?back=my-account', '', '2024-11-26 17:00:14'),
+(285, 28, 'http://localhost:8080/logowanie?back=my-account', 'localhost:8080/logowanie?back=my-account', '', '2024-11-26 17:01:13'),
+(286, 28, 'http://localhost:8080/logowanie?back=my-account', 'localhost:8080/logowanie?back=my-account', '', '2024-11-26 17:01:55'),
+(287, 28, 'http://localhost:8080/logowanie?back=my-account', 'localhost:8080/logowanie?back=my-account', '', '2024-11-26 17:02:03'),
+(288, 28, 'http://localhost:8080/logowanie?back=my-account', 'localhost:8080/logowanie?back=my-account', '', '2024-11-26 17:02:21'),
+(289, 28, 'http://localhost:8080/logowanie?back=my-account', 'localhost:8080/', '', '2024-11-26 17:02:22'),
+(290, 28, 'http://localhost:8080/logowanie?back=my-account', 'localhost:8080/', '', '2024-11-26 17:03:14'),
+(291, 28, 'http://localhost:8080/', 'localhost:8080/logowanie?create_account=1', '', '2024-11-26 17:03:19'),
+(292, 28, 'http://localhost:8080/logowanie?back=my-account', 'localhost:8080/', '', '2024-11-26 17:03:24'),
+(293, 28, 'http://localhost:8080/logowanie?back=my-account', 'localhost:8080/', '', '2024-11-26 17:03:33'),
+(294, 28, 'http://localhost:8080/logowanie?back=my-account', 'localhost:8080/', '', '2024-11-26 17:03:38'),
+(295, 28, 'http://localhost:8080/logowanie?back=my-account', 'localhost:8080/', '', '2024-11-26 17:04:00'),
+(296, 28, 'http://localhost:8080/logowanie?back=my-account', 'localhost:8080/', '', '2024-11-26 17:04:47'),
+(297, 28, 'http://localhost:8080/logowanie?back=my-account', 'localhost:8080/', '', '2024-11-26 17:05:19'),
+(298, 28, 'http://localhost:8080/', 'localhost:8080/logowanie?create_account=1', '', '2024-11-26 17:05:26'),
+(299, 28, 'http://localhost:8080/logowanie?back=my-account', 'localhost:8080/', '', '2024-11-26 17:05:28'),
+(300, 28, 'http://localhost:8080/', 'localhost:8080/logowanie?back=my-account', '', '2024-11-26 17:05:29'),
+(301, 28, 'http://localhost:8080/logowanie?back=my-account', 'localhost:8080/', '', '2024-11-26 17:05:31'),
+(302, 28, 'http://localhost:8080/logowanie?back=my-account', 'localhost:8080/', '', '2024-11-26 17:10:41'),
+(303, 28, 'http://localhost:8080/logowanie?back=my-account', 'localhost:8080/', '', '2024-11-26 17:10:52'),
+(304, 28, 'http://localhost:8080/logowanie?back=my-account', 'localhost:8080/', '', '2024-11-26 17:11:01'),
+(305, 28, 'http://localhost:8080/logowanie?back=my-account', 'localhost:8080/', '', '2024-11-26 17:11:31'),
+(306, 28, 'http://localhost:8080/logowanie?back=my-account', 'localhost:8080/', '', '2024-11-26 17:12:15'),
+(307, 28, 'http://localhost:8080/logowanie?back=my-account', 'localhost:8080/', '', '2024-11-26 17:12:59'),
+(308, 28, 'http://localhost:8080/logowanie?back=my-account', 'localhost:8080/', '', '2024-11-26 17:14:12'),
+(309, 28, 'http://localhost:8080/logowanie?back=my-account', 'localhost:8080/', '', '2024-11-26 17:15:14'),
+(310, 28, 'http://localhost:8080/logowanie?back=my-account', 'localhost:8080/', '', '2024-11-26 17:15:26'),
+(311, 28, 'http://localhost:8080/logowanie?back=my-account', 'localhost:8080/', '', '2024-11-26 18:28:11'),
+(312, 28, 'http://localhost:8080/logowanie?back=my-account', 'localhost:8080/', '', '2024-11-26 18:33:45'),
+(313, 28, 'http://localhost:8080/logowanie?back=my-account', 'localhost:8080/', '', '2024-11-26 18:35:25'),
+(314, 28, 'http://localhost:8080/logowanie?back=my-account', 'localhost:8080/', '', '2024-11-26 18:38:37'),
+(315, 28, 'http://localhost:8080/logowanie?back=my-account', 'localhost:8080/', '', '2024-11-26 18:39:01'),
+(316, 28, 'http://localhost:8080/logowanie?back=my-account', 'localhost:8080/', '', '2024-11-26 18:39:33'),
+(317, 28, 'http://localhost:8080/logowanie?back=my-account', 'localhost:8080/', '', '2024-11-26 18:40:02'),
+(318, 28, 'http://localhost:8080/logowanie?back=my-account', 'localhost:8080/', '', '2024-11-26 18:40:22'),
+(319, 28, 'http://localhost:8080/logowanie?back=my-account', 'localhost:8080/', '', '2024-11-26 18:42:20'),
+(320, 28, 'http://localhost:8080/logowanie?back=my-account', 'localhost:8080/', '', '2024-11-26 18:42:24'),
+(321, 28, 'http://localhost:8080/logowanie?back=my-account', 'localhost:8080/', '', '2024-11-26 19:10:58'),
+(322, 28, 'http://localhost:8080/logowanie?back=my-account', 'localhost:8080/', '', '2024-11-26 19:13:28'),
+(323, 28, 'http://localhost:8080/logowanie?back=my-account', 'localhost:8080/', '', '2024-11-26 19:14:31'),
+(324, 28, 'http://localhost:8080/logowanie?back=my-account', 'localhost:8080/', '', '2024-11-26 19:15:44'),
+(325, 28, 'http://localhost:8080/logowanie?back=my-account', 'localhost:8080/', '', '2024-11-26 19:15:54'),
+(326, 28, 'http://localhost:8080/logowanie?back=my-account', 'localhost:8080/', '', '2024-11-26 19:16:43'),
+(327, 28, 'http://localhost:8080/logowanie?back=my-account', 'localhost:8080/', '', '2024-11-26 19:24:18'),
+(328, 28, 'http://localhost:8080/logowanie?back=my-account', 'localhost:8080/', '', '2024-11-26 19:25:53'),
+(329, 28, 'http://localhost:8080/logowanie?back=my-account', 'localhost:8080/', '', '2024-11-26 19:27:16'),
+(330, 28, 'http://localhost:8080/logowanie?back=my-account', 'localhost:8080/', '', '2024-11-26 19:28:33'),
+(331, 28, 'http://localhost:8080/logowanie?back=my-account', 'localhost:8080/', '', '2024-11-26 19:29:02'),
+(332, 28, 'http://localhost:8080/logowanie?back=my-account', 'localhost:8080/', '', '2024-11-26 19:29:07'),
+(333, 28, 'http://localhost:8080/logowanie?back=my-account', 'localhost:8080/', '', '2024-11-26 19:29:25'),
+(334, 28, 'http://localhost:8080/logowanie?back=my-account', 'localhost:8080/', '', '2024-11-26 19:29:54'),
+(335, 28, 'http://localhost:8080/logowanie?back=my-account', 'localhost:8080/', '', '2024-11-26 19:30:23'),
+(336, 28, 'http://localhost:8080/logowanie?back=my-account', 'localhost:8080/', '', '2024-11-26 19:31:13'),
+(337, 28, 'http://localhost:8080/logowanie?back=my-account', 'localhost:8080/', '', '2024-11-26 19:32:15'),
+(338, 28, 'http://localhost:8080/logowanie?back=my-account', 'localhost:8080/', '', '2024-11-26 19:33:22'),
+(339, 28, 'http://localhost:8080/logowanie?back=my-account', 'localhost:8080/', '', '2024-11-26 19:33:38'),
+(340, 28, 'http://localhost:8080/logowanie?back=my-account', 'localhost:8080/', '', '2024-11-26 19:34:10'),
+(341, 28, 'http://localhost:8080/', 'localhost:8080/', '', '2024-11-26 19:34:19'),
+(342, 28, 'http://localhost:8080/', 'localhost:8080/', '', '2024-11-26 19:35:23'),
+(343, 28, 'http://localhost:8080/', 'localhost:8080/', '', '2024-11-26 19:38:55'),
+(344, 28, 'http://localhost:8080/', 'localhost:8080/', '', '2024-11-26 19:40:31'),
+(345, 28, 'http://localhost:8080/', 'localhost:8080/', '', '2024-11-26 19:40:38'),
+(346, 28, 'http://localhost:8080/', 'localhost:8080/', '', '2024-11-26 19:41:11'),
+(347, 28, 'http://localhost:8080/', 'localhost:8080/', '', '2024-11-26 19:42:53'),
+(348, 28, 'http://localhost:8080/', 'localhost:8080/', '', '2024-11-26 19:44:43'),
+(349, 28, 'http://localhost:8080/', 'localhost:8080/', '', '2024-11-26 19:44:52'),
+(350, 28, 'http://localhost:8080/', 'localhost:8080/', '', '2024-11-26 19:45:08'),
+(351, 28, 'http://localhost:8080/', 'localhost:8080/', '', '2024-11-26 19:45:40'),
+(352, 28, 'http://localhost:8080/', 'localhost:8080/', '', '2024-11-26 19:46:28'),
+(353, 28, 'http://localhost:8080/', 'localhost:8080/', '', '2024-11-26 19:48:31'),
+(354, 28, 'http://localhost:8080/', 'localhost:8080/', '', '2024-11-26 19:49:00'),
+(355, 28, 'http://localhost:8080/', 'localhost:8080/', '', '2024-11-26 19:49:36'),
+(356, 28, 'http://localhost:8080/', 'localhost:8080/', '', '2024-11-26 19:50:20'),
+(357, 28, 'http://localhost:8080/', 'localhost:8080/', '', '2024-11-26 19:51:38'),
+(358, 28, 'http://localhost:8080/', 'localhost:8080/', '', '2024-11-26 19:52:10'),
+(359, 28, 'http://localhost:8080/', 'localhost:8080/', '', '2024-11-26 19:52:12'),
+(360, 28, 'http://localhost:8080/', 'localhost:8080/', '', '2024-11-26 19:52:45'),
+(361, 28, 'http://localhost:8080/', 'localhost:8080/', '', '2024-11-26 19:52:49'),
+(362, 28, 'http://localhost:8080/', 'localhost:8080/', '', '2024-11-26 19:53:07'),
+(363, 28, 'http://localhost:8080/', 'localhost:8080/', '', '2024-11-26 19:53:52'),
+(364, 28, 'http://localhost:8080/', 'localhost:8080/', '', '2024-11-26 19:54:57'),
+(365, 28, 'http://localhost:8080/', 'localhost:8080/', '', '2024-11-26 19:55:59'),
+(366, 28, 'http://localhost:8080/', 'localhost:8080/', '', '2024-11-26 19:57:22'),
+(367, 28, 'http://localhost:8080/', 'localhost:8080/', '', '2024-11-26 20:02:12'),
+(368, 28, 'http://localhost:8080/', 'localhost:8080/', '', '2024-11-26 20:06:30'),
+(369, 28, 'http://localhost:8080/', 'localhost:8080/', '', '2024-11-26 20:06:39'),
+(370, 28, 'http://localhost:8080/', 'localhost:8080/', '', '2024-11-26 20:06:52'),
+(371, 28, 'http://localhost:8080/', 'localhost:8080/', '', '2024-11-26 20:07:53'),
+(372, 28, 'http://localhost:8080/', 'localhost:8080/', '', '2024-11-26 20:12:06'),
+(373, 28, 'http://localhost:8080/', 'localhost:8080/', '', '2024-11-26 20:12:17'),
+(374, 28, 'http://localhost:8080/', 'localhost:8080/', '', '2024-11-26 20:12:39'),
+(375, 28, 'http://localhost:8080/', 'localhost:8080/', '', '2024-11-26 20:12:56'),
+(376, 28, 'http://localhost:8080/', 'localhost:8080/', '', '2024-11-26 20:13:55'),
+(377, 28, 'http://localhost:8080/', 'localhost:8080/', '', '2024-11-26 20:14:13'),
+(378, 28, 'http://localhost:8080/', 'localhost:8080/', '', '2024-11-26 20:16:35'),
+(379, 28, 'http://localhost:8080/', 'localhost:8080/', '', '2024-11-26 20:18:06'),
+(380, 28, 'http://localhost:8080/', 'localhost:8080/', '', '2024-11-26 20:18:22'),
+(381, 28, 'http://localhost:8080/', 'localhost:8080/', '', '2024-11-26 20:19:20'),
+(382, 28, 'http://localhost:8080/logowanie?back=my-account', 'localhost:8080/logowanie?back=my-account', '', '2024-11-26 20:19:35'),
+(383, 28, 'http://localhost:8080/admin044berh2x/index.php/configure/shop/preferences/preferences?_token=fteklug3V6XO7jDFkQEzK9vzAcw-BY7pr3urwKu47AU', 'localhost:8080/favicon.ico', '', '2024-11-26 20:21:22'),
+(384, 28, 'http://localhost:8080/logowanie?back=my-account', 'localhost:8080/logowanie?back=my-account', '', '2024-11-26 20:23:52'),
+(385, 28, 'http://localhost:8080/logowanie?back=my-account', 'localhost:8080/logowanie?back=my-account', '', '2024-11-26 20:28:17'),
+(386, 28, 'http://localhost:8080/logowanie?back=my-account', 'localhost:8080/logowanie?back=my-account', '', '2024-11-26 20:28:41'),
+(387, 28, 'http://localhost:8080/logowanie?back=my-account', 'localhost:8080/logowanie?back=my-account', '', '2024-11-26 20:29:08'),
+(388, 28, 'http://localhost:8080/logowanie?back=my-account', 'localhost:8080/logowanie?back=my-account', '', '2024-11-26 20:29:12'),
+(389, 28, 'http://localhost:8080/logowanie?back=my-account', 'localhost:8080/logowanie?back=my-account', '', '2024-11-26 20:29:59'),
+(390, 28, 'http://localhost:8080/logowanie?back=my-account', 'localhost:8080/img/shoping-cart-icon.jpg', '', '2024-11-26 20:30:00'),
+(391, 28, 'http://localhost:8080/logowanie?back=my-account', 'localhost:8080/logowanie?back=my-account', '', '2024-11-26 20:30:17'),
+(392, 28, 'http://localhost:8080/logowanie?back=my-account', 'localhost:8080/img/shoping-cart-icon.jpg', '', '2024-11-26 20:30:18'),
+(393, 28, 'http://localhost:8080/logowanie?back=my-account', 'localhost:8080/logowanie?back=my-account', '', '2024-11-26 20:30:21'),
+(394, 28, 'http://localhost:8080/logowanie?back=my-account', 'localhost:8080/logowanie?back=my-account', '', '2024-11-26 20:30:47'),
+(395, 28, 'http://localhost:8080/logowanie?back=my-account', 'localhost:8080/img/shoping-cart-icon.jpg', '', '2024-11-26 20:30:47'),
+(396, 28, 'http://localhost:8080/logowanie?back=my-account', 'localhost:8080/logowanie?back=my-account', '', '2024-11-26 20:31:20'),
+(397, 28, 'http://localhost:8080/logowanie?back=my-account', 'localhost:8080/img/shoping-cart-icon.jpg', '', '2024-11-26 20:31:21'),
+(398, 28, 'http://localhost:8080/logowanie?back=my-account', 'localhost:8080/logowanie?back=my-account', '', '2024-11-26 20:32:47'),
+(399, 28, 'http://localhost:8080/logowanie?back=my-account', 'localhost:8080/img/shopping-cart-icon.jpg', '', '2024-11-26 20:32:47'),
+(400, 28, 'http://localhost:8080/themes/child_classic/modules/ps_emailsubscription/images/image.svg', 'localhost:8080/favicon.ico', '', '2024-11-26 20:33:06'),
+(401, 28, 'http://localhost:8080/logowanie?back=my-account', 'localhost:8080/logowanie?back=my-account', '', '2024-11-26 20:33:32'),
+(402, 28, 'http://localhost:8080/logowanie?back=my-account', 'localhost:8080/logowanie?back=my-account', '', '2024-11-26 20:34:57'),
+(403, 28, 'http://localhost:8080/index.php?controller=404', 'localhost:8080/', '', '2024-11-26 20:35:07'),
+(404, 28, 'http://localhost:8080/logowanie?back=my-account', 'localhost:8080/logowanie?back=my-account', '', '2024-11-26 20:35:10'),
+(405, 28, 'http://localhost:8080/logowanie?back=my-account', 'localhost:8080/logowanie?back=my-account', '', '2024-11-26 20:36:32'),
+(406, 28, 'http://localhost:8080/logowanie?back=my-account', 'localhost:8080/logowanie?back=my-account', '', '2024-11-26 20:36:40'),
+(407, 28, 'http://localhost:8080/logowanie?back=my-account', 'localhost:8080/logowanie?back=my-account', '', '2024-11-26 20:36:50'),
+(408, 28, 'http://localhost:8080/logowanie?back=my-account', 'localhost:8080/logowanie?back=my-account', '', '2024-11-26 20:37:06'),
+(409, 28, 'http://localhost:8080/logowanie?back=my-account', 'localhost:8080/', '', '2024-11-26 20:37:12'),
+(410, 28, 'http://localhost:8080/', 'localhost:8080/women/2-9-brown-bear-printed-sweater.html', '', '2024-11-26 20:37:15'),
+(411, 28, 'http://localhost:8080/women/2-9-brown-bear-printed-sweater.html', 'localhost:8080/koszyk?action=show', '', '2024-11-26 20:37:19'),
+(412, 28, 'http://localhost:8080/women/2-9-brown-bear-printed-sweater.html', 'localhost:8080/koszyk?action=show', '', '2024-11-26 20:37:30'),
+(413, 28, 'http://localhost:8080/koszyk?action=show', 'localhost:8080/koszyk?action=show', '', '2024-11-26 20:37:32'),
+(414, 28, 'http://localhost:8080/koszyk?action=show', 'localhost:8080/', '', '2024-11-26 20:37:34'),
+(415, 28, 'http://localhost:8080/koszyk?action=show', 'localhost:8080/', '', '2024-11-26 20:37:41'),
+(416, 28, 'http://localhost:8080/', 'localhost:8080/koszyk?action=show', '', '2024-11-26 20:37:48'),
+(417, 28, 'http://localhost:8080/koszyk?action=show', 'localhost:8080/', '', '2024-11-26 20:37:52'),
+(418, 28, 'http://localhost:8080/', 'localhost:8080/koszyk?action=show', '', '2024-11-26 20:38:00'),
+(419, 28, 'http://localhost:8080/koszyk?action=show', 'localhost:8080/koszyk?action=show', '', '2024-11-26 20:38:03'),
+(420, 28, 'http://localhost:8080/koszyk?action=show', 'localhost:8080/koszyk?action=show', '', '2024-11-26 20:38:17'),
+(421, 28, 'http://localhost:8080/koszyk?action=show', 'localhost:8080/koszyk?action=show', '', '2024-11-26 20:38:24'),
+(422, 28, 'http://localhost:8080/koszyk?action=show', 'localhost:8080/koszyk?action=show', '', '2024-11-26 20:38:34'),
+(423, 28, 'http://localhost:8080/koszyk?action=show', 'localhost:8080/koszyk?action=show', '', '2024-11-26 20:39:16'),
+(424, 28, 'http://localhost:8080/koszyk?action=show', 'localhost:8080/koszyk?action=show', '', '2024-11-26 20:39:47'),
+(425, 28, 'http://localhost:8080/koszyk?action=show', 'localhost:8080/koszyk?action=show', '', '2024-11-26 20:40:21'),
+(426, 28, 'http://localhost:8080/koszyk?action=show', 'localhost:8080/art/5-19-today-is-a-good-day-framed-poster.html', '', '2024-11-26 20:41:25'),
+(427, 28, 'http://localhost:8080/koszyk?action=show', 'localhost:8080/art/5-19-today-is-a-good-day-framed-poster.html', '', '2024-11-26 20:41:50'),
+(428, 28, 'http://localhost:8080/art/5-19-today-is-a-good-day-framed-poster.html', 'localhost:8080/koszyk?action=show', '', '2024-11-26 20:41:51'),
+(429, 28, 'http://localhost:8080/koszyk?action=show', 'localhost:8080/art/5-19-today-is-a-good-day-framed-poster.html', '', '2024-11-26 20:41:53'),
+(430, 28, 'http://localhost:8080/koszyk?action=show', 'localhost:8080/art/5-19-today-is-a-good-day-framed-poster.html', '', '2024-11-26 20:42:59'),
+(431, 28, 'http://localhost:8080/koszyk?action=show', 'localhost:8080/art/5-19-today-is-a-good-day-framed-poster.html', '', '2024-11-26 20:43:09'),
+(432, 28, 'http://localhost:8080/koszyk?action=show', 'localhost:8080/art/5-19-today-is-a-good-day-framed-poster.html', '', '2024-11-26 20:43:30'),
+(433, 28, 'http://localhost:8080/koszyk?action=show', 'localhost:8080/art/5-19-today-is-a-good-day-framed-poster.html', '', '2024-11-26 20:43:57'),
+(434, 28, 'http://localhost:8080/koszyk?action=show', 'localhost:8080/art/5-19-today-is-a-good-day-framed-poster.html', '', '2024-11-26 20:44:39'),
+(435, 28, 'http://localhost:8080/koszyk?action=show', 'localhost:8080/art/5-19-today-is-a-good-day-framed-poster.html', '', '2024-11-26 20:44:53'),
+(436, 28, 'http://localhost:8080/koszyk?action=show', 'localhost:8080/art/5-19-today-is-a-good-day-framed-poster.html', '', '2024-11-26 20:47:22'),
+(437, 28, 'http://localhost:8080/koszyk?action=show', 'localhost:8080/art/5-19-today-is-a-good-day-framed-poster.html', '', '2024-11-26 20:48:19'),
+(438, 28, 'http://localhost:8080/koszyk?action=show', 'localhost:8080/art/5-19-today-is-a-good-day-framed-poster.html', '', '2024-11-26 20:48:25'),
+(439, 28, 'http://localhost:8080/koszyk?action=show', 'localhost:8080/art/5-19-today-is-a-good-day-framed-poster.html', '', '2024-11-26 20:48:29'),
+(440, 28, 'http://localhost:8080/koszyk?action=show', 'localhost:8080/art/5-19-today-is-a-good-day-framed-poster.html', '', '2024-11-26 20:49:46'),
+(441, 28, 'http://localhost:8080/koszyk?action=show', 'localhost:8080/art/5-19-today-is-a-good-day-framed-poster.html', '', '2024-11-26 20:49:57'),
+(442, 28, 'http://localhost:8080/koszyk?action=show', 'localhost:8080/art/5-19-today-is-a-good-day-framed-poster.html', '', '2024-11-26 20:51:11'),
+(443, 28, 'http://localhost:8080/koszyk?action=show', 'localhost:8080/art/5-19-today-is-a-good-day-framed-poster.html', '', '2024-11-26 20:51:13'),
+(444, 28, 'http://localhost:8080/koszyk?action=show', 'localhost:8080/art/5-19-today-is-a-good-day-framed-poster.html', '', '2024-11-26 20:51:17'),
+(445, 28, 'http://localhost:8080/koszyk?action=show', 'localhost:8080/art/5-19-today-is-a-good-day-framed-poster.html', '', '2024-11-26 20:51:19'),
+(446, 28, 'http://localhost:8080/art/5-19-today-is-a-good-day-framed-poster.html', 'localhost:8080/koszyk?action=show', '', '2024-11-26 20:51:23'),
+(447, 28, 'http://localhost:8080/koszyk?action=show', 'localhost:8080/art/5-19-today-is-a-good-day-framed-poster.html', '', '2024-11-26 20:51:24'),
+(448, 28, 'http://localhost:8080/koszyk?action=show', 'localhost:8080/art/5-19-today-is-a-good-day-framed-poster.html', '', '2024-11-26 20:55:48');
+INSERT INTO `ps_connections_source` (`id_connections_source`, `id_connections`, `http_referer`, `request_uri`, `keywords`, `date_add`) VALUES
+(449, 28, 'http://localhost:8080/koszyk?action=show', 'localhost:8080/art/5-19-today-is-a-good-day-framed-poster.html', '', '2024-11-26 20:56:04'),
+(450, 28, 'http://localhost:8080/koszyk?action=show', 'localhost:8080/art/5-19-today-is-a-good-day-framed-poster.html', '', '2024-11-26 20:56:38'),
+(451, 28, 'http://localhost:8080/koszyk?action=show', 'localhost:8080/art/5-19-today-is-a-good-day-framed-poster.html', '', '2024-11-26 20:56:44'),
+(452, 28, 'http://localhost:8080/koszyk?action=show', 'localhost:8080/art/5-19-today-is-a-good-day-framed-poster.html', '', '2024-11-26 20:56:56'),
+(453, 28, 'http://localhost:8080/koszyk?action=show', 'localhost:8080/art/5-19-today-is-a-good-day-framed-poster.html', '', '2024-11-26 20:58:55'),
+(454, 28, 'http://localhost:8080/koszyk?action=show', 'localhost:8080/art/5-19-today-is-a-good-day-framed-poster.html', '', '2024-11-26 20:59:01'),
+(455, 28, 'http://localhost:8080/koszyk?action=show', 'localhost:8080/art/5-19-today-is-a-good-day-framed-poster.html', '', '2024-11-26 20:59:08'),
+(456, 28, 'http://localhost:8080/koszyk?action=show', 'localhost:8080/art/5-19-today-is-a-good-day-framed-poster.html', '', '2024-11-26 20:59:16'),
+(457, 28, 'http://localhost:8080/koszyk?action=show', 'localhost:8080/art/5-19-today-is-a-good-day-framed-poster.html', '', '2024-11-26 20:59:21'),
+(458, 28, 'http://localhost:8080/koszyk?action=show', 'localhost:8080/art/5-19-today-is-a-good-day-framed-poster.html', '', '2024-11-26 20:59:29'),
+(459, 28, 'http://localhost:8080/koszyk?action=show', 'localhost:8080/art/5-19-today-is-a-good-day-framed-poster.html', '', '2024-11-26 21:01:06'),
+(460, 28, 'http://localhost:8080/koszyk?action=show', 'localhost:8080/art/5-19-today-is-a-good-day-framed-poster.html', '', '2024-11-26 21:01:27'),
+(461, 28, 'http://localhost:8080/koszyk?action=show', 'localhost:8080/art/5-19-today-is-a-good-day-framed-poster.html', '', '2024-11-26 21:02:59'),
+(462, 28, 'http://localhost:8080/koszyk?action=show', 'localhost:8080/art/5-19-today-is-a-good-day-framed-poster.html', '', '2024-11-26 21:03:07'),
+(463, 28, 'http://localhost:8080/koszyk?action=show', 'localhost:8080/art/5-19-today-is-a-good-day-framed-poster.html', '', '2024-11-26 21:06:13'),
+(464, 28, 'http://localhost:8080/koszyk?action=show', 'localhost:8080/art/5-19-today-is-a-good-day-framed-poster.html', '', '2024-11-26 21:06:21'),
+(465, 28, 'http://localhost:8080/koszyk?action=show', 'localhost:8080/art/5-19-today-is-a-good-day-framed-poster.html', '', '2024-11-26 21:06:26'),
+(466, 28, 'http://localhost:8080/koszyk?action=show', 'localhost:8080/art/5-19-today-is-a-good-day-framed-poster.html', '', '2024-11-26 21:09:28'),
+(467, 28, 'http://localhost:8080/koszyk?action=show', 'localhost:8080/art/5-19-today-is-a-good-day-framed-poster.html', '', '2024-11-26 21:10:57'),
+(468, 28, 'http://localhost:8080/koszyk?action=show', 'localhost:8080/art/5-19-today-is-a-good-day-framed-poster.html', '', '2024-11-26 21:11:09'),
+(469, 28, 'http://localhost:8080/koszyk?action=show', 'localhost:8080/art/5-19-today-is-a-good-day-framed-poster.html', '', '2024-11-26 21:12:02'),
+(470, 28, 'http://localhost:8080/koszyk?action=show', 'localhost:8080/art/5-19-today-is-a-good-day-framed-poster.html', '', '2024-11-26 21:12:09'),
+(471, 28, 'http://localhost:8080/koszyk?action=show', 'localhost:8080/art/5-19-today-is-a-good-day-framed-poster.html', '', '2024-11-26 21:14:32'),
+(472, 28, 'http://localhost:8080/koszyk?action=show', 'localhost:8080/art/5-19-today-is-a-good-day-framed-poster.html', '', '2024-11-26 21:16:07'),
+(473, 28, 'http://localhost:8080/koszyk?action=show', 'localhost:8080/art/5-19-today-is-a-good-day-framed-poster.html', '', '2024-11-26 21:16:17'),
+(474, 28, 'http://localhost:8080/koszyk?action=show', 'localhost:8080/art/5-19-today-is-a-good-day-framed-poster.html', '', '2024-11-26 21:17:47'),
+(475, 28, 'http://localhost:8080/koszyk?action=show', 'localhost:8080/art/5-19-today-is-a-good-day-framed-poster.html', '', '2024-11-26 21:18:34'),
+(476, 28, 'http://localhost:8080/koszyk?action=show', 'localhost:8080/art/5-19-today-is-a-good-day-framed-poster.html', '', '2024-11-26 21:19:18'),
+(477, 28, 'http://localhost:8080/koszyk?action=show', 'localhost:8080/art/5-19-today-is-a-good-day-framed-poster.html', '', '2024-11-26 21:20:47'),
+(478, 28, 'http://localhost:8080/koszyk?action=show', 'localhost:8080/art/5-19-today-is-a-good-day-framed-poster.html', '', '2024-11-26 21:22:04'),
+(479, 28, 'http://localhost:8080/koszyk?action=show', 'localhost:8080/art/5-19-today-is-a-good-day-framed-poster.html', '', '2024-11-26 21:25:34'),
+(480, 28, 'http://localhost:8080/koszyk?action=show', 'localhost:8080/art/5-19-today-is-a-good-day-framed-poster.html', '', '2024-11-26 21:26:18'),
+(481, 28, 'http://localhost:8080/art/5-19-today-is-a-good-day-framed-poster.html', 'localhost:8080/szukaj?controller=search&s=', '', '2024-11-26 21:26:21'),
+(482, 28, 'http://localhost:8080/art/5-19-today-is-a-good-day-framed-poster.html', 'localhost:8080/szukaj?controller=search&s=', '', '2024-11-26 21:26:51'),
+(483, 28, 'http://localhost:8080/art/5-19-today-is-a-good-day-framed-poster.html', 'localhost:8080/szukaj?controller=search&s=', '', '2024-11-26 21:27:01'),
+(484, 28, 'http://localhost:8080/art/5-19-today-is-a-good-day-framed-poster.html', 'localhost:8080/szukaj?controller=search&s=', '', '2024-11-26 21:27:27'),
+(485, 28, 'http://localhost:8080/szukaj?controller=search&s=', 'localhost:8080/', '', '2024-11-26 21:27:29'),
+(486, 28, 'http://localhost:8080/szukaj?controller=search&s=', 'localhost:8080/', '', '2024-11-26 21:28:16'),
+(487, 28, 'http://localhost:8080/szukaj?controller=search&s=', 'localhost:8080/', '', '2024-11-26 21:28:36'),
+(488, 28, 'http://localhost:8080/szukaj?controller=search&s=', 'localhost:8080/', '', '2024-11-26 21:28:42'),
+(489, 28, 'http://localhost:8080/szukaj?controller=search&s=', 'localhost:8080/', '', '2024-11-26 21:30:10'),
+(490, 28, 'http://localhost:8080/szukaj?controller=search&s=', 'localhost:8080/', '', '2024-11-26 21:30:33'),
+(491, 28, 'http://localhost:8080/szukaj?controller=search&s=', 'localhost:8080/', '', '2024-11-26 21:31:42'),
+(492, 28, 'http://localhost:8080/szukaj?controller=search&s=', 'localhost:8080/', '', '2024-11-26 21:33:37'),
+(493, 28, 'http://localhost:8080/szukaj?controller=search&s=', 'localhost:8080/', '', '2024-11-26 21:33:59'),
+(494, 28, 'http://localhost:8080/szukaj?controller=search&s=', 'localhost:8080/', '', '2024-11-26 21:34:18'),
+(495, 28, 'http://localhost:8080/szukaj?controller=search&s=', 'localhost:8080/', '', '2024-11-26 21:34:57'),
+(496, 28, 'http://localhost:8080/szukaj?controller=search&s=', 'localhost:8080/', '', '2024-11-26 21:35:09'),
+(497, 28, 'http://localhost:8080/szukaj?controller=search&s=', 'localhost:8080/', '', '2024-11-26 21:35:40'),
+(498, 28, 'http://localhost:8080/szukaj?controller=search&s=', 'localhost:8080/', '', '2024-11-26 21:36:54'),
+(499, 28, 'http://localhost:8080/szukaj?controller=search&s=', 'localhost:8080/', '', '2024-11-26 21:37:33'),
+(500, 28, 'http://localhost:8080/szukaj?controller=search&s=', 'localhost:8080/', '', '2024-11-26 21:37:49'),
+(501, 28, 'http://localhost:8080/szukaj?controller=search&s=', 'localhost:8080/', '', '2024-11-26 21:41:55'),
+(502, 28, 'http://localhost:8080/szukaj?controller=search&s=', 'localhost:8080/', '', '2024-11-26 21:43:12'),
+(503, 28, 'http://localhost:8080/szukaj?controller=search&s=', 'localhost:8080/', '', '2024-11-26 21:44:11'),
+(504, 28, 'http://localhost:8080/szukaj?controller=search&s=', 'localhost:8080/', '', '2024-11-26 21:44:26'),
+(505, 28, 'http://localhost:8080/szukaj?controller=search&s=', 'localhost:8080/', '', '2024-11-26 21:47:45'),
+(506, 28, 'http://localhost:8080/szukaj?controller=search&s=', 'localhost:8080/', '', '2024-11-26 21:48:06'),
+(507, 28, 'http://localhost:8080/szukaj?controller=search&s=', 'localhost:8080/', '', '2024-11-26 21:49:28'),
+(508, 28, 'http://localhost:8080/szukaj?controller=search&s=', 'localhost:8080/', '', '2024-11-26 21:50:21'),
+(509, 28, 'http://localhost:8080/szukaj?controller=search&s=', 'localhost:8080/', '', '2024-11-26 21:50:43'),
+(510, 28, 'http://localhost:8080/szukaj?controller=search&s=', 'localhost:8080/', '', '2024-11-26 21:51:06'),
+(511, 28, 'http://localhost:8080/szukaj?controller=search&s=', 'localhost:8080/', '', '2024-11-26 21:52:02'),
+(512, 28, 'http://localhost:8080/szukaj?controller=search&s=', 'localhost:8080/', '', '2024-11-26 21:52:27'),
+(513, 28, 'http://localhost:8080/szukaj?controller=search&s=', 'localhost:8080/', '', '2024-11-26 21:52:51'),
+(514, 28, 'http://localhost:8080/szukaj?controller=search&s=', 'localhost:8080/', '', '2024-11-26 21:54:14'),
+(515, 28, 'http://localhost:8080/szukaj?controller=search&s=', 'localhost:8080/', '', '2024-11-26 21:54:22'),
+(516, 28, 'http://localhost:8080/szukaj?controller=search&s=', 'localhost:8080/', '', '2024-11-26 21:54:37'),
+(517, 28, 'http://localhost:8080/szukaj?controller=search&s=', 'localhost:8080/', '', '2024-11-26 21:57:44'),
+(518, 28, 'http://localhost:8080/szukaj?controller=search&s=', 'localhost:8080/', '', '2024-11-26 21:59:38'),
+(519, 28, 'http://localhost:8080/szukaj?controller=search&s=', 'localhost:8080/', '', '2024-11-26 22:00:55'),
+(520, 28, 'http://localhost:8080/szukaj?controller=search&s=', 'localhost:8080/', '', '2024-11-26 22:00:58'),
+(521, 28, 'http://localhost:8080/szukaj?controller=search&s=', 'localhost:8080/', '', '2024-11-26 22:02:21'),
+(522, 28, 'http://localhost:8080/szukaj?controller=search&s=', 'localhost:8080/', '', '2024-11-26 22:02:42'),
+(523, 28, 'http://localhost:8080/szukaj?controller=search&s=', 'localhost:8080/', '', '2024-11-26 22:03:57'),
+(524, 28, 'http://localhost:8080/szukaj?controller=search&s=', 'localhost:8080/', '', '2024-11-26 22:05:01'),
+(525, 28, 'http://localhost:8080/szukaj?controller=search&s=', 'localhost:8080/', '', '2024-11-26 22:07:35'),
+(526, 28, 'http://localhost:8080/szukaj?controller=search&s=', 'localhost:8080/', '', '2024-11-26 22:08:48'),
+(527, 28, 'http://localhost:8080/szukaj?controller=search&s=', 'localhost:8080/', '', '2024-11-26 22:09:15'),
+(528, 28, 'http://localhost:8080/szukaj?controller=search&s=', 'localhost:8080/', '', '2024-11-26 22:10:42'),
+(529, 28, 'http://localhost:8080/szukaj?controller=search&s=', 'localhost:8080/', '', '2024-11-26 22:11:27'),
+(530, 28, 'http://localhost:8080/szukaj?controller=search&s=', 'localhost:8080/', '', '2024-11-26 22:12:28'),
+(531, 28, 'http://localhost:8080/szukaj?controller=search&s=', 'localhost:8080/', '', '2024-11-26 22:22:20'),
+(532, 28, 'http://localhost:8080/szukaj?controller=search&s=', 'localhost:8080/', '', '2024-11-26 22:27:54'),
+(533, 28, 'http://localhost:8080/szukaj?controller=search&s=', 'localhost:8080/', '', '2024-11-26 22:29:03'),
+(534, 28, 'http://localhost:8080/szukaj?controller=search&s=', 'localhost:8080/', '', '2024-11-26 22:31:08'),
+(535, 28, 'http://localhost:8080/szukaj?controller=search&s=', 'localhost:8080/', '', '2024-11-26 22:33:24'),
+(536, 28, 'http://localhost:8080/szukaj?controller=search&s=', 'localhost:8080/', '', '2024-11-26 22:33:43'),
+(537, 28, 'http://localhost:8080/szukaj?controller=search&s=', 'localhost:8080/', '', '2024-11-26 22:35:18'),
+(538, 28, 'http://localhost:8080/szukaj?controller=search&s=', 'localhost:8080/', '', '2024-11-26 22:38:15'),
+(539, 28, 'http://localhost:8080/szukaj?controller=search&s=', 'localhost:8080/', '', '2024-11-26 22:38:39'),
+(540, 28, 'http://localhost:8080/szukaj?controller=search&s=', 'localhost:8080/', '', '2024-11-26 22:38:46'),
+(541, 28, 'http://localhost:8080/szukaj?controller=search&s=', 'localhost:8080/', '', '2024-11-26 22:39:55'),
+(542, 28, 'http://localhost:8080/szukaj?controller=search&s=', 'localhost:8080/', '', '2024-11-26 22:40:13'),
+(543, 28, 'http://localhost:8080/szukaj?controller=search&s=', 'localhost:8080/', '', '2024-11-26 22:40:30'),
+(544, 28, 'http://localhost:8080/szukaj?controller=search&s=', 'localhost:8080/', '', '2024-11-26 22:41:16'),
+(545, 28, 'http://localhost:8080/szukaj?controller=search&s=', 'localhost:8080/', '', '2024-11-26 22:41:27'),
+(546, 28, 'http://localhost:8080/szukaj?controller=search&s=', 'localhost:8080/', '', '2024-11-26 22:41:36'),
+(547, 28, 'http://localhost:8080/szukaj?controller=search&s=', 'localhost:8080/', '', '2024-11-26 22:42:51'),
+(548, 28, 'http://localhost:8080/szukaj?controller=search&s=', 'localhost:8080/', '', '2024-11-26 22:43:52'),
+(549, 28, 'http://localhost:8080/szukaj?controller=search&s=', 'localhost:8080/', '', '2024-11-26 22:44:43'),
+(550, 28, 'http://localhost:8080/szukaj?controller=search&s=', 'localhost:8080/', '', '2024-11-26 22:45:05'),
+(551, 28, 'http://localhost:8080/szukaj?controller=search&s=', 'localhost:8080/', '', '2024-11-26 22:46:20'),
+(552, 28, 'http://localhost:8080/szukaj?controller=search&s=', 'localhost:8080/', '', '2024-11-26 22:47:39'),
+(553, 28, 'http://localhost:8080/szukaj?controller=search&s=', 'localhost:8080/', '', '2024-11-26 22:48:01'),
+(554, 28, 'http://localhost:8080/szukaj?controller=search&s=', 'localhost:8080/', '', '2024-11-26 22:49:51'),
+(555, 28, 'http://localhost:8080/szukaj?controller=search&s=', 'localhost:8080/', '', '2024-11-26 22:50:21'),
+(556, 28, 'http://localhost:8080/szukaj?controller=search&s=', 'localhost:8080/', '', '2024-11-26 22:52:44'),
+(557, 28, 'http://localhost:8080/szukaj?controller=search&s=', 'localhost:8080/', '', '2024-11-26 22:52:52'),
+(558, 28, 'http://localhost:8080/szukaj?controller=search&s=', 'localhost:8080/', '', '2024-11-26 22:53:27'),
+(559, 28, 'http://localhost:8080/szukaj?controller=search&s=', 'localhost:8080/', '', '2024-11-26 22:53:58'),
+(560, 28, 'http://localhost:8080/szukaj?controller=search&s=', 'localhost:8080/', '', '2024-11-26 22:56:41'),
+(561, 28, 'http://localhost:8080/szukaj?controller=search&s=', 'localhost:8080/', '', '2024-11-26 22:56:53'),
+(562, 28, 'http://localhost:8080/szukaj?controller=search&s=', 'localhost:8080/', '', '2024-11-26 22:57:08'),
+(563, 28, 'http://localhost:8080/szukaj?controller=search&s=', 'localhost:8080/', '', '2024-11-26 22:57:52'),
+(564, 28, 'http://localhost:8080/szukaj?controller=search&s=', 'localhost:8080/', '', '2024-11-26 23:03:24'),
+(565, 28, 'http://localhost:8080/szukaj?controller=search&s=', 'localhost:8080/', '', '2024-11-26 23:05:25'),
+(566, 28, 'http://localhost:8080/szukaj?controller=search&s=', 'localhost:8080/', '', '2024-11-26 23:06:24'),
+(567, 28, 'http://localhost:8080/szukaj?controller=search&s=', 'localhost:8080/', '', '2024-11-26 23:08:33'),
+(568, 28, 'http://localhost:8080/szukaj?controller=search&s=', 'localhost:8080/', '', '2024-11-26 23:08:56'),
+(569, 28, 'http://localhost:8080/szukaj?controller=search&s=', 'localhost:8080/', '', '2024-11-26 23:09:20'),
+(570, 28, 'http://localhost:8080/szukaj?controller=search&s=', 'localhost:8080/', '', '2024-11-26 23:09:33'),
+(571, 28, 'http://localhost:8080/szukaj?controller=search&s=', 'localhost:8080/', '', '2024-11-26 23:09:56'),
+(572, 28, 'http://localhost:8080/szukaj?controller=search&s=', 'localhost:8080/', '', '2024-11-26 23:10:03'),
+(573, 28, 'http://localhost:8080/', 'localhost:8080/content/3-reklamacje', '', '2024-11-26 23:10:34'),
+(574, 28, 'http://localhost:8080/', 'localhost:8080/content/3-reklamacje', '', '2024-11-26 23:18:42'),
+(575, 28, 'http://localhost:8080/', 'localhost:8080/content/3-reklamacje', '', '2024-11-26 23:20:46'),
+(576, 28, 'http://localhost:8080/', 'localhost:8080/content/3-reklamacje', '', '2024-11-26 23:32:27'),
+(577, 28, 'http://localhost:8080/content/3-reklamacje', 'localhost:8080/', '', '2024-11-26 23:32:28'),
+(578, 28, 'http://localhost:8080/content/3-reklamacje', 'localhost:8080/', '', '2024-11-26 23:33:19'),
+(579, 28, 'http://localhost:8080/content/3-reklamacje', 'localhost:8080/', '', '2024-11-26 23:37:50'),
+(580, 28, 'http://localhost:8080/content/3-reklamacje', 'localhost:8080/', '', '2024-11-26 23:41:05'),
+(581, 28, 'http://localhost:8080/content/3-reklamacje', 'localhost:8080/', '', '2024-11-26 23:42:08'),
+(582, 28, 'http://localhost:8080/content/3-reklamacje', 'localhost:8080/', '', '2024-11-26 23:43:44'),
+(583, 28, 'http://localhost:8080/content/3-reklamacje', 'localhost:8080/', '', '2024-11-26 23:44:54'),
+(584, 28, 'http://localhost:8080/content/3-reklamacje', 'localhost:8080/', '', '2024-11-26 23:46:02'),
+(585, 28, 'http://localhost:8080/content/3-reklamacje', 'localhost:8080/', '', '2024-11-26 23:46:16'),
+(586, 28, 'http://localhost:8080/content/3-reklamacje', 'localhost:8080/', '', '2024-11-26 23:47:25'),
+(587, 28, 'http://localhost:8080/content/3-reklamacje', 'localhost:8080/', '', '2024-11-26 23:48:18'),
+(588, 28, 'http://localhost:8080/content/3-reklamacje', 'localhost:8080/', '', '2024-11-26 23:48:37'),
+(589, 28, 'http://localhost:8080/content/3-reklamacje', 'localhost:8080/', '', '2024-11-26 23:48:46'),
+(590, 28, 'http://localhost:8080/content/3-reklamacje', 'localhost:8080/', '', '2024-11-26 23:48:58'),
+(591, 28, 'http://localhost:8080/content/3-reklamacje', 'localhost:8080/', '', '2024-11-26 23:49:23'),
+(592, 28, 'http://localhost:8080/content/3-reklamacje', 'localhost:8080/', '', '2024-11-26 23:49:36'),
+(593, 28, 'http://localhost:8080/content/3-reklamacje', 'localhost:8080/', '', '2024-11-26 23:49:44'),
+(594, 28, 'http://localhost:8080/content/3-reklamacje', 'localhost:8080/', '', '2024-11-26 23:51:03'),
+(595, 28, 'http://localhost:8080/content/3-reklamacje', 'localhost:8080/', '', '2024-11-26 23:51:09'),
+(596, 28, 'http://localhost:8080/content/3-reklamacje', 'localhost:8080/', '', '2024-11-26 23:51:17'),
+(597, 28, 'http://localhost:8080/content/3-reklamacje', 'localhost:8080/', '', '2024-11-26 23:51:20'),
+(598, 28, 'http://localhost:8080/content/3-reklamacje', 'localhost:8080/', '', '2024-11-26 23:52:33'),
+(599, 28, 'http://localhost:8080/content/3-reklamacje', 'localhost:8080/', '', '2024-11-26 23:53:11'),
+(600, 28, 'http://localhost:8080/content/3-reklamacje', 'localhost:8080/', '', '2024-11-26 23:54:16'),
+(601, 28, 'http://localhost:8080/content/3-reklamacje', 'localhost:8080/', '', '2024-11-26 23:56:12'),
+(602, 28, 'http://localhost:8080/content/3-reklamacje', 'localhost:8080/', '', '2024-11-26 23:56:53'),
+(603, 28, 'http://localhost:8080/content/3-reklamacje', 'localhost:8080/', '', '2024-11-27 00:01:19'),
+(604, 28, 'http://localhost:8080/content/3-reklamacje', 'localhost:8080/', '', '2024-11-27 00:01:42'),
+(605, 28, 'http://localhost:8080/content/3-reklamacje', 'localhost:8080/', '', '2024-11-27 00:02:15'),
+(606, 28, 'http://localhost:8080/content/3-reklamacje', 'localhost:8080/', '', '2024-11-27 00:02:21'),
+(607, 28, 'http://localhost:8080/content/3-reklamacje', 'localhost:8080/', '', '2024-11-27 00:03:05'),
+(608, 28, 'http://localhost:8080/content/3-reklamacje', 'localhost:8080/', '', '2024-11-27 00:04:42'),
+(609, 28, 'http://localhost:8080/content/3-reklamacje', 'localhost:8080/', '', '2024-11-27 00:06:43'),
+(610, 28, 'http://localhost:8080/content/3-reklamacje', 'localhost:8080/', '', '2024-11-27 00:09:18'),
+(611, 28, 'http://localhost:8080/content/3-reklamacje', 'localhost:8080/', '', '2024-11-27 00:11:25'),
+(612, 28, 'http://localhost:8080/content/3-reklamacje', 'localhost:8080/', '', '2024-11-27 00:12:08'),
+(613, 28, 'http://localhost:8080/content/3-reklamacje', 'localhost:8080/', '', '2024-11-27 00:12:10'),
+(614, 28, 'http://localhost:8080/content/3-reklamacje', 'localhost:8080/', '', '2024-11-27 00:12:18'),
+(615, 28, 'http://localhost:8080/content/3-reklamacje', 'localhost:8080/', '', '2024-11-27 00:12:42'),
+(616, 28, 'http://localhost:8080/content/3-reklamacje', 'localhost:8080/', '', '2024-11-27 00:13:15'),
+(617, 28, 'http://localhost:8080/content/3-reklamacje', 'localhost:8080/', '', '2024-11-27 00:13:25'),
+(618, 28, 'http://localhost:8080/content/3-reklamacje', 'localhost:8080/', '', '2024-11-27 00:14:16'),
+(619, 28, 'http://localhost:8080/content/3-reklamacje', 'localhost:8080/', '', '2024-11-27 00:14:31'),
+(620, 28, 'http://localhost:8080/content/3-reklamacje', 'localhost:8080/', '', '2024-11-27 00:15:08'),
+(621, 28, 'http://localhost:8080/content/3-reklamacje', 'localhost:8080/', '', '2024-11-27 00:16:31'),
+(622, 28, 'http://localhost:8080/content/3-reklamacje', 'localhost:8080/', '', '2024-11-27 00:16:39'),
+(623, 28, 'http://localhost:8080/content/3-reklamacje', 'localhost:8080/', '', '2024-11-27 00:16:44'),
+(624, 28, 'http://localhost:8080/content/3-reklamacje', 'localhost:8080/', '', '2024-11-27 00:16:48'),
+(625, 28, 'http://localhost:8080/content/3-reklamacje', 'localhost:8080/', '', '2024-11-27 00:17:40'),
+(626, 28, 'http://localhost:8080/content/3-reklamacje', 'localhost:8080/', '', '2024-11-27 00:17:56'),
+(627, 28, 'http://localhost:8080/content/3-reklamacje', 'localhost:8080/', '', '2024-11-27 00:19:51'),
+(628, 28, 'http://localhost:8080/content/3-reklamacje', 'localhost:8080/', '', '2024-11-27 00:21:59'),
+(629, 28, 'http://localhost:8080/content/3-reklamacje', 'localhost:8080/', '', '2024-11-27 00:22:24'),
+(630, 28, 'http://localhost:8080/content/3-reklamacje', 'localhost:8080/', '', '2024-11-27 00:25:09'),
+(631, 28, 'http://localhost:8080/content/3-reklamacje', 'localhost:8080/', '', '2024-11-27 00:25:35'),
+(632, 28, 'http://localhost:8080/content/3-reklamacje', 'localhost:8080/', '', '2024-11-27 00:26:33'),
+(633, 28, 'http://localhost:8080/content/3-reklamacje', 'localhost:8080/', '', '2024-11-27 00:27:51');
 
 -- --------------------------------------------------------
 
@@ -5739,7 +6204,20 @@ INSERT INTO `ps_guest` (`id_guest`, `id_operating_system`, `id_web_browser`, `id
 (10, 8, 3, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'pl', 0),
 (11, 8, 3, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'pl', 0),
 (12, 8, 3, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'pl', 0),
-(13, 8, 3, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'pl', 0);
+(13, 8, 3, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'pl', 0),
+(14, 8, 3, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'pl', 0),
+(15, 8, 3, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'pl', 0),
+(16, 8, 3, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'pl', 0),
+(17, 8, 3, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'pl', 0),
+(18, 8, 3, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'pl', 0),
+(19, 8, 3, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'pl', 0),
+(20, 8, 3, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'pl', 0),
+(21, 8, 3, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'pl', 0),
+(22, 8, 3, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'pl', 0),
+(23, 8, 3, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'pl', 0),
+(24, 8, 3, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'pl', 0),
+(25, 8, 3, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'pl', 0),
+(26, 8, 3, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'pl', 0);
 
 -- --------------------------------------------------------
 
@@ -5839,7 +6317,7 @@ INSERT INTO `ps_hook` (`id_hook`, `name`, `title`, `description`, `active`, `pos
 (10, 'displayWrapperTop', 'Main wrapper section (top)', 'This hook displays new elements in the top of the main wrapper', 1, 1),
 (11, 'displayWrapperBottom', 'Main wrapper section (bottom)', 'This hook displays new elements in the bottom of the main wrapper', 1, 1),
 (12, 'displayContentWrapperTop', 'Content wrapper section (top)', 'This hook displays new elements in the top of the content wrapper', 1, 1),
-(13, 'displayContentWrapperBottom', 'Content wrapper section (bottom)', 'This hook displays new elements in the bottom of the content wrapper', 1, 1),
+(13, 'displayContentWrapperBottom', 'Content wrapper section (bottom)', 'This hook displays new elements in the bottom of the content wrapper', 0, 1),
 (14, 'displayLeftColumn', 'Left column blocks', 'This hook displays new elements in the left-hand column', 1, 1),
 (15, 'displayHome', 'Homepage content', 'This hook displays new elements on the homepage', 1, 1),
 (16, 'displayHeader', 'Pages html head section', 'This hook adds additional elements in the head section of your pages (head section of html)', 1, 1),
@@ -5872,7 +6350,7 @@ INSERT INTO `ps_hook` (`id_hook`, `name`, `title`, `description`, `active`, `pos
 (43, 'displayInvoiceLegalFreeText', 'PDF Invoice - Legal Free Text', 'This hook allows you to modify the legal free text on PDF invoices', 1, 1),
 (44, 'displayAdminCustomers', 'Display new elements in the Back Office, tab AdminCustomers', 'This hook launches modules when the AdminCustomers tab is displayed in the Back Office', 1, 1),
 (45, 'displayAdminCustomersAddressesItemAction', 'Display new elements in the Back Office, tab AdminCustomers, Addresses actions', 'This hook launches modules when the Addresses list into the AdminCustomers tab is displayed in the Back Office', 1, 1),
-(46, 'displayOrderConfirmation', 'Order confirmation page', 'This hook is called within an order\'s confirmation page', 1, 1),
+(46, 'displayOrderConfirmation', 'Order confirmation page', 'This hook is called within an order\'s confirmation page', 0, 1),
 (47, 'actionCustomerAccountAdd', 'Successful customer account creation', 'This hook is called when a new customer creates an account successfully', 1, 1),
 (48, 'actionCustomerAccountUpdate', 'Successful customer account update', 'This hook is called when a customer updates its account successfully', 1, 1),
 (49, 'displayCustomerAccount', 'Customer account displayed in Front Office', 'This hook displays new elements on the customer account page', 1, 1),
@@ -6358,7 +6836,7 @@ INSERT INTO `ps_hook` (`id_hook`, `name`, `title`, `description`, `active`, `pos
 (528, 'actionAddressGridPresenterModifier', 'Modify address grid template data', 'This hook allows to modify data which is about to be used in template for address grid', 1, 1),
 (529, 'actionCreditSlipGridPresenterModifier', 'Modify credit slip grid template data', 'This hook allows to modify data which is about to be used in template for credit slip grid', 1, 1),
 (530, 'displayAdditionalCustomerAddressFields', 'Display additional customer address fields', 'This hook allows to display extra field values added in an address form using hook \'additionalCustomerAddressFields\'', 1, 1),
-(531, 'displayFooterCategory', 'Category footer', 'This hook adds new blocks under the products listing in a category/search', 1, 1),
+(531, 'displayFooterCategory', 'Category footer', 'This hook adds new blocks under the products listing in a category/search', 0, 1),
 (532, 'displayHeaderCategory', 'Category header', 'This hook adds new blocks above the products listing in a category/search', 1, 1),
 (533, 'actionAdminAdministrationControllerPostProcessBefore', 'On post-process in Admin Configure Advanced Parameters Administration Controller', 'This hook is called on Admin Configure Advanced Parameters Administration post-process before processing any form', 1, 1),
 (534, 'actionAdminAdministrationControllerPostProcessGeneralBefore', 'On post-process in Admin Configure Advanced Parameters Administration Controller', 'This hook is called on Admin Configure Advanced Parameters Administration post-process before processing the General form', 1, 1),
@@ -6634,7 +7112,9 @@ INSERT INTO `ps_hook` (`id_hook`, `name`, `title`, `description`, `active`, `pos
 (806, 'actionObjectZoneAddAfter', 'actionObjectZoneAddAfter', '', 1, 1),
 (807, 'actionObjectZoneDeleteAfter', 'actionObjectZoneDeleteAfter', '', 1, 1),
 (808, 'actionObjectZoneUpdateAfter', 'actionObjectZoneUpdateAfter', '', 1, 1),
-(809, 'actionObjectEmployeeAddAfter', 'actionObjectEmployeeAddAfter', '', 1, 1);
+(809, 'actionObjectEmployeeAddAfter', 'actionObjectEmployeeAddAfter', '', 1, 1),
+(810, 'displayCustomWidgetPosition', 'displayCustomWidgetPosition', '', 0, 1),
+(811, 'displayProductPriceBlock', 'displayProductPriceBlock', '', 0, 1);
 
 -- --------------------------------------------------------
 
@@ -6788,12 +7268,12 @@ INSERT INTO `ps_hook_module` (`id_module`, `id_shop`, `id_hook`, `position`) VAL
 (12, 1, 696, 1),
 (13, 1, 14, 1),
 (14, 1, 7, 1),
-(15, 1, 698, 1),
 (15, 1, 701, 1),
 (16, 1, 69, 1),
 (17, 1, 702, 1),
 (18, 1, 703, 1),
 (18, 1, 704, 1),
+(19, 1, 698, 1),
 (20, 1, 706, 1),
 (21, 1, 122, 1),
 (22, 1, 47, 1),
@@ -6807,7 +7287,6 @@ INSERT INTO `ps_hook_module` (`id_module`, `id_shop`, `id_hook`, `position`) VAL
 (25, 1, 717, 1),
 (25, 1, 753, 1),
 (26, 1, 15, 1),
-(27, 1, 705, 1),
 (28, 1, 41, 1),
 (28, 1, 141, 1),
 (28, 1, 323, 1),
@@ -6829,6 +7308,7 @@ INSERT INTO `ps_hook_module` (`id_module`, `id_shop`, `id_hook`, `position`) VAL
 (29, 1, 732, 1),
 (30, 1, 733, 1),
 (31, 1, 58, 1),
+(32, 1, 705, 1),
 (44, 1, 18, 1),
 (44, 1, 24, 1),
 (44, 1, 734, 1),
@@ -6951,7 +7431,6 @@ INSERT INTO `ps_hook_module` (`id_module`, `id_shop`, `id_hook`, `position`) VAL
 (12, 1, 707, 2),
 (14, 1, 697, 2),
 (16, 1, 31, 2),
-(17, 1, 705, 2),
 (18, 1, 41, 2),
 (22, 1, 122, 2),
 (22, 1, 683, 2),
@@ -6962,7 +7441,7 @@ INSERT INTO `ps_hook_module` (`id_module`, `id_shop`, `id_hook`, `position`) VAL
 (26, 1, 16, 2),
 (26, 1, 706, 2),
 (29, 1, 82, 2),
-(30, 1, 25, 2),
+(30, 1, 705, 2),
 (35, 1, 7, 2),
 (36, 1, 55, 2),
 (53, 1, 71, 2),
@@ -6997,7 +7476,6 @@ INSERT INTO `ps_hook_module` (`id_module`, `id_shop`, `id_hook`, `position`) VAL
 (4, 1, 682, 3),
 (5, 1, 688, 3),
 (6, 1, 689, 3),
-(19, 1, 705, 3),
 (20, 1, 15, 3),
 (22, 1, 685, 3),
 (22, 1, 707, 3),
@@ -7016,7 +7494,6 @@ INSERT INTO `ps_hook_module` (`id_module`, `id_shop`, `id_hook`, `position`) VAL
 (5, 1, 682, 4),
 (6, 1, 688, 4),
 (32, 1, 16, 4),
-(32, 1, 705, 4),
 (33, 1, 707, 4),
 (38, 1, 55, 4),
 (57, 1, 683, 4),
@@ -7263,7 +7740,7 @@ CREATE TABLE `ps_info_lang` (
 --
 
 INSERT INTO `ps_info_lang` (`id_info`, `id_shop`, `id_lang`, `text`) VALUES
-(1, 1, 1, '<h2>Custom Text Block</h2>\n<p><strong class=\"dark\">Lorem ipsum dolor sit amet conse ctetu</strong></p>\n<p>Sit amet conse ctetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit.</p>');
+(1, 1, 1, '<div class=\"box resetcss box_custom blok-tekstu-na-dole\" id=\"box_custom49\">\n<p style=\"text-align:justify;\">Uwielbiasz uniwersum Harrego Pottera? W takim razie z pewnością pokochasz nasz sklep, w którym znajdziesz kubki, breloki, świeczki, różdżki oraz <strong>inne gadżety Harrego Pottera</strong>. To doskonałe akcesoria nie tylko dla przyszłych uczniów Hogwartu, ale także dla dorosłych miłośników sagi.</p>\n<h2 style=\"text-align:justify;\">Gadżety Harrego Pottera na wyciągnięcie ręki</h2>\n<p style=\"text-align:justify;\">W naszym sklepie Pottermania dostaniesz wszystko, czego potrzebujesz, aby poczuć magię. Chcesz wyglądać jak uczeń Hogwartu? W takim razie koniecznie sprawdź <a href=\"ubrania\">ubrania z Harrego Pottera</a>. Dostarczamy nie tylko<strong> klasyczne</strong> <strong>bluzy, swetry, szale, czapki z herbami domów</strong>, ale także prawdziwe szaty, które idealnie pasują np. na tematyczną imprezę lub bal karnawałowy. Wszystkim czarodziejom z pewnością przydadzą się także <a href=\"rozdzki\">różdżki Harry Potter</a>, bo tylko najpotężniejsi magowie potrafili rzucać bez nich zaklęcia.</p>\n<h2 style=\"text-align:justify;\">Sklep Harrego Pottera – dla fanów uniwersum</h2>\n<p style=\"text-align:justify;\">Pottermania to sklep dla fanów Harrego Pottera. Jeśli chcesz zamienić swój pokój w dormitorium Gryfonów lub Ślizgonów, to sprawdź nasz asortyment. <strong>Szklanki i kubki z herbami domów</strong> sprawią, że każdy napój będzie smakował magicznie. To także idealny prezent dla każdego fana uniwersum – bez względu na to czy kocha prostotę, minimalizm i szuka nowoczesnej zastawy z prostymi ozdobami, czy też woli ekstrawaganckie gadżety.</p>\n<p style=\"text-align:justify;\">A może szukasz ozdób na ścianę? W takim razie <strong>sprawdź plakaty Harry Potter</strong>. To proste dodatki nadające wnętrzu wyjątkowego charakteru. Nie brakuje u nas również <strong>praktycznych gadżetów Harry Potter</strong>. Oferujemy także <a href=\"kontakt\">breloczki Harry Potter</a>, dzięki którym z łatwością znajdziesz klucze, nawet jeśli użyłeś na swojej torbie powiększającego zaklęcia Capcious Extermis.</p>\n<h2 style=\"text-align:justify;\">Kup gadżety z Harrego Pottera i zostań częścią magicznego świata</h2>\n<p style=\"text-align:justify;\">Co łączy czarodziejów i mugoli? Wszyscy uwielbiają łakocie! Dlatego oferujemy <a href=\"slodycze\">słodycze Harry Potter</a>. Jeśli kiedykolwiek marzyłeś o spróbowaniu fasolek wszystkich smaków, to dobrze trafiłeś. W naszej ofercie dostępne są oczywiście <a href=\"ksiazki\">książki Harrego Pottera</a>, jeśli jeszcze nie masz ich na swojej półce, to czas nadrobić zaległości. </p>\n<p style=\"text-align:justify;\">Wyróżniamy się rozbudowanym asortyment. Dlatego jeśli chcesz wprowadzić do swojego życia odrobinę magii, to zapraszamy do zakupów – <strong>Pottermania to sklep dla fanów Harrego Pottera</strong>.</p>\n</div>');
 
 -- --------------------------------------------------------
 
@@ -7806,7 +8283,7 @@ INSERT INTO `ps_link_block` (`id_link_block`, `id_hook`, `position`, `content`) 
 (3, 41, 0, '{\"cms\":{\"1\":\"5\",\"2\":\"1\"},\"static\":[false],\"product\":[false],\"category\":[false]}'),
 (4, 41, 0, '{\"cms\":[\"7\",\"8\",\"2\",\"9\",\"10\"],\"static\":[false],\"product\":[false],\"category\":[false]}'),
 (5, 41, 0, '{\"cms\":[\"11\"],\"static\":[false],\"product\":[\"prices-drop\"],\"category\":[\"3\",\"8\"]}'),
-(6, 41, 0, '{\"cms\":[\"12\",\"13\",\"4\",\"14\"],\"static\":[false],\"product\":[false],\"category\":[false]}');
+(6, 41, 0, '{\"cms\":{\"1\":\"13\",\"2\":\"4\"},\"static\":[false],\"product\":[false],\"category\":[false]}');
 
 -- --------------------------------------------------------
 
@@ -8125,7 +8602,14 @@ INSERT INTO `ps_log` (`id_log`, `severity`, `error_code`, `message`, `object_typ
 (239, 3, 0, 'No result was found for query although at least one row was expected.', '', 0, 1, NULL, 1, 0, 1, '2024-11-25 18:06:05', '2024-11-25 18:06:05'),
 (240, 3, 0, 'No result was found for query although at least one row was expected.', '', 0, 1, NULL, 1, 0, 1, '2024-11-25 18:06:17', '2024-11-25 18:06:17'),
 (241, 1, 0, 'Protect vendor folder in module ps_accounts', '', 0, 1, NULL, 1, 0, 1, '2024-11-25 18:17:15', '2024-11-25 18:17:15'),
-(242, 1, 0, 'Protect vendor folder in module ps_eventbus', '', 0, 1, NULL, 1, 0, 1, '2024-11-25 22:44:36', '2024-11-25 22:44:36');
+(242, 1, 0, 'Protect vendor folder in module ps_eventbus', '', 0, 1, NULL, 1, 0, 1, '2024-11-25 22:44:36', '2024-11-25 22:44:36'),
+(243, 1, 0, 'Protect vendor folder in module ps_customtext', '', 0, 1, NULL, 1, 0, 1, '2024-11-26 15:19:17', '2024-11-26 15:19:17'),
+(244, 1, 0, 'Module ps_customtext has no vendor folder', '', 0, 1, NULL, 1, 0, 1, '2024-11-26 15:19:17', '2024-11-26 15:19:17'),
+(245, 1, 0, 'Protect vendor folder in module trustmate', '', 0, 1, NULL, 1, 0, 1, '2024-11-26 15:53:53', '2024-11-26 15:53:53'),
+(246, 1, 0, 'Module trustmate has no vendor folder', '', 0, 1, NULL, 1, 0, 1, '2024-11-26 15:53:53', '2024-11-26 15:53:53'),
+(247, 1, 0, 'Klucz API został stworzony: 6745e1af7922a6745e1af7922c6745e1', 'WebserviceKey', 1, 1, NULL, 1, 0, 1, '2024-11-26 15:56:47', '2024-11-26 15:56:47'),
+(248, 1, 0, 'Klucz API 6745e1af7922a6745e1af7922c6745e1 został skasowany', 'WebserviceKey', 1, 1, NULL, 1, 0, 1, '2024-11-26 16:05:44', '2024-11-26 16:05:44'),
+(249, 3, 0, 'No result was found for query although at least one row was expected.', '', 0, 1, NULL, 1, 0, 1, '2024-11-26 17:03:51', '2024-11-26 17:03:51');
 
 -- --------------------------------------------------------
 
@@ -9212,8 +9696,11 @@ INSERT INTO `ps_module_history` (`id`, `id_employee`, `id_module`, `date_add`, `
 (1, 1, 2, '2024-11-25 16:37:37', '2024-11-25 16:39:37'),
 (2, 1, 28, '2024-11-25 16:38:15', '2024-11-25 18:20:51'),
 (3, 1, 15, '2024-11-25 16:39:46', '2024-11-25 18:20:15'),
-(4, 1, 20, '2024-11-25 16:40:51', '2024-11-25 23:13:20'),
-(5, 1, 12, '2024-11-25 16:42:39', '2024-11-25 23:44:58');
+(4, 1, 20, '2024-11-25 16:40:51', '2024-11-26 15:19:49'),
+(5, 1, 12, '2024-11-25 16:42:39', '2024-11-25 23:44:58'),
+(6, 1, 65, '2024-11-26 15:54:16', '2024-11-26 16:16:39'),
+(7, 1, 32, '2024-11-26 16:28:39', '2024-11-26 20:28:09'),
+(8, 1, 29, '2024-11-26 17:35:42', '2024-11-26 17:35:42');
 
 -- --------------------------------------------------------
 
@@ -9263,6 +9750,7 @@ INSERT INTO `ps_module_shop` (`id_module`, `id_shop`, `enable_device`) VALUES
 (16, 1, 7),
 (17, 1, 7),
 (19, 1, 7),
+(20, 1, 7),
 (21, 1, 7),
 (22, 1, 7),
 (24, 1, 7),
@@ -9910,7 +10398,8 @@ INSERT INTO `ps_page` (`id_page`, `id_page_type`, `id_object`) VALUES
 (2, 2, NULL),
 (3, 3, NULL),
 (4, 4, NULL),
-(5, 5, NULL);
+(5, 5, NULL),
+(6, 6, 5);
 
 -- --------------------------------------------------------
 
@@ -9947,7 +10436,8 @@ INSERT INTO `ps_page_type` (`id_page_type`, `name`) VALUES
 (4, 'cms'),
 (3, 'contact'),
 (1, 'index'),
-(5, 'pagenotfound');
+(5, 'pagenotfound'),
+(6, 'product');
 
 -- --------------------------------------------------------
 
@@ -12713,6 +13203,22 @@ CREATE TABLE `ps_statssearch` (
   `date_add` datetime NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb3 COLLATE=utf8mb3_uca1400_ai_ci;
 
+--
+-- Dumping data for table `ps_statssearch`
+--
+
+INSERT INTO `ps_statssearch` (`id_statssearch`, `id_shop`, `id_shop_group`, `keywords`, `results`, `date_add`) VALUES
+(1, 1, 1, 'x', 0, '2024-11-26 20:01:30'),
+(2, 1, 1, 'xa', 0, '2024-11-26 20:01:32'),
+(3, 1, 1, 'a', 0, '2024-11-26 20:38:01'),
+(4, 1, 1, 'aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa', 0, '2024-11-26 20:38:02'),
+(5, 1, 1, 'aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa', 0, '2024-11-26 20:38:03'),
+(6, 1, 1, 'aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa', 0, '2024-11-26 20:38:04'),
+(7, 1, 1, 'a', 0, '2024-11-26 20:53:43'),
+(8, 1, 1, 'aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa', 0, '2024-11-26 20:53:45'),
+(9, 1, 1, 'a', 0, '2024-11-26 21:00:47'),
+(10, 1, 1, 'aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa', 0, '2024-11-26 21:00:48');
+
 -- --------------------------------------------------------
 
 --
@@ -14498,7 +15004,8 @@ INSERT INTO `ps_translation` (`id_translation`, `id_lang`, `key`, `translation`,
 (1, 1, 'Wpisz adres e-mail', 'Wpisz adres e-mail', 'ShopFormsLabels', 'child_classic'),
 (2, 1, '', ' ', 'ShopThemeActions', 'child_classic'),
 (3, 1, 'Odbierz 5% na pierwsze zakupy. Zapisując się do newslettera otrzymasz informacje o aktualnych promocjach i nowościach, a także ciekawostki ze świata Harrego Pottera.', 'Odbierz 5% na pierwsze zakupy. Zapisując się do newslettera otrzymasz informacje o aktualnych promocjach i nowościach, a także ciekawostki ze świata Harrego Pottera.', 'ShopThemeGlobal', 'child_classic'),
-(4, 1, 'Sklep internetowy Shoper.pl', 'Sklep internetowy Shoper.pl', 'messages', 'child_classic');
+(4, 1, 'Sklep internetowy Shoper.pl', 'Sklep internetowy Shoper.pl', 'messages', 'child_classic'),
+(5, 1, 'Sign up', 'Zarejestruj się', 'ShopThemeActions', 'child_classic');
 
 -- --------------------------------------------------------
 
@@ -16766,7 +17273,7 @@ ALTER TABLE `ps_attribute_impact`
 -- AUTO_INCREMENT for table `ps_authorization_role`
 --
 ALTER TABLE `ps_authorization_role`
-  MODIFY `id_authorization_role` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=869;
+  MODIFY `id_authorization_role` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=873;
 
 --
 -- AUTO_INCREMENT for table `ps_blockwishlist_statistics`
@@ -16784,7 +17291,7 @@ ALTER TABLE `ps_carrier`
 -- AUTO_INCREMENT for table `ps_cart`
 --
 ALTER TABLE `ps_cart`
-  MODIFY `id_cart` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+  MODIFY `id_cart` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
 
 --
 -- AUTO_INCREMENT for table `ps_cart_rule`
@@ -16838,7 +17345,7 @@ ALTER TABLE `ps_cms_role`
 -- AUTO_INCREMENT for table `ps_configuration`
 --
 ALTER TABLE `ps_configuration`
-  MODIFY `id_configuration` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=445;
+  MODIFY `id_configuration` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=471;
 
 --
 -- AUTO_INCREMENT for table `ps_configuration_kpi`
@@ -16850,13 +17357,13 @@ ALTER TABLE `ps_configuration_kpi`
 -- AUTO_INCREMENT for table `ps_connections`
 --
 ALTER TABLE `ps_connections`
-  MODIFY `id_connections` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=24;
+  MODIFY `id_connections` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=41;
 
 --
 -- AUTO_INCREMENT for table `ps_connections_source`
 --
 ALTER TABLE `ps_connections_source`
-  MODIFY `id_connections_source` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=195;
+  MODIFY `id_connections_source` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=634;
 
 --
 -- AUTO_INCREMENT for table `ps_contact`
@@ -16988,7 +17495,7 @@ ALTER TABLE `ps_group_reduction`
 -- AUTO_INCREMENT for table `ps_guest`
 --
 ALTER TABLE `ps_guest`
-  MODIFY `id_guest` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=14;
+  MODIFY `id_guest` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=27;
 
 --
 -- AUTO_INCREMENT for table `ps_homeslider`
@@ -17006,7 +17513,7 @@ ALTER TABLE `ps_homeslider_slides`
 -- AUTO_INCREMENT for table `ps_hook`
 --
 ALTER TABLE `ps_hook`
-  MODIFY `id_hook` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=810;
+  MODIFY `id_hook` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=812;
 
 --
 -- AUTO_INCREMENT for table `ps_hook_alias`
@@ -17084,7 +17591,7 @@ ALTER TABLE `ps_link_block_shop`
 -- AUTO_INCREMENT for table `ps_log`
 --
 ALTER TABLE `ps_log`
-  MODIFY `id_log` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=243;
+  MODIFY `id_log` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=250;
 
 --
 -- AUTO_INCREMENT for table `ps_mail`
@@ -17120,13 +17627,13 @@ ALTER TABLE `ps_meta`
 -- AUTO_INCREMENT for table `ps_module`
 --
 ALTER TABLE `ps_module`
-  MODIFY `id_module` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=65;
+  MODIFY `id_module` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=66;
 
 --
 -- AUTO_INCREMENT for table `ps_module_history`
 --
 ALTER TABLE `ps_module_history`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
 
 --
 -- AUTO_INCREMENT for table `ps_module_preference`
@@ -17216,7 +17723,7 @@ ALTER TABLE `ps_order_state`
 -- AUTO_INCREMENT for table `ps_page`
 --
 ALTER TABLE `ps_page`
-  MODIFY `id_page` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+  MODIFY `id_page` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
 
 --
 -- AUTO_INCREMENT for table `ps_pagenotfound`
@@ -17228,7 +17735,7 @@ ALTER TABLE `ps_pagenotfound`
 -- AUTO_INCREMENT for table `ps_page_type`
 --
 ALTER TABLE `ps_page_type`
-  MODIFY `id_page_type` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+  MODIFY `id_page_type` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
 
 --
 -- AUTO_INCREMENT for table `ps_product`
@@ -17426,7 +17933,7 @@ ALTER TABLE `ps_state`
 -- AUTO_INCREMENT for table `ps_statssearch`
 --
 ALTER TABLE `ps_statssearch`
-  MODIFY `id_statssearch` int(10) UNSIGNED NOT NULL AUTO_INCREMENT;
+  MODIFY `id_statssearch` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
 
 --
 -- AUTO_INCREMENT for table `ps_stock`
@@ -17540,7 +18047,7 @@ ALTER TABLE `ps_timezone`
 -- AUTO_INCREMENT for table `ps_translation`
 --
 ALTER TABLE `ps_translation`
-  MODIFY `id_translation` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+  MODIFY `id_translation` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 
 --
 -- AUTO_INCREMENT for table `ps_warehouse`
@@ -17558,13 +18065,13 @@ ALTER TABLE `ps_warehouse_product_location`
 -- AUTO_INCREMENT for table `ps_webservice_account`
 --
 ALTER TABLE `ps_webservice_account`
-  MODIFY `id_webservice_account` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id_webservice_account` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
 -- AUTO_INCREMENT for table `ps_webservice_permission`
 --
 ALTER TABLE `ps_webservice_permission`
-  MODIFY `id_webservice_permission` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id_webservice_permission` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
 
 --
 -- AUTO_INCREMENT for table `ps_web_browser`
