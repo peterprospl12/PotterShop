@@ -333,12 +333,6 @@ footer {
 
 /**********************************/
 
-@media screen and (min-width: 768px) and (max-width: 979px) {
-  .nav2-class {
-    width: 700px;
-  }
-}
-
 .nav2-class {
   position: relative;
   max-width: 1180px;
@@ -375,7 +369,6 @@ footer {
 #search_widget {
   height: 46px;
   float: right;
-  max-width: 410px;
   width: 100%;
   overflow: hidden;
   border-radius: 4px;
@@ -389,12 +382,14 @@ footer {
   background: transparent;
 }
 
-@media (min-width: 1000px) {
+@media (min-width: 992px) {
   #search_widget {
+    max-width: 410px;
     position: absolute; /* Ustawiamy absolutne pozycjonowanie */
     top: 0; /* Ustawiamy na górze diva */
-    right: 0; /* Ustawiamy na prawo w kontenerze */
+    right: 100px; /* Ustawiamy na prawo w kontenerze */
     margin: 0; /* Usuwamy marginesy */
+    margin-top: 15px;
   }
 }
 
