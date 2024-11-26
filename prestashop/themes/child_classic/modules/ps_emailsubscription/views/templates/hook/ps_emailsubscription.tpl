@@ -28,7 +28,7 @@
     Newsletter
   </span>
  </div>
-<div class="block_newsletter col-lg-8 col-md-12 col-sm-12" id="blockEmailSubscription_{$hookName}">
+<div class="block_newsletter col-lg-8 col-md-12 col-sm-12" id="blockEmailSubscription_{$hookName}" style="margin-bottom: 30px">
   <div class="row newsletter-big-div">
     <p id="block-newsletter-label" class="col-md-5 col-xs-12" style="padding: 0px">{l s='Odbierz 5% na pierwsze zakupy. Zapisując się do newslettera otrzymasz informacje o aktualnych promocjach i nowościach, a także ciekawostki ze świata Harrego Pottera.' d='Shop.Theme.Global'}</p>
     <div class="col-md-7 col-xs-12" style="width:100%">
