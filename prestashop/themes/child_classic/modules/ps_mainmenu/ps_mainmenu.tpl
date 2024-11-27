@@ -6,7 +6,7 @@
             <li class="{$node.type}{if $node.current} current {/if}" id="{$node.page_identifier}">
             {assign var=_counter value=$_counter+1}
               <a
-                class="{if $depth >= 0}dropdown-item{/if}{if $depth === 1} dropdown-submenu{/if}"
+                class="{if $depth >= 0}dropdown-item{/if}{if $depth === 1} dropdown-submenu{/if} {if $node.children|count} popdown-arrow-nav{/if}"
                 href="{$node.url}" data-depth="{$depth}"
                 {if $node.open_in_new_window} target="_blank" {/if}
               >
@@ -23,7 +23,7 @@
                 {$node.label}
               </a>
               {if $node.children|count}
-              <div {if $depth === 0} class="popover sub-menu js-sub-menu collapse"{else} class="collapse"{/if} id="top_sub_menu_{$_expand_id}">
+              <div {if $depth === 0} class="popover sub-menu js-sub-menu collapse"{else} class="collapse deeper-layer"{/if} id="top_sub_menu_{$_expand_id}">
                 {menu nodes=$node.children depth=$node.depth parent=$node}
               </div>
               {/if}
