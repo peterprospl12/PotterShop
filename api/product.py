@@ -1,4 +1,5 @@
 import random
+from utils import convert_price
 
 class BaseProduct:
     def __init__(self, product):
@@ -28,21 +29,31 @@ class BaseProduct:
     def set_link_name(self, link_name):
         self.product["product"]["link_rewrite"]["language"]["value"] = link_name.replace(" ", "-").lower()
 
-    def set_categories(self, category_id, subcategory_id):
-        categories_list = [{'id': 2}, {'id': category_id}, {'id': subcategory_id}]
-        self.product["product"]["associations"]["categories"] = {"category": categories_list}
-
     def set_description_short(self, description_short):
         self.product["product"]["description_short"]["language"]["value"] = description_short
 
     def set_description(self, description):
         self.product["product"]["description"]["language"]["value"] = description
 
+    def set_associations(self, category_id : int, subcategory_id : int):
+        if subcategory_id == 0:
+            self.product["product"]["associations"]["categories"] = {"category": [{'id': 2}, {'id': category_id}]}
+            pass
+        self.product["product"]["associations"]["categories"] = {"category": [{'id': 2}, {'id': category_id}, {'id': subcategory_id}]}
+        
     def get_product(self):
         return self.product
     
+    def get_from_json(self, product):
+        self.set_name(product["Name"])
+        self.set_price(convert_price(product["Price"]))
+        self.set_meta_title(product["Name"])
+        self.set_link_name(product["Name"])
+        self.set_description_short("test123")
+        self.set_description(product["Description"])
+    
 
-class Category:
+class BaseCategory:
     def __init__(self, category):
         self.category = category
         self.category["category"]["active"] = "1"

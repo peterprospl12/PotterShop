@@ -5,7 +5,7 @@ from utils import convert_price
 from prestashopAPI import PrestaShopAPI
 import requests
 from requests.auth import HTTPBasicAuth
-from product import BaseProduct
+from product import BaseProduct, BaseCategory
 import json
 
 def upload_image(api_url, api_key, product_id, image_path):
@@ -22,7 +22,7 @@ def upload_image(api_url, api_key, product_id, image_path):
 
 def main():
     api_url = 'http://localhost:8080/api'
-    api_key = 'leak'
+    api_key = ''
     api = PrestaShopAPI(api_url, api_key)
 
     # # Print products
@@ -48,28 +48,30 @@ def main():
 
     # #api.update_product(product_id, updated_fields)
     # api.print_product(product_id)
-
+    #api.api.delete("categories", 15)
     product_template = api.get_empty_product()
     base_product = BaseProduct(product_template)
+    main_category = BaseCategory(api.get_empty_category())
+    sub_category = BaseCategory(api.get_empty_category())
 
     with open("/home/peter/VsCodeProjects/PotterShop/scraper-results/all_products.json", 'r', encoding='utf-8') as file:
         products = json.load(file)
 
-    product = products['1']
-    base_product.set_name(product["Name"])
-    base_product.set_price(convert_price(product["Price"]))
-    base_product.set_meta_title(product["Name"])
-    base_product.set_link_name(product["Name"])
-    base_product.set_description_short("test123")
-    base_product.set_description(product["Description"])
-    base_product.set_category("1")
+    product = products['30']
+    main_category_name = product["Categories"][0]
+    sub_category_name = product["Categories"][1] if len(product["Categories"]) > 1 else None
+
+    main_category.set_default_attributes(main_category_name)
+    if sub_category_name is not None:
+        sub_category.set_default_attributes(sub_category_name) if sub_category_name is not None else None
+
+    category_id = api.add_category(main_category, sub_category)
+
+    base_product.get_from_json(product)
+    base_product.set_category(category_id[0])
+    base_product.set_associations(category_id[0], category_id[1])    
     
-    categories_list = [{'id': 2}, {'id': 1}, {'id': 1}]
-    
-    product_template["product"]["associations"]["categories"] = {"category": categories_list}
-    
-    
-    api.api.add('products', base_product.get_product())
+    api.add_product(base_product)
 
 if __name__ == '__main__':
     main()

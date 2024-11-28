@@ -1,6 +1,6 @@
 import logging
 from prestapyt import PrestaShopWebServiceDict
-from product import BaseProduct, Category
+from product import BaseProduct, BaseCategory
 
 class PrestaShopAPI:
     def __init__(self, api_url, api_key):
@@ -78,6 +78,13 @@ class PrestaShopAPI:
         except Exception as e:
             self.logger.error(f'Error getting category: {e}')
             return None
+        
+    def get_empty_category(self):
+        try:
+            return self.api.get('categories', options={"schema": "blank"})
+        except Exception as e:
+            self.logger.error(f'Error getting empty category: {e}')
+            return None
 
     def print_categories(self):
         categories_data = self.get_categories()
@@ -99,18 +106,25 @@ class PrestaShopAPI:
             except Exception as e:
                 self.logger.error(f'Error parsing category data for category ID: {category_id}: {e}')
 
-    def create_product(self, product : BaseProduct):
+    def add_product(self, product : BaseProduct):
         try:
-            return self.api.add('products', {'product': product})
+            return self.api.add('products', product.get_product())
         except Exception as e:
             self.logger.error(f'Error creating product: {e}')
             return None
         
-    def add_category(self, category : Category):
+    def add_category(self, main_category : BaseCategory, sub_category : BaseCategory) -> tuple:
         try:
-            if category.get_name() in self.categories:
-                return self.categories[category.get_name()]
-            return self.api.add('categories', {'category': category})
+            self.__update_categories()
+
+            main_category_id = self._get_or_create_category(main_category)
+
+            sub_category_id = 0
+            if sub_category.get_name() != "":
+                sub_category.set_parent_id(int(main_category_id))
+                sub_category_id = self._get_or_create_category(sub_category)
+
+            return main_category_id, sub_category_id
         except Exception as e:
             self.logger.error(f'Error creating category: {e}')
             return None
@@ -146,3 +160,31 @@ class PrestaShopAPI:
     def set_logging_debug(self):
         logging.basicConfig(level=logging.DEBUG)
         self.logger.setLevel(logging.DEBUG)
+
+    def __update_categories(self):
+        categories = self.api.get("categories")["categories"]["category"]
+    
+        categories_dict = {}
+
+        for category in categories:
+            category_id = category["attrs"]["id"]
+            
+            category_details = self.api.get(f"categories/{category_id}")["category"]
+            category_name = category_details["name"]["language"]["value"]
+            parent_id = category_details["id_parent"]
+            
+            categories_dict[category_name] = {
+                "category_id": int(category_id),
+                "parent_id": int(parent_id),
+            }
+
+        self.categories = categories_dict
+
+    def _get_or_create_category(self, category: BaseCategory) -> int:
+        category_name = category.get_name()
+        if category_name in self.categories:
+            return self.categories[category_name]["category_id"]
+        else:
+            response = self.api.add('categories', category.get_category())
+            category_id = response['prestashop']['category']['id']
+            return category_id
