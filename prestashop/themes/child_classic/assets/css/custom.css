@@ -249,6 +249,11 @@ footer {
   width: 100%;
 }
 
+.header-top-right {
+  border-top: 1px solid rgb(200, 200, 200) !important;
+  margin-top: 10px;
+}
+
 .hidden-sm-down {
   display: flex;
   flex-direction: column;
@@ -530,6 +535,156 @@ footer {
   align-items: center;
 }
 
+@media (max-width: 991px) {
+  .carousel {
+    left: 0;
+    width: 100%;
+    padding-bottom: 0.5rem;
+    margin-left: 0;
+    background-color: #f6f6f6;
+    box-shadow: none;
+  }
+}
+
+.carousel-indicators li {
+  width: 12px;
+  height: 12px;
+  color: #2f2f2f;
+  background-color: #2f2f2f;
+  border: none;
+}
+
+.carousel-indicators .active {
+  width: 12px;
+  height: 12px;
+  margin: 1px;
+  color: red;
+  background-color: red;
+  border: none;
+}
+
+@media (max-width: 991px) {
+  .carousel-indicators li {
+    width: 12px;
+    height: 12px;
+    color: #2f2f2f;
+    background-color: #2f2f2f;
+    border: none;
+  }
+}
+
+@media (max-width: 991px) {
+  .carousel-indicators .active {
+    width: 12px;
+    height: 12px;
+    margin: 1px;
+    color: red;
+    background-color: red;
+    border: none;
+  }
+}
+
+.carousel .carousel-inner {
+  height: auto;
+  margin: 0;
+}
+
+@media (max-width: 991px) {
+  .carousel {
+    left: 0;
+    width: 100%;
+    padding-bottom: 0.5rem;
+    margin-left: 0;
+    background-color: transparent;
+    box-shadow: none;
+  }
+}
+
+#header .header-top .position-static.sticky {
+  position: fixed;
+  z-index: 9;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background: white;
+  transition: 0.5s;
+  text-align: center;
+  padding-top: 10px;
+}
+
+#_desktop_top_menu .top-menu[data-depth="0"] li:hover .sub-menu {
+  top: 45px !important;
+}
+
+.under-slider {
+  font-size: 23px;
+  letter-spacing: 1px;
+  color: #000;
+}
+
+.under-slider-div {
+  font-family: "HarryP";
+  height: 50px;
+  margin: 50px 20px 50px 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+h2.products-section-title.text-uppercase {
+  font-family: "HarryP" !important;
+  text-align: left;
+  letter-spacing: 4px;
+  color: #000;
+}
+
+div.direction {
+  display: none;
+}
+
+#carousel:hover .direction {
+  display: block;
+}
+
+@media (max-width: 767px) {
+  mav.breadcrumb.hidden-sm-down {
+    display: none !important;
+  }
+}
+
+h3.product-title {
+  font-family: "HarryP";
+}
+
+.product-price-and-shipping {
+  font-family: "HarryP";
+}
+
+div.products.row {
+  margin: auto;
+}
+
+@media screen and (min-width: 768px) and (max-width: 979px) {
+  div.js-product.product.col-xs-12.col-sm-6.col-lg-4.col-xl-3 {
+    float: left;
+    width: 33.33333%;
+  }
+}
+
+@media (min-width: 979px) {
+  div.js-product.product.col-xs-12.col-sm-6.col-lg-4.col-xl-3 {
+    float: left;
+    width: 25%;
+  }
+}
+
+@media (max-width: 768px) {
+  div.js-product.product.col-xs-12.col-sm-6.col-lg-4.col-xl-3 {
+    float: left;
+    width: 100%;
+  }
+}
+
 .header-top-right {
   width: 100%;
   padding: 0;
@@ -539,6 +694,12 @@ footer {
   width: 100%;
 }
 
+#header {
+  border: none;
+  box-shadow: none;
+}
+/*********************************************/
+
 #header .header-top a[data-depth="0"] {
   font-family: "HarryP";
   font-size: 25px;
@@ -547,11 +708,6 @@ footer {
   line-height: 50px;
   font-weight: 500;
   padding: 0px 40px 0px 0px;
-}
-
-#header {
-  border: none;
-  box-shadow: none;
 }
 
 .popdown-arrow-nav::after {
@@ -571,10 +727,6 @@ footer {
   padding-top: 0px;
 }
 
-.popover ul li {
-  display: block;
-}
-
 .top-menu .sub-menu {
   z-index: 18;
   width: inherit;
@@ -585,6 +737,7 @@ footer {
   opacity: 0;
   position: absolute;
   top: 100%;
+  transition: none;
 }
 
 #header .menu > ul > li {
@@ -592,29 +745,8 @@ footer {
   position: relative;
 }
 
-.top-menu .sub-menu {
-  transition: none;
-}
-
 .top-menu {
   font-family: "HarryP";
-}
-
-.top-menu[data-depth="1"] {
-  margin: 0.625rem;
-}
-
-.top-menu .sub-menu ul[data-depth="1"] > li {
-  float: left;
-  margin: 0 1.25rem;
-}
-
-.top-menu .sub-menu ul[data-depth="1"] > li .deeper-layer {
-  display: none;
-  font-size: inherit;
-}
-.top-menu .sub-menu ul[data-depth="1"] > li:hover .deeper-layer {
-  display: block;
 }
 
 .top-menu a {
@@ -627,4 +759,88 @@ footer {
   font-size: 20px;
   text-transform: none !important;
   color: red !important;
+}
+
+.top-menu .sub-menu ul[data-depth="1"] > li .deeper-layer {
+  display: none;
+  font-size: inherit;
+}
+.top-menu .sub-menu ul[data-depth="1"] > li:hover .deeper-layer {
+  display: block;
+}
+/*
+ul.top-menu[data-depth="1"] {
+  position: absolute;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  top: 0;
+  left: 100%;
+}
+
+ul.top-menu[data-depth="1"] li:hover > ul {
+  display: block;
+}
+
+.top-menu[data-depth="1"] ul li {
+  position: relative;
+  padding: 10px;
+  border-bottom: 1px solid #bbb;
+}
+
+.top-menu[data-depth="1"] ul li:hover {
+  background-color: #ddd;
+}
+
+.menuxx ul ul {
+  left: 100%;
+  top: 0;
+}
+
+.menux ul {
+  opacity: 0;
+  transform: translateX(-10px);
+  transition: opacity 0.3s, transform 0.3s;
+}
+
+.menux li:hover > ul {
+  opacity: 1;
+  transform: translateX(0);
+}
+*/
+/*
+div.popover.sub-menu.js-sub-menu.collapse {
+  position: relative;
+}
+*/
+ul.top-menu[data-depth="1"] > li {
+  /*menu*/
+  position: relative;
+}
+
+div.collapse.deeper-layer {
+  /*submenu*/
+  display: none;
+  position: absolute;
+  top: 0;
+  left: 100%;
+  width: 200px;
+  background-color: lightcoral;
+  z-index: 1000;
+  box-shadow: 2px 1px 11px 2px rgba(0, 0, 0, 0.1);
+}
+
+ul.top-menu[data-depth="1"] > li:hover > .submenu {
+  display: block;
+}
+
+div.collapse.deeper-layer ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+div.collapse.deeper-layer ul li {
+  padding: 10px;
+  background-color: white;
 }

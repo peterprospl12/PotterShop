@@ -32,6 +32,9 @@
 /prestashop/cache/
 /prestashop/log/
 
+# Ignore tmp images
+/prestashop/img/tmp/
+
 # Ignore vendor directory
 # /vendor/
 
