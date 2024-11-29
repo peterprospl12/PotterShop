@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: mariadb:3306
--- Generation Time: Lis 29, 2024 at 06:31 PM
+-- Generation Time: Lis 29, 2024 at 06:50 PM
 -- Wersja serwera: 11.6.2-MariaDB-ubu2404
 -- Wersja PHP: 8.2.8
 
@@ -939,7 +939,9 @@ INSERT INTO `ps_address` (`id_address`, `id_country`, `id_state`, `id_customer`,
 (4, 21, 35, 0, 1, 0, 0, 'manufacturer', 'Fashion', 'manufacturer', 'manufacturer', '767 Fifth Ave.', '', '10154', 'New York', '', '(212) 336-1666', '', '', '', '2024-11-22 18:39:00', '2024-11-22 18:39:00', 1, 0),
 (5, 21, 12, 2, 0, 0, 0, 'My address', 'My Company', 'DOE', 'John', '16, Main street', '2nd floor', '33133', 'Miami', '', '0102030405', '', '', '', '2024-11-22 18:39:00', '2024-11-22 18:39:00', 1, 0),
 (6, 8, 0, 0, 0, 2, 0, 'accessories_supplier', 'Accessories and Co', 'accessories', 'accessories', '42 Avenue Maréchal Soult', '', '64990', 'Bayonne', '', '0102030405', '', '', '', '2024-11-22 18:39:00', '2024-11-22 18:39:00', 1, 0),
-(8, 14, 0, 4, 0, 0, 0, 'Mój adres', '', 'eeee', 'eeeee', 'eeeee', '', '12-111', 'eeee', '', '', '', '', '', '2024-11-29 17:05:46', '2024-11-29 17:05:46', 1, 0);
+(8, 14, 0, 4, 0, 0, 0, 'Mój adres', '', 'eeee', 'eeeee', 'eeeee', '', '12-111', 'eeee', '', '', '', '', '', '2024-11-29 17:05:46', '2024-11-29 17:05:46', 1, 0),
+(9, 14, 0, 5, 0, 0, 0, 'Mój adres', '', 'esssa', 'eessa', 'eeeee', '', '11-111', 'eeeee', '', '', '', '', '', '2024-11-29 19:28:58', '2024-11-29 19:28:58', 1, 0),
+(10, 14, 0, 6, 0, 0, 0, 'Mój adres', '', 'eee', 'eeeee', 'eeee', '', '11-111', 'eeee', '', '', '', '', '', '2024-11-29 19:49:54', '2024-11-29 19:49:54', 1, 0);
 
 -- --------------------------------------------------------
 
@@ -1225,7 +1227,13 @@ INSERT INTO `ps_admin_filter` (`id`, `employee`, `shop`, `controller`, `action`,
 (3, 1, 1, '', '', '{\"orderBy\":\"position\",\"sortOrder\":\"asc\",\"limit\":50,\"filters\":{\"id_cms_category_parent\":1}}', 'cms_page'),
 (4, 1, 1, 'contacts', 'index', '{\"limit\":10,\"orderBy\":\"id_contact\",\"sortOrder\":\"asc\",\"filters\":[]}', ''),
 (5, 1, 1, 'backup', 'index', '{\"limit\":20,\"orderBy\":null,\"sortOrder\":null,\"filters\":[]}', ''),
-(6, 1, 1, '', '', '{\"limit\":50,\"orderBy\":\"date_add\",\"sortOrder\":\"DESC\",\"filters\":[]}', 'customer');
+(6, 1, 1, '', '', '{\"limit\":50,\"orderBy\":\"date_add\",\"sortOrder\":\"DESC\",\"filters\":[]}', 'customer'),
+(7, 1, 1, 'email', 'index', '{\"limit\":50,\"orderBy\":\"id_mail\",\"sortOrder\":\"desc\",\"filters\":[]}', ''),
+(8, 1, 1, 'employee', 'index', '{\"limit\":50,\"orderBy\":\"id_employee\",\"sortOrder\":\"asc\",\"filters\":[]}', ''),
+(9, 1, 1, '', '', '{\"limit\":50,\"orderBy\":\"id_cart_rule\",\"sortOrder\":\"asc\",\"filters\":[]}', 'customer_discount'),
+(10, 1, 1, '', '', '{\"limit\":50,\"orderBy\":\"id_address\",\"sortOrder\":\"asc\",\"filters\":[]}', 'customer_address'),
+(11, 1, 1, 'ProductController', 'catalogAction', '{\"filter_category\":\"\",\"filter_column_id_product\":\"\",\"filter_column_name\":\"\",\"filter_column_reference\":\"\",\"filter_column_name_category\":\"\",\"filter_column_price\":\"\",\"filter_column_sav_quantity\":\"\",\"filter_column_active\":\"\",\"last_offset\":\"0\",\"last_limit\":\"20\",\"last_orderBy\":\"id_product\",\"last_sortOrder\":\"desc\"}', ''),
+(12, 1, 1, '', '', '{\"orderBy\":\"position\",\"sortOrder\":\"asc\",\"limit\":50,\"filters\":{\"id_category_parent\":4}}', 'category');
 
 -- --------------------------------------------------------
 
@@ -1569,10 +1577,6 @@ INSERT INTO `ps_authorization_role` (`id_authorization_role`, `slug`) VALUES
 (780, 'ROLE_MOD_MODULE_PS_CHECKOUT_DELETE'),
 (778, 'ROLE_MOD_MODULE_PS_CHECKOUT_READ'),
 (779, 'ROLE_MOD_MODULE_PS_CHECKOUT_UPDATE'),
-(553, 'ROLE_MOD_MODULE_PS_CHECKPAYMENT_CREATE'),
-(556, 'ROLE_MOD_MODULE_PS_CHECKPAYMENT_DELETE'),
-(554, 'ROLE_MOD_MODULE_PS_CHECKPAYMENT_READ'),
-(555, 'ROLE_MOD_MODULE_PS_CHECKPAYMENT_UPDATE'),
 (557, 'ROLE_MOD_MODULE_PS_CONTACTINFO_CREATE'),
 (560, 'ROLE_MOD_MODULE_PS_CONTACTINFO_DELETE'),
 (558, 'ROLE_MOD_MODULE_PS_CONTACTINFO_READ'),
@@ -2755,7 +2759,9 @@ INSERT INTO `ps_cart` (`id_cart`, `id_shop_group`, `id_shop`, `id_carrier`, `del
 (3, 1, 1, 2, '{\"3\":\"2,\"}', 1, 5, 5, 1, 2, 1, 'b44a6d9efd7a0076a0fbce6b15eaf3b1', 0, 0, '', 0, 0, '2024-11-22 18:39:00', '2024-11-22 18:39:00', NULL),
 (4, 1, 1, 2, '{\"3\":\"2,\"}', 1, 5, 5, 1, 2, 1, 'b44a6d9efd7a0076a0fbce6b15eaf3b1', 0, 0, '', 0, 0, '2024-11-22 18:39:00', '2024-11-22 18:39:00', NULL),
 (5, 1, 1, 2, '{\"3\":\"2,\"}', 1, 5, 5, 1, 2, 1, 'b44a6d9efd7a0076a0fbce6b15eaf3b1', 0, 0, '', 0, 0, '2024-11-22 18:39:00', '2024-11-22 18:39:00', NULL),
-(7, 1, 1, 22, '{\"8\":\"22,\"}', 1, 8, 8, 1, 4, 13, '83b8450e932ff99f4a0c2e948ea014d4', 0, 0, '', 0, 0, '2024-11-29 17:03:56', '2024-11-29 17:11:54', '{\"checkout-personal-information-step\":{\"step_is_reachable\":true,\"step_is_complete\":true},\"checkout-addresses-step\":{\"step_is_reachable\":true,\"step_is_complete\":true,\"use_same_address\":true},\"checkout-delivery-step\":{\"step_is_reachable\":true,\"step_is_complete\":false},\"checkout-payment-step\":{\"step_is_reachable\":false,\"step_is_complete\":false},\"checksum\":\"39df9f0b61cb84ac24f58f9e476dc5206f193807\"}');
+(7, 1, 1, 26, '{\"8\":\"26,\"}', 1, 8, 8, 1, 4, 13, '83b8450e932ff99f4a0c2e948ea014d4', 0, 0, '', 0, 0, '2024-11-29 17:03:56', '2024-11-29 19:21:17', '{\"checkout-personal-information-step\":{\"step_is_reachable\":true,\"step_is_complete\":true},\"checkout-addresses-step\":{\"step_is_reachable\":true,\"step_is_complete\":true,\"use_same_address\":true},\"checkout-delivery-step\":{\"step_is_reachable\":true,\"step_is_complete\":true},\"checkout-payment-step\":{\"step_is_reachable\":true,\"step_is_complete\":false},\"checksum\":\"ae17106a39324199e0fa8c9ffd1ccd792111ca4f\"}'),
+(8, 1, 1, 25, '{\"9\":\"25,\"}', 1, 9, 9, 1, 5, 14, '4a4a3abf97d5327cc72f784953e1667f', 0, 0, '', 0, 0, '2024-11-29 19:28:32', '2024-11-29 19:29:06', '{\"checkout-personal-information-step\":{\"step_is_reachable\":true,\"step_is_complete\":true},\"checkout-addresses-step\":{\"step_is_reachable\":true,\"step_is_complete\":true,\"use_same_address\":true},\"checkout-delivery-step\":{\"step_is_reachable\":true,\"step_is_complete\":true},\"checkout-payment-step\":{\"step_is_reachable\":true,\"step_is_complete\":false},\"checksum\":\"c1346034f518c4f6ad911a32715bbc3508f62589\"}'),
+(9, 1, 1, 26, '{\"10\":\"26,\"}', 1, 10, 10, 1, 6, 15, 'f3da2864431410780588bc27bde8252c', 0, 0, '', 0, 0, '2024-11-29 19:49:11', '2024-11-29 19:49:57', '{\"checkout-personal-information-step\":{\"step_is_reachable\":true,\"step_is_complete\":true},\"checkout-addresses-step\":{\"step_is_reachable\":true,\"step_is_complete\":true,\"use_same_address\":true},\"checkout-delivery-step\":{\"step_is_reachable\":true,\"step_is_complete\":true},\"checkout-payment-step\":{\"step_is_reachable\":true,\"step_is_complete\":false},\"checksum\":\"50d28085523cfb6003b6f337ae5a224647881a5b\"}');
 
 -- --------------------------------------------------------
 
@@ -2797,7 +2803,9 @@ INSERT INTO `ps_cart_product` (`id_cart`, `id_product`, `id_address_delivery`, `
 (3, 16, 3, 1, 28, 0, 1, '0000-00-00 00:00:00'),
 (4, 16, 3, 1, 29, 0, 1, '0000-00-00 00:00:00'),
 (5, 10, 3, 1, 25, 0, 1, '0000-00-00 00:00:00'),
-(7, 1, 8, 1, 1, 0, 2, '2024-11-29 17:04:28');
+(7, 16, 8, 1, 28, 0, 100, '2024-11-29 19:16:45'),
+(8, 1, 9, 1, 1, 0, 100, '2024-11-29 19:28:32'),
+(9, 1, 10, 1, 1, 0, 1, '2024-11-29 19:49:11');
 
 -- --------------------------------------------------------
 
@@ -4233,7 +4241,78 @@ INSERT INTO `ps_connections_source` (`id_connections_source`, `id_connections`, 
 (192, 23, 'http://localhost:8080/zam%C3%B3wienie', 'localhost:8080/zam%C3%B3wienie', '', '2024-11-29 17:14:36'),
 (193, 23, 'http://localhost:8080/zam%C3%B3wienie', 'localhost:8080/', '', '2024-11-29 17:14:38'),
 (194, 23, 'http://localhost:8080/', 'localhost:8080/koszyk?action=show', '', '2024-11-29 17:14:41'),
-(195, 23, 'http://localhost:8080/koszyk?action=show', 'localhost:8080/zam%C3%B3wienie', '', '2024-11-29 17:14:44');
+(195, 23, 'http://localhost:8080/koszyk?action=show', 'localhost:8080/zam%C3%B3wienie', '', '2024-11-29 17:14:44'),
+(196, 24, 'http://localhost:8080/', 'localhost:8080/4-men', '', '2024-11-29 17:37:56'),
+(197, 24, 'http://localhost:8080/4-men', 'localhost:8080/men/1-1-hummingbird-printed-t-shirt.html', '', '2024-11-29 17:37:59'),
+(198, 24, 'http://localhost:8080/men/1-1-hummingbird-printed-t-shirt.html', 'localhost:8080/koszyk?action=show', '', '2024-11-29 17:38:09'),
+(199, 24, 'http://localhost:8080/koszyk?action=show', 'localhost:8080/zam%C3%B3wienie', '', '2024-11-29 17:38:11'),
+(200, 24, 'http://localhost:8080/zam%C3%B3wienie', 'localhost:8080/zam%C3%B3wienie', '', '2024-11-29 17:38:21'),
+(201, 24, 'http://localhost:8080/zam%C3%B3wienie', 'localhost:8080/zam%C3%B3wienie', '', '2024-11-29 17:38:24'),
+(202, 24, 'http://localhost:8080/zam%C3%B3wienie', 'localhost:8080/', '', '2024-11-29 17:38:32'),
+(203, 24, 'http://localhost:8080/', 'localhost:8080/koszyk?action=show', '', '2024-11-29 17:38:34'),
+(204, 24, 'http://localhost:8080/koszyk?action=show', 'localhost:8080/zam%C3%B3wienie', '', '2024-11-29 17:38:39'),
+(205, 24, 'http://localhost:8080/zam%C3%B3wienie', 'localhost:8080/zam%C3%B3wienie', '', '2024-11-29 17:38:50'),
+(206, 24, 'http://localhost:8080/zam%C3%B3wienie', 'localhost:8080/zam%C3%B3wienie', '', '2024-11-29 17:38:52'),
+(207, 24, 'http://localhost:8080/zam%C3%B3wienie', 'localhost:8080/', '', '2024-11-29 17:38:59'),
+(208, 24, 'http://localhost:8080/', 'localhost:8080/koszyk?action=show', '', '2024-11-29 17:39:01'),
+(209, 24, 'http://localhost:8080/koszyk?action=show', 'localhost:8080/', '', '2024-11-29 17:39:05'),
+(210, 24, 'http://localhost:8080/', 'localhost:8080/4-men', '', '2024-11-29 17:50:52'),
+(211, 24, 'http://localhost:8080/4-men', 'localhost:8080/men/1-1-hummingbird-printed-t-shirt.html', '', '2024-11-29 17:50:55'),
+(212, 24, 'http://localhost:8080/men/1-1-hummingbird-printed-t-shirt.html', 'localhost:8080/koszyk?action=show', '', '2024-11-29 17:50:59'),
+(213, 24, 'http://localhost:8080/koszyk?action=show', 'localhost:8080/zam%C3%B3wienie', '', '2024-11-29 17:51:01'),
+(214, 24, 'http://localhost:8080/zam%C3%B3wienie', 'localhost:8080/zam%C3%B3wienie', '', '2024-11-29 17:51:15'),
+(215, 24, 'http://localhost:8080/zam%C3%B3wienie', 'localhost:8080/zam%C3%B3wienie', '', '2024-11-29 17:51:19'),
+(216, 24, 'http://localhost:8080/zam%C3%B3wienie', 'localhost:8080/zam%C3%B3wienie', '', '2024-11-29 17:51:24'),
+(217, 24, 'http://localhost:8080/men/1-1-hummingbird-printed-t-shirt.html', 'localhost:8080/koszyk?action=show', '', '2024-11-29 17:51:28'),
+(218, 24, 'http://localhost:8080/4-men', 'localhost:8080/men/1-1-hummingbird-printed-t-shirt.html', '', '2024-11-29 17:51:29'),
+(219, 24, 'http://localhost:8080/', 'localhost:8080/4-men', '', '2024-11-29 17:53:12'),
+(220, 25, 'http://localhost:8080/', 'localhost:8080/3-clothes', '', '2024-11-29 18:42:14'),
+(221, 25, 'http://localhost:8080/3-clothes', 'localhost:8080/4-men', '', '2024-11-29 18:42:17'),
+(222, 25, 'http://localhost:8080/4-men', 'localhost:8080/men/1-1-hummingbird-printed-t-shirt.html', '', '2024-11-29 18:42:18'),
+(223, 25, 'http://localhost:8080/men/1-1-hummingbird-printed-t-shirt.html', 'localhost:8080/koszyk?action=show', '', '2024-11-29 18:42:21'),
+(224, 25, 'http://localhost:8080/koszyk?action=show', 'localhost:8080/zam%C3%B3wienie', '', '2024-11-29 18:42:24'),
+(225, 26, 'http://localhost:8080/', 'localhost:8080/koszyk?action=show', '', '2024-11-29 19:16:32'),
+(226, 26, 'http://localhost:8080/koszyk?action=show', 'localhost:8080/zam%C3%B3wienie', '', '2024-11-29 19:16:34'),
+(227, 26, 'http://localhost:8080/zam%C3%B3wienie', 'localhost:8080/', '', '2024-11-29 19:16:36'),
+(228, 26, 'http://localhost:8080/', 'localhost:8080/7-stationery', '', '2024-11-29 19:16:40'),
+(229, 26, 'http://localhost:8080/7-stationery', 'localhost:8080/stationery/16-28-mountain-fox-notebook.html', '', '2024-11-29 19:16:43'),
+(230, 26, 'http://localhost:8080/stationery/16-28-mountain-fox-notebook.html', 'localhost:8080/koszyk?action=show', '', '2024-11-29 19:16:47'),
+(231, 26, 'http://localhost:8080/koszyk?action=show', 'localhost:8080/zam%C3%B3wienie', '', '2024-11-29 19:16:50'),
+(232, 26, 'http://localhost:8080/zam%C3%B3wienie', 'localhost:8080/zam%C3%B3wienie', '', '2024-11-29 19:16:56'),
+(233, 26, 'http://localhost:8080/zam%C3%B3wienie', 'localhost:8080/zam%C3%B3wienie', '', '2024-11-29 19:16:58'),
+(234, 26, 'http://localhost:8080/zam%C3%B3wienie', 'localhost:8080/', '', '2024-11-29 19:17:04'),
+(235, 26, 'http://localhost:8080/', 'localhost:8080/koszyk?action=show', '', '2024-11-29 19:17:06'),
+(236, 26, 'http://localhost:8080/koszyk?action=show', 'localhost:8080/zam%C3%B3wienie', '', '2024-11-29 19:17:12'),
+(237, 26, 'http://localhost:8080/zam%C3%B3wienie', 'localhost:8080/', '', '2024-11-29 19:17:14'),
+(238, 26, 'http://localhost:8080/', 'localhost:8080/koszyk?action=show', '', '2024-11-29 19:19:19'),
+(239, 26, 'http://localhost:8080/koszyk?action=show', 'localhost:8080/zam%C3%B3wienie', '', '2024-11-29 19:19:21'),
+(240, 26, 'http://localhost:8080/zam%C3%B3wienie', 'localhost:8080/zam%C3%B3wienie', '', '2024-11-29 19:19:32'),
+(241, 26, 'http://localhost:8080/zam%C3%B3wienie', 'localhost:8080/zam%C3%B3wienie', '', '2024-11-29 19:19:37'),
+(242, 26, 'http://localhost:8080/admin044berh2x/index.php/configure/advanced/emails/?_token=K9p00iYt7X0LjsMmF_wPbEk6-TeHlUHsXtVJB9K48Q4', 'localhost:8080/favicon.ico', '', '2024-11-29 19:20:08'),
+(243, 26, 'http://localhost:8080/stationery/16-28-mountain-fox-notebook.html', 'localhost:8080/koszyk?action=show', '', '2024-11-29 19:20:58'),
+(244, 26, 'http://localhost:8080/koszyk?action=show', 'localhost:8080/zam%C3%B3wienie', '', '2024-11-29 19:21:05'),
+(245, 26, 'http://localhost:8080/zam%C3%B3wienie', 'localhost:8080/zam%C3%B3wienie', '', '2024-11-29 19:21:09'),
+(246, 26, 'http://localhost:8080/zam%C3%B3wienie', 'localhost:8080/zam%C3%B3wienie', '', '2024-11-29 19:21:11'),
+(247, 26, 'http://localhost:8080/zam%C3%B3wienie', 'localhost:8080/zam%C3%B3wienie', '', '2024-11-29 19:21:18'),
+(248, 27, 'http://localhost:8080/zam%C3%B3wienie', 'localhost:8080/potwierdzenie-zamowienia?id_cart=7&id_module=14&id_order=6&key=83b8450e932ff99f4a0c2e948ea014d4', '', '2024-11-29 19:21:28'),
+(249, 27, 'http://localhost:8080/', 'localhost:8080/4-men', '', '2024-11-29 19:28:25'),
+(250, 27, 'http://localhost:8080/4-men', 'localhost:8080/men/1-1-hummingbird-printed-t-shirt.html', '', '2024-11-29 19:28:29'),
+(251, 27, 'http://localhost:8080/men/1-1-hummingbird-printed-t-shirt.html', 'localhost:8080/koszyk?action=show', '', '2024-11-29 19:28:34'),
+(252, 27, 'http://localhost:8080/koszyk?action=show', 'localhost:8080/zam%C3%B3wienie', '', '2024-11-29 19:28:36'),
+(253, 27, 'http://localhost:8080/zam%C3%B3wienie', 'localhost:8080/zam%C3%B3wienie', '', '2024-11-29 19:28:51'),
+(254, 27, 'http://localhost:8080/zam%C3%B3wienie', 'localhost:8080/zam%C3%B3wienie', '', '2024-11-29 19:28:58'),
+(255, 27, 'http://localhost:8080/zam%C3%B3wienie', 'localhost:8080/zam%C3%B3wienie', '', '2024-11-29 19:29:02'),
+(256, 27, 'http://localhost:8080/zam%C3%B3wienie', 'localhost:8080/zam%C3%B3wienie?updatedTransaction=1', '', '2024-11-29 19:29:06'),
+(257, 27, 'http://localhost:8080/zam%C3%B3wienie', 'localhost:8080/zam%C3%B3wienie', '', '2024-11-29 19:29:07'),
+(258, 28, 'http://localhost:8080/zam%C3%B3wienie', 'localhost:8080/potwierdzenie-zamowienia?id_cart=8&id_module=14&id_order=7&key=4a4a3abf97d5327cc72f784953e1667f', '', '2024-11-29 19:29:15'),
+(259, 28, 'http://localhost:8080/potwierdzenie-zamowienia?id_cart=8&id_module=14&id_order=7&key=4a4a3abf97d5327cc72f784953e1667f', 'localhost:8080/4-men', '', '2024-11-29 19:49:08'),
+(260, 28, 'http://localhost:8080/4-men', 'localhost:8080/men/1-1-hummingbird-printed-t-shirt.html', '', '2024-11-29 19:49:10'),
+(261, 28, 'http://localhost:8080/men/1-1-hummingbird-printed-t-shirt.html', 'localhost:8080/koszyk?action=show', '', '2024-11-29 19:49:12'),
+(262, 28, 'http://localhost:8080/koszyk?action=show', 'localhost:8080/zam%C3%B3wienie', '', '2024-11-29 19:49:14'),
+(263, 28, 'http://localhost:8080/zam%C3%B3wienie', 'localhost:8080/zam%C3%B3wienie', '', '2024-11-29 19:49:29'),
+(264, 28, 'http://localhost:8080/zam%C3%B3wienie', 'localhost:8080/zam%C3%B3wienie', '', '2024-11-29 19:49:43'),
+(265, 28, 'http://localhost:8080/zam%C3%B3wienie', 'localhost:8080/zam%C3%B3wienie', '', '2024-11-29 19:49:55'),
+(266, 28, 'http://localhost:8080/zam%C3%B3wienie', 'localhost:8080/zam%C3%B3wienie', '', '2024-11-29 19:49:58');
 
 -- --------------------------------------------------------
 
@@ -5195,7 +5274,9 @@ CREATE TABLE `ps_customer` (
 INSERT INTO `ps_customer` (`id_customer`, `id_shop_group`, `id_shop`, `id_gender`, `id_default_group`, `id_lang`, `id_risk`, `company`, `siret`, `ape`, `firstname`, `lastname`, `email`, `passwd`, `last_passwd_gen`, `birthday`, `newsletter`, `ip_registration_newsletter`, `newsletter_date_add`, `optin`, `website`, `outstanding_allow_amount`, `show_public_prices`, `max_payment_days`, `secure_key`, `note`, `active`, `is_guest`, `deleted`, `date_add`, `date_upd`, `reset_password_token`, `reset_password_validity`) VALUES
 (1, 1, 1, 1, 3, 1, 0, '', '', '', 'Anonymous', 'Anonymous', 'anonymous@psgdpr.com', '$2y$10$qbSnkgNCoqvE2F8KkBZIv.5zxwQT3w6krmuPpwH.UMBYKVAh4lgji', '2024-11-22 12:38:41', '0000-00-00', 0, '', '0000-00-00 00:00:00', 0, '', 0.000000, 0, 0, '77cd87debd25bd973078263d9c2f3d37', '', 0, 0, 0, '2024-11-22 18:38:41', '2024-11-22 18:38:41', '', '0000-00-00 00:00:00'),
 (2, 1, 1, 1, 3, 1, 0, '', '', '', 'John', 'DOE', 'pub@prestashop.com', 'f7a25de2428e2b097c85b1a2fe24090e', '2024-11-22 12:39:00', '1970-01-15', 1, '', '2013-12-13 08:19:15', 1, '', 0.000000, 0, 0, '5186626f6661f36b4f00de2b36d94c88', '', 1, 0, 0, '2024-11-22 18:39:00', '2024-11-22 18:39:00', '', '0000-00-00 00:00:00'),
-(4, 1, 1, 0, 2, 1, 0, NULL, NULL, NULL, 'eeeee', 'eeee', 'presta@presta.com', '$2y$10$Yn2wCuj.tvSzftQCZ7oyi./FFZ9okpTaiXufy56xDSQq8FqngTivS', '2024-11-29 11:05:32', '0000-00-00', 0, NULL, '0000-00-00 00:00:00', 0, NULL, 0.000000, 0, 0, '83b8450e932ff99f4a0c2e948ea014d4', NULL, 1, 1, 0, '2024-11-29 17:05:32', '2024-11-29 17:08:00', NULL, '0000-00-00 00:00:00');
+(4, 1, 1, 0, 2, 1, 0, NULL, NULL, NULL, 'eeeee', 'eeee', 'kmonieczny@gmail.com', '$2y$10$Yn2wCuj.tvSzftQCZ7oyi./FFZ9okpTaiXufy56xDSQq8FqngTivS', '2024-11-29 11:05:32', '0000-00-00', 0, NULL, '0000-00-00 00:00:00', 0, NULL, 0.000000, 0, 0, '83b8450e932ff99f4a0c2e948ea014d4', NULL, 1, 1, 0, '2024-11-29 17:05:32', '2024-11-29 19:21:08', NULL, '0000-00-00 00:00:00'),
+(5, 1, 1, 0, 2, 1, 0, '', '', '', 'eessa', 'esssa', 'kmonieczny@gmail.com', '$2y$10$TseDYJ2I6heKTcBwSw8bie496KW34E2/LNcGrRXUKHED5Xz7W4qtu', '2024-11-29 13:28:50', '0000-00-00', 0, '', '0000-00-00 00:00:00', 0, '', 0.000000, 0, 0, '4a4a3abf97d5327cc72f784953e1667f', '', 1, 1, 0, '2024-11-29 19:28:50', '2024-11-29 19:28:50', '', '0000-00-00 00:00:00'),
+(6, 1, 1, 0, 2, 1, 0, NULL, NULL, NULL, 'eeeee', 'eee', 'eee@wp.pl', '$2y$10$JvaVXfv/I2ARs1xYxP49e.dQl7Tej0oOQu1nyWc1CTEfpZrhRCahO', '2024-11-29 13:49:28', '0000-00-00', 0, NULL, '0000-00-00 00:00:00', 0, NULL, 0.000000, 0, 0, 'f3da2864431410780588bc27bde8252c', NULL, 1, 1, 0, '2024-11-29 19:49:28', '2024-11-29 19:49:43', NULL, '0000-00-00 00:00:00');
 
 -- --------------------------------------------------------
 
@@ -5214,6 +5295,8 @@ CREATE TABLE `ps_customer_group` (
 
 INSERT INTO `ps_customer_group` (`id_customer`, `id_group`) VALUES
 (4, 2),
+(5, 2),
+(6, 2),
 (1, 3),
 (2, 3);
 
@@ -5267,7 +5350,14 @@ INSERT INTO `ps_customer_session` (`id_customer_session`, `id_customer`, `token`
 (1, 3, '3aa1c682e4e32c8fb5e3c098ee29f3c5e814ef43'),
 (2, 3, '25b499f654daea97a56eeeb305ff19a06d68f3ee'),
 (4, 4, 'ec94325bd2dd62a6ad98cfc673112c6973be6622'),
-(5, 4, '5af258bb4e733ab3e1fe4c33d7cfb8d2ef12f87a');
+(5, 4, '5af258bb4e733ab3e1fe4c33d7cfb8d2ef12f87a'),
+(6, 4, 'a5237be8066a126c0d7c74de2a69442a81f502fa'),
+(7, 4, '62bd4632df143c3bad50c748c0b8f80e1eb77b49'),
+(8, 4, 'bd55a617332b9a5c0766ceb9e6a85925de42ec49'),
+(9, 4, 'b7049fde29db53ffa359b650d31a90262b5548af'),
+(10, 4, '698b978688a1a6255b0c343694badbc1eaf4ad23'),
+(13, 6, 'fa8a4299079caa53c4527d4d9d6e6e18c588951d'),
+(14, 6, '5eaf445756112e59122ad429169f8f3153dc66b9');
 
 -- --------------------------------------------------------
 
@@ -5986,7 +6076,7 @@ INSERT INTO `ps_guest` (`id_guest`, `id_operating_system`, `id_web_browser`, `id
 (12, 8, 3, 3, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'en', 0),
 (13, 8, 3, 4, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'en', 0),
 (14, 8, 3, 5, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'en', 0),
-(15, 8, 3, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'en', 0);
+(15, 8, 3, 6, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'en', 0);
 
 -- --------------------------------------------------------
 
@@ -7034,7 +7124,6 @@ INSERT INTO `ps_hook_module` (`id_module`, `id_shop`, `id_hook`, `position`) VAL
 (11, 1, 695, 1),
 (12, 1, 696, 1),
 (13, 1, 14, 1),
-(14, 1, 7, 1),
 (15, 1, 698, 1),
 (15, 1, 701, 1),
 (16, 1, 69, 1),
@@ -7076,6 +7165,7 @@ INSERT INTO `ps_hook_module` (`id_module`, `id_shop`, `id_hook`, `position`) VAL
 (29, 1, 732, 1),
 (30, 1, 733, 1),
 (31, 1, 58, 1),
+(35, 1, 7, 1),
 (44, 1, 18, 1),
 (44, 1, 24, 1),
 (44, 1, 734, 1),
@@ -7195,7 +7285,6 @@ INSERT INTO `ps_hook_module` (`id_module`, `id_shop`, `id_hook`, `position`) VAL
 (4, 1, 688, 2),
 (5, 1, 689, 2),
 (11, 1, 685, 2),
-(14, 1, 697, 2),
 (16, 1, 31, 2),
 (17, 1, 705, 2),
 (18, 1, 41, 2),
@@ -7210,11 +7299,12 @@ INSERT INTO `ps_hook_module` (`id_module`, `id_shop`, `id_hook`, `position`) VAL
 (26, 1, 706, 2),
 (29, 1, 82, 2),
 (30, 1, 25, 2),
-(35, 1, 7, 2),
+(35, 1, 697, 2),
 (36, 1, 55, 2),
 (53, 1, 71, 2),
 (54, 1, 47, 2),
 (55, 1, 323, 2),
+(57, 1, 7, 2),
 (57, 1, 737, 2),
 (59, 1, 46, 2),
 (59, 1, 735, 2),
@@ -7251,10 +7341,8 @@ INSERT INTO `ps_hook_module` (`id_module`, `id_shop`, `id_hook`, `position`) VAL
 (30, 1, 16, 3),
 (33, 1, 683, 3),
 (33, 1, 707, 3),
-(35, 1, 697, 3),
 (37, 1, 55, 3),
 (54, 1, 122, 3),
-(57, 1, 7, 3),
 (58, 1, 737, 3),
 (59, 1, 47, 3),
 (59, 1, 71, 3),
@@ -8405,6 +8493,14 @@ CREATE TABLE `ps_mail` (
   `date_add` timestamp NOT NULL DEFAULT current_timestamp()
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_uca1400_ai_ci;
 
+--
+-- Dumping data for table `ps_mail`
+--
+
+INSERT INTO `ps_mail` (`id_mail`, `recipient`, `template`, `subject`, `id_lang`, `date_add`) VALUES
+(3, 'kmonieczny@gmail.com', 'cheque', '[PotterShop] Oczekiwanie na płatność czekiem', 1, '2024-11-29 19:29:13'),
+(4, 'kmonieczny@gmail.com', 'order_conf', '[PotterShop] Potwierdzenie zamówienia', 1, '2024-11-29 19:29:15');
+
 -- --------------------------------------------------------
 
 --
@@ -8562,8 +8658,6 @@ INSERT INTO `ps_meta` (`id_meta`, `page`, `configurable`) VALUES
 (31, 'module-bankwire-validation', 0),
 (32, 'module-bankwire-payment', 0),
 (33, 'module-cashondelivery-validation', 0),
-(34, 'module-ps_checkpayment-payment', 1),
-(35, 'module-ps_checkpayment-validation', 1),
 (36, 'module-ps_emailsubscription-verification', 1),
 (37, 'module-ps_emailsubscription-subscription', 1),
 (38, 'module-ps_shoppingcart-ajax', 1),
@@ -8616,8 +8710,6 @@ INSERT INTO `ps_meta_lang` (`id_meta`, `id_shop`, `id_lang`, `title`, `descripti
 (23, 1, 1, 'Sklepy', '', '', 'nasze-sklepy'),
 (24, 1, 1, 'Śledzenie zamówień gości', '', '', 'sledzenie-zamowien-gosci'),
 (25, 1, 1, 'Potwierdzenie zamówienia', '', '', 'potwierdzenie-zamowienia'),
-(34, 1, 1, '', '', '', ''),
-(35, 1, 1, '', '', '', ''),
 (36, 1, 1, '', '', '', ''),
 (37, 1, 1, '', '', '', ''),
 (38, 1, 1, '', '', '', ''),
@@ -8655,7 +8747,6 @@ INSERT INTO `ps_module` (`id_module`, `name`, `active`, `version`) VALUES
 (11, 'productcomments', 1, '6.0.2'),
 (12, 'ps_banner', 1, '2.1.2'),
 (13, 'ps_categorytree', 1, '2.0.3'),
-(14, 'ps_checkpayment', 1, '2.1.0'),
 (15, 'ps_contactinfo', 1, '3.3.2'),
 (16, 'ps_crossselling', 1, '2.0.2'),
 (17, 'ps_currencyselector', 1, '2.1.1'),
@@ -8774,10 +8865,6 @@ INSERT INTO `ps_module_access` (`id_profile`, `id_authorization_role`) VALUES
 (1, 550),
 (1, 551),
 (1, 552),
-(1, 553),
-(1, 554),
-(1, 555),
-(1, 556),
 (1, 557),
 (1, 558),
 (1, 559),
@@ -8992,12 +9079,6 @@ CREATE TABLE `ps_module_carrier` (
 --
 
 INSERT INTO `ps_module_carrier` (`id_module`, `id_shop`, `id_reference`) VALUES
-(14, 1, 1),
-(14, 1, 2),
-(14, 1, 3),
-(14, 1, 4),
-(14, 1, 5),
-(14, 1, 6),
 (35, 1, 1),
 (35, 1, 2),
 (35, 1, 3),
@@ -9028,7 +9109,6 @@ CREATE TABLE `ps_module_country` (
 --
 
 INSERT INTO `ps_module_country` (`id_module`, `id_shop`, `id_country`) VALUES
-(14, 1, 14),
 (35, 1, 14),
 (57, 1, 1),
 (57, 1, 2),
@@ -9248,7 +9328,6 @@ CREATE TABLE `ps_module_currency` (
 --
 
 INSERT INTO `ps_module_currency` (`id_module`, `id_shop`, `id_currency`) VALUES
-(14, 1, 1),
 (35, 1, 1),
 (57, 1, 1);
 
@@ -9308,9 +9387,6 @@ INSERT INTO `ps_module_group` (`id_module`, `id_shop`, `id_group`) VALUES
 (13, 1, 1),
 (13, 1, 2),
 (13, 1, 3),
-(14, 1, 1),
-(14, 1, 2),
-(14, 1, 3),
 (15, 1, 1),
 (15, 1, 2),
 (15, 1, 3),
@@ -9482,7 +9558,8 @@ INSERT INTO `ps_module_history` (`id`, `id_employee`, `id_module`, `date_add`, `
 (2, 1, 28, '2024-11-25 16:38:15', '2024-11-25 18:20:51'),
 (3, 1, 15, '2024-11-25 16:39:46', '2024-11-25 18:20:15'),
 (4, 1, 20, '2024-11-25 16:40:51', '2024-11-25 23:13:20'),
-(5, 1, 12, '2024-11-25 16:42:39', '2024-11-25 23:44:58');
+(5, 1, 12, '2024-11-25 16:42:39', '2024-11-25 23:44:58'),
+(6, 1, 14, '2024-11-29 19:46:05', '2024-11-29 19:46:50');
 
 -- --------------------------------------------------------
 
@@ -9528,7 +9605,6 @@ INSERT INTO `ps_module_shop` (`id_module`, `id_shop`, `enable_device`) VALUES
 (11, 1, 7),
 (12, 1, 3),
 (13, 1, 7),
-(14, 1, 7),
 (16, 1, 7),
 (17, 1, 7),
 (19, 1, 7),
@@ -9667,7 +9743,9 @@ INSERT INTO `ps_orders` (`id_order`, `reference`, `id_shop_group`, `id_shop`, `i
 (2, 'OHSATSERP', 1, 1, 2, 1, 2, 2, 1, 5, 5, 1, 'b44a6d9efd7a0076a0fbce6b15eaf3b1', 'Payment by check', 1.000000, 'ps_checkpayment', 0, 0, '', 0, '', 0.000000, 0.000000, 0.000000, 169.900000, 169.900000, 169.900000, 0.000000, 169.900000, 169.900000, 0.000000, 0.000000, 0.000000, 0.000, 0.000000, 0.000000, 0.000000, 0, 0, 0, 0, '0000-00-00 00:00:00', '0000-00-00 00:00:00', 0, '2024-11-22 18:39:01', '2024-11-22 18:39:01', ''),
 (3, 'UOYEVOLI', 1, 1, 2, 1, 2, 3, 1, 5, 5, 8, 'b44a6d9efd7a0076a0fbce6b15eaf3b1', 'Payment by check', 1.000000, 'ps_checkpayment', 0, 0, '', 0, '', 0.000000, 0.000000, 0.000000, 14.900000, 21.300000, 19.900000, 0.000000, 12.900000, 12.900000, 7.000000, 8.400000, 7.000000, 0.000, 0.000000, 0.000000, 0.000000, 0, 0, 0, 0, '0000-00-00 00:00:00', '0000-00-00 00:00:00', 0, '2024-11-22 18:39:01', '2024-11-22 18:39:01', ''),
 (4, 'FFATNOMMJ', 1, 1, 2, 1, 2, 4, 1, 5, 5, 1, 'b44a6d9efd7a0076a0fbce6b15eaf3b1', 'Payment by check', 1.000000, 'ps_checkpayment', 0, 0, '', 0, '', 0.000000, 0.000000, 0.000000, 14.900000, 21.300000, 19.900000, 0.000000, 12.900000, 12.900000, 7.000000, 8.400000, 7.000000, 0.000, 0.000000, 0.000000, 0.000000, 0, 0, 0, 0, '0000-00-00 00:00:00', '0000-00-00 00:00:00', 0, '2024-11-22 18:39:01', '2024-11-22 18:39:01', ''),
-(5, 'KHWLILZLL', 1, 1, 2, 1, 2, 5, 1, 5, 5, 10, 'b44a6d9efd7a0076a0fbce6b15eaf3b1', 'Bank wire', 1.000000, 'ps_wirepayment', 0, 0, '', 0, '', 0.000000, 0.000000, 0.000000, 20.900000, 27.300000, 25.900000, 0.000000, 18.900000, 18.900000, 7.000000, 8.400000, 7.000000, 0.000, 0.000000, 0.000000, 0.000000, 0, 0, 0, 0, '0000-00-00 00:00:00', '0000-00-00 00:00:00', 0, '2024-11-22 18:39:01', '2024-11-22 18:39:01', '');
+(5, 'KHWLILZLL', 1, 1, 2, 1, 2, 5, 1, 5, 5, 10, 'b44a6d9efd7a0076a0fbce6b15eaf3b1', 'Bank wire', 1.000000, 'ps_wirepayment', 0, 0, '', 0, '', 0.000000, 0.000000, 0.000000, 20.900000, 27.300000, 25.900000, 0.000000, 18.900000, 18.900000, 7.000000, 8.400000, 7.000000, 0.000, 0.000000, 0.000000, 0.000000, 0, 0, 0, 0, '0000-00-00 00:00:00', '0000-00-00 00:00:00', 0, '2024-11-22 18:39:01', '2024-11-22 18:39:01', ''),
+(6, 'RXKJYGLLD', 1, 1, 26, 1, 4, 7, 1, 8, 8, 1, '83b8450e932ff99f4a0c2e948ea014d4', 'Czek', 1.000000, 'ps_checkpayment', 0, 0, '', 0, '', 0.000000, 0.000000, 0.000000, 1586.700000, 1586.700000, 1290.000000, 0.000000, 1290.000000, 1586.700000, 0.000000, 0.000000, 0.000000, 23.000, 0.000000, 0.000000, 0.000000, 2, 2, 0, 0, '0000-00-00 00:00:00', '0000-00-00 00:00:00', 0, '2024-11-29 19:21:25', '2024-11-29 19:21:25', ''),
+(7, 'RMHWVXYAS', 1, 1, 25, 1, 5, 8, 1, 9, 9, 1, '4a4a3abf97d5327cc72f784953e1667f', 'Czek', 1.000000, 'ps_checkpayment', 0, 0, '', 0, '', 0.000000, 0.000000, 0.000000, 2351.760000, 2351.760000, 1912.000000, 0.000000, 1912.000000, 2351.760000, 0.000000, 0.000000, 0.000000, 23.000, 0.000000, 0.000000, 0.000000, 2, 2, 0, 0, '0000-00-00 00:00:00', '0000-00-00 00:00:00', 0, '2024-11-29 19:29:11', '2024-11-29 19:29:11', '');
 
 -- --------------------------------------------------------
 
@@ -9696,7 +9774,9 @@ INSERT INTO `ps_order_carrier` (`id_order_carrier`, `id_order`, `id_carrier`, `i
 (2, 2, 2, 0, 0.000000, 7.000000, 8.400000, '', '2024-11-22 18:39:01'),
 (3, 3, 2, 0, 0.000000, 7.000000, 8.400000, '', '2024-11-22 18:39:01'),
 (4, 4, 2, 0, 0.000000, 7.000000, 8.400000, '', '2024-11-22 18:39:01'),
-(5, 5, 2, 0, 0.000000, 7.000000, 8.400000, '', '2024-11-22 18:39:01');
+(5, 5, 2, 0, 0.000000, 7.000000, 8.400000, '', '2024-11-22 18:39:01'),
+(6, 6, 26, 0, 30.000000, 0.000000, 0.000000, '', '2024-11-29 19:21:25'),
+(7, 7, 25, 0, 30.000000, 0.000000, 0.000000, '', '2024-11-29 19:29:11');
 
 -- --------------------------------------------------------
 
@@ -9785,7 +9865,9 @@ INSERT INTO `ps_order_detail` (`id_order_detail`, `id_order`, `id_order_invoice`
 (4, 2, 0, 0, 1, 8, 0, 0, 'Mug Today is a good day', 1, 1, 0, 0, 0, 11.900000, 0.00, 0.000000, 0.000000, 0.000000, 0.00, 0.000000, '', '', '', '', 'demo_13', '', 0.000000, 0, 0, '', 0.000, 0.000000, 0.000, 0, '', 0, '0000-00-00 00:00:00', 11.900000, 11.900000, 11.900000, 11.900000, 0.000000, 0.000000, 0.000000, 11.900000, 0.000000, 0.000000, 0.000000),
 (5, 3, 0, 0, 1, 16, 28, 0, 'Mountain fox notebook Style : Ruled', 1, 1, 0, 0, 0, 12.900000, 0.00, 0.000000, 0.000000, 0.000000, 0.00, 0.000000, '', '', '', '', 'demo_8', '', 0.000000, 0, 0, '', 0.000, 0.000000, 0.000, 0, '', 0, '0000-00-00 00:00:00', 12.900000, 12.900000, 12.900000, 12.900000, 0.000000, 0.000000, 0.000000, 12.900000, 0.000000, 0.000000, 0.000000),
 (6, 4, 0, 0, 1, 16, 29, 0, 'Mountain fox notebook Style : Plain', 1, 1, 0, 0, 0, 12.900000, 0.00, 0.000000, 0.000000, 0.000000, 0.00, 0.000000, '', '', '', '', 'demo_8', '', 0.000000, 0, 0, '', 0.000, 0.000000, 0.000, 0, '', 0, '0000-00-00 00:00:00', 12.900000, 12.900000, 12.900000, 12.900000, 0.000000, 0.000000, 0.000000, 12.900000, 0.000000, 0.000000, 0.000000),
-(7, 5, 0, 0, 1, 10, 25, 0, 'Brown bear cushion Color : Black', 1, 1, 0, 0, 0, 18.900000, 0.00, 0.000000, 0.000000, 0.000000, 0.00, 0.000000, '', '', '', '', 'demo_16', '', 0.000000, 0, 0, '', 0.000, 0.000000, 0.000, 0, '', 0, '0000-00-00 00:00:00', 18.900000, 18.900000, 18.900000, 18.900000, 0.000000, 0.000000, 0.000000, 18.900000, 0.000000, 0.000000, 0.000000);
+(7, 5, 0, 0, 1, 10, 25, 0, 'Brown bear cushion Color : Black', 1, 1, 0, 0, 0, 18.900000, 0.00, 0.000000, 0.000000, 0.000000, 0.00, 0.000000, '', '', '', '', 'demo_16', '', 0.000000, 0, 0, '', 0.000, 0.000000, 0.000, 0, '', 0, '0000-00-00 00:00:00', 18.900000, 18.900000, 18.900000, 18.900000, 0.000000, 0.000000, 0.000000, 18.900000, 0.000000, 0.000000, 0.000000),
+(8, 6, 0, 0, 1, 16, 28, 0, 'Mountain fox notebook (Paper Type: Ruled)', 100, 100, 0, 0, 0, 12.900000, 0.00, 0.000000, 0.000000, 0.000000, 0.00, 0.000000, '', '', '', '', 'demo_8', 'demo_8_85', 0.300000, 1, 0, 'PTU PL 23%', 23.000, 0.000000, 0.000, 0, '', 0, '0000-00-00 00:00:00', 1586.700000, 1290.000000, 15.867000, 12.900000, 0.000000, 0.000000, 5.490000, 12.900000, 0.000000, 0.000000, 0.000000),
+(9, 7, 0, 0, 1, 1, 1, 0, 'Hummingbird printed t-shirt (Rozmiar: S - Kolor: Biały)', 100, 100, 0, 0, 0, 19.120000, 20.00, 0.000000, 0.000000, 0.000000, 0.00, 0.000000, '', '', '', '', 'demo_1', 'demo_1_46', 0.300000, 1, 0, 'PTU PL 23%', 23.000, 0.000000, 0.000, 0, '', 0, '0000-00-00 00:00:00', 2351.760000, 1912.000000, 23.517600, 19.120000, 0.000000, 0.000000, 5.490000, 23.900000, 0.000000, 0.000000, 0.000000);
 
 -- --------------------------------------------------------
 
@@ -9833,7 +9915,9 @@ INSERT INTO `ps_order_history` (`id_order_history`, `id_employee`, `id_order`, `
 (4, 0, 4, 1, '2024-11-22 18:39:01'),
 (5, 0, 5, 10, '2024-11-22 18:39:01'),
 (6, 1, 1, 6, '2024-11-22 18:39:01'),
-(7, 1, 3, 8, '2024-11-22 18:39:01');
+(7, 1, 3, 8, '2024-11-22 18:39:01'),
+(8, 0, 6, 1, '2024-11-29 19:21:25'),
+(9, 0, 7, 1, '2024-11-29 19:29:11');
 
 -- --------------------------------------------------------
 
@@ -11163,7 +11247,9 @@ CREATE TABLE `ps_psgdpr_log` (
 
 INSERT INTO `ps_psgdpr_log` (`id_gdpr_log`, `id_customer`, `id_guest`, `client_name`, `id_module`, `request_type`, `date_add`, `date_upd`) VALUES
 (1, 3, 0, 'eee eee', 0, 1, '2024-11-29 16:02:46', '2024-11-29 16:02:46'),
-(2, 4, 0, 'eeeee eeee', 0, 1, '2024-11-29 17:05:33', '2024-11-29 17:05:33');
+(2, 4, 0, 'eeeee eeee', 0, 1, '2024-11-29 17:05:33', '2024-11-29 17:05:33'),
+(3, 5, 0, 'eessa esssa', 0, 1, '2024-11-29 19:28:50', '2024-11-29 19:28:50'),
+(4, 6, 0, 'eeeee eee', 0, 1, '2024-11-29 19:49:28', '2024-11-29 19:49:28');
 
 -- --------------------------------------------------------
 
@@ -13061,7 +13147,7 @@ CREATE TABLE `ps_stock_available` (
 --
 
 INSERT INTO `ps_stock_available` (`id_stock_available`, `id_product`, `id_product_attribute`, `id_shop`, `id_shop_group`, `quantity`, `physical_quantity`, `reserved_quantity`, `depends_on_stock`, `out_of_stock`, `location`) VALUES
-(1, 1, 0, 1, 0, 2400, 0, 0, 0, 2, ''),
+(1, 1, 0, 1, 0, 2300, 2300, 0, 0, 2, ''),
 (2, 2, 0, 1, 0, 2100, 0, 0, 0, 2, ''),
 (3, 3, 0, 1, 0, 1500, 0, 0, 0, 2, ''),
 (4, 4, 0, 1, 0, 1500, 0, 0, 0, 2, ''),
@@ -13076,18 +13162,18 @@ INSERT INTO `ps_stock_available` (`id_stock_available`, `id_product`, `id_produc
 (13, 13, 0, 1, 0, 300, 0, 0, 0, 1, ''),
 (14, 14, 0, 1, 0, 300, 0, 0, 0, 1, ''),
 (15, 15, 0, 1, 0, 100, 0, 0, 0, 2, ''),
-(16, 16, 0, 1, 0, 1200, 0, 0, 0, 2, ''),
+(16, 16, 0, 1, 0, 1100, 1100, 0, 0, 2, ''),
 (17, 17, 0, 1, 0, 1200, 0, 0, 0, 2, ''),
 (18, 18, 0, 1, 0, 1200, 0, 0, 0, 2, ''),
 (19, 19, 0, 1, 0, 300, 0, 0, 0, 2, ''),
-(20, 1, 1, 1, 0, 300, 0, 0, 0, 2, ''),
-(21, 1, 2, 1, 0, 300, 0, 0, 0, 2, ''),
-(22, 1, 3, 1, 0, 300, 0, 0, 0, 2, ''),
-(23, 1, 4, 1, 0, 300, 0, 0, 0, 2, ''),
-(24, 1, 5, 1, 0, 300, 0, 0, 0, 2, ''),
-(25, 1, 6, 1, 0, 300, 0, 0, 0, 2, ''),
-(26, 1, 7, 1, 0, 300, 0, 0, 0, 2, ''),
-(27, 1, 8, 1, 0, 300, 0, 0, 0, 2, ''),
+(20, 1, 1, 1, 0, 200, 300, 100, 0, 2, ''),
+(21, 1, 2, 1, 0, 300, 300, 0, 0, 2, ''),
+(22, 1, 3, 1, 0, 300, 300, 0, 0, 2, ''),
+(23, 1, 4, 1, 0, 300, 300, 0, 0, 2, ''),
+(24, 1, 5, 1, 0, 300, 300, 0, 0, 2, ''),
+(25, 1, 6, 1, 0, 300, 300, 0, 0, 2, ''),
+(26, 1, 7, 1, 0, 300, 300, 0, 0, 2, ''),
+(27, 1, 8, 1, 0, 300, 300, 0, 0, 2, ''),
 (28, 2, 9, 1, 0, 1200, 0, 0, 0, 2, ''),
 (29, 2, 10, 1, 0, 300, 0, 0, 0, 2, ''),
 (30, 2, 11, 1, 0, 300, 0, 0, 0, 2, ''),
@@ -13107,10 +13193,10 @@ INSERT INTO `ps_stock_available` (`id_stock_available`, `id_product`, `id_produc
 (44, 10, 25, 1, 0, 300, 0, 0, 0, 2, ''),
 (45, 11, 26, 1, 0, 300, 0, 0, 0, 2, ''),
 (46, 11, 27, 1, 0, 300, 0, 0, 0, 2, ''),
-(47, 16, 28, 1, 0, 300, 0, 0, 0, 2, ''),
-(48, 16, 29, 1, 0, 300, 0, 0, 0, 2, ''),
-(49, 16, 30, 1, 0, 300, 0, 0, 0, 2, ''),
-(50, 16, 31, 1, 0, 300, 0, 0, 0, 2, ''),
+(47, 16, 28, 1, 0, 200, 300, 100, 0, 2, ''),
+(48, 16, 29, 1, 0, 300, 301, 1, 0, 2, ''),
+(49, 16, 30, 1, 0, 300, 300, 0, 0, 2, ''),
+(50, 16, 31, 1, 0, 300, 300, 0, 0, 2, ''),
 (51, 17, 32, 1, 0, 300, 0, 0, 0, 2, ''),
 (52, 17, 33, 1, 0, 300, 0, 0, 0, 2, ''),
 (53, 17, 34, 1, 0, 300, 0, 0, 0, 2, ''),
@@ -17020,7 +17106,7 @@ ALTER TABLE `ps_zone_shop`
 -- AUTO_INCREMENT for table `ps_address`
 --
 ALTER TABLE `ps_address`
-  MODIFY `id_address` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
+  MODIFY `id_address` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
 
 --
 -- AUTO_INCREMENT for table `ps_admin_filter`
@@ -17086,7 +17172,7 @@ ALTER TABLE `ps_carrier`
 -- AUTO_INCREMENT for table `ps_cart`
 --
 ALTER TABLE `ps_cart`
-  MODIFY `id_cart` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
+  MODIFY `id_cart` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
 
 --
 -- AUTO_INCREMENT for table `ps_cart_rule`
@@ -17158,7 +17244,7 @@ ALTER TABLE `ps_connections`
 -- AUTO_INCREMENT for table `ps_connections_source`
 --
 ALTER TABLE `ps_connections_source`
-  MODIFY `id_connections_source` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=259;
+  MODIFY `id_connections_source` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=267;
 
 --
 -- AUTO_INCREMENT for table `ps_contact`
@@ -17182,7 +17268,7 @@ ALTER TABLE `ps_currency`
 -- AUTO_INCREMENT for table `ps_customer`
 --
 ALTER TABLE `ps_customer`
-  MODIFY `id_customer` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+  MODIFY `id_customer` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
 
 --
 -- AUTO_INCREMENT for table `ps_customer_message`
@@ -17194,7 +17280,7 @@ ALTER TABLE `ps_customer_message`
 -- AUTO_INCREMENT for table `ps_customer_session`
 --
 ALTER TABLE `ps_customer_session`
-  MODIFY `id_customer_session` int(11) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
+  MODIFY `id_customer_session` int(11) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=15;
 
 --
 -- AUTO_INCREMENT for table `ps_customer_thread`
@@ -17428,7 +17514,7 @@ ALTER TABLE `ps_module`
 -- AUTO_INCREMENT for table `ps_module_history`
 --
 ALTER TABLE `ps_module_history`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
 
 --
 -- AUTO_INCREMENT for table `ps_module_preference`
@@ -17602,7 +17688,7 @@ ALTER TABLE `ps_psgdpr_consent_lang`
 -- AUTO_INCREMENT for table `ps_psgdpr_log`
 --
 ALTER TABLE `ps_psgdpr_log`
-  MODIFY `id_gdpr_log` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `id_gdpr_log` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 
 --
 -- AUTO_INCREMENT for table `ps_psreassurance`
