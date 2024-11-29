@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: mariadb:3306
--- Generation Time: Lis 29, 2024 at 06:50 PM
+-- Generation Time: Lis 29, 2024 at 07:05 PM
 -- Wersja serwera: 11.6.2-MariaDB-ubu2404
 -- Wersja PHP: 8.2.8
 
@@ -1569,6 +1569,10 @@ INSERT INTO `ps_authorization_role` (`id_authorization_role`, `slug`) VALUES
 (772, 'ROLE_MOD_MODULE_PS_BUYBUTTONLITE_DELETE'),
 (770, 'ROLE_MOD_MODULE_PS_BUYBUTTONLITE_READ'),
 (771, 'ROLE_MOD_MODULE_PS_BUYBUTTONLITE_UPDATE'),
+(869, 'ROLE_MOD_MODULE_PS_CASHONDELIVERY_CREATE'),
+(872, 'ROLE_MOD_MODULE_PS_CASHONDELIVERY_DELETE'),
+(870, 'ROLE_MOD_MODULE_PS_CASHONDELIVERY_READ'),
+(871, 'ROLE_MOD_MODULE_PS_CASHONDELIVERY_UPDATE'),
 (549, 'ROLE_MOD_MODULE_PS_CATEGORYTREE_CREATE'),
 (552, 'ROLE_MOD_MODULE_PS_CATEGORYTREE_DELETE'),
 (550, 'ROLE_MOD_MODULE_PS_CATEGORYTREE_READ'),
@@ -3816,7 +3820,11 @@ INSERT INTO `ps_configuration` (`id_configuration`, `id_shop_group`, `id_shop`, 
 (442, NULL, NULL, 'PS_SHOWCASECARD_CMS_PAGES_CLOSED', '1', '2024-11-25 18:35:02', '2024-11-25 18:35:02'),
 (443, NULL, NULL, 'PS_ACCOUNTS_FIREBASE_REFRESH_TOKEN', NULL, '2024-11-25 22:44:26', '2024-11-29 19:25:12'),
 (444, NULL, NULL, 'PS_MAIL_EMAIL_MESSAGE', '2', '2024-11-29 18:19:00', '2024-11-29 18:19:00'),
-(445, NULL, NULL, 'PS_MAIL_DOMAIN', NULL, '2024-11-29 18:19:00', '2024-11-29 18:19:00');
+(445, NULL, NULL, 'PS_MAIL_DOMAIN', NULL, '2024-11-29 18:19:00', '2024-11-29 18:19:00'),
+(446, NULL, NULL, 'CONF_PS_CASHONDELIVERY_FIXED', '0.2', '2024-11-29 20:03:20', '2024-11-29 20:03:20'),
+(447, NULL, NULL, 'CONF_PS_CASHONDELIVERY_VAR', '2', '2024-11-29 20:03:20', '2024-11-29 20:03:20'),
+(448, NULL, NULL, 'CONF_PS_CASHONDELIVERY_FIXED_FOREIGN', '0.2', '2024-11-29 20:03:20', '2024-11-29 20:03:20'),
+(449, NULL, NULL, 'CONF_PS_CASHONDELIVERY_VAR_FOREIGN', '2', '2024-11-29 20:03:20', '2024-11-29 20:03:20');
 
 -- --------------------------------------------------------
 
@@ -7348,6 +7356,7 @@ INSERT INTO `ps_hook_module` (`id_module`, `id_shop`, `id_hook`, `position`) VAL
 (59, 1, 71, 3),
 (60, 1, 46, 3),
 (62, 1, 82, 3),
+(65, 1, 697, 3),
 (1, 1, 41, 4),
 (5, 1, 682, 4),
 (6, 1, 688, 4),
@@ -7357,6 +7366,7 @@ INSERT INTO `ps_hook_module` (`id_module`, `id_shop`, `id_hook`, `position`) VAL
 (38, 1, 55, 4),
 (57, 1, 683, 4),
 (60, 1, 71, 4),
+(65, 1, 46, 4),
 (7, 1, 682, 5),
 (39, 1, 55, 5),
 (59, 1, 16, 5),
@@ -8476,7 +8486,8 @@ INSERT INTO `ps_log` (`id_log`, `severity`, `error_code`, `message`, `object_typ
 (245, 1, 0, 'usunięcie Carrier', 'Carrier', 3, 1, NULL, 1, 0, 1, '2024-11-29 15:52:41', '2024-11-29 15:52:41'),
 (246, 1, 0, 'usunięcie Carrier', 'Carrier', 4, 1, NULL, 1, 0, 1, '2024-11-29 15:58:05', '2024-11-29 15:58:05'),
 (247, 1, 0, 'Frontcontroller::init - Cart cannot be loaded or an order has already been placed using this cart', 'Cart', 7, 1, NULL, 1, 0, 0, '2024-11-29 19:21:28', '2024-11-29 19:21:28'),
-(248, 1, 0, 'Frontcontroller::init - Cart cannot be loaded or an order has already been placed using this cart', 'Cart', 8, 1, NULL, 1, 0, 0, '2024-11-29 19:29:15', '2024-11-29 19:29:15');
+(248, 1, 0, 'Frontcontroller::init - Cart cannot be loaded or an order has already been placed using this cart', 'Cart', 8, 1, NULL, 1, 0, 0, '2024-11-29 19:29:15', '2024-11-29 19:29:15'),
+(249, 1, 0, 'Protect vendor folder in module ps_cashondelivery', '', 0, 1, NULL, 1, 0, 1, '2024-11-29 20:03:20', '2024-11-29 20:03:20');
 
 -- --------------------------------------------------------
 
@@ -8662,7 +8673,8 @@ INSERT INTO `ps_meta` (`id_meta`, `page`, `configurable`) VALUES
 (37, 'module-ps_emailsubscription-subscription', 1),
 (38, 'module-ps_shoppingcart-ajax', 1),
 (39, 'module-ps_wirepayment-payment', 1),
-(40, 'module-ps_wirepayment-validation', 1);
+(40, 'module-ps_wirepayment-validation', 1),
+(41, 'module-ps_cashondelivery-validation', 1);
 
 -- --------------------------------------------------------
 
@@ -8714,7 +8726,8 @@ INSERT INTO `ps_meta_lang` (`id_meta`, `id_shop`, `id_lang`, `title`, `descripti
 (37, 1, 1, '', '', '', ''),
 (38, 1, 1, '', '', '', ''),
 (39, 1, 1, '', '', '', ''),
-(40, 1, 1, '', '', '', '');
+(40, 1, 1, '', '', '', ''),
+(41, 1, 1, '', '', '', '');
 
 -- --------------------------------------------------------
 
@@ -8795,7 +8808,8 @@ INSERT INTO `ps_module` (`id_module`, `name`, `active`, `version`) VALUES
 (61, 'blockreassurance', 1, '5.1.4'),
 (62, 'ps_facetedsearch', 1, '3.14.1'),
 (63, 'ps_accounts', 1, '7.0.8'),
-(64, 'ps_eventbus', 1, '3.2.1');
+(64, 'ps_eventbus', 1, '3.2.1'),
+(65, 'ps_cashondelivery', 1, '2.0.1');
 
 -- --------------------------------------------------------
 
@@ -9060,7 +9074,11 @@ INSERT INTO `ps_module_access` (`id_profile`, `id_authorization_role`) VALUES
 (1, 865),
 (1, 866),
 (1, 867),
-(1, 868);
+(1, 868),
+(1, 869),
+(1, 870),
+(1, 871),
+(1, 872);
 
 -- --------------------------------------------------------
 
@@ -9090,7 +9108,10 @@ INSERT INTO `ps_module_carrier` (`id_module`, `id_shop`, `id_reference`) VALUES
 (57, 1, 3),
 (57, 1, 4),
 (57, 1, 5),
-(57, 1, 6);
+(57, 1, 6),
+(65, 1, 1),
+(65, 1, 5),
+(65, 1, 6);
 
 -- --------------------------------------------------------
 
@@ -9309,7 +9330,8 @@ INSERT INTO `ps_module_country` (`id_module`, `id_shop`, `id_country`) VALUES
 (57, 1, 234),
 (57, 1, 237),
 (57, 1, 238),
-(57, 1, 239);
+(57, 1, 239),
+(65, 1, 14);
 
 -- --------------------------------------------------------
 
@@ -9329,7 +9351,8 @@ CREATE TABLE `ps_module_currency` (
 
 INSERT INTO `ps_module_currency` (`id_module`, `id_shop`, `id_currency`) VALUES
 (35, 1, 1),
-(57, 1, 1);
+(57, 1, 1),
+(65, 1, 1);
 
 -- --------------------------------------------------------
 
@@ -9533,7 +9556,10 @@ INSERT INTO `ps_module_group` (`id_module`, `id_shop`, `id_group`) VALUES
 (63, 1, 3),
 (64, 1, 1),
 (64, 1, 2),
-(64, 1, 3);
+(64, 1, 3),
+(65, 1, 1),
+(65, 1, 2),
+(65, 1, 3);
 
 -- --------------------------------------------------------
 
@@ -9650,7 +9676,8 @@ INSERT INTO `ps_module_shop` (`id_module`, `id_shop`, `enable_device`) VALUES
 (61, 1, 7),
 (62, 1, 7),
 (63, 1, 7),
-(64, 1, 7);
+(64, 1, 7),
+(65, 1, 7);
 
 -- --------------------------------------------------------
 
@@ -17154,7 +17181,7 @@ ALTER TABLE `ps_attribute_impact`
 -- AUTO_INCREMENT for table `ps_authorization_role`
 --
 ALTER TABLE `ps_authorization_role`
-  MODIFY `id_authorization_role` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=869;
+  MODIFY `id_authorization_role` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=873;
 
 --
 -- AUTO_INCREMENT for table `ps_blockwishlist_statistics`
@@ -17226,7 +17253,7 @@ ALTER TABLE `ps_cms_role`
 -- AUTO_INCREMENT for table `ps_configuration`
 --
 ALTER TABLE `ps_configuration`
-  MODIFY `id_configuration` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=446;
+  MODIFY `id_configuration` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=450;
 
 --
 -- AUTO_INCREMENT for table `ps_configuration_kpi`
@@ -17472,7 +17499,7 @@ ALTER TABLE `ps_link_block_shop`
 -- AUTO_INCREMENT for table `ps_log`
 --
 ALTER TABLE `ps_log`
-  MODIFY `id_log` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=249;
+  MODIFY `id_log` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=250;
 
 --
 -- AUTO_INCREMENT for table `ps_mail`
@@ -17502,13 +17529,13 @@ ALTER TABLE `ps_message`
 -- AUTO_INCREMENT for table `ps_meta`
 --
 ALTER TABLE `ps_meta`
-  MODIFY `id_meta` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=41;
+  MODIFY `id_meta` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=42;
 
 --
 -- AUTO_INCREMENT for table `ps_module`
 --
 ALTER TABLE `ps_module`
-  MODIFY `id_module` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=65;
+  MODIFY `id_module` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=66;
 
 --
 -- AUTO_INCREMENT for table `ps_module_history`
