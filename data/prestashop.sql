@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: mariadb:3306
--- Generation Time: Lis 29, 2024 at 07:05 PM
+-- Generation Time: Lis 29, 2024 at 07:12 PM
 -- Wersja serwera: 11.6.2-MariaDB-ubu2404
 -- Wersja PHP: 8.2.8
 
@@ -3824,7 +3824,12 @@ INSERT INTO `ps_configuration` (`id_configuration`, `id_shop_group`, `id_shop`, 
 (446, NULL, NULL, 'CONF_PS_CASHONDELIVERY_FIXED', '0.2', '2024-11-29 20:03:20', '2024-11-29 20:03:20'),
 (447, NULL, NULL, 'CONF_PS_CASHONDELIVERY_VAR', '2', '2024-11-29 20:03:20', '2024-11-29 20:03:20'),
 (448, NULL, NULL, 'CONF_PS_CASHONDELIVERY_FIXED_FOREIGN', '0.2', '2024-11-29 20:03:20', '2024-11-29 20:03:20'),
-(449, NULL, NULL, 'CONF_PS_CASHONDELIVERY_VAR_FOREIGN', '2', '2024-11-29 20:03:20', '2024-11-29 20:03:20');
+(449, NULL, NULL, 'CONF_PS_CASHONDELIVERY_VAR_FOREIGN', '2', '2024-11-29 20:03:20', '2024-11-29 20:03:20'),
+(450, NULL, NULL, 'BANK_WIRE_DETAILS', 'PL99 9999 9999 9999 9999 9999 9999', '2024-11-29 20:11:22', '2024-11-29 20:11:22'),
+(451, NULL, NULL, 'BANK_WIRE_OWNER', 'PotterShop', '2024-11-29 20:11:22', '2024-11-29 20:11:22'),
+(452, NULL, NULL, 'BANK_WIRE_ADDRESS', 'mBank S.A.\r\nul. Prosta 18, 00-850 Warszawa', '2024-11-29 20:11:22', '2024-11-29 20:11:22'),
+(453, NULL, NULL, 'BANK_WIRE_RESERVATION_DAYS', '3', '2024-11-29 20:11:22', '2024-11-29 20:12:00'),
+(454, NULL, NULL, 'BANK_WIRE_CUSTOM_TEXT', NULL, '2024-11-29 20:11:22', '2024-11-29 20:11:22');
 
 -- --------------------------------------------------------
 
@@ -3969,7 +3974,8 @@ INSERT INTO `ps_configuration_lang` (`id_configuration`, `id_lang`, `value`, `da
 (327, 1, 'Udostępnione przez Ciebie dane osobowe są wykorzystywane w celu udzielania odpowiedzi na zapytania, przetwarzania zamówień lub umożliwiania dostępu do konkretnych informacji. Przysługuje Ci prawo do modyfikowania oraz usuwania wszelkich danych osobowych zamieszczonych na stronie „Moje konto”.', '2024-11-22 18:37:50'),
 (329, 1, 'Możesz zrezygnować w każdej chwili. W tym celu należy odnaleźć szczegóły w naszej informacji prawnej.', '2024-11-22 18:37:51'),
 (365, 1, 'Akceptuję ogólne warunki użytkowania i politykę prywatności', '2024-11-22 18:38:41'),
-(367, 1, 'Akceptuję ogólne warunki użytkowania i politykę prywatności', '2024-11-22 18:38:41');
+(367, 1, 'Akceptuję ogólne warunki użytkowania i politykę prywatności', '2024-11-22 18:38:41'),
+(454, 1, '', '2024-11-29 20:11:22');
 
 -- --------------------------------------------------------
 
@@ -4020,7 +4026,8 @@ INSERT INTO `ps_connections` (`id_connections`, `id_shop_group`, `id_shop`, `id_
 (25, 1, 1, 13, 1, 2886860801, '2024-11-29 18:42:12', ''),
 (26, 1, 1, 13, 1, 2886860801, '2024-11-29 19:16:27', ''),
 (27, 1, 1, 14, 6, 2886860801, '2024-11-29 19:21:28', 'http://localhost:8080/zam%C3%B3wienie'),
-(28, 1, 1, 15, 6, 2886860801, '2024-11-29 19:29:15', 'http://localhost:8080/zam%C3%B3wienie');
+(28, 1, 1, 15, 6, 2886860801, '2024-11-29 19:29:15', 'http://localhost:8080/zam%C3%B3wienie'),
+(29, 1, 1, 15, 1, 2886860801, '2024-11-29 20:07:51', '');
 
 -- --------------------------------------------------------
 
@@ -9585,7 +9592,8 @@ INSERT INTO `ps_module_history` (`id`, `id_employee`, `id_module`, `date_add`, `
 (3, 1, 15, '2024-11-25 16:39:46', '2024-11-25 18:20:15'),
 (4, 1, 20, '2024-11-25 16:40:51', '2024-11-25 23:13:20'),
 (5, 1, 12, '2024-11-25 16:42:39', '2024-11-25 23:44:58'),
-(6, 1, 14, '2024-11-29 19:46:05', '2024-11-29 19:46:50');
+(6, 1, 14, '2024-11-29 19:46:05', '2024-11-29 19:46:50'),
+(7, 1, 35, '2024-11-29 20:08:56', '2024-11-29 20:08:56');
 
 -- --------------------------------------------------------
 
@@ -17253,7 +17261,7 @@ ALTER TABLE `ps_cms_role`
 -- AUTO_INCREMENT for table `ps_configuration`
 --
 ALTER TABLE `ps_configuration`
-  MODIFY `id_configuration` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=450;
+  MODIFY `id_configuration` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=455;
 
 --
 -- AUTO_INCREMENT for table `ps_configuration_kpi`
@@ -17265,13 +17273,13 @@ ALTER TABLE `ps_configuration_kpi`
 -- AUTO_INCREMENT for table `ps_connections`
 --
 ALTER TABLE `ps_connections`
-  MODIFY `id_connections` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=29;
+  MODIFY `id_connections` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=30;
 
 --
 -- AUTO_INCREMENT for table `ps_connections_source`
 --
 ALTER TABLE `ps_connections_source`
-  MODIFY `id_connections_source` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=267;
+  MODIFY `id_connections_source` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=269;
 
 --
 -- AUTO_INCREMENT for table `ps_contact`
@@ -17541,7 +17549,7 @@ ALTER TABLE `ps_module`
 -- AUTO_INCREMENT for table `ps_module_history`
 --
 ALTER TABLE `ps_module_history`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
 
 --
 -- AUTO_INCREMENT for table `ps_module_preference`
