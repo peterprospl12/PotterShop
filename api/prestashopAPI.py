@@ -106,9 +106,10 @@ class PrestaShopAPI:
             except Exception as e:
                 self.logger.error(f'Error parsing category data for category ID: {category_id}: {e}')
 
-    def add_product(self, product : BaseProduct):
+    def add_product(self, product : BaseProduct) -> int:
         try:
-            return self.api.add('products', product.get_product())
+            response = self.api.add('products', product.get_product())
+            return response["prestashop"]["product"]["id"]
         except Exception as e:
             self.logger.error(f'Error creating product: {e}')
             return None
@@ -128,6 +129,17 @@ class PrestaShopAPI:
         except Exception as e:
             self.logger.error(f'Error creating category: {e}')
             return None
+        
+    def add_images(self, product_id, images):
+        try:
+            for image in images:
+                response = self.api.add(f"images/products/{product_id}", files=[('image', image[0], image[1])])
+                if response['prestashop']['image']['id'] is not None:
+                    print('Product image was successfully created.')
+                else:
+                    print(f'Failed to upload image. Status code: {response.status_code}, Response: {response.text}')
+        except Exception as e:
+            self.logger.error(f'Error adding images: {e}')
 
     def update_product(self, product_id, updated_fields):
         try:
@@ -150,12 +162,35 @@ class PrestaShopAPI:
         except Exception as e:
             self.logger.error(f'Error updating product: {e}')
 
-    def delete_product(self, product_id):
+    def delete_all_products(self):
         try:
-            self.api.delete('products', product_id)
-            print(f'Product ID: {product_id} deleted successfully')
+            products = self.api.get('products')["products"]
+            if products == '' or len(products["product"]) == 0:
+                print('No products found')
+                return
+
+            for product in products["product"]:
+                product_id = product["attrs"]["id"]
+                self.api.delete('products', product_id)
+                print(f'Product ID: {product_id} deleted successfully')
+
         except Exception as e:
             self.logger.error(f'Error deleting product: {e}')
+
+    def delete_all_categories(self):
+        try:
+            categories = self.api.get("categories")["categories"]["category"]
+
+            for category in categories:
+                category_id = category["attrs"]["id"]
+
+                if category_id in ("1", "2"):
+                    continue
+
+                self.api.delete('categories', category_id)
+                print(f'Category ID: {category_id} deleted successfully')
+        except Exception as e:
+            self.logger.error(f'Error deleting category: {e}')
 
     def set_logging_debug(self):
         logging.basicConfig(level=logging.DEBUG)

@@ -1,5 +1,8 @@
+import os
 import random
 from utils import convert_price
+from PIL import Image
+import io
 
 class BaseProduct:
     def __init__(self, product):
@@ -73,3 +76,34 @@ class BaseCategory:
 
     def get_category(self):
         return self.category
+
+
+class BaseImage:
+    def __init__(self, path_to_images: str):
+        self.absolute_path = path_to_images
+        self.image_paths = []
+        self.images = []
+
+    def set_image(self, image_paths: list):
+        self.image_paths = image_paths
+        self.__process_image()
+
+    def get_images(self):
+        images = self.images
+        self.images = []
+        return images
+    
+    def __process_image(self):
+        for image_path in self.image_paths:
+            image_name, image_path = self.__convert_image_path(image_path)
+            with open(image_path, 'rb') as file:
+                image = Image.open(file)
+                with io.BytesIO() as output:
+                    image.convert("RGB").save(output, format="JPEG")
+                    content = output.getvalue()
+
+            self.images.append([image_name, content])
+
+    def __convert_image_path(self, image_path : str):
+        parts = image_path.split('/')
+        return f"{parts[1]}-{parts[2]}", os.path.join(self.absolute_path, f"{parts[0]}/{parts[1]}/{parts[2]}")
