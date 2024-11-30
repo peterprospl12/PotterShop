@@ -652,10 +652,6 @@ div.direction {
   }
 }
 
-h3.product-title {
-  font-family: "HarryP";
-}
-
 .product-price-and-shipping {
   font-family: "HarryP";
 }
@@ -664,9 +660,16 @@ div.products.row {
   margin: auto;
 }
 
+@media (max-width: 991px) {
+  .featured-products .products {
+    -webkit-box-pack: unset;
+    justify-content: left;
+  }
+}
+
 @media screen and (min-width: 768px) and (max-width: 979px) {
   div.js-product.product.col-xs-12.col-sm-6.col-lg-4.col-xl-3 {
-    float: left;
+    float: left !important;
     width: 33.33333%;
   }
 }
@@ -843,4 +846,123 @@ div.collapse.deeper-layer ul {
 div.collapse.deeper-layer ul li {
   padding: 10px;
   background-color: white;
+}
+
+.custom-pagination {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.custom-pagination .btn {
+  padding: 10px;
+  text-decoration: none;
+}
+
+.custom-pagination .btn-primary {
+  color: black;
+  background-color: transparent;
+  font-size: 12px;
+  font-weight: bold;
+}
+
+.custom-pagination .btn-default {
+  background-color: transparent;
+  color: #c51515;
+  border: 2px solid #c51515;
+  border-radius: 3px;
+  font-size: 12px;
+  font-weight: bold;
+}
+
+.featured-products {
+  margin-bottom: 50px;
+}
+
+.main-page-add-to-cart {
+}
+
+.products article .wishlist-button-add {
+  display: none;
+}
+
+.product-miniature .product-flags li.product-flag {
+  margin: 0;
+}
+
+.product-miniature .thumbnail-top {
+  padding: 10px;
+}
+
+.product-miniature .product-flags li.product-flag {
+  padding: 7px 10px;
+  float: none;
+  display: inline-block;
+  overflow: hidden;
+  margin: 0 0.1em;
+  text-align: center;
+  text-transform: uppercase;
+  font-weight: bold;
+  letter-spacing: 2.18px;
+  background-color: #ffaa83;
+}
+
+.product-miniature .product-title {
+  height: 2.25em;
+  text-align: left;
+  padding-left: 10px;
+  padding-right: 10px;
+  margin-bottom: 20px;
+}
+
+.product-miniature .product-title a {
+  font-size: 16px;
+  color: #606060;
+  font-weight: normal;
+}
+
+.miniature-price-and-button {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  align-items: flex-start;
+}
+
+.product-miniature .product-price-and-shipping {
+  padding: 0px 10px 0px 10px;
+  color: #242424;
+  min-height: 32px;
+  max-width: initial;
+  font-size: 1.8em;
+}
+
+.product-miniature .regular-price {
+  float: right;
+  font-size: 0.8em;
+}
+
+.custom-button-add-to-cart {
+  background-color: #c51515;
+  border: 1px solid #c51515;
+  color: #fff;
+  padding: 7px 10px;
+  text-transform: none;
+  font-size: 12px;
+  vertical-align: middle;
+  cursor: pointer;
+  text-decoration: none;
+  text-align: center;
+  display: inline-block;
+  border-radius: 4px;
+}
+
+.custom-button-add-to-cart:focus {
+  transition: background-color 0.1s linear;
+}
+
+.custom-button-add-to-cart:hover {
+  background-color: #444;
+  border-color: #444;
+}
+
+a.thumbnail.product-thumbnail {
+  padding-bottom: 80px;
 }

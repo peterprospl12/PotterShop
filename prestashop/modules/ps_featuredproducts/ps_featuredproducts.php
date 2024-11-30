@@ -254,8 +254,24 @@ class Ps_FeaturedProducts extends Module implements WidgetInterface
     {
         $products = $this->getProducts();
 
+        $nProducts = Configuration::get('HOME_FEATURED_NBR');
+        if ($nProducts <= 0) {
+            $nProducts = 4;
+        }
+        
+        $page = (int) Tools::getValue('page', 1);
+
+        $category = new Category((int) Configuration::get('HOME_FEATURED_CAT'));
+        $categoryProducts = $category->getProducts($this->context->language->id, 1, 1000000, 'position', 'asc');
+        $numProductsInCategory = count($categoryProducts);
+
+        $totalPages = ceil($numProductsInCategory / $nProducts);
+
         if (!empty($products)) {
             return [
+                'products_number' => $numProductsInCategory,
+                'current_page' => $page,
+                'total_pages' => $totalPages,
                 'products' => $products,
                 'allProductsLink' => Context::getContext()->link->getCategoryLink($this->getConfigFieldsValues()['HOME_FEATURED_CAT']),
             ];
@@ -279,12 +295,14 @@ class Ps_FeaturedProducts extends Module implements WidgetInterface
 
         $nProducts = Configuration::get('HOME_FEATURED_NBR');
         if ($nProducts < 0) {
-            $nProducts = 12;
+            $nProducts = 4;
         }
+
+        $page = (int) Tools::getValue('page', 1);
 
         $query
             ->setResultsPerPage($nProducts)
-            ->setPage(1)
+            ->setPage($page)
         ;
 
         if (Configuration::get('HOME_FEATURED_RANDOMIZE')) {

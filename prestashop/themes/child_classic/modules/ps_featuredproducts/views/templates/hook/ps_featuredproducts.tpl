@@ -27,7 +27,32 @@
     {l s='Polecane produkty' d='Shop.Theme.Catalog'}
   </h2>
   {include file="catalog/_partials/productlist.tpl" products=$products cssClass="row" productClass="col-xs-12 col-sm-6 col-lg-4 col-xl-3"}
-  <a class="all-product-link float-xs-left float-md-right h4" href="{$allProductsLink}">
-    {l s='All products' d='Shop.Theme.Catalog'}<i class="material-icons">&#xE315;</i>
-  </a>
+  {if isset($total_pages) && $total_pages > 1}
+    <div class="custom-pagination">
+      {if $current_page > 1}
+        <a href="?page={$current_page - 1}" class="btn btn-direction">
+          <img src="http://localhost:8080/themes/child_classic/modules/ps_featuredproducts/img/custom-pagination-left.svg"
+            alt="Shopping cart">
+        </a>
+      {/if}
+      {if $current_page <= 1}
+        <a href="?page=1" class="btn btn-direction">
+          <img src="http://localhost:8080/themes/child_classic/modules/ps_featuredproducts/img/custom-pagination-left.svg"
+            alt="Shopping cart">
+        </a>
+      {/if}
+      {for $i = 1 to $total_pages}
+        <a {if $i != $current_page}href="?page={$i}"{/if} class="btn {if $i == $current_page}btn-primary{else}btn-default{/if}">
+          {$i}
+        </a>
+      {/for}
+
+      {if $current_page < $total_pages}
+        <a href="?page={$current_page + 1}" class="btn btn-direction">
+          <img src="http://localhost:8080/themes/child_classic/modules/ps_featuredproducts/img/custom-pagination-right.svg"
+            alt="Shopping cart">
+        </a>
+      {/if}
+    </div>
+  {/if}
 </section>
