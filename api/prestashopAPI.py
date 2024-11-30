@@ -1,4 +1,5 @@
 import logging
+import random
 from prestapyt import PrestaShopWebServiceDict
 from product import BaseProduct, BaseCategory
 
@@ -65,6 +66,27 @@ class PrestaShopAPI:
             product_id = product['attrs']['id']
             self.print_product(product_id)
 
+    def print_categories(self):
+        categories_data = self.get_categories()
+        if categories_data is None:
+            self.logger.error('Error getting categories')
+            return
+
+        categories = categories_data['categories']['category']
+        for category in categories:
+            category_id = category['attrs']['id']
+            category_data = self.get_category(category_id)
+            if category_data is None:
+                self.logger.error(f'Error getting category data for category ID: {category_id}')
+                continue
+
+            try:
+                category_name = category_data['category']['name']['language'][0]['value']
+                print(f'Category ID: {category_id}, Name: {category_name}')
+            except Exception as e:
+                self.logger.error(f'Error parsing category data for category ID: {category_id}: {e}')
+
+
     def get_categories(self):
         try:
             return self.api.get('categories')
@@ -86,30 +108,12 @@ class PrestaShopAPI:
             self.logger.error(f'Error getting empty category: {e}')
             return None
 
-    def print_categories(self):
-        categories_data = self.get_categories()
-        if categories_data is None:
-            self.logger.error('Error getting categories')
-            return
-
-        categories = categories_data['categories']['category']
-        for category in categories:
-            category_id = category['attrs']['id']
-            category_data = self.get_category(category_id)
-            if category_data is None:
-                self.logger.error(f'Error getting category data for category ID: {category_id}')
-                continue
-
-            try:
-                category_name = category_data['category']['name']['language'][0]['value']
-                print(f'Category ID: {category_id}, Name: {category_name}')
-            except Exception as e:
-                self.logger.error(f'Error parsing category data for category ID: {category_id}: {e}')
-
     def add_product(self, product : BaseProduct) -> int:
         try:
             response = self.api.add('products', product.get_product())
-            return response["prestashop"]["product"]["id"]
+            id = response["prestashop"]["product"]["id"]
+            self.logger.info(f'Product {id} created')
+            return id
         except Exception as e:
             self.logger.error(f'Error creating product: {e}')
             return None
@@ -124,22 +128,34 @@ class PrestaShopAPI:
             if sub_category.get_name() != "":
                 sub_category.set_parent_id(int(main_category_id))
                 sub_category_id = self._get_or_create_category(sub_category)
-
+            self.logger.info(f'Category created: {main_category.get_name()}')
             return main_category_id, sub_category_id
         except Exception as e:
             self.logger.error(f'Error creating category: {e}')
             return None
+
+    def set_product_stock(self, product_id : int, quantity : int = 0):
+        try:
+            stock_available_id = self.api.search('stock_availables', options={'filter[id_product]': product_id})[0]
+            stock_available_schema = self.api.get('stock_availables', stock_available_id)
+            stock_available_schema['stock_available']['quantity'] = random.randint(1, 100) if quantity == 0 else quantity
+            self.api.edit('stock_availables', stock_available_schema)
+            print(f'Stock for product ID: {product_id} updated successfully')
+        except Exception as e:
+            self.logger.error(f'Error updating stock: {e}')
         
     def add_images(self, product_id, images):
-        try:
-            for image in images:
+        for image in images:
+            try:
                 response = self.api.add(f"images/products/{product_id}", files=[('image', image[0], image[1])])
-                if response['prestashop']['image']['id'] is not None:
-                    print('Product image was successfully created.')
-                else:
-                    print(f'Failed to upload image. Status code: {response.status_code}, Response: {response.text}')
-        except Exception as e:
-            self.logger.error(f'Error adding images: {e}')
+            except Exception as e:
+                self.logger.error(f'Error adding images: {e}')
+            
+            if response['prestashop']['image']['id'] is not None:
+                print(f'Product {product_id} image was successfully created.')
+            else:
+                print(f'Failed to upload image for Product {product_id}. Status code: {response.status_code}, Response: {response.text}')
+
 
     def update_product(self, product_id, updated_fields):
         try:
@@ -164,18 +180,29 @@ class PrestaShopAPI:
 
     def delete_all_products(self):
         try:
-            products = self.api.get('products')["products"]
-            if products == '' or len(products["product"]) == 0:
-                print('No products found')
-                return
-
-            for product in products["product"]:
-                product_id = product["attrs"]["id"]
+            products = self.api.get('products')["products"]["product"]
+        except TypeError as e:
+            self.logger.info("There are no products to delete")
+            return
+        
+        if len(products) == 2:
+            product_id = products["attrs"]["id"]
+            try:
                 self.api.delete('products', product_id)
-                print(f'Product ID: {product_id} deleted successfully')
+            except Exception as e:
+                self.logger.error(f'Error deleting product: {e}')
+                return
+            print(f'Product ID: {product_id} deleted successfully')
+            return
 
-        except Exception as e:
-            self.logger.error(f'Error deleting product: {e}')
+        for product in products:
+            product_id = product["attrs"]["id"]
+            try:
+                self.api.delete('products', product_id)
+            except Exception as e:
+                self.logger.error(f'Error deleting product: {e}')
+                continue
+            print(f'Product ID: {product_id} deleted successfully')
 
     def delete_all_categories(self):
         try:
@@ -223,3 +250,4 @@ class PrestaShopAPI:
             response = self.api.add('categories', category.get_category())
             category_id = response['prestashop']['category']['id']
             return category_id
+            

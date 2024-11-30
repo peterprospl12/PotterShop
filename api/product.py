@@ -43,7 +43,7 @@ class BaseProduct:
             self.product["product"]["associations"]["categories"] = {"category": [{'id': 2}, {'id': category_id}]}
             pass
         self.product["product"]["associations"]["categories"] = {"category": [{'id': 2}, {'id': category_id}, {'id': subcategory_id}]}
-        
+
     def get_product(self):
         return self.product
     

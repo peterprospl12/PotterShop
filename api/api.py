@@ -15,6 +15,8 @@ def main():
     api.delete_all_products()
     api.delete_all_categories()
 
+    logging.basicConfig(level=logging.ERROR)
+
     product_template = api.get_empty_product()
     base_product = BaseProduct(product_template)
     main_category = BaseCategory(api.get_empty_category())
@@ -25,7 +27,7 @@ def main():
     with open(f"{project_path}/scraper-results/all_products.json", 'r', encoding='utf-8') as file:
         products = json.load(file)
 
-    for i in range(1, 100):
+    for i in range(1, len(products) + 1, 40):
         product = products[str(i)]
         main_category_name = product["Categories"][0]
         sub_category_name = product["Categories"][1] if len(product["Categories"]) > 1 else None
@@ -41,6 +43,8 @@ def main():
         base_product.set_associations(category_id[0], category_id[1])    
         
         product_id = api.add_product(base_product)
+
+        api.set_product_stock(product_id)
 
         image.set_image(product["Images"])
         api.add_images(product_id, image.get_images())
