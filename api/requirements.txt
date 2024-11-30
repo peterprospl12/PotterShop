@@ -1,0 +1,3 @@
+Pillow==11.0.0
+prestapyt==0.11.1
+python-dotenv==1.0.1
