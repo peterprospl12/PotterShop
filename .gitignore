@@ -55,3 +55,7 @@ Thumbs.db
 *.iml
 .idea/
 .vscode/
+/api/.env
+/api/__pycache__
+
+/prestashop/img/*
