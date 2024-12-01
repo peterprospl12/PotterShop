@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: mariadb:3306
--- Generation Time: Lis 26, 2024 at 11:28 PM
+-- Generation Time: Dec 01, 2024 at 07:49 PM
 -- Wersja serwera: 11.5.2-MariaDB-ubu2404
 -- Wersja PHP: 8.2.8
 
@@ -3441,7 +3441,7 @@ INSERT INTO `ps_configuration` (`id_configuration`, `id_shop_group`, `id_shop`, 
 (251, NULL, NULL, 'PS_MAIL_COLOR', '#db3484', '0000-00-00 00:00:00', '0000-00-00 00:00:00'),
 (252, NULL, NULL, 'NW_SALT', '2q1zCCG4KrKnOMuK', '0000-00-00 00:00:00', '2024-11-22 18:37:51'),
 (253, NULL, NULL, 'PS_PAYMENT_LOGO_CMS_ID', '0', '0000-00-00 00:00:00', '0000-00-00 00:00:00'),
-(254, NULL, NULL, 'HOME_FEATURED_NBR', '8', '0000-00-00 00:00:00', '0000-00-00 00:00:00'),
+(254, NULL, NULL, 'HOME_FEATURED_NBR', '4', '0000-00-00 00:00:00', '2024-12-01 14:12:18'),
 (255, NULL, NULL, 'SEK_MIN_OCCURENCES', '1', '0000-00-00 00:00:00', '0000-00-00 00:00:00'),
 (256, NULL, NULL, 'SEK_FILTER_KW', '', '0000-00-00 00:00:00', '0000-00-00 00:00:00'),
 (257, NULL, NULL, 'PS_ALLOW_MOBILE_DEVICE', '1', '0000-00-00 00:00:00', '0000-00-00 00:00:00'),
@@ -3525,7 +3525,7 @@ INSERT INTO `ps_configuration` (`id_configuration`, `id_shop_group`, `id_shop`, 
 (344, NULL, NULL, 'BACKGROUND_COLOR_FAVICONBO', '#DF0067', '2024-11-22 18:37:51', '2024-11-22 18:37:51'),
 (345, NULL, NULL, 'TEXT_COLOR_FAVICONBO', '#FFFFFF', '2024-11-22 18:37:51', '2024-11-22 18:37:51'),
 (346, NULL, NULL, 'HOME_FEATURED_CAT', '2', '2024-11-22 18:37:51', '2024-11-22 18:37:51'),
-(347, NULL, NULL, 'HOMESLIDER_PAUSE_ON_HOVER', '1', '2024-11-22 18:37:52', '2024-11-22 18:37:52'),
+(347, NULL, NULL, 'HOMESLIDER_PAUSE_ON_HOVER', '0', '2024-11-22 18:37:52', '2024-12-01 14:26:02'),
 (348, NULL, NULL, 'HOMESLIDER_WRAP', '1', '2024-11-22 18:37:52', '2024-11-22 18:37:52'),
 (349, NULL, NULL, 'PS_SC_TWITTER', '1', '2024-11-22 18:37:52', '2024-11-22 18:37:52'),
 (350, NULL, NULL, 'PS_SC_FACEBOOK', '1', '2024-11-22 18:37:52', '2024-11-22 18:37:52'),
@@ -3605,8 +3605,8 @@ INSERT INTO `ps_configuration` (`id_configuration`, `id_shop_group`, `id_shop`, 
 (424, NULL, NULL, 'PS_LAYERED_FILTER_BY_DEFAULT_CATEGORY', '0', '2024-11-22 18:39:06', '2024-11-22 18:39:06'),
 (425, NULL, NULL, 'PS_LAYERED_INDEXED', '1', '2024-11-22 18:39:06', '2024-11-22 18:39:06'),
 (426, NULL, NULL, 'ONBOARDINGV2_SHUT_DOWN', '1', '2024-11-22 18:39:44', '2024-11-22 18:39:44'),
-(427, NULL, NULL, 'PS_CCCJS_VERSION', '6', '2024-11-25 00:27:30', '2024-11-26 16:14:31'),
-(428, NULL, NULL, 'PS_CCCCSS_VERSION', '6', '2024-11-25 00:27:30', '2024-11-26 16:14:31'),
+(427, NULL, NULL, 'PS_CCCJS_VERSION', '7', '2024-11-25 00:27:30', '2024-12-01 14:19:49'),
+(428, NULL, NULL, 'PS_CCCCSS_VERSION', '7', '2024-11-25 00:27:30', '2024-12-01 14:19:49'),
 (429, NULL, NULL, 'PS_LOGO_MAIL', 'logo_mail-1732492307.jpg', '2024-11-25 00:51:47', '2024-11-25 00:51:47'),
 (430, NULL, NULL, 'PS_LOGO_INVOICE', 'logo_invoice-1732492307.jpg', '2024-11-25 00:51:47', '2024-11-25 00:51:47'),
 (431, NULL, NULL, 'CONTACTFORM_SEND_CONFIRMATION_EMAIL', '1', '2024-11-25 16:37:55', '2024-11-25 16:37:55'),
@@ -3621,7 +3621,7 @@ INSERT INTO `ps_configuration` (`id_configuration`, `id_shop_group`, `id_shop`, 
 (440, NULL, NULL, 'PS_ACCOUNTS_FIREBASE_ID_TOKEN', NULL, '2024-11-25 18:17:15', '2024-11-25 18:17:15'),
 (441, NULL, NULL, 'PS_ACCOUNTS_ACCESS_TOKEN', NULL, '2024-11-25 18:17:16', '2024-11-25 18:17:16'),
 (442, NULL, NULL, 'PS_SHOWCASECARD_CMS_PAGES_CLOSED', '1', '2024-11-25 18:35:02', '2024-11-25 18:35:02'),
-(443, NULL, NULL, 'PS_ACCOUNTS_FIREBASE_REFRESH_TOKEN', NULL, '2024-11-25 22:44:26', '2024-11-26 23:34:37'),
+(443, NULL, NULL, 'PS_ACCOUNTS_FIREBASE_REFRESH_TOKEN', NULL, '2024-11-25 22:44:26', '2024-12-01 15:36:22'),
 (444, NULL, NULL, 'PS_ALLOW_HTML_IFRAME', '1', '2024-11-26 01:20:42', '2024-11-26 01:20:42'),
 (446, NULL, NULL, 'TRUSTMATE_HAVEACCOUNT', '1', '2024-11-26 15:55:12', '2024-11-26 15:55:12'),
 (448, NULL, NULL, 'TRUSTMATE_INSTANT_REVIEW', NULL, '2024-11-26 15:56:47', '2024-11-26 16:05:49'),
@@ -3820,7 +3820,22 @@ INSERT INTO `ps_connections` (`id_connections`, `id_shop_group`, `id_shop`, `id_
 (37, 1, 1, 23, 1, 2886860801, '2024-11-26 22:41:49', ''),
 (38, 1, 1, 24, 4, 2886860801, '2024-11-26 23:18:25', ''),
 (39, 1, 1, 25, 4, 2886860801, '2024-11-26 23:22:15', ''),
-(40, 1, 1, 26, 1, 2886860801, '2024-11-27 00:12:26', '');
+(40, 1, 1, 26, 1, 2886860801, '2024-11-27 00:12:26', ''),
+(41, 1, 1, 27, 1, 2886860801, '2024-12-01 14:10:29', 'http://localhost:8080/breloki/20-brelok-harry-potter-harry.html'),
+(42, 1, 1, 28, 1, 2886860801, '2024-12-01 14:30:50', ''),
+(43, 1, 1, 27, 5, 2886860801, '2024-12-01 15:21:53', ''),
+(44, 1, 1, 29, 7, 2886860801, '2024-12-01 15:33:47', ''),
+(45, 1, 1, 27, 5, 2886860801, '2024-12-01 15:53:55', ''),
+(46, 1, 1, 27, 5, 2886860801, '2024-12-01 16:49:47', ''),
+(47, 1, 1, 27, 5, 2886860801, '2024-12-01 17:20:33', ''),
+(48, 1, 1, 27, 5, 2886860801, '2024-12-01 18:12:43', ''),
+(49, 1, 1, 27, 5, 2886860801, '2024-12-01 18:45:57', ''),
+(50, 1, 1, 30, 7, 2886860801, '2024-12-01 18:56:59', ''),
+(51, 1, 1, 31, 7, 2886860801, '2024-12-01 19:05:07', ''),
+(52, 1, 1, 27, 5, 2886860801, '2024-12-01 19:17:37', ''),
+(53, 1, 1, 32, 8, 2886860801, '2024-12-01 19:39:47', ''),
+(54, 1, 1, 27, 5, 2886860801, '2024-12-01 20:05:26', ''),
+(55, 1, 1, 33, 8, 2886860801, '2024-12-01 20:46:48', '');
 
 -- --------------------------------------------------------
 
@@ -4488,7 +4503,236 @@ INSERT INTO `ps_connections_source` (`id_connections_source`, `id_connections`, 
 (630, 28, 'http://localhost:8080/content/3-reklamacje', 'localhost:8080/', '', '2024-11-27 00:25:09'),
 (631, 28, 'http://localhost:8080/content/3-reklamacje', 'localhost:8080/', '', '2024-11-27 00:25:35'),
 (632, 28, 'http://localhost:8080/content/3-reklamacje', 'localhost:8080/', '', '2024-11-27 00:26:33'),
-(633, 28, 'http://localhost:8080/content/3-reklamacje', 'localhost:8080/', '', '2024-11-27 00:27:51');
+(633, 28, 'http://localhost:8080/content/3-reklamacje', 'localhost:8080/', '', '2024-11-27 00:27:51'),
+(634, 41, 'http://localhost:8080/breloki/20-brelok-harry-potter-harry.html', 'localhost:8080/', '', '2024-12-01 14:10:29'),
+(635, 41, 'http://localhost:8080/breloki/20-brelok-harry-potter-harry.html', 'localhost:8080/', '', '2024-12-01 14:10:38'),
+(636, 41, 'http://localhost:8080/breloki/20-brelok-harry-potter-harry.html', 'localhost:8080/', '', '2024-12-01 14:11:21'),
+(637, 41, 'http://localhost:8080/', 'localhost:8080/?page=2', '', '2024-12-01 14:11:37'),
+(638, 41, 'http://localhost:8080/?page=2', 'localhost:8080/?page=1', '', '2024-12-01 14:11:39'),
+(639, 41, 'http://localhost:8080/?page=2', 'localhost:8080/?page=1', '', '2024-12-01 14:12:20'),
+(640, 41, 'http://localhost:8080/men/1-1-hummingbird-printed-t-shirt.html', 'localhost:8080/favicon.ico', '', '2024-12-01 14:12:22'),
+(641, 41, 'http://localhost:8080/?page=2', 'localhost:8080/?page=1', '', '2024-12-01 14:20:13'),
+(642, 41, 'http://localhost:8080/?page=2', 'localhost:8080/?page=1', '', '2024-12-01 14:25:19'),
+(643, 41, 'http://localhost:8080/?page=2', 'localhost:8080/?page=1', '', '2024-12-01 14:26:41'),
+(644, 41, 'http://localhost:8080/?page=1', 'localhost:8080/harry-potter-wszystkie-produkty', '', '2024-12-01 14:26:45'),
+(645, 41, 'http://localhost:8080/?page=2', 'localhost:8080/?page=1', '', '2024-12-01 14:26:46'),
+(646, 41, 'http://localhost:8080/?page=2', 'localhost:8080/?page=1', '', '2024-12-01 14:27:19'),
+(647, 41, 'http://localhost:8080/?page=2', 'localhost:8080/?page=1', '', '2024-12-01 14:27:22'),
+(648, 41, 'http://localhost:8080/?page=2', 'localhost:8080/?page=1', '', '2024-12-01 14:27:29'),
+(649, 41, 'http://localhost:8080/?page=1', 'localhost:8080/harry-potter-kalendarze-adwentowe', '', '2024-12-01 14:27:32'),
+(650, 41, 'http://localhost:8080/harry-potter-kalendarze-adwentowe', 'localhost:8080/', '', '2024-12-01 14:29:26'),
+(651, 41, 'http://localhost:8080/harry-potter-kalendarze-adwentowe', 'localhost:8080/', '', '2024-12-01 14:29:43'),
+(652, 41, 'http://localhost:8080/harry-potter-kalendarze-adwentowe', 'localhost:8080/', '', '2024-12-01 14:30:29'),
+(653, 41, 'http://localhost:8080/harry-potter-kalendarze-adwentowe', 'localhost:8080/', '', '2024-12-01 14:31:59'),
+(654, 41, 'http://localhost:8080/harry-potter-kalendarze-adwentowe', 'localhost:8080/', '', '2024-12-01 14:33:23'),
+(655, 41, 'http://localhost:8080/harry-potter-kalendarze-adwentowe', 'localhost:8080/', '', '2024-12-01 15:21:52'),
+(656, 41, 'http://localhost:8080/harry-potter-kalendarze-adwentowe', 'localhost:8080/', '', '2024-12-01 15:22:18'),
+(657, 41, 'http://localhost:8080/', 'localhost:8080/content/6-zwroty', '', '2024-12-01 15:23:03'),
+(658, 41, 'http://localhost:8080/content/6-zwroty', 'localhost:8080/', '', '2024-12-01 15:23:41'),
+(659, 41, 'http://localhost:8080/', 'localhost:8080/', '', '2024-12-01 15:23:49'),
+(660, 41, 'http://localhost:8080/', 'localhost:8080/', '', '2024-12-01 15:24:48'),
+(661, 41, 'http://localhost:8080/', 'localhost:8080/', '', '2024-12-01 15:25:10'),
+(662, 41, 'http://localhost:8080/', 'localhost:8080/men/1-1-hummingbird-printed-t-shirt.html', '', '2024-12-01 15:25:25'),
+(663, 41, 'http://localhost:8080/', 'localhost:8080/men/1-1-hummingbird-printed-t-shirt.html', '', '2024-12-01 15:27:13'),
+(664, 41, 'http://localhost:8080/', 'localhost:8080/men/1-1-hummingbird-printed-t-shirt.html', '', '2024-12-01 15:27:32'),
+(665, 41, 'http://localhost:8080/', 'localhost:8080/men/1-1-hummingbird-printed-t-shirt.html', '', '2024-12-01 15:28:06'),
+(666, 41, 'http://localhost:8080/', 'localhost:8080/men/1-1-hummingbird-printed-t-shirt.html', '', '2024-12-01 15:28:14'),
+(667, 41, 'http://localhost:8080/', 'localhost:8080/men/1-1-hummingbird-printed-t-shirt.html', '', '2024-12-01 15:29:42'),
+(668, 41, 'http://localhost:8080/', 'localhost:8080/men/1-1-hummingbird-printed-t-shirt.html', '', '2024-12-01 15:29:51'),
+(669, 41, 'http://localhost:8080/', 'localhost:8080/men/1-1-hummingbird-printed-t-shirt.html', '', '2024-12-01 15:30:03'),
+(670, 41, 'http://localhost:8080/', 'localhost:8080/men/1-1-hummingbird-printed-t-shirt.html', '', '2024-12-01 15:30:29'),
+(671, 41, 'http://localhost:8080/', 'localhost:8080/men/1-1-hummingbird-printed-t-shirt.html', '', '2024-12-01 15:30:37'),
+(672, 41, 'http://localhost:8080/', 'localhost:8080/men/1-1-hummingbird-printed-t-shirt.html', '', '2024-12-01 15:31:15'),
+(673, 41, 'http://localhost:8080/', 'localhost:8080/men/1-1-hummingbird-printed-t-shirt.html', '', '2024-12-01 15:31:23'),
+(674, 41, 'http://localhost:8080/', 'localhost:8080/men/1-1-hummingbird-printed-t-shirt.html', '', '2024-12-01 15:31:34'),
+(675, 41, 'http://localhost:8080/', 'localhost:8080/men/1-1-hummingbird-printed-t-shirt.html', '', '2024-12-01 15:31:54'),
+(676, 41, 'http://localhost:8080/', 'localhost:8080/men/1-1-hummingbird-printed-t-shirt.html', '', '2024-12-01 15:32:19'),
+(677, 41, 'http://localhost:8080/', 'localhost:8080/men/1-1-hummingbird-printed-t-shirt.html', '', '2024-12-01 15:32:23'),
+(678, 41, 'http://localhost:8080/', 'localhost:8080/men/1-1-hummingbird-printed-t-shirt.html', '', '2024-12-01 15:32:44'),
+(679, 41, 'http://localhost:8080/', 'localhost:8080/men/1-1-hummingbird-printed-t-shirt.html', '', '2024-12-01 15:33:31'),
+(680, 41, 'http://localhost:8080/', 'localhost:8080/men/1-1-hummingbird-printed-t-shirt.html', '', '2024-12-01 15:34:42'),
+(681, 41, 'http://localhost:8080/', 'localhost:8080/men/1-1-hummingbird-printed-t-shirt.html', '', '2024-12-01 15:36:55'),
+(682, 41, 'http://localhost:8080/', 'localhost:8080/men/1-1-hummingbird-printed-t-shirt.html', '', '2024-12-01 15:37:26'),
+(683, 41, 'http://localhost:8080/', 'localhost:8080/men/1-1-hummingbird-printed-t-shirt.html', '', '2024-12-01 15:38:07'),
+(684, 41, 'http://localhost:8080/', 'localhost:8080/men/1-1-hummingbird-printed-t-shirt.html', '', '2024-12-01 15:38:43'),
+(685, 41, 'http://localhost:8080/', 'localhost:8080/men/1-1-hummingbird-printed-t-shirt.html', '', '2024-12-01 15:38:48'),
+(686, 41, 'http://localhost:8080/', 'localhost:8080/men/1-1-hummingbird-printed-t-shirt.html', '', '2024-12-01 15:39:21'),
+(687, 41, 'http://localhost:8080/', 'localhost:8080/men/1-1-hummingbird-printed-t-shirt.html', '', '2024-12-01 15:39:46'),
+(688, 41, 'http://localhost:8080/', 'localhost:8080/men/1-1-hummingbird-printed-t-shirt.html', '', '2024-12-01 15:41:19'),
+(689, 41, 'http://localhost:8080/', 'localhost:8080/men/1-1-hummingbird-printed-t-shirt.html', '', '2024-12-01 15:41:36'),
+(690, 41, 'http://localhost:8080/', 'localhost:8080/men/1-1-hummingbird-printed-t-shirt.html', '', '2024-12-01 15:43:30'),
+(691, 41, 'http://localhost:8080/', 'localhost:8080/men/1-1-hummingbird-printed-t-shirt.html', '', '2024-12-01 15:44:58'),
+(692, 41, 'http://localhost:8080/', 'localhost:8080/men/1-1-hummingbird-printed-t-shirt.html', '', '2024-12-01 15:45:56'),
+(693, 41, 'http://localhost:8080/', 'localhost:8080/men/1-1-hummingbird-printed-t-shirt.html', '', '2024-12-01 15:46:28'),
+(694, 41, 'http://localhost:8080/', 'localhost:8080/men/1-1-hummingbird-printed-t-shirt.html', '', '2024-12-01 15:49:12'),
+(695, 41, 'http://localhost:8080/', 'localhost:8080/men/1-1-hummingbird-printed-t-shirt.html', '', '2024-12-01 15:51:28'),
+(696, 41, 'http://localhost:8080/', 'localhost:8080/men/1-1-hummingbird-printed-t-shirt.html', '', '2024-12-01 15:51:39'),
+(697, 41, 'http://localhost:8080/', 'localhost:8080/men/1-1-hummingbird-printed-t-shirt.html', '', '2024-12-01 15:53:54'),
+(698, 41, 'http://localhost:8080/', 'localhost:8080/men/1-1-hummingbird-printed-t-shirt.html', '', '2024-12-01 15:55:04'),
+(699, 41, 'http://localhost:8080/', 'localhost:8080/men/1-1-hummingbird-printed-t-shirt.html', '', '2024-12-01 15:55:17'),
+(700, 41, 'http://localhost:8080/', 'localhost:8080/men/1-1-hummingbird-printed-t-shirt.html', '', '2024-12-01 15:55:51'),
+(701, 41, 'http://localhost:8080/', 'localhost:8080/men/1-1-hummingbird-printed-t-shirt.html', '', '2024-12-01 15:56:43'),
+(702, 41, 'http://localhost:8080/', 'localhost:8080/men/1-1-hummingbird-printed-t-shirt.html', '', '2024-12-01 15:56:55'),
+(703, 41, 'http://localhost:8080/', 'localhost:8080/men/1-1-hummingbird-printed-t-shirt.html', '', '2024-12-01 15:57:52'),
+(704, 41, 'http://localhost:8080/', 'localhost:8080/men/1-1-hummingbird-printed-t-shirt.html', '', '2024-12-01 15:58:18'),
+(705, 41, 'http://localhost:8080/', 'localhost:8080/men/1-1-hummingbird-printed-t-shirt.html', '', '2024-12-01 15:58:51'),
+(706, 41, 'http://localhost:8080/', 'localhost:8080/men/1-1-hummingbird-printed-t-shirt.html', '', '2024-12-01 15:59:15'),
+(707, 41, 'http://localhost:8080/', 'localhost:8080/men/1-1-hummingbird-printed-t-shirt.html', '', '2024-12-01 16:00:04'),
+(708, 41, 'http://localhost:8080/', 'localhost:8080/men/1-1-hummingbird-printed-t-shirt.html', '', '2024-12-01 16:49:41'),
+(709, 41, 'http://localhost:8080/', 'localhost:8080/men/1-1-hummingbird-printed-t-shirt.html', '', '2024-12-01 16:50:05'),
+(710, 41, 'http://localhost:8080/', 'localhost:8080/men/1-1-hummingbird-printed-t-shirt.html', '', '2024-12-01 16:51:08'),
+(711, 41, 'http://localhost:8080/men/1-1-hummingbird-printed-t-shirt.html', 'localhost:8080/', '', '2024-12-01 16:51:13'),
+(712, 41, 'http://localhost:8080/', 'localhost:8080/men/1-1-hummingbird-printed-t-shirt.html', '', '2024-12-01 16:51:16'),
+(713, 41, 'http://localhost:8080/', 'localhost:8080/men/1-1-hummingbird-printed-t-shirt.html', '', '2024-12-01 17:10:27'),
+(714, 41, 'http://localhost:8080/', 'localhost:8080/men/1-1-hummingbird-printed-t-shirt.html', '', '2024-12-01 17:10:38'),
+(715, 41, 'http://localhost:8080/', 'localhost:8080/men/1-1-hummingbird-printed-t-shirt.html', '', '2024-12-01 17:10:45'),
+(716, 41, 'http://localhost:8080/', 'localhost:8080/men/1-1-hummingbird-printed-t-shirt.html', '', '2024-12-01 17:16:38'),
+(717, 41, 'http://localhost:8080/', 'localhost:8080/men/1-1-hummingbird-printed-t-shirt.html', '', '2024-12-01 17:20:32'),
+(718, 41, 'http://localhost:8080/', 'localhost:8080/men/1-1-hummingbird-printed-t-shirt.html', '', '2024-12-01 17:21:06'),
+(719, 41, 'http://localhost:8080/', 'localhost:8080/men/1-1-hummingbird-printed-t-shirt.html', '', '2024-12-01 17:22:39'),
+(720, 41, 'http://localhost:8080/themes/child_classic/assets/css/custom.css', 'localhost:8080/skins/user/rwd_primary_5/images/icon-email.svg', '', '2024-12-01 17:22:41'),
+(721, 41, 'http://localhost:8080/', 'localhost:8080/men/1-1-hummingbird-printed-t-shirt.html', '', '2024-12-01 17:23:22'),
+(722, 41, 'http://localhost:8080/themes/child_classic/assets/css/custom.css', 'localhost:8080/skins/user/rwd_primary_5/images/icon-email.svg', '', '2024-12-01 17:23:23'),
+(723, 41, 'http://localhost:8080/men/1-1-hummingbird-printed-t-shirt.html', 'localhost:8080/skins/user/rwd_primary_5/images/icon-email.svg', '', '2024-12-01 17:23:37'),
+(724, 41, 'http://localhost:8080/men/1-1-hummingbird-printed-t-shirt.html', 'localhost:8080/skins/user/rwd_primary_5/images/icon-email.svg', '', '2024-12-01 17:23:48'),
+(725, 41, 'http://localhost:8080/', 'localhost:8080/men/1-1-hummingbird-printed-t-shirt.html', '', '2024-12-01 17:25:06'),
+(726, 41, 'http://localhost:8080/themes/child_classic/assets/css/custom.css', 'localhost:8080/themes/child_classic/assets/css/img/mail.svg', '', '2024-12-01 17:25:07'),
+(727, 41, 'http://localhost:8080/', 'localhost:8080/men/1-1-hummingbird-printed-t-shirt.html', '', '2024-12-01 17:25:32'),
+(728, 41, 'http://localhost:8080/', 'localhost:8080/men/1-1-hummingbird-printed-t-shirt.html', '', '2024-12-01 17:27:16'),
+(729, 41, 'http://localhost:8080/', 'localhost:8080/men/1-1-hummingbird-printed-t-shirt.html', '', '2024-12-01 17:27:25'),
+(730, 41, 'http://localhost:8080/', 'localhost:8080/men/1-1-hummingbird-printed-t-shirt.html', '', '2024-12-01 17:27:44'),
+(731, 41, 'http://localhost:8080/', 'localhost:8080/men/1-1-hummingbird-printed-t-shirt.html', '', '2024-12-01 17:28:00'),
+(732, 41, 'http://localhost:8080/', 'localhost:8080/men/1-1-hummingbird-printed-t-shirt.html', '', '2024-12-01 17:29:30'),
+(733, 41, 'http://localhost:8080/', 'localhost:8080/men/1-1-hummingbird-printed-t-shirt.html', '', '2024-12-01 17:30:16'),
+(734, 41, 'http://localhost:8080/', 'localhost:8080/men/1-1-hummingbird-printed-t-shirt.html', '', '2024-12-01 17:31:07'),
+(735, 41, 'http://localhost:8080/', 'localhost:8080/men/1-1-hummingbird-printed-t-shirt.html', '', '2024-12-01 17:31:27'),
+(736, 41, 'http://localhost:8080/', 'localhost:8080/men/1-1-hummingbird-printed-t-shirt.html', '', '2024-12-01 17:33:20'),
+(737, 41, 'http://localhost:8080/', 'localhost:8080/men/1-1-hummingbird-printed-t-shirt.html', '', '2024-12-01 17:33:52'),
+(738, 41, 'http://localhost:8080/', 'localhost:8080/men/1-1-hummingbird-printed-t-shirt.html', '', '2024-12-01 17:34:28'),
+(739, 41, 'http://localhost:8080/', 'localhost:8080/men/1-1-hummingbird-printed-t-shirt.html', '', '2024-12-01 17:34:56'),
+(740, 41, 'http://localhost:8080/', 'localhost:8080/men/1-1-hummingbird-printed-t-shirt.html', '', '2024-12-01 17:36:03'),
+(741, 41, 'http://localhost:8080/', 'localhost:8080/men/1-1-hummingbird-printed-t-shirt.html', '', '2024-12-01 17:36:31'),
+(742, 41, 'http://localhost:8080/', 'localhost:8080/men/1-1-hummingbird-printed-t-shirt.html', '', '2024-12-01 17:37:27'),
+(743, 41, 'http://localhost:8080/', 'localhost:8080/men/1-1-hummingbird-printed-t-shirt.html', '', '2024-12-01 17:38:05'),
+(744, 41, 'http://localhost:8080/', 'localhost:8080/men/1-1-hummingbird-printed-t-shirt.html', '', '2024-12-01 17:39:48'),
+(745, 41, 'http://localhost:8080/', 'localhost:8080/men/1-1-hummingbird-printed-t-shirt.html', '', '2024-12-01 17:40:42'),
+(746, 41, 'http://localhost:8080/', 'localhost:8080/men/1-1-hummingbird-printed-t-shirt.html', '', '2024-12-01 17:42:55'),
+(747, 41, 'http://localhost:8080/', 'localhost:8080/men/1-1-hummingbird-printed-t-shirt.html', '', '2024-12-01 17:43:16'),
+(748, 41, 'http://localhost:8080/', 'localhost:8080/men/1-1-hummingbird-printed-t-shirt.html', '', '2024-12-01 17:44:40'),
+(749, 41, 'http://localhost:8080/', 'localhost:8080/men/1-1-hummingbird-printed-t-shirt.html', '', '2024-12-01 17:44:55'),
+(750, 41, 'http://localhost:8080/', 'localhost:8080/men/1-1-hummingbird-printed-t-shirt.html', '', '2024-12-01 17:45:08'),
+(751, 41, 'http://localhost:8080/', 'localhost:8080/men/1-1-hummingbird-printed-t-shirt.html', '', '2024-12-01 17:45:17'),
+(752, 41, 'http://localhost:8080/', 'localhost:8080/men/1-1-hummingbird-printed-t-shirt.html', '', '2024-12-01 17:45:27'),
+(753, 41, 'http://localhost:8080/', 'localhost:8080/men/1-1-hummingbird-printed-t-shirt.html', '', '2024-12-01 17:45:37'),
+(754, 41, 'http://localhost:8080/', 'localhost:8080/men/1-1-hummingbird-printed-t-shirt.html', '', '2024-12-01 17:46:16'),
+(755, 41, 'http://localhost:8080/', 'localhost:8080/men/1-1-hummingbird-printed-t-shirt.html', '', '2024-12-01 17:46:40'),
+(756, 41, 'http://localhost:8080/', 'localhost:8080/men/1-1-hummingbird-printed-t-shirt.html', '', '2024-12-01 17:47:35'),
+(757, 41, 'http://localhost:8080/', 'localhost:8080/men/1-1-hummingbird-printed-t-shirt.html', '', '2024-12-01 17:47:37'),
+(758, 41, 'http://localhost:8080/', 'localhost:8080/men/1-1-hummingbird-printed-t-shirt.html', '', '2024-12-01 18:12:41'),
+(759, 41, 'http://localhost:8080/', 'localhost:8080/men/1-1-hummingbird-printed-t-shirt.html', '', '2024-12-01 18:13:10'),
+(760, 41, 'http://localhost:8080/', 'localhost:8080/men/1-1-hummingbird-printed-t-shirt.html', '', '2024-12-01 18:13:16'),
+(761, 41, 'http://localhost:8080/', 'localhost:8080/men/1-1-hummingbird-printed-t-shirt.html', '', '2024-12-01 18:13:21'),
+(762, 41, 'http://localhost:8080/', 'localhost:8080/men/1-1-hummingbird-printed-t-shirt.html', '', '2024-12-01 18:13:27'),
+(763, 41, 'http://localhost:8080/', 'localhost:8080/men/1-1-hummingbird-printed-t-shirt.html', '', '2024-12-01 18:14:36'),
+(764, 41, 'http://localhost:8080/', 'localhost:8080/men/1-1-hummingbird-printed-t-shirt.html', '', '2024-12-01 18:14:44'),
+(765, 41, 'http://localhost:8080/', 'localhost:8080/men/1-1-hummingbird-printed-t-shirt.html', '', '2024-12-01 18:14:55'),
+(766, 41, 'http://localhost:8080/', 'localhost:8080/men/1-1-hummingbird-printed-t-shirt.html', '', '2024-12-01 18:15:09'),
+(767, 41, 'http://localhost:8080/', 'localhost:8080/men/1-1-hummingbird-printed-t-shirt.html', '', '2024-12-01 18:15:32'),
+(768, 41, 'http://localhost:8080/', 'localhost:8080/men/1-1-hummingbird-printed-t-shirt.html', '', '2024-12-01 18:15:51'),
+(769, 41, 'http://localhost:8080/', 'localhost:8080/men/1-1-hummingbird-printed-t-shirt.html', '', '2024-12-01 18:16:51'),
+(770, 41, 'http://localhost:8080/', 'localhost:8080/men/1-1-hummingbird-printed-t-shirt.html', '', '2024-12-01 18:18:09'),
+(771, 41, 'http://localhost:8080/', 'localhost:8080/men/1-1-hummingbird-printed-t-shirt.html', '', '2024-12-01 18:18:15'),
+(772, 41, 'http://localhost:8080/', 'localhost:8080/men/1-1-hummingbird-printed-t-shirt.html', '', '2024-12-01 18:18:40'),
+(773, 41, 'http://localhost:8080/', 'localhost:8080/men/1-1-hummingbird-printed-t-shirt.html', '', '2024-12-01 18:18:47'),
+(774, 41, 'http://localhost:8080/', 'localhost:8080/men/1-1-hummingbird-printed-t-shirt.html', '', '2024-12-01 18:22:38'),
+(775, 41, 'http://localhost:8080/', 'localhost:8080/men/1-1-hummingbird-printed-t-shirt.html', '', '2024-12-01 18:22:57'),
+(776, 41, 'http://localhost:8080/', 'localhost:8080/men/1-1-hummingbird-printed-t-shirt.html', '', '2024-12-01 18:24:42'),
+(777, 41, 'http://localhost:8080/', 'localhost:8080/men/1-1-hummingbird-printed-t-shirt.html', '', '2024-12-01 18:25:23'),
+(778, 41, 'http://localhost:8080/', 'localhost:8080/men/1-1-hummingbird-printed-t-shirt.html', '', '2024-12-01 18:25:48'),
+(779, 41, 'http://localhost:8080/', 'localhost:8080/men/1-1-hummingbird-printed-t-shirt.html', '', '2024-12-01 18:27:46'),
+(780, 41, 'http://localhost:8080/', 'localhost:8080/men/1-1-hummingbird-printed-t-shirt.html', '', '2024-12-01 18:29:12'),
+(781, 41, 'http://localhost:8080/', 'localhost:8080/men/1-1-hummingbird-printed-t-shirt.html', '', '2024-12-01 18:31:34'),
+(782, 41, 'http://localhost:8080/', 'localhost:8080/men/1-1-hummingbird-printed-t-shirt.html', '', '2024-12-01 18:32:10'),
+(783, 41, 'http://localhost:8080/', 'localhost:8080/men/1-1-hummingbird-printed-t-shirt.html', '', '2024-12-01 18:34:50'),
+(784, 41, 'http://localhost:8080/', 'localhost:8080/men/1-1-hummingbird-printed-t-shirt.html', '', '2024-12-01 18:36:08'),
+(785, 41, 'http://localhost:8080/', 'localhost:8080/men/1-1-hummingbird-printed-t-shirt.html', '', '2024-12-01 18:36:21'),
+(786, 41, 'http://localhost:8080/', 'localhost:8080/men/1-1-hummingbird-printed-t-shirt.html', '', '2024-12-01 18:36:41'),
+(787, 41, 'http://localhost:8080/', 'localhost:8080/men/1-1-hummingbird-printed-t-shirt.html', '', '2024-12-01 18:38:00'),
+(788, 41, 'http://localhost:8080/', 'localhost:8080/men/1-1-hummingbird-printed-t-shirt.html', '', '2024-12-01 18:38:59'),
+(789, 41, 'http://localhost:8080/', 'localhost:8080/men/1-1-hummingbird-printed-t-shirt.html', '', '2024-12-01 18:39:37'),
+(790, 41, 'http://localhost:8080/', 'localhost:8080/men/1-1-hummingbird-printed-t-shirt.html', '', '2024-12-01 18:39:51'),
+(791, 41, 'http://localhost:8080/', 'localhost:8080/men/1-1-hummingbird-printed-t-shirt.html', '', '2024-12-01 18:40:18'),
+(792, 41, 'http://localhost:8080/', 'localhost:8080/men/1-1-hummingbird-printed-t-shirt.html', '', '2024-12-01 18:41:56'),
+(793, 41, 'http://localhost:8080/', 'localhost:8080/men/1-1-hummingbird-printed-t-shirt.html', '', '2024-12-01 18:42:40'),
+(794, 41, 'http://localhost:8080/', 'localhost:8080/men/1-1-hummingbird-printed-t-shirt.html', '', '2024-12-01 18:45:56'),
+(795, 41, 'http://localhost:8080/', 'localhost:8080/men/1-1-hummingbird-printed-t-shirt.html', '', '2024-12-01 18:46:56'),
+(796, 41, 'http://localhost:8080/', 'localhost:8080/men/1-1-hummingbird-printed-t-shirt.html', '', '2024-12-01 18:47:03'),
+(797, 41, 'http://localhost:8080/', 'localhost:8080/men/1-1-hummingbird-printed-t-shirt.html', '', '2024-12-01 18:47:24'),
+(798, 41, 'http://localhost:8080/', 'localhost:8080/men/1-1-hummingbird-printed-t-shirt.html', '', '2024-12-01 18:47:54'),
+(799, 41, 'http://localhost:8080/', 'localhost:8080/men/1-1-hummingbird-printed-t-shirt.html', '', '2024-12-01 18:52:07'),
+(800, 41, 'http://localhost:8080/', 'localhost:8080/men/1-1-hummingbird-printed-t-shirt.html', '', '2024-12-01 18:55:49'),
+(801, 41, 'http://localhost:8080/', 'localhost:8080/men/1-1-hummingbird-printed-t-shirt.html', '', '2024-12-01 19:04:38'),
+(802, 41, 'http://localhost:8080/', 'localhost:8080/men/1-1-hummingbird-printed-t-shirt.html', '', '2024-12-01 19:05:31'),
+(803, 41, 'http://localhost:8080/', 'localhost:8080/men/1-1-hummingbird-printed-t-shirt.html', '', '2024-12-01 19:05:40'),
+(804, 41, 'http://localhost:8080/', 'localhost:8080/men/1-1-hummingbird-printed-t-shirt.html', '', '2024-12-01 19:08:29'),
+(805, 41, 'http://localhost:8080/', 'localhost:8080/men/1-1-hummingbird-printed-t-shirt.html', '', '2024-12-01 19:09:01'),
+(806, 41, 'http://localhost:8080/', 'localhost:8080/men/1-1-hummingbird-printed-t-shirt.html', '', '2024-12-01 19:09:43'),
+(807, 41, 'http://localhost:8080/', 'localhost:8080/men/1-1-hummingbird-printed-t-shirt.html', '', '2024-12-01 19:12:30'),
+(808, 41, 'http://localhost:8080/', 'localhost:8080/men/1-1-hummingbird-printed-t-shirt.html', '', '2024-12-01 19:13:12'),
+(809, 41, 'http://localhost:8080/', 'localhost:8080/men/1-1-hummingbird-printed-t-shirt.html', '', '2024-12-01 19:13:41'),
+(810, 41, 'http://localhost:8080/', 'localhost:8080/men/1-1-hummingbird-printed-t-shirt.html', '', '2024-12-01 19:14:19'),
+(811, 41, 'http://localhost:8080/', 'localhost:8080/men/1-1-hummingbird-printed-t-shirt.html', '', '2024-12-01 19:14:34'),
+(812, 41, 'http://localhost:8080/', 'localhost:8080/men/1-1-hummingbird-printed-t-shirt.html', '', '2024-12-01 19:15:02'),
+(813, 41, 'http://localhost:8080/', 'localhost:8080/men/1-1-hummingbird-printed-t-shirt.html', '', '2024-12-01 19:15:17'),
+(814, 41, 'http://localhost:8080/', 'localhost:8080/men/1-1-hummingbird-printed-t-shirt.html', '', '2024-12-01 19:15:23'),
+(815, 41, 'http://localhost:8080/', 'localhost:8080/men/1-1-hummingbird-printed-t-shirt.html', '', '2024-12-01 19:17:36'),
+(816, 41, 'http://localhost:8080/', 'localhost:8080/men/1-1-hummingbird-printed-t-shirt.html', '', '2024-12-01 19:19:52'),
+(817, 41, 'http://localhost:8080/', 'localhost:8080/men/1-1-hummingbird-printed-t-shirt.html', '', '2024-12-01 19:23:41'),
+(818, 41, 'http://localhost:8080/', 'localhost:8080/men/1-1-hummingbird-printed-t-shirt.html', '', '2024-12-01 19:25:00'),
+(819, 41, 'http://localhost:8080/', 'localhost:8080/men/1-1-hummingbird-printed-t-shirt.html', '', '2024-12-01 19:25:47'),
+(820, 41, 'http://localhost:8080/', 'localhost:8080/men/1-1-hummingbird-printed-t-shirt.html', '', '2024-12-01 19:26:36'),
+(821, 41, 'http://localhost:8080/', 'localhost:8080/men/1-1-hummingbird-printed-t-shirt.html', '', '2024-12-01 19:26:58'),
+(822, 41, 'http://localhost:8080/', 'localhost:8080/men/1-1-hummingbird-printed-t-shirt.html', '', '2024-12-01 19:29:35'),
+(823, 41, 'http://localhost:8080/', 'localhost:8080/men/1-1-hummingbird-printed-t-shirt.html', '', '2024-12-01 19:29:48'),
+(824, 41, 'http://localhost:8080/', 'localhost:8080/men/1-1-hummingbird-printed-t-shirt.html', '', '2024-12-01 19:33:20'),
+(825, 41, 'http://localhost:8080/', 'localhost:8080/men/1-1-hummingbird-printed-t-shirt.html', '', '2024-12-01 19:35:20'),
+(826, 41, 'http://localhost:8080/', 'localhost:8080/men/1-1-hummingbird-printed-t-shirt.html', '', '2024-12-01 19:35:49'),
+(827, 41, 'http://localhost:8080/', 'localhost:8080/men/1-1-hummingbird-printed-t-shirt.html', '', '2024-12-01 19:36:18'),
+(828, 41, 'http://localhost:8080/men/1-1-hummingbird-printed-t-shirt.html', 'localhost:8080/', '', '2024-12-01 19:36:29'),
+(829, 41, 'http://localhost:8080/', 'localhost:8080/art/3-13-the-best-is-yet-to-come-framed-poster.html', '', '2024-12-01 19:36:31'),
+(830, 41, 'http://localhost:8080/', 'localhost:8080/art/3-13-the-best-is-yet-to-come-framed-poster.html', '', '2024-12-01 19:38:31'),
+(831, 41, 'http://localhost:8080/', 'localhost:8080/art/3-13-the-best-is-yet-to-come-framed-poster.html', '', '2024-12-01 19:38:41'),
+(832, 41, 'http://localhost:8080/', 'localhost:8080/art/3-13-the-best-is-yet-to-come-framed-poster.html', '', '2024-12-01 19:38:50'),
+(833, 41, 'http://localhost:8080/', 'localhost:8080/art/3-13-the-best-is-yet-to-come-framed-poster.html', '', '2024-12-01 19:40:04'),
+(834, 41, 'http://localhost:8080/', 'localhost:8080/art/3-13-the-best-is-yet-to-come-framed-poster.html', '', '2024-12-01 19:41:10'),
+(835, 41, 'http://localhost:8080/', 'localhost:8080/art/3-13-the-best-is-yet-to-come-framed-poster.html', '', '2024-12-01 20:07:23'),
+(836, 41, 'http://localhost:8080/', 'localhost:8080/art/3-13-the-best-is-yet-to-come-framed-poster.html', '', '2024-12-01 20:18:40'),
+(837, 41, 'http://localhost:8080/', 'localhost:8080/art/3-13-the-best-is-yet-to-come-framed-poster.html', '', '2024-12-01 20:20:24'),
+(838, 41, 'http://localhost:8080/', 'localhost:8080/art/3-13-the-best-is-yet-to-come-framed-poster.html', '', '2024-12-01 20:22:15'),
+(839, 41, 'http://localhost:8080/', 'localhost:8080/art/3-13-the-best-is-yet-to-come-framed-poster.html', '', '2024-12-01 20:28:05'),
+(840, 41, 'http://localhost:8080/', 'localhost:8080/art/3-13-the-best-is-yet-to-come-framed-poster.html', '', '2024-12-01 20:30:35'),
+(841, 41, 'http://localhost:8080/', 'localhost:8080/art/3-13-the-best-is-yet-to-come-framed-poster.html', '', '2024-12-01 20:31:56'),
+(842, 41, 'http://localhost:8080/', 'localhost:8080/art/3-13-the-best-is-yet-to-come-framed-poster.html', '', '2024-12-01 20:32:33'),
+(843, 41, 'http://localhost:8080/', 'localhost:8080/art/3-13-the-best-is-yet-to-come-framed-poster.html', '', '2024-12-01 20:32:40'),
+(844, 41, 'http://localhost:8080/', 'localhost:8080/art/3-13-the-best-is-yet-to-come-framed-poster.html', '', '2024-12-01 20:34:17'),
+(845, 41, 'http://localhost:8080/', 'localhost:8080/art/3-13-the-best-is-yet-to-come-framed-poster.html', '', '2024-12-01 20:36:22'),
+(846, 41, 'http://localhost:8080/', 'localhost:8080/art/3-13-the-best-is-yet-to-come-framed-poster.html', '', '2024-12-01 20:36:53'),
+(847, 41, 'http://localhost:8080/', 'localhost:8080/art/3-13-the-best-is-yet-to-come-framed-poster.html', '', '2024-12-01 20:37:48'),
+(848, 41, 'http://localhost:8080/', 'localhost:8080/art/3-13-the-best-is-yet-to-come-framed-poster.html', '', '2024-12-01 20:38:07'),
+(849, 41, 'http://localhost:8080/', 'localhost:8080/art/3-13-the-best-is-yet-to-come-framed-poster.html', '', '2024-12-01 20:38:17'),
+(850, 41, 'http://localhost:8080/', 'localhost:8080/art/3-13-the-best-is-yet-to-come-framed-poster.html', '', '2024-12-01 20:39:33'),
+(851, 41, 'http://localhost:8080/', 'localhost:8080/art/3-13-the-best-is-yet-to-come-framed-poster.html', '', '2024-12-01 20:39:42'),
+(852, 41, 'http://localhost:8080/', 'localhost:8080/art/3-13-the-best-is-yet-to-come-framed-poster.html', '', '2024-12-01 20:40:18'),
+(853, 41, 'http://localhost:8080/', 'localhost:8080/art/3-13-the-best-is-yet-to-come-framed-poster.html', '', '2024-12-01 20:43:30'),
+(854, 41, 'http://localhost:8080/', 'localhost:8080/art/3-13-the-best-is-yet-to-come-framed-poster.html', '', '2024-12-01 20:44:53'),
+(855, 41, 'http://localhost:8080/', 'localhost:8080/art/3-13-the-best-is-yet-to-come-framed-poster.html', '', '2024-12-01 20:45:12'),
+(856, 41, 'http://localhost:8080/', 'localhost:8080/art/3-13-the-best-is-yet-to-come-framed-poster.html', '', '2024-12-01 20:45:50'),
+(857, 41, 'http://localhost:8080/', 'localhost:8080/art/3-13-the-best-is-yet-to-come-framed-poster.html', '', '2024-12-01 20:45:56'),
+(858, 41, 'http://localhost:8080/', 'localhost:8080/art/3-13-the-best-is-yet-to-come-framed-poster.html', '', '2024-12-01 20:46:25'),
+(859, 41, 'http://localhost:8080/', 'localhost:8080/art/3-13-the-best-is-yet-to-come-framed-poster.html', '', '2024-12-01 20:46:27'),
+(860, 41, 'http://localhost:8080/', 'localhost:8080/art/3-13-the-best-is-yet-to-come-framed-poster.html', '', '2024-12-01 20:46:33'),
+(861, 41, 'http://localhost:8080/', 'localhost:8080/art/3-13-the-best-is-yet-to-come-framed-poster.html', '', '2024-12-01 20:47:42'),
+(862, 41, 'http://localhost:8080/', 'localhost:8080/art/3-13-the-best-is-yet-to-come-framed-poster.html', '', '2024-12-01 20:48:23');
 
 -- --------------------------------------------------------
 
@@ -5721,7 +5965,7 @@ CREATE TABLE `ps_employee` (
 --
 
 INSERT INTO `ps_employee` (`id_employee`, `id_profile`, `id_lang`, `lastname`, `firstname`, `email`, `passwd`, `last_passwd_gen`, `stats_date_from`, `stats_date_to`, `stats_compare_from`, `stats_compare_to`, `stats_compare_option`, `preselect_date_range`, `bo_color`, `bo_theme`, `bo_css`, `default_tab`, `bo_width`, `bo_menu`, `active`, `optin`, `id_last_order`, `id_last_customer_message`, `id_last_customer`, `last_connection_date`, `reset_password_token`, `reset_password_validity`, `has_enabled_gravatar`) VALUES
-(1, 1, 1, 'Dziekański', 'Dziekan', 'presta@presta.com', '$2y$10$9FA73SQpoOomFYCEzKZyqeoPI6NjpIZN4Plhyx4FD0kt4QgNp8AXa', '2024-11-22 12:37:45', '2024-10-22', '2024-11-22', '0000-00-00', '0000-00-00', 1, NULL, NULL, 'default', 'theme.css', 1, 0, 1, 1, NULL, 5, 0, 2, '2024-11-26', NULL, '0000-00-00 00:00:00', 0);
+(1, 1, 1, 'Dziekański', 'Dziekan', 'presta@presta.com', '$2y$10$9FA73SQpoOomFYCEzKZyqeoPI6NjpIZN4Plhyx4FD0kt4QgNp8AXa', '2024-11-22 12:37:45', '2024-10-22', '2024-11-22', '0000-00-00', '0000-00-00', 1, NULL, NULL, 'default', 'theme.css', 1, 0, 1, 1, NULL, 5, 0, 2, '2024-12-01', NULL, '0000-00-00 00:00:00', 0);
 
 -- --------------------------------------------------------
 
@@ -6217,7 +6461,14 @@ INSERT INTO `ps_guest` (`id_guest`, `id_operating_system`, `id_web_browser`, `id
 (23, 8, 3, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'pl', 0),
 (24, 8, 3, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'pl', 0),
 (25, 8, 3, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'pl', 0),
-(26, 8, 3, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'pl', 0);
+(26, 8, 3, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'pl', 0),
+(27, 8, 3, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'pl', 0),
+(28, 8, 3, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'pl', 0),
+(29, 8, 3, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'pl', 0),
+(30, 8, 3, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'pl', 0),
+(31, 8, 3, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'pl', 0),
+(32, 8, 3, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'pl', 0),
+(33, 8, 3, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'pl', 0);
 
 -- --------------------------------------------------------
 
@@ -6235,9 +6486,11 @@ CREATE TABLE `ps_homeslider` (
 --
 
 INSERT INTO `ps_homeslider` (`id_homeslider_slides`, `id_shop`) VALUES
-(1, 1),
-(2, 1),
-(3, 1);
+(4, 1),
+(5, 1),
+(6, 1),
+(7, 1),
+(8, 1);
 
 -- --------------------------------------------------------
 
@@ -6256,9 +6509,11 @@ CREATE TABLE `ps_homeslider_slides` (
 --
 
 INSERT INTO `ps_homeslider_slides` (`id_homeslider_slides`, `position`, `active`) VALUES
-(1, 1, 1),
-(2, 2, 1),
-(3, 3, 1);
+(4, 1, 1),
+(5, 2, 1),
+(6, 3, 1),
+(7, 4, 1),
+(8, 5, 1);
 
 -- --------------------------------------------------------
 
@@ -6281,9 +6536,11 @@ CREATE TABLE `ps_homeslider_slides_lang` (
 --
 
 INSERT INTO `ps_homeslider_slides_lang` (`id_homeslider_slides`, `id_lang`, `title`, `description`, `legend`, `url`, `image`) VALUES
-(1, 1, 'Sample 1', '<h3>EXCEPTEUR OCCAECAT</h3>\n                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin tristique in tortor et dignissim. Quisque non tempor leo. Maecenas egestas sem elit</p>', 'sample-1', 'https://www.prestashop-project.org?utm_source=back-office&utm_medium=v17_homeslider&utm_campaign=back-office-PL&utm_content=download', 'sample-1.jpg'),
-(2, 1, 'Sample 2', '<h3>EXCEPTEUR OCCAECAT</h3>\n                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin tristique in tortor et dignissim. Quisque non tempor leo. Maecenas egestas sem elit</p>', 'sample-2', 'https://www.prestashop-project.org?utm_source=back-office&utm_medium=v17_homeslider&utm_campaign=back-office-PL&utm_content=download', 'sample-2.jpg'),
-(3, 1, 'Sample 3', '<h3>EXCEPTEUR OCCAECAT</h3>\n                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin tristique in tortor et dignissim. Quisque non tempor leo. Maecenas egestas sem elit</p>', 'sample-3', 'https://www.prestashop-project.org?utm_source=back-office&utm_medium=v17_homeslider&utm_campaign=back-office-PL&utm_content=download', 'sample-3.jpg');
+(4, 1, '', '', '', 'harry-potter-wszystkie-produkty', '377814bc9c2028a3ac8041435e00b9ea6d466c7f_slider1.jpg'),
+(5, 1, '', '', '', 'harry-potter-kalendarze-adwentowe', 'e8e7054e6c64c19531a32d5c1d9523f9cd4d7705_slider2.jpg'),
+(6, 1, '', '', '', 'harry-potter-wszystkie-produkty', '657974f2deeec08ed0355579455c2f7bd7c52672_slider3.jpg'),
+(7, 1, '', '', '', 'content/6-zwroty', 'bc8847ea54c7335b8589330cf3480445f3d3bd15_slider4.jpg'),
+(8, 1, '', '', '', 'content/1-czas-i-koszty-dostawy', 'f0eb1ddb4f3d578691d23d8c2cf9211871ced737_slider5.jpg');
 
 -- --------------------------------------------------------
 
@@ -6335,7 +6592,7 @@ INSERT INTO `ps_hook` (`id_hook`, `name`, `title`, `description`, `active`, `pos
 (28, 'actionProductDelete', 'Product deletion', 'This hook is called when a product is deleted', 1, 1),
 (29, 'actionObjectProductInCartDeleteBefore', 'Cart product removal', 'This hook is called before a product is removed from a cart', 1, 1),
 (30, 'actionObjectProductInCartDeleteAfter', 'Cart product removal', 'This hook is called after a product is removed from a cart', 1, 1),
-(31, 'displayFooterProduct', 'Product footer', 'This hook adds new blocks under the product\'s description', 0, 1),
+(31, 'displayFooterProduct', 'Product footer', 'This hook adds new blocks under the product\'s description', 1, 1),
 (32, 'displayInvoice', 'Invoice', 'This hook displays new blocks on the invoice (order)', 1, 1),
 (33, 'actionOrderStatusUpdate', 'Order status update - Event', 'This hook launches modules when the status of an order changes', 1, 1),
 (34, 'displayAdminGridTableBefore', 'Display before Grid table', 'This hook adds new blocks before Grid component table', 1, 1),
@@ -6362,7 +6619,7 @@ INSERT INTO `ps_hook` (`id_hook`, `name`, `title`, `description`, `active`, `pos
 (55, 'displayAdminStatsModules', 'Stats - Modules', '', 1, 1),
 (56, 'displayAdminStatsGraphEngine', 'Graph engines', '', 1, 1),
 (57, 'actionOrderReturn', 'Returned product', 'This hook is displayed when a customer returns a product ', 1, 1),
-(58, 'displayProductAdditionalInfo', 'Product page additional info', 'This hook adds additional information on the product page', 1, 1),
+(58, 'displayProductAdditionalInfo', 'Product page additional info', 'This hook adds additional information on the product page', 0, 1),
 (59, 'displayBackOfficeHome', 'Administration panel homepage', 'This hook is displayed on the admin panel\'s homepage', 1, 1),
 (60, 'displayAdminStatsGridEngine', 'Grid engines', '', 1, 1),
 (61, 'actionWatermark', 'Watermark', '', 1, 1),
@@ -6511,7 +6768,7 @@ INSERT INTO `ps_hook` (`id_hook`, `name`, `title`, `description`, `active`, `pos
 (204, 'actionGetMailThemeFolder', 'Define the folder of an email theme', 'This hook allows to change the folder of an email theme (useful if you theme is in a module for example)', 1, 1),
 (205, 'actionBuildMailLayoutVariables', 'Build the variables used in email layout rendering', 'This hook allows to change the variables used when an email layout is rendered', 1, 1),
 (206, 'actionGetMailLayoutTransformations', 'Define the transformation to apply on layout', 'This hook allows to add/remove TransformationInterface used to generate an email layout', 1, 1),
-(207, 'displayProductActions', 'Display additional action button on the product page', 'This hook allow additional actions to be triggered, near the add to cart button.', 1, 1),
+(207, 'displayProductActions', 'Display additional action button on the product page', 'This hook allow additional actions to be triggered, near the add to cart button.', 0, 1),
 (208, 'displayPersonalInformationTop', 'Content in the checkout funnel, on top of the personal information panel', 'Display actions or additional content in the personal details tab of the checkout funnel.', 1, 1),
 (209, 'actionSqlRequestFormBuilderModifier', 'Modify sql request identifiable object form', 'This hook allows to modify sql request identifiable object forms content by modifying form builder data or FormBuilder itself', 1, 1),
 (210, 'actionCustomerFormBuilderModifier', 'Modify customer identifiable object form', 'This hook allows to modify customer identifiable object forms content by modifying form builder data or FormBuilder itself', 1, 1),
@@ -9700,7 +9957,9 @@ INSERT INTO `ps_module_history` (`id`, `id_employee`, `id_module`, `date_add`, `
 (5, 1, 12, '2024-11-25 16:42:39', '2024-11-25 23:44:58'),
 (6, 1, 65, '2024-11-26 15:54:16', '2024-11-26 16:16:39'),
 (7, 1, 32, '2024-11-26 16:28:39', '2024-11-26 20:28:09'),
-(8, 1, 29, '2024-11-26 17:35:42', '2024-11-26 17:35:42');
+(8, 1, 29, '2024-11-26 17:35:42', '2024-11-26 17:35:42'),
+(9, 1, 25, '2024-12-01 14:12:13', '2024-12-01 14:12:13'),
+(10, 1, 26, '2024-12-01 14:25:41', '2024-12-01 14:25:41');
 
 -- --------------------------------------------------------
 
@@ -10399,7 +10658,9 @@ INSERT INTO `ps_page` (`id_page`, `id_page_type`, `id_object`) VALUES
 (3, 3, NULL),
 (4, 4, NULL),
 (5, 5, NULL),
-(6, 6, 5);
+(6, 6, 5),
+(7, 6, 1),
+(8, 6, 3);
 
 -- --------------------------------------------------------
 
@@ -17357,13 +17618,13 @@ ALTER TABLE `ps_configuration_kpi`
 -- AUTO_INCREMENT for table `ps_connections`
 --
 ALTER TABLE `ps_connections`
-  MODIFY `id_connections` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=41;
+  MODIFY `id_connections` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=56;
 
 --
 -- AUTO_INCREMENT for table `ps_connections_source`
 --
 ALTER TABLE `ps_connections_source`
-  MODIFY `id_connections_source` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=634;
+  MODIFY `id_connections_source` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=863;
 
 --
 -- AUTO_INCREMENT for table `ps_contact`
@@ -17495,19 +17756,19 @@ ALTER TABLE `ps_group_reduction`
 -- AUTO_INCREMENT for table `ps_guest`
 --
 ALTER TABLE `ps_guest`
-  MODIFY `id_guest` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=27;
+  MODIFY `id_guest` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=34;
 
 --
 -- AUTO_INCREMENT for table `ps_homeslider`
 --
 ALTER TABLE `ps_homeslider`
-  MODIFY `id_homeslider_slides` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `id_homeslider_slides` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
 
 --
 -- AUTO_INCREMENT for table `ps_homeslider_slides`
 --
 ALTER TABLE `ps_homeslider_slides`
-  MODIFY `id_homeslider_slides` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `id_homeslider_slides` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
 
 --
 -- AUTO_INCREMENT for table `ps_hook`
@@ -17633,7 +17894,7 @@ ALTER TABLE `ps_module`
 -- AUTO_INCREMENT for table `ps_module_history`
 --
 ALTER TABLE `ps_module_history`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
 
 --
 -- AUTO_INCREMENT for table `ps_module_preference`
@@ -17723,7 +17984,7 @@ ALTER TABLE `ps_order_state`
 -- AUTO_INCREMENT for table `ps_page`
 --
 ALTER TABLE `ps_page`
-  MODIFY `id_page` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
+  MODIFY `id_page` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
 
 --
 -- AUTO_INCREMENT for table `ps_pagenotfound`
