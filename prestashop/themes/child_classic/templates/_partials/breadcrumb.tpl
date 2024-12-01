@@ -24,6 +24,9 @@
  *}
 <nav data-depth="{$breadcrumb.count}" class="breadcrumb hidden-sm-down">
   <ol>
+    <li>
+      <a href=""><span>Jesteś w:</span></a>
+    </li>
     {block name='breadcrumb'}
       {foreach from=$breadcrumb.links item=path name=breadcrumb}
         {block name='breadcrumb_item'}
@@ -39,3 +42,11 @@
     {/block}
   </ol>
 </nav>
+<div class="free-shipping-info">
+  <div class="free-shipping-title">
+    <span>Darmowa dostawa</span>
+  </div>
+  <div class="free-shipping-content">
+    Zamówienie za więcej niż 150,00 zł - otrzymujesz darmową dostawę (InPost Paczkomaty 24/7).
+  </div>
+</div>

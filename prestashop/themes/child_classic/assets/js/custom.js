@@ -1,5 +1,6 @@
 const menu = document.getElementById("_desktop_top_menu");
 const sticky = menu.offsetTop;
+var lastScrollTop = 0;
 
 window.addEventListener(
   "scroll",
@@ -9,6 +10,17 @@ window.addEventListener(
     } else {
       menu.classList.remove("sticky");
     }
+
+    /*
+    var st = window.scrollY || document.documentElement.scrollTop;
+
+    if (st > lastScrollTop) {
+      menu.style.top = "-60px";
+    } else {
+      menu.style.top = "0";
+    }
+    lastScrollTop = st <= 0 ? 0 : st;
+    */
   },
   false
 );
