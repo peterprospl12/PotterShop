@@ -112,7 +112,7 @@ class PrestaShopAPI:
         try:
             response = self.api.add('products', product.get_product())
             id = response["prestashop"]["product"]["id"]
-            self.logger.info(f'Product {id} created')
+            print(f'Product {id} created')
             return id
         except Exception as e:
             self.logger.error(f'Error creating product: {e}')
@@ -138,7 +138,10 @@ class PrestaShopAPI:
         try:
             stock_available_id = self.api.search('stock_availables', options={'filter[id_product]': product_id})[0]
             stock_available_schema = self.api.get('stock_availables', stock_available_id)
-            stock_available_schema['stock_available']['quantity'] = random.randint(1, 100) if quantity == 0 else quantity
+            if random.random() < 0.1:
+                stock_available_schema['stock_available']['quantity'] = 0
+            else:
+                stock_available_schema['stock_available']['quantity'] = random.randint(1, 10) if quantity == 0 else quantity
             self.api.edit('stock_availables', stock_available_schema)
             print(f'Stock for product ID: {product_id} updated successfully')
         except Exception as e:

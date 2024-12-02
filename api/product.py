@@ -1,8 +1,9 @@
 import os
 import random
 from utils import convert_price
-from PIL import Image
 import io
+from bs4 import BeautifulSoup
+from PIL import Image
 
 class BaseProduct:
     def __init__(self, product):
@@ -53,7 +54,17 @@ class BaseProduct:
         self.set_meta_title(product["Name"])
         self.set_link_name(product["Name"])
         self.set_description_short("test123")
-        self.set_description(product["Description"])
+        description = self.__remove_src_tags(product["Description"])
+        self.set_description(description)
+
+    
+    def __remove_src_tags(self, html_content : str):
+        soup = BeautifulSoup(html_content, 'html.parser')
+        for tag in soup.find_all(src=True):
+            parent = tag.find_parent()
+            if parent:
+                parent.decompose()
+        return str(soup)
     
 
 class BaseCategory:
