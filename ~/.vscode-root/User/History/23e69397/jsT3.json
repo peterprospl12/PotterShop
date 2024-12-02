@@ -1,6 +1,0 @@
-{
-    "editor.defaultFormatter": "esbenp.prettier-vscode",
-    "github.copilot.advanced": {
-        "authProvider": "github-enterprise"
-    }
-}
