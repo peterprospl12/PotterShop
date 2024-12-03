@@ -32,6 +32,9 @@
 /prestashop/cache/
 /prestashop/log/
 
+# Ignore tmp images
+/prestashop/img/tmp/
+
 # Ignore vendor directory
 # /vendor/
 
@@ -57,5 +60,8 @@ Thumbs.db
 .vscode/
 /api/.env
 /api/__pycache__
+
+# Weird VSCode dir while doing sudo code
+~/
 
 /prestashop/img/*

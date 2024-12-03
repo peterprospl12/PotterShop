@@ -99,6 +99,9 @@
         {block name="footer"}
           {include file="_partials/footer.tpl"}
         {/block}
+        <a href="#header">
+          <span class="to-top"><i class="material-icons">expand_less</i></span>
+        </a>
       </footer>
 
     </main>

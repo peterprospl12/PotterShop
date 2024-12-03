@@ -25,7 +25,7 @@
 <div class="col-md-6 links gray-long-line" style="width:100%">
   <div class="row">
   {foreach $linkBlocks as $linkBlock}
-    <div class="col-md-6 wrapper" style="width: calc(100% / 6)">
+    <div class="col-md-6 wrapper linkblock-heading" style="width: calc(100% / 6); padding-left: 5px; padding-right: 5px;">
       <p class="h3 hidden-sm-down harry-potter-font-class">{$linkBlock.title}</p>
       <div class="title clearfix hidden-md-up" data-target="#footer_sub_menu_{$linkBlock.id}" data-toggle="collapse">
         <span class="h3">{$linkBlock.title}</span>
@@ -56,3 +56,4 @@
   </div>
 <hr style="height: 1px; background-color: #757575;; border: none; margin: 0;">
 </div>
+

@@ -26,18 +26,17 @@
   {foreach from=$groups key=id_attribute_group item=group}
     {if !empty($group.attributes)}
     <div class="clearfix product-variants-item">
-      <span class="control-label">{$group.name}{l s=': ' d='Shop.Theme.Catalog'}
-          {foreach from=$group.attributes key=id_attribute item=group_attribute}
-            {if $group_attribute.selected}{$group_attribute.name}{/if}
-          {/foreach}
+      <span class="control-label">* {$group.name}{l s=': ' d='Shop.Theme.Catalog'}
+
       </span>
       {if $group.group_type == 'select'}
         <select
-          class="form-control form-control-select"
+          class="form-control form-control-select select-attribute manufacturer-select"
           id="group_{$id_attribute_group}"
           aria-label="{$group.name}"
           data-product-attribute="{$id_attribute_group}"
           name="group[{$id_attribute_group}]">
+          <option label="Wybierz" value="">Wybierz</option>
           {foreach from=$group.attributes key=id_attribute item=group_attribute}
             <option value="{$id_attribute}" title="{$group_attribute.name}"{if $group_attribute.selected} selected="selected"{/if}>{$group_attribute.name}</option>
           {/foreach}
@@ -74,4 +73,6 @@
     </div>
     {/if}
   {/foreach}
+
+  <span>* - Pole wymagane</span>
 </div>
