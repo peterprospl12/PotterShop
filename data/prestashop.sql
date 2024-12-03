@@ -2763,7 +2763,6 @@ INSERT INTO `ps_cart` (`id_cart`, `id_shop_group`, `id_shop`, `id_carrier`, `del
 (3, 1, 1, 2, '{\"3\":\"2,\"}', 1, 5, 5, 1, 2, 1, 'b44a6d9efd7a0076a0fbce6b15eaf3b1', 0, 0, '', 0, 0, '2024-11-22 18:39:00', '2024-11-22 18:39:00', NULL),
 (4, 1, 1, 2, '{\"3\":\"2,\"}', 1, 5, 5, 1, 2, 1, 'b44a6d9efd7a0076a0fbce6b15eaf3b1', 0, 0, '', 0, 0, '2024-11-22 18:39:00', '2024-11-22 18:39:00', NULL),
 (5, 1, 1, 2, '{\"3\":\"2,\"}', 1, 5, 5, 1, 2, 1, 'b44a6d9efd7a0076a0fbce6b15eaf3b1', 0, 0, '', 0, 0, '2024-11-22 18:39:00', '2024-11-22 18:39:00', NULL),
-(6, 1, 1, 0, '', 1, 0, 0, 1, 0, 4, '', 0, 0, '', 0, 0, '2024-11-26 20:37:16', '2024-11-26 20:41:26', NULL);
 (7, 1, 1, 26, '{\"8\":\"26,\"}', 1, 8, 8, 1, 4, 13, '83b8450e932ff99f4a0c2e948ea014d4', 0, 0, '', 0, 0, '2024-11-29 17:03:56', '2024-11-29 19:21:17', '{\"checkout-personal-information-step\":{\"step_is_reachable\":true,\"step_is_complete\":true},\"checkout-addresses-step\":{\"step_is_reachable\":true,\"step_is_complete\":true,\"use_same_address\":true},\"checkout-delivery-step\":{\"step_is_reachable\":true,\"step_is_complete\":true},\"checkout-payment-step\":{\"step_is_reachable\":true,\"step_is_complete\":false},\"checksum\":\"ae17106a39324199e0fa8c9ffd1ccd792111ca4f\"}'),
 (8, 1, 1, 25, '{\"9\":\"25,\"}', 1, 9, 9, 1, 5, 14, '4a4a3abf97d5327cc72f784953e1667f', 0, 0, '', 0, 0, '2024-11-29 19:28:32', '2024-11-29 19:29:06', '{\"checkout-personal-information-step\":{\"step_is_reachable\":true,\"step_is_complete\":true},\"checkout-addresses-step\":{\"step_is_reachable\":true,\"step_is_complete\":true,\"use_same_address\":true},\"checkout-delivery-step\":{\"step_is_reachable\":true,\"step_is_complete\":true},\"checkout-payment-step\":{\"step_is_reachable\":true,\"step_is_complete\":false},\"checksum\":\"c1346034f518c4f6ad911a32715bbc3508f62589\"}'),
 (9, 1, 1, 26, '{\"10\":\"26,\"}', 1, 10, 10, 1, 6, 15, 'f3da2864431410780588bc27bde8252c', 0, 0, '', 0, 0, '2024-11-29 19:49:11', '2024-11-29 19:49:57', '{\"checkout-personal-information-step\":{\"step_is_reachable\":true,\"step_is_complete\":true},\"checkout-addresses-step\":{\"step_is_reachable\":true,\"step_is_complete\":true,\"use_same_address\":true},\"checkout-delivery-step\":{\"step_is_reachable\":true,\"step_is_complete\":true},\"checkout-payment-step\":{\"step_is_reachable\":true,\"step_is_complete\":false},\"checksum\":\"50d28085523cfb6003b6f337ae5a224647881a5b\"}');
@@ -2808,7 +2807,7 @@ INSERT INTO `ps_cart_product` (`id_cart`, `id_product`, `id_address_delivery`, `
 (3, 16, 3, 1, 28, 0, 1, '0000-00-00 00:00:00'),
 (4, 16, 3, 1, 29, 0, 1, '0000-00-00 00:00:00'),
 (5, 10, 3, 1, 25, 0, 1, '0000-00-00 00:00:00'),
-(6, 5, 0, 1, 19, 0, 1, '2024-11-26 20:41:26');
+(6, 5, 0, 1, 19, 0, 1, '2024-11-26 20:41:26'),
 (7, 16, 8, 1, 28, 0, 100, '2024-11-29 19:16:45'),
 (8, 1, 9, 1, 1, 0, 100, '2024-11-29 19:28:32'),
 (9, 1, 10, 1, 1, 0, 1, '2024-11-29 19:49:11');
@@ -8076,7 +8075,6 @@ INSERT INTO `ps_hook_module` (`id_module`, `id_shop`, `id_hook`, `position`) VAL
 (26, 1, 706, 2),
 (29, 1, 82, 2),
 (30, 1, 705, 2),
-(35, 1, 7, 2),
 (36, 1, 55, 2),
 (53, 1, 71, 2),
 (54, 1, 47, 2),
@@ -8126,7 +8124,6 @@ INSERT INTO `ps_hook_module` (`id_module`, `id_shop`, `id_hook`, `position`) VAL
 (60, 1, 46, 3),
 (62, 1, 82, 3),
 (65, 1, 697, 3),
-(1, 1, 41, 4),
 (5, 1, 682, 4),
 (6, 1, 688, 4),
 (32, 1, 16, 4),
