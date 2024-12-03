@@ -1,5 +1,5 @@
 const menu = document.getElementById("_desktop_top_menu");
-const sticky = menu.offsetTop - 200;
+const sticky = menu.offsetTop;
 var lastScrollTop = 0;
 
 window.addEventListener(

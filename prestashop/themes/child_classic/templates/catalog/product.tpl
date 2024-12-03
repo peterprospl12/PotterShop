@@ -176,27 +176,119 @@
                   </li>
                 {/if}
 
+
+
                 <!-- Nowa zakładka 1 -->
                 <li class="nav-item">
-                  <a class="nav-link" data-toggle="tab" href="#custom-tab1" role="tab" aria-controls="custom-tab1">
+                  <a class="nav-link" data-toggle="tab" href="#product-delivery" role="tab" aria-controls="product-delivery">
                     {l s='Koszty dostawy' d='Shop.Theme.Catalog'}
                   </a>
                 </li>
 
                 <!-- Nowa zakładka 2 -->
                 <li class="nav-item">
-                  <a class="nav-link" data-toggle="tab" href="#custom-tab2" role="tab" aria-controls="custom-tab2">
+                  <a class="nav-link" data-toggle="tab" href="#product-opinions" role="tab" aria-controls="product-opinions">
                     {l s='Opinie' d='Shop.Theme.Catalog'}
                   </a>
                 </li>
-
-                <!-- Nowa zakładka 3 -->
-                <li class="nav-item">
-                  <a class="nav-link" data-toggle="tab" href="#custom-tab3" role="tab" aria-controls="custom-tab3">
-                    {l s='Produkty powiązane' d='Shop.Theme.Catalog'}
-                  </a>
-                </li>
               </ul>
+              <!-- Opis produktu -->
+
+              <div class="tab-content" id="tab-content">
+                <div class="tab-pane fade in{if $product.description} active js-product-tab-active{/if}" id="description"
+                  role="tabpanel">
+                  {block name='product_description'}
+                    <div class="product-description">{$product.description nofilter}</div>
+                  {/block}
+                </div>
+
+                {block name='product_details'}
+                  {include file='catalog/_partials/product-details.tpl'}
+                {/block}
+
+                {foreach from=$product.extraContent item=extra key=extraKey}
+                  <div class="tab-pane fade in {$extra.attr.class}" id="extra-{$extraKey}" role="tabpanel"
+                    {foreach $extra.attr as $key => $val} {$key}="{$val}" {/foreach}>
+                    {$extra.content nofilter}
+                  </div>
+                {/foreach}
+                <!-- Koszty dostawy -->
+                <div class="tab-pane fade" id="product-delivery" role="tabpanel">
+                  <div class="product-delivery">
+                    <div class="innerbox tab-content product-deliveries">
+                      <div class="delivery-container" id="deliveries">
+                        <div class="shipping-country-select" style="display: none;">
+                          <span>
+                            <em>Kraj wysyłki:</em>
+                          </span>
+
+                          <span>
+                            <select name="shipping-country" class="shipping-country"></select>
+                          </span>
+                        </div>
+
+                        <div class="shippings " data-cost-from="od" data-cost-free="Darmowa">
+                          <div class="shipping row f-row">
+                            <div class="shipping-label-container f-grid-9"><span class="shipping-label">InPost Paczkomaty
+                                24/7</span></div>
+                            <div class="shipping-cost f-grid-3">9,99&nbsp;zł</div>
+                          </div>
+                          <div class="shipping row f-row">
+                            <div class="shipping-label-container f-grid-9"><span class="shipping-label">Kurier DPD - dostawa
+                                do punktu</span></div>
+                            <div class="shipping-cost f-grid-3">11,99&nbsp;zł</div>
+                          </div>
+                          <div class="shipping row f-row">
+                            <div class="shipping-label-container f-grid-9"><span class="shipping-label">Orlen Paczka</span>
+                            </div>
+                            <div class="shipping-cost f-grid-3">11,99&nbsp;zł</div>
+                          </div>
+                          <div class="shipping row f-row">
+                            <div class="shipping-label-container f-grid-9"><span class="shipping-label">InPost Kurier</span>
+                            </div>
+                            <div class="shipping-cost f-grid-3">14,99&nbsp;zł</div>
+                          </div>
+                          <div class="shipping row f-row">
+                            <div class="shipping-label-container f-grid-9"><span class="shipping-label">Kurier DPD</span>
+                            </div>
+                            <div class="shipping-cost f-grid-3">16,99&nbsp;zł</div>
+                          </div>
+                          <div class="shipping row f-row">
+                            <div class="shipping-label-container f-grid-9"><span class="shipping-label">Kurier DHL</span>
+                            </div>
+                            <div class="shipping-cost f-grid-3">17,99&nbsp;zł</div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Opinie -->
+                <div class="tab-pane fade" id="product-opinions" role="tabpanel">
+                  {hook h='displayFooterProduct' product=$product category=$category}
+                </div>
+
+              {block name='product_attachments'}
+                {if $product.attachments}
+                  <div class="tab-pane fade in" id="attachments" role="tabpanel">
+                    <section class="product-attachments">
+                      <p class="h5 text-uppercase">{l s='Download' d='Shop.Theme.Actions'}</p>
+                      {foreach from=$product.attachments item=attachment}
+                        <div class="attachment">
+                          <h4><a
+                              href="{url entity='attachment' params=['id_attachment' => $attachment.id_attachment]}">{$attachment.name}</a>
+                          </h4>
+                          <p>{$attachment.description}</p>
+                          <a href="{url entity='attachment' params=['id_attachment' => $attachment.id_attachment]}">
+                            {l s='Download' d='Shop.Theme.Actions'} ({$attachment.file_size_formatted})
+                          </a>
+                        </div>
+                      {/foreach}
+                    </section>
+                  </div>
+                {/if}
+              {/block}
             </div>
           {/block}
         </div>
