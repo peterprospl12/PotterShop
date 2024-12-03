@@ -265,6 +265,8 @@ class Ps_FeaturedProducts extends Module implements WidgetInterface
         $categoryProducts = $category->getProducts($this->context->language->id, 1, 1000000, 'position', 'asc');
         $numProductsInCategory = count($categoryProducts);
 
+        $numProductsInCategory = min($numProductsInCategory, 25);
+
         $totalPages = ceil($numProductsInCategory / $nProducts);
 
         if (!empty($products)) {

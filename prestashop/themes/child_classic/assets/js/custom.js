@@ -34,3 +34,28 @@ window.addEventListener("scroll", function () {
     toTop.classList.remove("active");
   }
 });
+
+let currentSlide = 0;
+
+function showSlide(index) {
+  const slides = document.querySelectorAll(".slide");
+  const totalSlides = slides.length;
+
+  if (index >= totalSlides) {
+    currentSlide = 0; // Wracamy do pierwszego zdjęcia
+  } else if (index < 0) {
+    currentSlide = totalSlides - 1; // Przechodzimy na ostatnie zdjęcie
+  } else {
+    currentSlide = index;
+  }
+
+  const slider = document.querySelector(".slider");
+  slider.style.transform = `translateX(-${currentSlide * 100}%)`; // Przesuwamy slider
+}
+
+function moveSlide(step) {
+  showSlide(currentSlide + step); // Zmieniamy slajd o 1 w zależności od przycisku
+}
+
+// Inicjalne ustawienie slidera
+showSlide(currentSlide);

@@ -269,31 +269,51 @@
                   {hook h='displayFooterProduct' product=$product category=$category}
                 </div>
 
-              {block name='product_attachments'}
-                {if $product.attachments}
-                  <div class="tab-pane fade in" id="attachments" role="tabpanel">
-                    <section class="product-attachments">
-                      <p class="h5 text-uppercase">{l s='Download' d='Shop.Theme.Actions'}</p>
-                      {foreach from=$product.attachments item=attachment}
-                        <div class="attachment">
-                          <h4><a
-                              href="{url entity='attachment' params=['id_attachment' => $attachment.id_attachment]}">{$attachment.name}</a>
-                          </h4>
-                          <p>{$attachment.description}</p>
-                          <a href="{url entity='attachment' params=['id_attachment' => $attachment.id_attachment]}">
-                            {l s='Download' d='Shop.Theme.Actions'} ({$attachment.file_size_formatted})
-                          </a>
-                        </div>
-                      {/foreach}
-                    </section>
-                  </div>
-                {/if}
-              {/block}
-            </div>
-          {/block}
-        </div>
-      {/block}
-    </div>
-
+                {block name='product_attachments'}
+                  {if $product.attachments}
+                    <div class="tab-pane fade in" id="attachments" role="tabpanel">
+                      <section class="product-attachments">
+                        <p class="h5 text-uppercase">{l s='Download' d='Shop.Theme.Actions'}</p>
+                        {foreach from=$product.attachments item=attachment}
+                          <div class="attachment">
+                            <h4><a
+                                href="{url entity='attachment' params=['id_attachment' => $attachment.id_attachment]}">{$attachment.name}</a>
+                            </h4>
+                            <p>{$attachment.description}</p>
+                            <a href="{url entity='attachment' params=['id_attachment' => $attachment.id_attachment]}">
+                              {l s='Download' d='Shop.Theme.Actions'} ({$attachment.file_size_formatted})
+                            </a>
+                          </div>
+                        {/foreach}
+                      </section>
+                    </div>
+                  {/if}
+                {/block}
+              </div>
+            {/block}
+          </div>
+        {/block}
+      </div>
   </section>
+  
+{/block}
+
+
+{block name="footer"}
+  <div id="custom-slider" class="slider-container">
+    <div class="slider">
+      {foreach from=$relatedProducts item=product}
+        <div class="slide">
+          <a href="{$product.link}">
+            <img src="{$product.cover.bySize.home_default.url}" alt="{$product.name}">
+          </a>
+          <h3>{$product.name|escape:'html':'UTF-8'}</h3>
+          <p>{$product.price}</p>
+        </div>
+      {/foreach}
+    </div>
+    <button class="prev" onclick="moveSlide(-1)">&#10094;</button>
+    <button class="next" onclick="moveSlide(1)">&#10095;</button>
+  </div>
+  {include file="_partials/footer.tpl"}
 {/block}

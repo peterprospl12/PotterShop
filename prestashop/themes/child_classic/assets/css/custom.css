@@ -235,6 +235,7 @@ footer {
 
 #top-menu {
   width: 100%;
+  font-family: "HarryP";
 }
 
 .header-top-right {
@@ -734,14 +735,19 @@ div.products.row {
   position: relative;
 }
 
-.top-menu {
-  font-family: "HarryP";
-}
-
 .top-menu a {
   font-size: 20px;
   text-transform: none !important;
   color: #606060 !important;
+}
+
+.top-menu ul {
+  list-style-type: none;
+}
+
+ul.top-menu li {
+  display: block;
+  clear: both;
 }
 
 .top-menu a:hover {
@@ -757,51 +763,7 @@ div.products.row {
 .top-menu .sub-menu ul[data-depth="1"] > li:hover .deeper-layer {
   display: block;
 }
-/*
-ul.top-menu[data-depth="1"] {
-  position: absolute;
-  list-style: none;
-  margin: 0;
-  padding: 0;
-  top: 0;
-  left: 100%;
-}
 
-ul.top-menu[data-depth="1"] li:hover > ul {
-  display: block;
-}
-
-.top-menu[data-depth="1"] ul li {
-  position: relative;
-  padding: 10px;
-  border-bottom: 1px solid #bbb;
-}
-
-.top-menu[data-depth="1"] ul li:hover {
-  background-color: #ddd;
-}
-
-.menuxx ul ul {
-  left: 100%;
-  top: 0;
-}
-
-.menux ul {
-  opacity: 0;
-  transform: translateX(-10px);
-  transition: opacity 0.3s, transform 0.3s;
-}
-
-.menux li:hover > ul {
-  opacity: 1;
-  transform: translateX(0);
-}
-*/
-/*
-div.popover.sub-menu.js-sub-menu.collapse {
-  position: relative;
-}
-*/
 ul.top-menu[data-depth="1"] > li {
   /*menu*/
   position: relative;
@@ -1499,4 +1461,50 @@ a span {
 .very-footest {
   background-color: #faf9f9;
   padding: 20px 0 80px;
+}
+
+#custom-slider {
+  position: relative;
+  width: 100%;
+  max-width: 600px; /* Maksymalna szerokość slidera */
+  margin: auto;
+  overflow: hidden; /* Ukrywamy niepotrzebne obrazy */
+}
+
+.slider {
+  display: flex;
+  transition: transform 0.5s ease; /* Gładka animacja przesunięcia */
+}
+
+.slide {
+  min-width: 100%; /* Każde zdjęcie zajmuje 100% szerokości slidera */
+}
+
+.slide img {
+  width: 100%; /* Dopasowujemy obrazki do kontenera */
+  height: auto;
+}
+
+button {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: rgba(0, 0, 0, 0.5);
+  color: white;
+  border: none;
+  padding: 10px;
+  cursor: pointer;
+  z-index: 10;
+}
+
+button:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+.prev {
+  left: 0;
+}
+
+.next {
+  right: 0;
 }
