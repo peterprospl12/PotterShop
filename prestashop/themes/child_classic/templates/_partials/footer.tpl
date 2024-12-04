@@ -22,35 +22,35 @@
  * @copyright Since 2007 PrestaShop SA and Contributors
  * @license   https://opensource.org/licenses/AFL-3.0 Academic Free License 3.0 (AFL-3.0)
  *}
-<div class="container">
-  <div class="row">
-    {block name='hook_footer_before'}
-      {hook h='displayFooterBefore'}
-    {/block}
-  </div>
+ <div class="container">
+ <div class="row">
+   {block name='hook_footer_before'}
+     {hook h='displayFooterBefore'}
+   {/block}
+ </div>
 </div>
 <div class="footer-container">
-  <div class="container">
-    <div class="row">
-      {block name='hook_footer'}
-        {hook h='displayFooter'}
-      {/block}
-    </div>
-    <div class="row">
-      {block name='hook_footer_after'}
-        {hook h='displayFooterAfter'}
-      {/block}
-    </div>
-    <div class="row very-footest">
-      <div class="col-md-12">
-        <p class="text-sm-center">
-          {block name='copyright_link'}
-            <a href="https://www.shoper.pl" target="_blank" rel="noopener noreferrer nofollow">
-              {l s='Sklep internetowy Shoper.pl'}
-            </a>
-          {/block}
-        </p>
-      </div>
-    </div>
-  </div>
+ <div class="container">
+   <div class="row">
+     {block name='hook_footer'}
+       {hook h='displayFooter'}
+     {/block}
+   </div>
+   <div class="row">
+     {block name='hook_footer_after'}
+       {hook h='displayFooterAfter'}
+     {/block}
+   </div>
+   <div class="row very-footest">
+     <div class="col-md-12">
+       <p class="text-sm-center">
+         {block name='copyright_link'}
+           <a href="https://www.shoper.pl" target="_blank" rel="noopener noreferrer nofollow">
+             {l s='Sklep internetowy Shoper.pl'}
+           </a>
+         {/block}
+       </p>
+     </div>
+   </div>
+ </div>
 </div>
