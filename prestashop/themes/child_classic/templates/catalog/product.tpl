@@ -1,5 +1,4 @@
 {extends file=$layout}
-
 {block name="left_column"}
   <div id="left-column" class="col-xs-12 col-sm-4 col-md-3 product-page-left-column">
     {if $page.page_name == 'product'}
@@ -295,25 +294,30 @@
         {/block}
       </div>
   </section>
-  
+
 {/block}
 
 
 {block name="footer"}
-  <div id="custom-slider" class="custom-slider-container">
+  <div class="container custom-slider-container">
+  <div class="custom-boxhead">
+    <span>Pottermaniacy kupili również:</span>
+  </div>
     <div class="custom-slider">
       {foreach from=$relatedProducts item=product}
         <div class="custom-slide">
-          <a href="{$product.link}">
-            <img src="{$product.cover.bySize.home_default.url}" alt="{$product.name}">
-          </a>
-          <h3>{$product.name|escape:'html':'UTF-8'}</h3>
-          <p>{$product.price}</p>
+          {include file="catalog/_partials/miniatures/product.tpl" product=$product}
         </div>
       {/foreach}
     </div>
-    <button class="custom-prev custom-slider-button" onclick="moveSlide(-1)">&#10094;</button>
-    <button class="custom-next custom-slider-button" onclick="moveSlide(1)">&#10095;</button>
+    <div class="custom-slider-direction" aria-label="Przyciski karuzeli">
+      <button class="custom-prev custom-slider-button" aria-label="Poprzedni" onclick="moveSlide(-1)">
+        <i class="material-icons"></i>
+      </button>
+      <button class="custom-next custom-slider-button" aria-label="Następny" onclick="moveSlide(1)">
+        <i class="material-icons"></i>
+      </button>
+    </div>
   </div>
   {include file="_partials/footer.tpl"}
 {/block}

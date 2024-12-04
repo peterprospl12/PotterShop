@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: mariadb:3306
--- Generation Time: Dec 04, 2024 at 12:53 PM
+-- Generation Time: Dec 04, 2024 at 06:01 PM
 -- Wersja serwera: 11.5.2-MariaDB-ubu2404
 -- Wersja PHP: 8.2.8
 
@@ -3184,7 +3184,7 @@ INSERT INTO `ps_cart` (`id_cart`, `id_shop_group`, `id_shop`, `id_carrier`, `del
 (7, 1, 1, 26, '{\"8\":\"26,\"}', 1, 8, 8, 1, 4, 13, '83b8450e932ff99f4a0c2e948ea014d4', 0, 0, '', 0, 0, '2024-11-29 17:03:56', '2024-11-29 19:21:17', '{\"checkout-personal-information-step\":{\"step_is_reachable\":true,\"step_is_complete\":true},\"checkout-addresses-step\":{\"step_is_reachable\":true,\"step_is_complete\":true,\"use_same_address\":true},\"checkout-delivery-step\":{\"step_is_reachable\":true,\"step_is_complete\":true},\"checkout-payment-step\":{\"step_is_reachable\":true,\"step_is_complete\":false},\"checksum\":\"ae17106a39324199e0fa8c9ffd1ccd792111ca4f\"}'),
 (8, 1, 1, 25, '{\"9\":\"25,\"}', 1, 9, 9, 1, 5, 14, '4a4a3abf97d5327cc72f784953e1667f', 0, 0, '', 0, 0, '2024-11-29 19:28:32', '2024-11-29 19:29:06', '{\"checkout-personal-information-step\":{\"step_is_reachable\":true,\"step_is_complete\":true},\"checkout-addresses-step\":{\"step_is_reachable\":true,\"step_is_complete\":true,\"use_same_address\":true},\"checkout-delivery-step\":{\"step_is_reachable\":true,\"step_is_complete\":true},\"checkout-payment-step\":{\"step_is_reachable\":true,\"step_is_complete\":false},\"checksum\":\"c1346034f518c4f6ad911a32715bbc3508f62589\"}'),
 (9, 1, 1, 26, '{\"10\":\"26,\"}', 1, 10, 10, 1, 6, 15, 'f3da2864431410780588bc27bde8252c', 0, 0, '', 0, 0, '2024-11-29 19:49:11', '2024-11-29 19:49:57', '{\"checkout-personal-information-step\":{\"step_is_reachable\":true,\"step_is_complete\":true},\"checkout-addresses-step\":{\"step_is_reachable\":true,\"step_is_complete\":true,\"use_same_address\":true},\"checkout-delivery-step\":{\"step_is_reachable\":true,\"step_is_complete\":true},\"checkout-payment-step\":{\"step_is_reachable\":true,\"step_is_complete\":false},\"checksum\":\"50d28085523cfb6003b6f337ae5a224647881a5b\"}'),
-(10, 1, 1, 0, '', 1, 0, 0, 1, 0, 27, '', 0, 0, '', 0, 0, '2024-12-04 13:13:58', '2024-12-04 13:44:49', NULL);
+(10, 1, 1, 0, '', 1, 0, 0, 1, 0, 27, '', 0, 0, '', 0, 0, '2024-12-04 13:13:58', '2024-12-04 18:49:36', NULL);
 
 -- --------------------------------------------------------
 
@@ -3220,7 +3220,7 @@ CREATE TABLE `ps_cart_product` (
 
 INSERT INTO `ps_cart_product` (`id_cart`, `id_product`, `id_address_delivery`, `id_shop`, `id_product_attribute`, `id_customization`, `quantity`, `date_add`) VALUES
 (10, 20, 0, 1, 0, 0, 4, '2024-12-04 13:13:58'),
-(10, 22, 0, 1, 0, 0, 2, '2024-12-04 13:17:33');
+(10, 22, 0, 1, 0, 0, 3, '2024-12-04 13:17:33');
 
 -- --------------------------------------------------------
 
@@ -5638,7 +5638,7 @@ INSERT INTO `ps_configuration` (`id_configuration`, `id_shop_group`, `id_shop`, 
 (440, NULL, NULL, 'PS_ACCOUNTS_FIREBASE_ID_TOKEN', NULL, '2024-11-25 18:17:15', '2024-11-25 18:17:15'),
 (441, NULL, NULL, 'PS_ACCOUNTS_ACCESS_TOKEN', NULL, '2024-11-25 18:17:16', '2024-11-25 18:17:16'),
 (442, NULL, NULL, 'PS_SHOWCASECARD_CMS_PAGES_CLOSED', '1', '2024-11-25 18:35:02', '2024-11-25 18:35:02'),
-(443, NULL, NULL, 'PS_ACCOUNTS_FIREBASE_REFRESH_TOKEN', NULL, '2024-11-25 22:44:26', '2024-12-04 12:36:01'),
+(443, NULL, NULL, 'PS_ACCOUNTS_FIREBASE_REFRESH_TOKEN', NULL, '2024-11-25 22:44:26', '2024-12-04 15:39:34'),
 (444, NULL, NULL, 'PS_MAIL_EMAIL_MESSAGE', '2', '2024-11-29 18:19:00', '2024-11-29 18:19:00'),
 (445, NULL, NULL, 'PS_MAIL_DOMAIN', NULL, '2024-11-29 18:19:00', '2024-11-29 18:19:00'),
 (446, NULL, NULL, 'CONF_PS_CASHONDELIVERY_FIXED', '0.2', '2024-11-29 20:03:20', '2024-11-29 20:03:20'),
@@ -5906,7 +5906,15 @@ INSERT INTO `ps_connections` (`id_connections`, `id_shop_group`, `id_shop`, `id_
 (84, 1, 1, 52, 12, 2886860801, '2024-12-04 12:39:07', ''),
 (85, 1, 1, 53, 13, 2886860801, '2024-12-04 13:12:04', ''),
 (86, 1, 1, 54, 1, 2886860801, '2024-12-04 13:14:31', ''),
-(87, 1, 1, 55, 1, 2886860801, '2024-12-04 13:29:53', '');
+(87, 1, 1, 55, 1, 2886860801, '2024-12-04 13:29:53', ''),
+(88, 1, 1, 27, 1, 2886860801, '2024-12-04 15:35:36', ''),
+(89, 1, 1, 56, 10, 2886860801, '2024-12-04 16:31:45', ''),
+(90, 1, 1, 57, 10, 2886860801, '2024-12-04 17:31:04', ''),
+(91, 1, 1, 27, 14, 2886860801, '2024-12-04 17:54:28', ''),
+(92, 1, 1, 58, 14, 2886860801, '2024-12-04 17:55:00', ''),
+(93, 1, 1, 59, 10, 2886860801, '2024-12-04 18:00:40', ''),
+(94, 1, 1, 27, 5, 2886860801, '2024-12-04 18:39:11', ''),
+(95, 1, 1, 60, 10, 2886860801, '2024-12-04 18:53:14', '');
 
 -- --------------------------------------------------------
 
@@ -7156,7 +7164,116 @@ INSERT INTO `ps_connections_source` (`id_connections_source`, `id_connections`, 
 (1211, 83, 'http://localhost:8080/breloki/20-brelok-harry-potter-harry.html', 'localhost:8080/', '', '2024-12-04 13:44:17'),
 (1212, 83, 'http://localhost:8080/', 'localhost:8080/kontakt', '', '2024-12-04 13:44:44'),
 (1213, 83, 'http://localhost:8080/breloki/20-brelok-harry-potter-harry.html', 'localhost:8080/', '', '2024-12-04 13:44:47'),
-(1214, 83, 'http://localhost:8080/breloki/20-brelok-harry-potter-harry.html', 'localhost:8080/', '', '2024-12-04 13:52:18');
+(1214, 83, 'http://localhost:8080/breloki/20-brelok-harry-potter-harry.html', 'localhost:8080/', '', '2024-12-04 13:52:18'),
+(1215, 88, 'http://localhost:8080/', 'localhost:8080/2-strona-glowna', '', '2024-12-04 15:35:41'),
+(1216, 88, 'http://localhost:8080/2-strona-glowna', 'localhost:8080/2-strona-glowna', '', '2024-12-04 15:35:59'),
+(1217, 88, 'http://localhost:8080/2-strona-glowna', 'localhost:8080/', '', '2024-12-04 15:36:14'),
+(1218, 88, 'http://localhost:8080/', 'localhost:8080/breloki/20-brelok-harry-potter-harry.html', '', '2024-12-04 15:36:21'),
+(1219, 88, 'http://localhost:8080/breloki/20-brelok-harry-potter-harry.html', 'localhost:8080/breloki/2-strona-glowna', '', '2024-12-04 15:36:30'),
+(1220, 88, 'http://localhost:8080/breloki/2-strona-glowna', 'localhost:8080/breloki/2-strona-glowna', '', '2024-12-04 15:37:02'),
+(1221, 88, 'http://localhost:8080/', 'localhost:8080/breloki/20-brelok-harry-potter-harry.html', '', '2024-12-04 15:39:14'),
+(1222, 88, 'http://localhost:8080/breloki/20-brelok-harry-potter-harry.html', 'localhost:8080/51-magic-box', '', '2024-12-04 15:39:17'),
+(1223, 88, 'http://localhost:8080/', 'localhost:8080/breloki/20-brelok-harry-potter-harry.html', '', '2024-12-04 15:39:18'),
+(1224, 88, 'http://localhost:8080/breloki/20-brelok-harry-potter-harry.html', 'localhost:8080/breloki/2-strona-glowna', '', '2024-12-04 15:39:19'),
+(1225, 88, 'http://localhost:8080/breloki/2-strona-glowna', 'localhost:8080/', '', '2024-12-04 15:41:22'),
+(1226, 88, 'http://localhost:8080/', 'localhost:8080/2-strona-glowna', '', '2024-12-04 15:41:24'),
+(1227, 88, 'http://localhost:8080/2-strona-glowna', 'localhost:8080/breloki/20-brelok-harry-potter-harry.html', '', '2024-12-04 15:41:27'),
+(1228, 88, 'http://localhost:8080/breloki/20-brelok-harry-potter-harry.html', 'localhost:8080/2-strona-glowna', '', '2024-12-04 15:41:29'),
+(1229, 88, 'http://localhost:8080/2-strona-glowna', 'localhost:8080/breloki/20-brelok-harry-potter-harry.html', '', '2024-12-04 15:41:32'),
+(1230, 88, 'http://localhost:8080/breloki/20-brelok-harry-potter-harry.html', 'localhost:8080/2-strona-glowna', '', '2024-12-04 15:41:34'),
+(1231, 88, 'http://localhost:8080/2-strona-glowna', 'localhost:8080/breloki/20-brelok-harry-potter-harry.html', '', '2024-12-04 15:44:54'),
+(1232, 88, 'http://localhost:8080/breloki/20-brelok-harry-potter-harry.html', 'localhost:8080/2-strona-glowna', '', '2024-12-04 15:44:58'),
+(1233, 88, 'http://localhost:8080/2-strona-glowna', 'localhost:8080/', '', '2024-12-04 15:45:01'),
+(1234, 88, 'http://localhost:8080/', 'localhost:8080/breloki/20-brelok-harry-potter-harry.html', '', '2024-12-04 15:45:07'),
+(1235, 88, 'http://localhost:8080/', 'localhost:8080/breloki/20-brelok-harry-potter-harry.html', '', '2024-12-04 15:45:32'),
+(1236, 88, 'http://localhost:8080/breloki/20-brelok-harry-potter-harry.html', 'localhost:8080/breloki/21-brelok-3d-harry-potter-zloty-znicz.html', '', '2024-12-04 15:45:35'),
+(1237, 88, 'http://localhost:8080/', 'localhost:8080/breloki/20-brelok-harry-potter-harry.html', '', '2024-12-04 15:45:37'),
+(1238, 88, 'http://localhost:8080/', 'localhost:8080/breloki/20-brelok-harry-potter-harry.html', '', '2024-12-04 15:46:36'),
+(1239, 88, 'http://localhost:8080/', 'localhost:8080/breloki/20-brelok-harry-potter-harry.html', '', '2024-12-04 15:52:04'),
+(1240, 88, 'http://localhost:8080/', 'localhost:8080/breloki/20-brelok-harry-potter-harry.html', '', '2024-12-04 15:52:38'),
+(1241, 88, 'http://localhost:8080/', 'localhost:8080/breloki/20-brelok-harry-potter-harry.html', '', '2024-12-04 15:53:35'),
+(1242, 88, 'http://localhost:8080/', 'localhost:8080/breloki/20-brelok-harry-potter-harry.html', '', '2024-12-04 15:53:55'),
+(1243, 88, 'http://localhost:8080/breloki/20-brelok-harry-potter-harry.html', 'localhost:8080/16-hogwart-s-xmas', '', '2024-12-04 15:55:42'),
+(1244, 88, 'http://localhost:8080/', 'localhost:8080/breloki/20-brelok-harry-potter-harry.html', '', '2024-12-04 15:55:46'),
+(1245, 88, 'http://localhost:8080/', 'localhost:8080/breloki/20-brelok-harry-potter-harry.html', '', '2024-12-04 16:20:23'),
+(1246, 88, 'http://localhost:8080/', 'localhost:8080/breloki/20-brelok-harry-potter-harry.html', '', '2024-12-04 16:22:18'),
+(1247, 88, 'http://localhost:8080/', 'localhost:8080/breloki/20-brelok-harry-potter-harry.html', '', '2024-12-04 16:22:35'),
+(1248, 88, 'http://localhost:8080/', 'localhost:8080/breloki/20-brelok-harry-potter-harry.html', '', '2024-12-04 16:23:07'),
+(1249, 88, 'http://localhost:8080/', 'localhost:8080/breloki/20-brelok-harry-potter-harry.html', '', '2024-12-04 16:31:06'),
+(1250, 88, 'http://localhost:8080/', 'localhost:8080/breloki/20-brelok-harry-potter-harry.html', '', '2024-12-04 16:31:25'),
+(1251, 88, 'http://localhost:8080/breloki/20-brelok-harry-potter-harry.html', 'localhost:8080/favicon.ico', '', '2024-12-04 16:34:11'),
+(1252, 88, 'http://localhost:8080/', 'localhost:8080/breloki/20-brelok-harry-potter-harry.html', '', '2024-12-04 16:45:10'),
+(1253, 88, 'http://localhost:8080/', 'localhost:8080/breloki/20-brelok-harry-potter-harry.html', '', '2024-12-04 16:47:19'),
+(1254, 88, 'http://localhost:8080/', 'localhost:8080/breloki/20-brelok-harry-potter-harry.html', '', '2024-12-04 16:47:23'),
+(1255, 88, 'http://localhost:8080/', 'localhost:8080/breloki/20-brelok-harry-potter-harry.html', '', '2024-12-04 16:47:31'),
+(1256, 88, 'http://localhost:8080/', 'localhost:8080/breloki/20-brelok-harry-potter-harry.html', '', '2024-12-04 17:30:47'),
+(1257, 88, 'http://localhost:8080/breloki/20-brelok-harry-potter-harry.html', 'localhost:8080/breloki/21-brelok-3d-harry-potter-zloty-znicz.html', '', '2024-12-04 17:38:07'),
+(1258, 88, 'http://localhost:8080/breloki/21-brelok-3d-harry-potter-zloty-znicz.html', 'localhost:8080/breloki/20-brelok-harry-potter-harry.html', '', '2024-12-04 17:38:34'),
+(1259, 88, 'http://localhost:8080/breloki/20-brelok-harry-potter-harry.html', 'localhost:8080/breloki/25-brelok-harry-potter-hermiona.html', '', '2024-12-04 17:38:44'),
+(1260, 88, 'http://localhost:8080/breloki/20-brelok-harry-potter-harry.html', 'localhost:8080/breloki/25-brelok-harry-potter-hermiona.html', '', '2024-12-04 17:44:02'),
+(1261, 88, 'http://localhost:8080/breloki/25-brelok-harry-potter-hermiona.html', 'localhost:8080/kontakt', '', '2024-12-04 17:53:57'),
+(1262, 88, 'http://localhost:8080/breloki/20-brelok-harry-potter-harry.html', 'localhost:8080/breloki/25-brelok-harry-potter-hermiona.html', '', '2024-12-04 17:54:00'),
+(1263, 91, 'http://localhost:8080/breloki/25-brelok-harry-potter-hermiona.html', 'localhost:8080/', '', '2024-12-04 17:58:58'),
+(1264, 91, 'http://localhost:8080/', 'localhost:8080/breloki/20-brelok-harry-potter-harry.html', '', '2024-12-04 18:00:15'),
+(1265, 91, 'http://localhost:8080/', 'localhost:8080/breloki/20-brelok-harry-potter-harry.html', '', '2024-12-04 18:04:43'),
+(1266, 91, 'http://localhost:8080/', 'localhost:8080/breloki/20-brelok-harry-potter-harry.html', '', '2024-12-04 18:04:51'),
+(1267, 91, 'http://localhost:8080/', 'localhost:8080/breloki/20-brelok-harry-potter-harry.html', '', '2024-12-04 18:06:18'),
+(1268, 91, 'http://localhost:8080/', 'localhost:8080/breloki/20-brelok-harry-potter-harry.html', '', '2024-12-04 18:07:23'),
+(1269, 91, 'http://localhost:8080/breloki/20-brelok-harry-potter-harry.html', 'localhost:8080/', '', '2024-12-04 18:07:41'),
+(1270, 91, 'http://localhost:8080/', 'localhost:8080/breloki/20-brelok-harry-potter-harry.html', '', '2024-12-04 18:08:30'),
+(1271, 91, 'http://localhost:8080/breloki/20-brelok-harry-potter-harry.html', 'localhost:8080/kontakt', '', '2024-12-04 18:08:53'),
+(1272, 91, 'http://localhost:8080/', 'localhost:8080/breloki/20-brelok-harry-potter-harry.html', '', '2024-12-04 18:08:58'),
+(1273, 91, 'http://localhost:8080/', 'localhost:8080/breloki/20-brelok-harry-potter-harry.html', '', '2024-12-04 18:11:58'),
+(1274, 91, 'http://localhost:8080/', 'localhost:8080/breloki/20-brelok-harry-potter-harry.html', '', '2024-12-04 18:12:57'),
+(1275, 91, 'http://localhost:8080/', 'localhost:8080/breloki/20-brelok-harry-potter-harry.html', '', '2024-12-04 18:14:11'),
+(1276, 91, 'http://localhost:8080/', 'localhost:8080/breloki/20-brelok-harry-potter-harry.html', '', '2024-12-04 18:15:31'),
+(1277, 91, 'http://localhost:8080/', 'localhost:8080/breloki/20-brelok-harry-potter-harry.html', '', '2024-12-04 18:16:41'),
+(1278, 91, 'http://localhost:8080/', 'localhost:8080/breloki/20-brelok-harry-potter-harry.html', '', '2024-12-04 18:17:59'),
+(1279, 91, 'http://localhost:8080/', 'localhost:8080/breloki/20-brelok-harry-potter-harry.html', '', '2024-12-04 18:18:30'),
+(1280, 91, 'http://localhost:8080/', 'localhost:8080/breloki/20-brelok-harry-potter-harry.html', '', '2024-12-04 18:18:41'),
+(1281, 91, 'http://localhost:8080/', 'localhost:8080/breloki/20-brelok-harry-potter-harry.html', '', '2024-12-04 18:19:02'),
+(1282, 91, 'http://localhost:8080/', 'localhost:8080/breloki/20-brelok-harry-potter-harry.html', '', '2024-12-04 18:19:55');
+INSERT INTO `ps_connections_source` (`id_connections_source`, `id_connections`, `http_referer`, `request_uri`, `keywords`, `date_add`) VALUES
+(1283, 91, 'http://localhost:8080/', 'localhost:8080/breloki/20-brelok-harry-potter-harry.html', '', '2024-12-04 18:20:06'),
+(1284, 91, 'http://localhost:8080/', 'localhost:8080/breloki/20-brelok-harry-potter-harry.html', '', '2024-12-04 18:23:13'),
+(1285, 91, 'http://localhost:8080/breloki/20-brelok-harry-potter-harry.html', 'localhost:8080/', '', '2024-12-04 18:23:29'),
+(1286, 91, 'http://localhost:8080/breloki/20-brelok-harry-potter-harry.html', 'localhost:8080/', '', '2024-12-04 18:25:15'),
+(1287, 91, 'http://localhost:8080/', 'localhost:8080/breloki/23-brelok-harry-potter-gryffindor.html', '', '2024-12-04 18:25:22'),
+(1288, 91, 'http://localhost:8080/breloki/23-brelok-harry-potter-gryffindor.html', 'localhost:8080/', '', '2024-12-04 18:25:34'),
+(1289, 91, 'http://localhost:8080/', 'localhost:8080/breloki/20-brelok-harry-potter-harry.html', '', '2024-12-04 18:25:43'),
+(1290, 91, 'http://localhost:8080/', 'localhost:8080/breloki/20-brelok-harry-potter-harry.html', '', '2024-12-04 18:26:26'),
+(1291, 91, 'http://localhost:8080/breloki/20-brelok-harry-potter-harry.html', 'localhost:8080/', '', '2024-12-04 18:26:36'),
+(1292, 91, 'http://localhost:8080/', 'localhost:8080/breloki/20-brelok-harry-potter-harry.html', '', '2024-12-04 18:26:43'),
+(1293, 91, 'http://localhost:8080/breloki/20-brelok-harry-potter-harry.html', 'localhost:8080/', '', '2024-12-04 18:26:53'),
+(1294, 91, 'http://localhost:8080/', 'localhost:8080/breloki/20-brelok-harry-potter-harry.html', '', '2024-12-04 18:29:37'),
+(1295, 91, 'http://localhost:8080/', 'localhost:8080/breloki/20-brelok-harry-potter-harry.html', '', '2024-12-04 18:31:48'),
+(1296, 91, 'http://localhost:8080/', 'localhost:8080/breloki/20-brelok-harry-potter-harry.html', '', '2024-12-04 18:33:11'),
+(1297, 91, 'http://localhost:8080/', 'localhost:8080/breloki/20-brelok-harry-potter-harry.html', '', '2024-12-04 18:34:03'),
+(1298, 91, 'http://localhost:8080/', 'localhost:8080/breloki/20-brelok-harry-potter-harry.html', '', '2024-12-04 18:35:49'),
+(1299, 91, 'http://localhost:8080/', 'localhost:8080/breloki/20-brelok-harry-potter-harry.html', '', '2024-12-04 18:36:04'),
+(1300, 91, 'http://localhost:8080/', 'localhost:8080/breloki/20-brelok-harry-potter-harry.html', '', '2024-12-04 18:36:25'),
+(1301, 91, 'http://localhost:8080/', 'localhost:8080/breloki/20-brelok-harry-potter-harry.html', '', '2024-12-04 18:38:08'),
+(1302, 91, 'http://localhost:8080/', 'localhost:8080/breloki/20-brelok-harry-potter-harry.html', '', '2024-12-04 18:39:06'),
+(1303, 91, 'http://localhost:8080/', 'localhost:8080/breloki/20-brelok-harry-potter-harry.html', '', '2024-12-04 18:40:59'),
+(1304, 91, 'http://localhost:8080/', 'localhost:8080/breloki/20-brelok-harry-potter-harry.html', '', '2024-12-04 18:41:30'),
+(1305, 91, 'http://localhost:8080/', 'localhost:8080/breloki/20-brelok-harry-potter-harry.html', '', '2024-12-04 18:42:33'),
+(1306, 91, 'http://localhost:8080/', 'localhost:8080/breloki/20-brelok-harry-potter-harry.html', '', '2024-12-04 18:45:07'),
+(1307, 91, 'http://localhost:8080/', 'localhost:8080/breloki/20-brelok-harry-potter-harry.html', '', '2024-12-04 18:45:31'),
+(1308, 91, 'http://localhost:8080/', 'localhost:8080/breloki/20-brelok-harry-potter-harry.html', '', '2024-12-04 18:46:55'),
+(1309, 91, 'http://localhost:8080/', 'localhost:8080/breloki/20-brelok-harry-potter-harry.html', '', '2024-12-04 18:49:27'),
+(1310, 91, 'http://localhost:8080/breloki/20-brelok-harry-potter-harry.html', 'localhost:8080/breloki/21-brelok-3d-harry-potter-zloty-znicz.html', '', '2024-12-04 18:49:32'),
+(1311, 91, 'http://localhost:8080/', 'localhost:8080/breloki/20-brelok-harry-potter-harry.html', '', '2024-12-04 18:49:34'),
+(1312, 91, 'http://localhost:8080/breloki/20-brelok-harry-potter-harry.html', 'localhost:8080/content/6-zwroty', '', '2024-12-04 18:51:45'),
+(1313, 91, 'http://localhost:8080/breloki/20-brelok-harry-potter-harry.html', 'localhost:8080/content/6-zwroty', '', '2024-12-04 18:52:20'),
+(1314, 91, 'http://localhost:8080/content/6-zwroty', 'localhost:8080/', '', '2024-12-04 18:52:23'),
+(1315, 91, 'http://localhost:8080/', 'localhost:8080/breloki/20-brelok-harry-potter-harry.html', '', '2024-12-04 18:52:25'),
+(1316, 91, 'http://localhost:8080/', 'localhost:8080/breloki/20-brelok-harry-potter-harry.html', '', '2024-12-04 18:53:33'),
+(1317, 91, 'http://localhost:8080/', 'localhost:8080/breloki/20-brelok-harry-potter-harry.html', '', '2024-12-04 18:55:23'),
+(1318, 91, 'http://localhost:8080/', 'localhost:8080/breloki/20-brelok-harry-potter-harry.html', '', '2024-12-04 18:55:51'),
+(1319, 91, 'http://localhost:8080/', 'localhost:8080/breloki/20-brelok-harry-potter-harry.html', '', '2024-12-04 18:57:55'),
+(1320, 91, 'http://localhost:8080/', 'localhost:8080/breloki/20-brelok-harry-potter-harry.html', '', '2024-12-04 18:58:08'),
+(1321, 91, 'http://localhost:8080/', 'localhost:8080/breloki/20-brelok-harry-potter-harry.html', '', '2024-12-04 18:59:33'),
+(1322, 91, 'http://localhost:8080/', 'localhost:8080/breloki/20-brelok-harry-potter-harry.html', '', '2024-12-04 19:00:09');
 
 -- --------------------------------------------------------
 
@@ -9393,7 +9510,12 @@ INSERT INTO `ps_guest` (`id_guest`, `id_operating_system`, `id_web_browser`, `id
 (52, 8, 3, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'pl', 0),
 (53, 8, 3, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'pl', 0),
 (54, 8, 3, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'pl', 0),
-(55, 8, 3, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'pl', 0);
+(55, 8, 3, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'pl', 0),
+(56, 8, 3, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'pl', 0),
+(57, 8, 3, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'pl', 0),
+(58, 8, 3, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'pl', 0),
+(59, 8, 3, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'pl', 0),
+(60, 8, 3, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'pl', 0);
 
 -- --------------------------------------------------------
 
@@ -9532,7 +9654,7 @@ INSERT INTO `ps_hook` (`id_hook`, `name`, `title`, `description`, `active`, `pos
 (46, 'displayOrderConfirmation', 'Order confirmation page', 'This hook is called within an order\'s confirmation page', 0, 1),
 (47, 'actionCustomerAccountAdd', 'Successful customer account creation', 'This hook is called when a new customer creates an account successfully', 1, 1),
 (48, 'actionCustomerAccountUpdate', 'Successful customer account update', 'This hook is called when a customer updates its account successfully', 1, 1),
-(49, 'displayCustomerAccount', 'Customer account displayed in Front Office', 'This hook displays new elements on the customer account page', 1, 1),
+(49, 'displayCustomerAccount', 'Customer account displayed in Front Office', 'This hook displays new elements on the customer account page', 0, 1),
 (50, 'actionOrderSlipAdd', 'Order slip creation', 'This hook is called when a new credit slip is added regarding client order', 1, 1),
 (51, 'displayShoppingCartFooter', 'Shopping cart footer', 'This hook displays some specific information on the shopping cart\'s page', 1, 1),
 (52, 'displayCreateAccountEmailFormBottom', 'Customer authentication form', 'This hook displays some information on the bottom of the email form', 1, 1),
@@ -10426,7 +10548,6 @@ INSERT INTO `ps_hook_module` (`id_module`, `id_shop`, `id_hook`, `position`) VAL
 (1, 1, 75, 1),
 (1, 1, 102, 1),
 (1, 1, 105, 1),
-(1, 1, 207, 1),
 (1, 1, 682, 1),
 (1, 1, 683, 1),
 (1, 1, 684, 1),
@@ -10653,7 +10774,6 @@ INSERT INTO `ps_hook_module` (`id_module`, `id_shop`, `id_hook`, `position`) VAL
 (64, 1, 732, 2),
 (64, 1, 739, 2),
 (64, 1, 758, 2),
-(1, 1, 41, 3),
 (4, 1, 682, 3),
 (5, 1, 688, 3),
 (6, 1, 689, 3),
@@ -13400,6 +13520,7 @@ CREATE TABLE `ps_layered_filter_block` (
 
 INSERT INTO `ps_layered_filter_block` (`hash`, `data`) VALUES
 ('3446fce58f5024d3dedce6008b5f830e', 'a:1:{s:7:\"filters\";a:0:{}}'),
+('4e159e3fe2d4becd1fe2f66e51d285c4', 'a:1:{s:7:\"filters\";a:0:{}}'),
 ('5e7780514c0e7e8e4f7ceb57ef74b6d4', 'a:1:{s:7:\"filters\";a:0:{}}'),
 ('74f402ff3f26466605f42369140e603b', 'a:1:{s:7:\"filters\";a:7:{i:0;a:7:{s:9:\"type_lite\";s:12:\"availability\";s:4:\"type\";s:12:\"availability\";s:6:\"id_key\";i:0;s:4:\"name\";s:13:\"Dostępność\";s:6:\"values\";a:2:{i:2;a:2:{s:4:\"name\";s:11:\"W magazynie\";s:3:\"nbr\";i:357;}i:0;a:2:{s:4:\"name\";s:12:\"Niedostępny\";s:3:\"nbr\";i:48;}}s:17:\"filter_show_limit\";i:0;s:11:\"filter_type\";s:1:\"0\";}i:1;a:7:{s:9:\"type_lite\";s:6:\"extras\";s:4:\"type\";s:6:\"extras\";s:6:\"id_key\";i:0;s:4:\"name\";s:10:\"Selections\";s:6:\"values\";a:3:{s:4:\"sale\";a:2:{s:4:\"name\";s:7:\"On sale\";s:3:\"nbr\";i:0;}s:3:\"new\";a:2:{s:4:\"name\";s:11:\"New product\";s:3:\"nbr\";i:405;}s:8:\"discount\";a:2:{s:4:\"name\";s:10:\"Discounted\";s:3:\"nbr\";i:0;}}s:17:\"filter_show_limit\";i:0;s:11:\"filter_type\";s:1:\"0\";}i:2;a:12:{s:9:\"type_lite\";s:5:\"price\";s:4:\"type\";s:5:\"price\";s:6:\"id_key\";i:0;s:4:\"name\";s:4:\"Cena\";s:3:\"max\";d:300;s:3:\"min\";d:5;s:4:\"unit\";s:3:\"zł\";s:14:\"specifications\";a:11:{s:6:\"symbol\";a:11:{i:0;s:1:\",\";i:1;s:2:\" \";i:2;s:1:\";\";i:3;s:1:\"%\";i:4;s:1:\"-\";i:5;s:1:\"+\";i:6;s:1:\"E\";i:7;s:2:\"×\";i:8;s:3:\"‰\";i:9;s:3:\"∞\";i:10;s:3:\"NaN\";}s:12:\"currencyCode\";s:3:\"PLN\";s:14:\"currencySymbol\";s:3:\"zł\";s:13:\"numberSymbols\";a:11:{i:0;s:1:\",\";i:1;s:2:\" \";i:2;s:1:\";\";i:3;s:1:\"%\";i:4;s:1:\"-\";i:5;s:1:\"+\";i:6;s:1:\"E\";i:7;s:2:\"×\";i:8;s:3:\"‰\";i:9;s:3:\"∞\";i:10;s:3:\"NaN\";}s:15:\"positivePattern\";s:12:\"#,##0.00 ¤\";s:15:\"negativePattern\";s:13:\"-#,##0.00 ¤\";s:17:\"maxFractionDigits\";i:2;s:17:\"minFractionDigits\";i:2;s:12:\"groupingUsed\";b:1;s:16:\"primaryGroupSize\";i:3;s:18:\"secondaryGroupSize\";i:3;}s:17:\"filter_show_limit\";i:0;s:11:\"filter_type\";i:3;s:3:\"nbr\";i:405;s:5:\"value\";N;}i:3;a:7:{s:9:\"type_lite\";s:8:\"category\";s:4:\"type\";s:8:\"category\";s:6:\"id_key\";i:0;s:4:\"name\";s:9:\"Kategorie\";s:6:\"values\";a:18:{i:10;a:2:{s:4:\"name\";s:7:\"Breloki\";s:3:\"nbr\";s:2:\"28\";}i:11;a:2:{s:4:\"name\";s:7:\"Odzież\";s:3:\"nbr\";s:2:\"44\";}i:13;a:2:{s:4:\"name\";s:17:\"Artykuły Biurowe\";s:3:\"nbr\";s:2:\"39\";}i:16;a:2:{s:4:\"name\";s:14:\"Hogwart\'s Xmas\";s:3:\"nbr\";s:1:\"7\";}i:18;a:2:{s:4:\"name\";s:5:\"Kubki\";s:3:\"nbr\";s:2:\"55\";}i:20;a:2:{s:4:\"name\";s:9:\"Słodycze\";s:3:\"nbr\";s:1:\"9\";}i:21;a:2:{s:4:\"name\";s:9:\"Akcesoria\";s:3:\"nbr\";s:2:\"81\";}i:23;a:2:{s:4:\"name\";s:17:\"Magiczne Prezenty\";s:3:\"nbr\";s:2:\"10\";}i:25;a:2:{s:4:\"name\";s:9:\"Książki\";s:3:\"nbr\";s:2:\"14\";}i:29;a:2:{s:4:\"name\";s:10:\"Różdżki\";s:3:\"nbr\";s:2:\"39\";}i:31;a:2:{s:4:\"name\";s:10:\"Biżuteria\";s:3:\"nbr\";s:2:\"12\";}i:32;a:2:{s:4:\"name\";s:7:\"Plakaty\";s:3:\"nbr\";s:2:\"13\";}i:33;a:2:{s:4:\"name\";s:7:\"Plecaki\";s:3:\"nbr\";s:1:\"4\";}i:35;a:2:{s:4:\"name\";s:6:\"Puzzle\";s:3:\"nbr\";s:1:\"4\";}i:39;a:2:{s:4:\"name\";s:8:\"Szklanki\";s:3:\"nbr\";s:1:\"7\";}i:44;a:2:{s:4:\"name\";s:6:\"Notesy\";s:3:\"nbr\";s:2:\"33\";}i:51;a:2:{s:4:\"name\";s:9:\"Magic Box\";s:3:\"nbr\";s:1:\"3\";}i:56;a:2:{s:4:\"name\";s:9:\"Świeczki\";s:3:\"nbr\";s:1:\"3\";}}s:17:\"filter_show_limit\";i:0;s:11:\"filter_type\";s:1:\"0\";}i:4;a:7:{s:9:\"type_lite\";s:12:\"manufacturer\";s:4:\"type\";s:12:\"manufacturer\";s:6:\"id_key\";i:0;s:4:\"name\";s:5:\"Marka\";s:6:\"values\";a:0:{}s:17:\"filter_show_limit\";i:0;s:11:\"filter_type\";s:1:\"0\";}i:5;a:7:{s:9:\"type_lite\";s:9:\"condition\";s:4:\"type\";s:9:\"condition\";s:6:\"id_key\";i:0;s:4:\"name\";s:5:\"Stan:\";s:6:\"values\";a:3:{s:3:\"new\";a:2:{s:4:\"name\";s:4:\"Nowy\";s:3:\"nbr\";s:3:\"405\";}s:4:\"used\";a:2:{s:4:\"name\";s:8:\"Używany\";s:3:\"nbr\";i:0;}s:11:\"refurbished\";a:2:{s:4:\"name\";s:9:\"Odnowiony\";s:3:\"nbr\";i:0;}}s:17:\"filter_show_limit\";i:0;s:11:\"filter_type\";s:1:\"0\";}i:6;a:12:{s:9:\"type_lite\";s:6:\"weight\";s:4:\"type\";s:6:\"weight\";s:6:\"id_key\";i:0;s:4:\"name\";s:4:\"Waga\";s:3:\"max\";d:0.56999999999999995;s:3:\"min\";d:0.56999999999999995;s:4:\"unit\";s:2:\"kg\";s:14:\"specifications\";N;s:17:\"filter_show_limit\";i:0;s:11:\"filter_type\";i:3;s:5:\"value\";N;s:3:\"nbr\";i:405;}}}'),
 ('86edb0feb8581f417648ef9b3c264225', 'a:1:{s:7:\"filters\";a:0:{}}'),
@@ -14055,7 +14176,7 @@ CREATE TABLE `ps_linksmenutop_lang` (
 --
 
 INSERT INTO `ps_linksmenutop_lang` (`id_linksmenutop`, `id_lang`, `id_shop`, `label`, `link`) VALUES
-(1, 1, 1, 'Wszystkie Produkty', '2-strona-glowna');
+(1, 1, 1, 'Wszystkie Produkty', '/2-strona-glowna');
 
 -- --------------------------------------------------------
 
@@ -15511,9 +15632,10 @@ INSERT INTO `ps_module_history` (`id`, `id_employee`, `id_module`, `date_add`, `
 (5, 1, 12, '2024-11-25 16:42:39', '2024-11-25 23:44:58'),
 (6, 1, 65, '2024-11-26 15:54:16', '2024-11-26 16:16:39'),
 (7, 1, 32, '2024-11-26 16:28:39', '2024-11-26 20:28:09'),
-(8, 1, 29, '2024-11-26 17:35:42', '2024-12-03 21:27:51'),
+(8, 1, 29, '2024-11-26 17:35:42', '2024-12-04 15:40:01'),
 (9, 1, 25, '2024-12-01 14:12:13', '2024-12-03 20:49:10'),
-(10, 1, 26, '2024-12-01 14:25:41', '2024-12-04 12:05:46');
+(10, 1, 26, '2024-12-01 14:25:41', '2024-12-04 12:05:46'),
+(11, 1, 1, '2024-12-04 17:30:06', '2024-12-04 17:30:06');
 
 -- --------------------------------------------------------
 
@@ -15546,7 +15668,6 @@ CREATE TABLE `ps_module_shop` (
 --
 
 INSERT INTO `ps_module_shop` (`id_module`, `id_shop`, `enable_device`) VALUES
-(1, 1, 7),
 (2, 1, 7),
 (3, 1, 7),
 (4, 1, 7),
@@ -16228,7 +16349,8 @@ INSERT INTO `ps_page` (`id_page`, `id_page_type`, `id_object`) VALUES
 (10, 6, 20),
 (11, 9, NULL),
 (12, 6, 21),
-(13, 6, 22);
+(13, 6, 22),
+(14, 6, 25);
 
 -- --------------------------------------------------------
 
@@ -64515,9 +64637,9 @@ INSERT INTO `ps_tab` (`id_tab`, `id_parent`, `position`, `module`, `class_name`,
 (121, -1, 2, NULL, 'AdminQuickAccesses', NULL, 1, 1, 0, '', 'Quick Access', 'Admin.Navigation.Menu'),
 (122, 0, 4, NULL, 'DEFAULT', NULL, 1, 1, 0, '', 'More', 'Admin.Navigation.Menu'),
 (123, -1, 3, NULL, 'AdminPatterns', NULL, 1, 1, 0, '', '', ''),
-(124, 43, 3, 'blockwishlist', 'WishlistConfigurationAdminParentController', '', 0, 1, 0, '', NULL, NULL),
-(125, 124, 1, 'blockwishlist', 'WishlistConfigurationAdminController', '', 1, 1, 0, '', NULL, NULL),
-(126, 124, 2, 'blockwishlist', 'WishlistStatisticsAdminController', '', 1, 1, 0, '', NULL, NULL),
+(124, 43, 3, 'blockwishlist', 'WishlistConfigurationAdminParentController', '', 0, 0, 0, '', NULL, NULL),
+(125, 124, 1, 'blockwishlist', 'WishlistConfigurationAdminController', '', 1, 0, 0, '', NULL, NULL),
+(126, 124, 2, 'blockwishlist', 'WishlistStatisticsAdminController', '', 1, 0, 0, '', NULL, NULL),
 (127, -1, 4, 'dashgoals', 'AdminDashgoals', '', 1, 1, 0, '', NULL, NULL),
 (128, -1, 5, 'ps_faviconnotificationbo', 'AdminConfigureFaviconBo', '', 1, 1, 0, '', NULL, NULL),
 (129, 52, 8, 'ps_linklist', 'AdminLinkWidget', 'admin_link_block_list', 1, 1, 0, '', 'Link List', 'Modules.Linklist.Admin'),
@@ -68062,13 +68184,13 @@ ALTER TABLE `ps_configuration_kpi`
 -- AUTO_INCREMENT for table `ps_connections`
 --
 ALTER TABLE `ps_connections`
-  MODIFY `id_connections` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=88;
+  MODIFY `id_connections` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=96;
 
 --
 -- AUTO_INCREMENT for table `ps_connections_source`
 --
 ALTER TABLE `ps_connections_source`
-  MODIFY `id_connections_source` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=1215;
+  MODIFY `id_connections_source` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=1323;
 
 --
 -- AUTO_INCREMENT for table `ps_contact`
@@ -68200,7 +68322,7 @@ ALTER TABLE `ps_group_reduction`
 -- AUTO_INCREMENT for table `ps_guest`
 --
 ALTER TABLE `ps_guest`
-  MODIFY `id_guest` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=56;
+  MODIFY `id_guest` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=61;
 
 --
 -- AUTO_INCREMENT for table `ps_homeslider`
@@ -68338,7 +68460,7 @@ ALTER TABLE `ps_module`
 -- AUTO_INCREMENT for table `ps_module_history`
 --
 ALTER TABLE `ps_module_history`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
 
 --
 -- AUTO_INCREMENT for table `ps_module_preference`
@@ -68428,7 +68550,7 @@ ALTER TABLE `ps_order_state`
 -- AUTO_INCREMENT for table `ps_page`
 --
 ALTER TABLE `ps_page`
-  MODIFY `id_page` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=14;
+  MODIFY `id_page` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=15;
 
 --
 -- AUTO_INCREMENT for table `ps_pagenotfound`
