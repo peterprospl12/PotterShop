@@ -24,7 +24,7 @@
  *}
 {block name='product_miniature_item'}
   <div class="js-product product{if !empty($productClasses)} {$productClasses}{/if}">
-    <article class="product-miniature js-product-miniature" data-id-product="{$product.id_product}"
+  <article class="product-miniature js-product-miniature {if $product.availability !='available'}inactive-miniature{/if}" data-id-product="{$product.id_product}"
       data-id-product-attribute="{$product.id_product_attribute}">
       <div class="thumbnail-container">
         <div class="thumbnail-top">
@@ -95,15 +95,25 @@
                 {hook h='displayProductListReviews' product=$product}
                 {if !$configuration.is_catalog}
                   {if $product.customization_required === false}
-                    <form action="{$urls.pages.cart}" method="POST" class="main-page-add-to-cart add-to-cart-or-refresh">
-                      <input type="hidden" name="token" value="{$static_token}">
-                      <input type="hidden" name="id_product" value="{$product.id}">
-                      <input type="hidden" name="qty" value="1">
-                      <button class="btn btn-primary add-to-cart custom-button-add-to-cart" data-button-action="add-to-cart" type="submit"
-                        {if $product.quantity < 1}disabled{/if}>
-                        {l s='DO KOSZYKA' d='Shop.Theme.Actions'}
-                      </button>
-                    </form>
+                    {if $product.quantity >= 1}
+                      <form action="{$urls.pages.cart}" method="POST" class="main-page-add-to-cart add-to-cart-or-refresh">
+                        <input type="hidden" name="token" value="{$static_token}">
+                        <input type="hidden" name="id_product" value="{$product.id}">
+                        <input type="hidden" name="qty" value="1">
+                        <button class="btn btn-primary add-to-cart custom-button-add-to-cart" data-button-action="add-to-cart"
+                          type="submit" {if $product.quantity < 1}disabled{/if}>
+                          {l s='DO KOSZYKA' d='Shop.Theme.Actions'}
+                        </button>
+                      </form>
+                    {else}
+                      <div class="button_wrap">
+                        <button type="submit" onclick="window.location.href='/kontakt';"
+                          class="custom-button-add-to-cart-disabled btn btn-red" data-is-logged="false" data-stock-id="572"
+                          data-product-id="422" data-product-name="Harry Potter Lampka Hedwiga">
+                          <span>powiadom o dostępności</span>
+                        </button>
+                      </div>
+                    {/if}
                   {else}
 
                   {/if}

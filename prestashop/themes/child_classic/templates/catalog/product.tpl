@@ -300,10 +300,10 @@
 
 
 {block name="footer"}
-  <div id="custom-slider" class="slider-container">
-    <div class="slider">
+  <div id="custom-slider" class="custom-slider-container">
+    <div class="custom-slider">
       {foreach from=$relatedProducts item=product}
-        <div class="slide">
+        <div class="custom-slide">
           <a href="{$product.link}">
             <img src="{$product.cover.bySize.home_default.url}" alt="{$product.name}">
           </a>
@@ -312,8 +312,8 @@
         </div>
       {/foreach}
     </div>
-    <button class="prev" onclick="moveSlide(-1)">&#10094;</button>
-    <button class="next" onclick="moveSlide(1)">&#10095;</button>
+    <button class="custom-prev custom-slider-button" onclick="moveSlide(-1)">&#10094;</button>
+    <button class="custom-next custom-slider-button" onclick="moveSlide(1)">&#10095;</button>
   </div>
   {include file="_partials/footer.tpl"}
 {/block}

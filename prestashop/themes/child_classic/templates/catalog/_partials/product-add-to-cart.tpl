@@ -27,24 +27,39 @@
 
     {block name='product_quantity'}
       <div class="product-quantity clearfix">
-        <div class="product-number-div">
-          <div class="qty">
-            <input type="number" name="qty" id="quantity_wanted" inputmode="numeric" pattern="[0-9]*"
-              {if $product.quantity_wanted} value="{$product.quantity_wanted}" min="{$product.minimal_quantity}" 
-              {else}
-              value="1" min="1" {/if} class="input-group" aria-label="{l s='Quantity' d='Shop.Theme.Actions'}">
+        {if $product.availability =='available'}
+          <div class="product-number-div">
+            <div class="qty">
+              <input type="number" name="qty" id="quantity_wanted" inputmode="numeric" pattern="[0-9]*"
+                {if $product.quantity_wanted} value="{$product.quantity_wanted}" min="{$product.minimal_quantity}" 
+                {else}
+                value="1" min="1" {/if} class="input-group" aria-label="{l s='Quantity' d='Shop.Theme.Actions'}">
+            </div>
+
+            <span class="control-label szt-class">{l s='szt.' d='Shop.Theme.Catalog'}</span>
+          </div>
+          <div class="add">
+            <form action="{$urls.pages.cart}" method="POST" class="main-page-add-to-cart add-to-cart-or-refresh">
+              <input type="hidden" name="token" value="{$static_token}">
+              <input type="hidden" name="id_product" value="{$product.id}">
+              <input type="hidden" name="qty" value="1">
+              <button class="btn btn-primary add-to-cart product-page-add-to-cart" data-button-action="add-to-cart"
+                type="submit" {if !$product.add_to_cart_url} disabled {/if}>
+                {l s='Do koszyka' d='Shop.Theme.Actions'}
+              </button>
+            </form>
           </div>
 
-          <span class="control-label szt-class">{l s='szt.' d='Shop.Theme.Catalog'}</span>
-        </div>
-        <div class="add">
-          <button class="btn btn-primary add-to-cart product-page-add-to-cart" data-button-action="add-to-cart"
-            type="submit" {if !$product.add_to_cart_url} disabled {/if}>
-            {l s='Do koszyka' d='Shop.Theme.Actions'}
-          </button>
-        </div>
-
-        {hook h='displayProductActions' product=$product}
+          {hook h='displayProductActions' product=$product}
+        {else}
+          <div class="button_wrap">
+            <button type="submit" onclick="window.location.href='/kontakt';" class="non-availability-notifier-btn btn btn-red"
+              data-is-logged="false" data-stock-id="572" data-product-id="422"
+              data-product-name="Harry Potter Lampka Hedwiga">
+              <span>powiadom o dostępności</span>
+            </button>
+          </div>
+        {/if}
       </div>
     {/block}
 
@@ -56,9 +71,8 @@
           {elseif $product.availability == 'last_remaining_items'}
             <i class="material-icons product-last-items">&#xE002;</i>
           {else}
-            <i class="material-icons product-unavailable">&#xE14B;</i>
+            <p class="towar-niedostepny">towar niedostępny</p>
           {/if}
-          {$product.availability_message}
         {/if}
       </span>
     {/block}
@@ -67,10 +81,10 @@
       <p class="product-minimal-quantity js-product-minimal-quantity">
         {if $product.minimal_quantity > 1}
           {l
-                                    s='The minimum purchase order quantity for the product is %quantity%.'
-                                    d='Shop.Theme.Checkout'
-                                    sprintf=['%quantity%' => $product.minimal_quantity]
-                                    }
+                s='The minimum purchase order quantity for the product is %quantity%.'
+                d='Shop.Theme.Checkout'
+                sprintf=['%quantity%' => $product.minimal_quantity]
+                }
         {/if}
       </p>
     {/block}

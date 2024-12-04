@@ -1471,21 +1471,21 @@ a span {
   overflow: hidden; /* Ukrywamy niepotrzebne obrazy */
 }
 
-.slider {
+.custom-slider {
   display: flex;
   transition: transform 0.5s ease; /* Gładka animacja przesunięcia */
 }
 
-.slide {
+.custom-slide {
   min-width: 100%; /* Każde zdjęcie zajmuje 100% szerokości slidera */
 }
 
-.slide img {
+.custom-slide img {
   width: 100%; /* Dopasowujemy obrazki do kontenera */
   height: auto;
 }
 
-button {
+.custom-slider-button {
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
@@ -1497,14 +1497,104 @@ button {
   z-index: 10;
 }
 
-button:hover {
+.custom-slider-button:hover {
   background-color: rgba(0, 0, 0, 0.8);
 }
 
-.prev {
+.custom-prev {
   left: 0;
 }
 
-.next {
+.custom-next {
   right: 0;
+}
+
+.block-category {
+  font-family: "HarryP";
+  min-height: 5rem;
+  margin-bottom: 1rem;
+}
+
+.button_wrap {
+  width: 100%;
+  float: right;
+  text-align: right;
+  min-width: 75%;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0 none;
+  font-size: 100%;
+  background: transparent;
+}
+
+.non-availability-notifier-btn {
+  min-height: 40px;
+  float: right;
+  text-transform: uppercase;
+  width: auto;
+  padding: 12px 50px;
+  font-size: 16px;
+  background-color: #fff;
+  color: #135cc8;
+  border: 1px solid #135cc8;
+  cursor: pointer;
+  border-radius: 4px;
+  position: relative;
+}
+
+.non-availability-notifier-btn  {
+  white-space: normal;
+  text-align: center;
+  font-weight: bold;
+  line-height: 1.35;
+}
+
+p.towar-niedostepny {
+  text-align: center;
+  text-align: center;
+  font-size: 18px;
+  line-height: 18px;
+  color: #757575;
+  width: 100%;
+}
+
+#product-availability {
+  text-align: center;
+  font-size: 18px;
+  line-height: 18px;
+  color: #757575;
+  width: 100%;
+}
+
+.custom-button-add-to-cart-disabled  {
+  padding: 7px 10px;
+  text-transform: none;
+  font-size: 10px;
+  vertical-align: middle;
+  cursor: pointer;
+  text-decoration: none;
+  text-align: center;
+  display: inline-block;
+  border-radius: 4px;
+  white-space: normal;
+  text-transform: uppercase;
+  background-color: #fff;
+  border-color: #135cc8;
+  color: #135cc8;
+  font-weight: 600;
+}
+
+.custom-button-add-to-cart-disabled:focus {
+  transition: background-color 0.1s linear;
+}
+
+.custom-button-add-to-cart-disabled:hover {
+  background-color: #135cc8;
+  color: #fff;
+  border-color: #444;
+}
+
+.inactive-miniature {
+  filter: grayscale(100%);
 }
