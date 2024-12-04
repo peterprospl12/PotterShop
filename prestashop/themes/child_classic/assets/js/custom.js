@@ -72,23 +72,27 @@ function showSlide(index) {
     slider.style.transform = `translateX(-${currentSlide * slideWidth}px)`; // Przesuwamy slider o odpowiednią szerokość
   }
 
-  // Hiding arrows if on edge of slider
-  if (index == 0) {
-    // Left arrow hide
-    const arrowLeft = document.querySelector(".custom-prev");
-    arrowLeft.classList.add("hide-custom-arrow");
-  } else {
-    const arrowLeft = document.querySelector(".custom-prev");
-    arrowLeft.classList.remove("hide-custom-arrow");
+  // Sprawdzamy, czy przyciski istnieją przed manipulowaniem nimi
+  const arrowLeft = document.querySelector(".custom-prev");
+  const arrowRight = document.querySelector(".custom-next");
+
+  // Jeśli przyciski istnieją, wykonujemy dalsze operacje
+  if (arrowLeft) {
+    if (index == 0) {
+      // Left arrow hide
+      arrowLeft.classList.add("hide-custom-arrow");
+    } else {
+      arrowLeft.classList.remove("hide-custom-arrow");
+    }
   }
 
-  if (index == iconPages - 1) {
-    // Right arrow hide
-    const arrowRight = document.querySelector(".custom-next");
-    arrowRight.classList.add("hide-custom-arrow");
-  } else {
-    const arrowRight = document.querySelector(".custom-next");
-    arrowRight.classList.remove("hide-custom-arrow");
+  if (arrowRight) {
+    if (index == iconPages - 1) {
+      // Right arrow hide
+      arrowRight.classList.add("hide-custom-arrow");
+    } else {
+      arrowRight.classList.remove("hide-custom-arrow");
+    }
   }
 }
 
