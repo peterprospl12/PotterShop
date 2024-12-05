@@ -27,6 +27,8 @@ def process_product(api, base_product, main_category, sub_category, image, produ
     main_category.set_default_attributes(main_category_name)
     if sub_category_name is not None:
         sub_category.set_default_attributes(sub_category_name)
+    else:
+        sub_category = BaseCategory(api.get_empty_category())
 
     category_id = api.add_category(main_category, sub_category)
 
