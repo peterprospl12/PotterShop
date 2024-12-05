@@ -30,10 +30,6 @@
         {if $product.availability =='available'}
           <div class="product-number-div">
             <div class="qty">
-              <input type="number" name="qty" id="quantity_wanted" inputmode="numeric" pattern="[0-9]*"
-                {if $product.quantity_wanted} value="{$product.quantity_wanted}" min="{$product.minimal_quantity}" 
-                {else}
-                value="1" min="1" {/if} class="input-group" aria-label="{l s='Quantity' d='Shop.Theme.Actions'}">
             </div>
 
             <span class="control-label szt-class">{l s='szt.' d='Shop.Theme.Catalog'}</span>
@@ -42,7 +38,10 @@
             <form action="{$urls.pages.cart}" method="POST" class="main-page-add-to-cart add-to-cart-or-refresh">
               <input type="hidden" name="token" value="{$static_token}">
               <input type="hidden" name="id_product" value="{$product.id}">
-              <input type="hidden" name="qty" value="1">
+              <input type="number" name="qty" id="quantity_wanted" inputmode="numeric" pattern="[0-9]*"
+                {if $product.quantity_wanted} value="{$product.quantity_wanted}" min="{$product.minimal_quantity}" 
+                {else}
+                value="1" min="1" {/if} class="input-group" aria-label="{l s='Quantity' d='Shop.Theme.Actions'}">
               <button class="btn btn-primary add-to-cart product-page-add-to-cart" data-button-action="add-to-cart"
                 type="submit" {if !$product.add_to_cart_url} disabled {/if}>
                 {l s='Do koszyka' d='Shop.Theme.Actions'}
@@ -53,9 +52,8 @@
           {hook h='displayProductActions' product=$product}
         {else}
           <div class="button_wrap">
-            <button type="submit" onclick="window.location.href='/kontakt';" class="non-availability-notifier-btn btn btn-red"
-              data-is-logged="false" data-stock-id="572" data-product-id="422"
-              data-product-name="Harry Potter Lampka Hedwiga">
+            <button type="submit" onclick="window.location.href='/kontakt';"
+              class="non-availability-notifier-btn btn btn-red">
               <span>powiadom o dostępności</span>
             </button>
           </div>
