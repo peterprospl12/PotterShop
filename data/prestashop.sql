@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: mariadb:3306
--- Generation Time: Dec 05, 2024 at 11:31 AM
+-- Generation Time: Dec 05, 2024 at 05:53 PM
 -- Wersja serwera: 11.5.2-MariaDB-ubu2404
 -- Wersja PHP: 8.2.8
 
@@ -1652,7 +1652,8 @@ INSERT INTO `ps_admin_filter` (`id`, `employee`, `shop`, `controller`, `action`,
 (18, 1, 1, '', '', '{\"limit\":20,\"orderBy\":\"name\",\"sortOrder\":\"asc\",\"filters\":[]}', 'product_without_image'),
 (19, 1, 1, '', '', '{\"limit\":20,\"orderBy\":\"name\",\"sortOrder\":\"asc\",\"filters\":[]}', 'product_without_description'),
 (20, 1, 1, '', '', '{\"limit\":20,\"orderBy\":\"name\",\"sortOrder\":\"asc\",\"filters\":[]}', 'product_without_price'),
-(21, 1, 1, '', '', '{\"limit\":50,\"orderBy\":\"id_tax\",\"sortOrder\":\"asc\",\"filters\":[]}', 'tax');
+(21, 1, 1, '', '', '{\"limit\":50,\"orderBy\":\"id_tax\",\"sortOrder\":\"asc\",\"filters\":[]}', 'tax'),
+(23, 1, 1, '', '', '{\"limit\":50,\"orderBy\":\"id_meta\",\"sortOrder\":\"asc\",\"filters\":[]}', 'meta');
 
 -- --------------------------------------------------------
 
@@ -5215,7 +5216,7 @@ INSERT INTO `ps_configuration` (`id_configuration`, `id_shop_group`, `id_shop`, 
 (5, NULL, NULL, 'PS_GROUP_FEATURE_ACTIVE', '1', '2024-11-22 18:37:43', '2024-11-22 18:37:43'),
 (6, NULL, NULL, 'PS_CURRENCY_DEFAULT', '1', '0000-00-00 00:00:00', '0000-00-00 00:00:00'),
 (7, NULL, NULL, 'PS_COUNTRY_DEFAULT', '14', '0000-00-00 00:00:00', '2024-11-22 18:37:44'),
-(8, NULL, NULL, 'PS_REWRITING_SETTINGS', '1', '0000-00-00 00:00:00', '2024-11-22 18:37:44'),
+(8, NULL, NULL, 'PS_REWRITING_SETTINGS', '0', '0000-00-00 00:00:00', '2024-12-05 18:48:41'),
 (9, NULL, NULL, 'PS_ORDER_OUT_OF_STOCK', '0', '0000-00-00 00:00:00', '0000-00-00 00:00:00'),
 (10, NULL, NULL, 'PS_LAST_QTIES', '3', '0000-00-00 00:00:00', '0000-00-00 00:00:00'),
 (11, NULL, NULL, 'PS_CONDITIONS', '1', '0000-00-00 00:00:00', '0000-00-00 00:00:00'),
@@ -5236,7 +5237,7 @@ INSERT INTO `ps_configuration` (`id_configuration`, `id_shop_group`, `id_shop`, 
 (26, NULL, NULL, 'PS_TAX', '1', '0000-00-00 00:00:00', '0000-00-00 00:00:00'),
 (27, NULL, NULL, 'PS_SHOP_ENABLE', '1', '0000-00-00 00:00:00', '0000-00-00 00:00:00'),
 (28, NULL, NULL, 'PS_NB_DAYS_NEW_PRODUCT', '20', '0000-00-00 00:00:00', '0000-00-00 00:00:00'),
-(29, NULL, NULL, 'PS_SSL_ENABLED', NULL, '0000-00-00 00:00:00', '2024-11-26 01:20:42'),
+(29, NULL, NULL, 'PS_SSL_ENABLED', '1', '0000-00-00 00:00:00', '2024-12-05 14:03:41'),
 (30, NULL, NULL, 'PS_WEIGHT_UNIT', 'kg', '0000-00-00 00:00:00', '0000-00-00 00:00:00'),
 (31, NULL, NULL, 'PS_BLOCK_CART_AJAX', '1', '0000-00-00 00:00:00', '2024-11-26 20:28:24'),
 (32, NULL, NULL, 'PS_ORDER_RETURN', '0', '0000-00-00 00:00:00', '0000-00-00 00:00:00'),
@@ -5313,9 +5314,9 @@ INSERT INTO `ps_configuration` (`id_configuration`, `id_shop_group`, `id_shop`, 
 (103, NULL, NULL, 'PS_SMARTY_CACHE', NULL, '0000-00-00 00:00:00', '2024-11-25 00:26:53'),
 (104, NULL, NULL, 'PS_DIMENSION_UNIT', 'cm', '0000-00-00 00:00:00', '0000-00-00 00:00:00'),
 (105, NULL, NULL, 'PS_GUEST_CHECKOUT_ENABLED', '1', '0000-00-00 00:00:00', '0000-00-00 00:00:00'),
-(106, NULL, NULL, 'PS_DISPLAY_SUPPLIERS', NULL, '0000-00-00 00:00:00', '2024-11-26 01:20:42'),
-(107, NULL, NULL, 'PS_DISPLAY_MANUFACTURERS', '1', '0000-00-00 00:00:00', '2024-11-26 01:20:42'),
-(108, NULL, NULL, 'PS_DISPLAY_BEST_SELLERS', '1', '0000-00-00 00:00:00', '2024-11-26 01:20:42'),
+(106, NULL, NULL, 'PS_DISPLAY_SUPPLIERS', NULL, '0000-00-00 00:00:00', '2024-12-05 14:03:41'),
+(107, NULL, NULL, 'PS_DISPLAY_MANUFACTURERS', '1', '0000-00-00 00:00:00', '2024-12-05 14:03:41'),
+(108, NULL, NULL, 'PS_DISPLAY_BEST_SELLERS', '1', '0000-00-00 00:00:00', '2024-12-05 14:03:41'),
 (109, NULL, NULL, 'PS_CATALOG_MODE', '0', '0000-00-00 00:00:00', '0000-00-00 00:00:00'),
 (110, NULL, NULL, 'PS_GEOLOCATION_WHITELIST', '127;::1;188.165.122;209.185.108;209.185.253;209.85.238;209.85.238.11;209.85.238.4;216.239.33.96;216.239.33.97;216.239.33.98;216.239.33.99;216.239.37.98;216.239.37.99;216.239.39.98;216.239.39.99;216.239.41.96;216.239.41.97;216.239.41.98;216.239.41.99;216.239.45.4;216.239.46;216.239.51.96;216.239.51.97;216.239.51.98;216.239.51.99;216.239.53.98;216.239.53.99;216.239.57.96;91.240.109;216.239.57.97;216.239.57.98;216.239.57.99;216.239.59.98;216.239.59.99;216.33.229.163;64.233.173.193;64.233.173.194;64.233.173.195;64.233.173.196;64.233.173.197;64.233.173.198;64.233.173.199;64.233.173.200;64.233.173.201;64.233.173.202;64.233.173.203;64.233.173.204;64.233.173.205;64.233.173.206;64.233.173.207;64.233.173.208;64.233.173.209;64.233.173.210;64.233.173.211;64.233.173.212;64.233.173.213;64.233.173.214;64.233.173.215;64.233.173.216;64.233.173.217;64.233.173.218;64.233.173.219;64.233.173.220;64.233.173.221;64.233.173.222;64.233.173.223;64.233.173.224;64.233.173.225;64.233.173.226;64.233.173.227;64.233.173.228;64.233.173.229;64.233.173.230;64.233.173.231;64.233.173.232;64.233.173.233;64.233.173.234;64.233.173.235;64.233.173.236;64.233.173.237;64.233.173.238;64.233.173.239;64.233.173.240;64.233.173.241;64.233.173.242;64.233.173.243;64.233.173.244;64.233.173.245;64.233.173.246;64.233.173.247;64.233.173.248;64.233.173.249;64.233.173.250;64.233.173.251;64.233.173.252;64.233.173.253;64.233.173.254;64.233.173.255;64.68.80;64.68.81;64.68.82;64.68.83;64.68.84;64.68.85;64.68.86;64.68.87;64.68.88;64.68.89;64.68.90.1;64.68.90.10;64.68.90.11;64.68.90.12;64.68.90.129;64.68.90.13;64.68.90.130;64.68.90.131;64.68.90.132;64.68.90.133;64.68.90.134;64.68.90.135;64.68.90.136;64.68.90.137;64.68.90.138;64.68.90.139;64.68.90.14;64.68.90.140;64.68.90.141;64.68.90.142;64.68.90.143;64.68.90.144;64.68.90.145;64.68.90.146;64.68.90.147;64.68.90.148;64.68.90.149;64.68.90.15;64.68.90.150;64.68.90.151;64.68.90.152;64.68.90.153;64.68.90.154;64.68.90.155;64.68.90.156;64.68.90.157;64.68.90.158;64.68.90.159;64.68.90.16;64.68.90.160;64.68.90.161;64.68.90.162;64.68.90.163;64.68.90.164;64.68.90.165;64.68.90.166;64.68.90.167;64.68.90.168;64.68.90.169;64.68.90.17;64.68.90.170;64.68.90.171;64.68.90.172;64.68.90.173;64.68.90.174;64.68.90.175;64.68.90.176;64.68.90.177;64.68.90.178;64.68.90.179;64.68.90.18;64.68.90.180;64.68.90.181;64.68.90.182;64.68.90.183;64.68.90.184;64.68.90.185;64.68.90.186;64.68.90.187;64.68.90.188;64.68.90.189;64.68.90.19;64.68.90.190;64.68.90.191;64.68.90.192;64.68.90.193;64.68.90.194;64.68.90.195;64.68.90.196;64.68.90.197;64.68.90.198;64.68.90.199;64.68.90.2;64.68.90.20;64.68.90.200;64.68.90.201;64.68.90.202;64.68.90.203;64.68.90.204;64.68.90.205;64.68.90.206;64.68.90.207;64.68.90.208;64.68.90.21;64.68.90.22;64.68.90.23;64.68.90.24;64.68.90.25;64.68.90.26;64.68.90.27;64.68.90.28;64.68.90.29;64.68.90.3;64.68.90.30;64.68.90.31;64.68.90.32;64.68.90.33;64.68.90.34;64.68.90.35;64.68.90.36;64.68.90.37;64.68.90.38;64.68.90.39;64.68.90.4;64.68.90.40;64.68.90.41;64.68.90.42;64.68.90.43;64.68.90.44;64.68.90.45;64.68.90.46;64.68.90.47;64.68.90.48;64.68.90.49;64.68.90.5;64.68.90.50;64.68.90.51;64.68.90.52;64.68.90.53;64.68.90.54;64.68.90.55;64.68.90.56;64.68.90.57;64.68.90.58;64.68.90.59;64.68.90.6;64.68.90.60;64.68.90.61;64.68.90.62;64.68.90.63;64.68.90.64;64.68.90.65;64.68.90.66;64.68.90.67;64.68.90.68;64.68.90.69;64.68.90.7;64.68.90.70;64.68.90.71;64.68.90.72;64.68.90.73;64.68.90.74;64.68.90.75;64.68.90.76;64.68.90.77;64.68.90.78;64.68.90.79;64.68.90.8;64.68.90.80;64.68.90.9;64.68.91;64.68.92;66.249.64;66.249.65;66.249.66;66.249.67;66.249.68;66.249.69;66.249.70;66.249.71;66.249.72;66.249.73;66.249.78;66.249.79;72.14.199;8.6.48', '0000-00-00 00:00:00', '0000-00-00 00:00:00'),
 (111, NULL, NULL, 'PS_LOGS_BY_EMAIL', '4', '0000-00-00 00:00:00', '0000-00-00 00:00:00'),
@@ -5399,7 +5400,7 @@ INSERT INTO `ps_configuration` (`id_configuration`, `id_shop_group`, `id_shop`, 
 (189, NULL, NULL, 'MANUFACTURER_DISPLAY_TEXT', '1', '0000-00-00 00:00:00', '0000-00-00 00:00:00'),
 (190, NULL, NULL, 'MANUFACTURER_DISPLAY_TEXT_NB', '5', '0000-00-00 00:00:00', '0000-00-00 00:00:00'),
 (191, NULL, NULL, 'NEW_PRODUCTS_NBR', '5', '0000-00-00 00:00:00', '0000-00-00 00:00:00'),
-(192, NULL, NULL, 'PS_TOKEN_ENABLE', '1', '0000-00-00 00:00:00', '2024-11-26 01:20:42'),
+(192, NULL, NULL, 'PS_TOKEN_ENABLE', '1', '0000-00-00 00:00:00', '2024-12-05 14:03:41'),
 (193, NULL, NULL, 'PS_STATS_RENDER', 'graphnvd3', '0000-00-00 00:00:00', '0000-00-00 00:00:00'),
 (194, NULL, NULL, 'PS_STATS_OLD_CONNECT_AUTO_CLEAN', 'never', '0000-00-00 00:00:00', '0000-00-00 00:00:00'),
 (195, NULL, NULL, 'PS_STATS_GRID_RENDER', 'gridhtml', '0000-00-00 00:00:00', '0000-00-00 00:00:00'),
@@ -5441,8 +5442,8 @@ INSERT INTO `ps_configuration` (`id_configuration`, `id_shop_group`, `id_shop`, 
 (231, NULL, NULL, 'HOMESLIDER_PAUSE', '7700', '0000-00-00 00:00:00', '0000-00-00 00:00:00'),
 (232, NULL, NULL, 'HOMESLIDER_LOOP', '1', '0000-00-00 00:00:00', '0000-00-00 00:00:00'),
 (233, NULL, NULL, 'PS_BASE_DISTANCE_UNIT', 'm', '0000-00-00 00:00:00', '0000-00-00 00:00:00'),
-(234, NULL, NULL, 'PS_SHOP_DOMAIN', 'localhost:8080', '0000-00-00 00:00:00', '2024-11-22 18:37:44'),
-(235, NULL, NULL, 'PS_SHOP_DOMAIN_SSL', 'localhost:8080', '0000-00-00 00:00:00', '2024-11-22 18:37:44'),
+(234, NULL, NULL, 'PS_SHOP_DOMAIN', 'localhost:8443', '0000-00-00 00:00:00', '2024-12-05 18:47:12'),
+(235, NULL, NULL, 'PS_SHOP_DOMAIN_SSL', 'localhost:8443', '0000-00-00 00:00:00', '2024-12-05 18:47:12'),
 (236, NULL, NULL, 'PS_SHOP_NAME', 'PotterShop', '0000-00-00 00:00:00', '2024-11-22 18:37:44'),
 (237, NULL, NULL, 'PS_SHOP_EMAIL', 'presta@presta.com', '0000-00-00 00:00:00', '2024-11-22 18:37:45'),
 (238, NULL, NULL, 'PS_MAIL_METHOD', '2', '0000-00-00 00:00:00', '2024-11-29 18:19:00'),
@@ -5471,7 +5472,7 @@ INSERT INTO `ps_configuration` (`id_configuration`, `id_shop_group`, `id_shop`, 
 (261, NULL, NULL, 'PS_ATTRIBUTE_ANCHOR_SEPARATOR', '-', '0000-00-00 00:00:00', '0000-00-00 00:00:00'),
 (262, NULL, NULL, 'CONF_AVERAGE_PRODUCT_MARGIN', '40', '0000-00-00 00:00:00', '0000-00-00 00:00:00'),
 (263, NULL, NULL, 'PS_DASHBOARD_SIMULATION', '0', '0000-00-00 00:00:00', '0000-00-00 00:00:00'),
-(264, NULL, NULL, 'PS_USE_HTMLPURIFIER', '1', '0000-00-00 00:00:00', '2024-11-26 01:20:42'),
+(264, NULL, NULL, 'PS_USE_HTMLPURIFIER', '1', '0000-00-00 00:00:00', '2024-12-05 14:03:41'),
 (265, NULL, NULL, 'PS_SMARTY_CACHING_TYPE', 'filesystem', '0000-00-00 00:00:00', '0000-00-00 00:00:00'),
 (266, NULL, NULL, 'PS_SMARTY_LOCAL', NULL, '0000-00-00 00:00:00', '2024-11-25 00:26:53'),
 (267, NULL, NULL, 'PS_SMARTY_CLEAR_CACHE', 'everytime', '0000-00-00 00:00:00', '0000-00-00 00:00:00'),
@@ -5499,7 +5500,7 @@ INSERT INTO `ps_configuration` (`id_configuration`, `id_shop_group`, `id_shop`, 
 (289, NULL, NULL, 'PS_LOGS_EMAIL_RECEIVERS', 'presta@presta.com', '0000-00-00 00:00:00', '2024-11-22 18:37:45'),
 (290, NULL, NULL, 'PS_SHOW_LABEL_OOS_LISTING_PAGES', '1', '0000-00-00 00:00:00', '0000-00-00 00:00:00'),
 (291, NULL, NULL, 'ADDONS_API_MODULE_CHANNEL', 'stable', '0000-00-00 00:00:00', '0000-00-00 00:00:00'),
-(292, NULL, NULL, 'PS_SSL_ENABLED_EVERYWHERE', NULL, '2024-11-22 18:37:44', '2024-11-26 01:20:42'),
+(292, NULL, NULL, 'PS_SSL_ENABLED_EVERYWHERE', '1', '2024-11-22 18:37:44', '2024-12-05 14:03:41'),
 (293, NULL, NULL, 'blockwishlist_WishlistPageName', NULL, '2024-11-22 18:37:49', '2024-11-22 18:37:49'),
 (294, NULL, NULL, 'blockwishlist_WishlistDefaultTitle', NULL, '2024-11-22 18:37:49', '2024-11-22 18:37:49'),
 (295, NULL, NULL, 'blockwishlist_CreateButtonLabel', NULL, '2024-11-22 18:37:49', '2024-11-22 18:37:49'),
@@ -5625,8 +5626,8 @@ INSERT INTO `ps_configuration` (`id_configuration`, `id_shop_group`, `id_shop`, 
 (424, NULL, NULL, 'PS_LAYERED_FILTER_BY_DEFAULT_CATEGORY', '0', '2024-11-22 18:39:06', '2024-11-22 18:39:06'),
 (425, NULL, NULL, 'PS_LAYERED_INDEXED', '1', '2024-11-22 18:39:06', '2024-11-22 18:39:06'),
 (426, NULL, NULL, 'ONBOARDINGV2_SHUT_DOWN', '1', '2024-11-22 18:39:44', '2024-11-22 18:39:44'),
-(427, NULL, NULL, 'PS_CCCJS_VERSION', '8', '2024-11-25 00:27:30', '2024-12-04 12:36:10'),
-(428, NULL, NULL, 'PS_CCCCSS_VERSION', '8', '2024-11-25 00:27:30', '2024-12-04 12:36:10'),
+(427, NULL, NULL, 'PS_CCCJS_VERSION', '10', '2024-11-25 00:27:30', '2024-12-05 18:41:13'),
+(428, NULL, NULL, 'PS_CCCCSS_VERSION', '10', '2024-11-25 00:27:30', '2024-12-05 18:41:13'),
 (429, NULL, NULL, 'PS_LOGO_MAIL', 'logo_mail-1732492307.jpg', '2024-11-25 00:51:47', '2024-11-25 00:51:47'),
 (430, NULL, NULL, 'PS_LOGO_INVOICE', 'logo_invoice-1732492307.jpg', '2024-11-25 00:51:47', '2024-11-25 00:51:47'),
 (431, NULL, NULL, 'CONTACTFORM_SEND_CONFIRMATION_EMAIL', '1', '2024-11-25 16:37:55', '2024-11-25 16:37:55'),
@@ -5641,7 +5642,7 @@ INSERT INTO `ps_configuration` (`id_configuration`, `id_shop_group`, `id_shop`, 
 (440, NULL, NULL, 'PS_ACCOUNTS_FIREBASE_ID_TOKEN', NULL, '2024-11-25 18:17:15', '2024-11-25 18:17:15'),
 (441, NULL, NULL, 'PS_ACCOUNTS_ACCESS_TOKEN', NULL, '2024-11-25 18:17:16', '2024-11-25 18:17:16'),
 (442, NULL, NULL, 'PS_SHOWCASECARD_CMS_PAGES_CLOSED', '1', '2024-11-25 18:35:02', '2024-11-25 18:35:02'),
-(443, NULL, NULL, 'PS_ACCOUNTS_FIREBASE_REFRESH_TOKEN', NULL, '2024-11-25 22:44:26', '2024-12-04 15:39:34'),
+(443, NULL, NULL, 'PS_ACCOUNTS_FIREBASE_REFRESH_TOKEN', NULL, '2024-11-25 22:44:26', '2024-12-05 18:47:12'),
 (444, NULL, NULL, 'PS_MAIL_EMAIL_MESSAGE', '2', '2024-11-29 18:19:00', '2024-11-29 18:19:00'),
 (445, NULL, NULL, 'PS_MAIL_DOMAIN', NULL, '2024-11-29 18:19:00', '2024-11-29 18:19:00'),
 (446, NULL, NULL, 'CONF_PS_CASHONDELIVERY_FIXED', '0.2', '2024-11-29 20:03:20', '2024-11-29 20:03:20'),
@@ -5924,7 +5925,10 @@ INSERT INTO `ps_connections` (`id_connections`, `id_shop_group`, `id_shop`, `id_
 (99, 1, 1, 62, 13, 2886860801, '2024-12-04 22:32:10', ''),
 (100, 1, 1, 63, 1, 2886860801, '2024-12-04 22:56:01', ''),
 (101, 1, 1, 63, 1, 2886860801, '2024-12-05 00:35:58', ''),
-(102, 1, 1, 63, 1, 2886860801, '2024-12-05 12:28:38', '');
+(102, 1, 1, 63, 1, 2886860801, '2024-12-05 12:28:38', ''),
+(104, 1, 1, 63, 1, 2886860801, '2024-12-05 17:45:03', ''),
+(105, 1, 1, 63, 1, 2886860801, '2024-12-05 18:32:19', ''),
+(106, 1, 1, 64, 10, 2886860801, '2024-12-05 18:34:59', '');
 
 -- --------------------------------------------------------
 
@@ -7455,7 +7459,65 @@ INSERT INTO `ps_connections_source` (`id_connections_source`, `id_connections`, 
 (1491, 102, 'http://localhost:8080/koszyk?action=show', 'localhost:8080/', '', '2024-12-05 12:28:44'),
 (1492, 102, 'http://localhost:8080/', 'localhost:8080/breloki/20-brelok-harry-potter-harry.html', '', '2024-12-05 12:28:46'),
 (1493, 102, 'http://localhost:8080/breloki/20-brelok-harry-potter-harry.html', 'localhost:8080/koszyk?action=show', '', '2024-12-05 12:28:54'),
-(1494, 102, 'http://localhost:8080/koszyk?action=show', 'localhost:8080/10-breloki', '', '2024-12-05 12:30:03');
+(1494, 102, 'http://localhost:8080/koszyk?action=show', 'localhost:8080/10-breloki', '', '2024-12-05 12:30:03'),
+(1535, 104, 'https://localhost:8443/', 'localhost:8443/24-home_default/brelok-harry-potter-harry.jpg', '', '2024-12-05 17:45:03'),
+(1536, 104, 'https://localhost:8443/', 'localhost:8443/26-home_default/brelok-3d-harry-potter-zloty-znicz.jpg', '', '2024-12-05 17:45:03'),
+(1537, 104, 'https://localhost:8443/', 'localhost:8443/28-home_default/brelok-harry-potter---mroczny-znak.jpg', '', '2024-12-05 17:45:03'),
+(1538, 104, 'https://localhost:8443/', 'localhost:8443/30-home_default/brelok-harry-potter-gryffindor.jpg', '', '2024-12-05 17:45:03'),
+(1539, 104, 'https://localhost:8443/', 'localhost:8443/26-home_default/brelok-3d-harry-potter-zloty-znicz.jpg', '', '2024-12-05 17:45:18'),
+(1540, 104, 'https://localhost:8443/', 'localhost:8443/24-home_default/brelok-harry-potter-harry.jpg', '', '2024-12-05 17:45:18'),
+(1541, 104, 'https://localhost:8443/', 'localhost:8443/28-home_default/brelok-harry-potter---mroczny-znak.jpg', '', '2024-12-05 17:45:18'),
+(1542, 104, 'https://localhost:8443/', 'localhost:8443/30-home_default/brelok-harry-potter-gryffindor.jpg', '', '2024-12-05 17:45:18'),
+(1543, 104, 'http://localhost:8080/24-home_default/brelok-harry-potter-harry.jpg', 'localhost:8080/favicon.ico', '', '2024-12-05 17:46:45'),
+(1544, 104, 'http://localhost:8080/24-home_default/brelok-harry-potter-harry.jpg', 'localhost:8080/favicon.ico', '', '2024-12-05 17:49:31'),
+(1545, 104, 'https://localhost:8443/', 'localhost:8443/24-home_default/brelok-harry-potter-harry.jpg', '', '2024-12-05 17:58:17'),
+(1546, 104, 'https://localhost:8443/', 'localhost:8443/26-home_default/brelok-3d-harry-potter-zloty-znicz.jpg', '', '2024-12-05 17:58:17'),
+(1547, 104, 'https://localhost:8443/', 'localhost:8443/30-home_default/brelok-harry-potter-gryffindor.jpg', '', '2024-12-05 17:58:17'),
+(1548, 104, 'https://localhost:8443/', 'localhost:8443/28-home_default/brelok-harry-potter---mroczny-znak.jpg', '', '2024-12-05 17:58:17'),
+(1549, 104, 'https://localhost:8443/', 'localhost:8443/28-home_default/brelok-harry-potter---mroczny-znak.jpg', '', '2024-12-05 17:58:21'),
+(1550, 104, 'https://localhost:8443/', 'localhost:8443/26-home_default/brelok-3d-harry-potter-zloty-znicz.jpg', '', '2024-12-05 17:58:21'),
+(1551, 104, 'https://localhost:8443/', 'localhost:8443/24-home_default/brelok-harry-potter-harry.jpg', '', '2024-12-05 17:58:21'),
+(1552, 104, 'https://localhost:8443/', 'localhost:8443/30-home_default/brelok-harry-potter-gryffindor.jpg', '', '2024-12-05 17:58:22'),
+(1553, 104, 'https://localhost:8443/', 'localhost:8443/26-home_default/brelok-3d-harry-potter-zloty-znicz.jpg', '', '2024-12-05 17:58:33'),
+(1554, 104, 'https://localhost:8443/', 'localhost:8443/24-home_default/brelok-harry-potter-harry.jpg', '', '2024-12-05 17:58:33'),
+(1555, 104, 'https://localhost:8443/', 'localhost:8443/28-home_default/brelok-harry-potter---mroczny-znak.jpg', '', '2024-12-05 17:58:33'),
+(1556, 104, 'https://localhost:8443/', 'localhost:8443/30-home_default/brelok-harry-potter-gryffindor.jpg', '', '2024-12-05 17:58:33'),
+(1557, 104, 'https://localhost:8443/', 'localhost:8443/24-home_default/brelok-harry-potter-harry.jpg', '', '2024-12-05 18:00:05'),
+(1558, 104, 'https://localhost:8443/', 'localhost:8443/26-home_default/brelok-3d-harry-potter-zloty-znicz.jpg', '', '2024-12-05 18:00:05'),
+(1559, 104, 'https://localhost:8443/', 'localhost:8443/30-home_default/brelok-harry-potter-gryffindor.jpg', '', '2024-12-05 18:00:06'),
+(1560, 104, 'https://localhost:8443/', 'localhost:8443/28-home_default/brelok-harry-potter---mroczny-znak.jpg', '', '2024-12-05 18:00:06'),
+(1561, 104, 'https://localhost:8443/', 'localhost:8443/24-home_default/brelok-harry-potter-harry.jpg', '', '2024-12-05 18:00:09'),
+(1562, 104, 'https://localhost:8443/', 'localhost:8443/26-home_default/brelok-3d-harry-potter-zloty-znicz.jpg', '', '2024-12-05 18:00:09'),
+(1563, 104, 'https://localhost:8443/', 'localhost:8443/30-home_default/brelok-harry-potter-gryffindor.jpg', '', '2024-12-05 18:00:09'),
+(1564, 104, 'https://localhost:8443/', 'localhost:8443/28-home_default/brelok-harry-potter---mroczny-znak.jpg', '', '2024-12-05 18:00:09'),
+(1565, 105, 'https://localhost:8443/', 'localhost:8443/28-home_default/brelok-harry-potter---mroczny-znak.jpg', '', '2024-12-05 18:32:19'),
+(1566, 105, 'https://localhost:8443/', 'localhost:8443/26-home_default/brelok-3d-harry-potter-zloty-znicz.jpg', '', '2024-12-05 18:32:19'),
+(1567, 105, 'https://localhost:8443/', 'localhost:8443/30-home_default/brelok-harry-potter-gryffindor.jpg', '', '2024-12-05 18:32:19'),
+(1568, 105, 'https://localhost:8443/', 'localhost:8443/24-home_default/brelok-harry-potter-harry.jpg', '', '2024-12-05 18:32:19'),
+(1569, 105, 'https://localhost:8443/', 'localhost:8443/24-home_default/brelok-harry-potter-harry.jpg', '', '2024-12-05 18:32:59'),
+(1570, 105, 'https://localhost:8443/', 'localhost:8443/26-home_default/brelok-3d-harry-potter-zloty-znicz.jpg', '', '2024-12-05 18:32:59'),
+(1571, 105, 'https://localhost:8443/', 'localhost:8443/28-home_default/brelok-harry-potter---mroczny-znak.jpg', '', '2024-12-05 18:32:59'),
+(1572, 105, 'https://localhost:8443/', 'localhost:8443/30-home_default/brelok-harry-potter-gryffindor.jpg', '', '2024-12-05 18:32:59'),
+(1573, 105, 'https://localhost:8443/', 'localhost:8443/breloki/20-brelok-harry-potter-harry.html', '', '2024-12-05 18:34:46'),
+(1574, 105, 'https://localhost:8443/breloki/20-brelok-harry-potter-harry.html', 'localhost:8443/24-medium_default/brelok-harry-potter-harry.jpg', '', '2024-12-05 18:34:47'),
+(1575, 105, 'https://localhost:8443/breloki/20-brelok-harry-potter-harry.html', 'localhost:8443/24-large_default/brelok-harry-potter-harry.jpg', '', '2024-12-05 18:34:48'),
+(1576, 105, 'https://localhost:8443/breloki/20-brelok-harry-potter-harry.html', 'localhost:8443/26-home_default/brelok-3d-harry-potter-zloty-znicz.jpg', '', '2024-12-05 18:34:48'),
+(1577, 105, 'https://localhost:8443/breloki/20-brelok-harry-potter-harry.html', 'localhost:8443/24-small_default/brelok-harry-potter-harry.jpg', '', '2024-12-05 18:34:48'),
+(1578, 105, 'https://localhost:8443/breloki/20-brelok-harry-potter-harry.html', 'localhost:8443/25-small_default/brelok-harry-potter-harry.jpg', '', '2024-12-05 18:34:48'),
+(1579, 105, 'https://localhost:8443/breloki/20-brelok-harry-potter-harry.html', 'localhost:8443/28-home_default/brelok-harry-potter---mroczny-znak.jpg', '', '2024-12-05 18:34:48'),
+(1580, 105, 'https://localhost:8443/24-large_default/brelok-harry-potter-harry.jpg', 'localhost:8443/', '', '2024-12-05 18:35:12'),
+(1581, 105, 'https://localhost:8443/', 'localhost:8443/24-home_default/brelok-harry-potter-harry.jpg', '', '2024-12-05 18:35:13'),
+(1582, 105, 'https://localhost:8443/', 'localhost:8443/26-home_default/brelok-3d-harry-potter-zloty-znicz.jpg', '', '2024-12-05 18:35:13'),
+(1583, 105, 'https://localhost:8443/', 'localhost:8443/30-home_default/brelok-harry-potter-gryffindor.jpg', '', '2024-12-05 18:35:13'),
+(1584, 105, 'https://localhost:8443/', 'localhost:8443/28-home_default/brelok-harry-potter---mroczny-znak.jpg', '', '2024-12-05 18:35:13'),
+(1585, 105, 'https://localhost:8443/', 'localhost:8443/24-home_default/brelok-harry-potter-harry.jpg', '', '2024-12-05 18:42:49'),
+(1586, 105, 'https://localhost:8443/', 'localhost:8443/26-home_default/brelok-3d-harry-potter-zloty-znicz.jpg', '', '2024-12-05 18:42:49'),
+(1587, 105, 'https://localhost:8443/', 'localhost:8443/28-home_default/brelok-harry-potter---mroczny-znak.jpg', '', '2024-12-05 18:42:49'),
+(1588, 105, 'https://localhost:8443/', 'localhost:8443/30-home_default/brelok-harry-potter-gryffindor.jpg', '', '2024-12-05 18:42:49'),
+(1589, 105, 'https://localhost:8443/breloki/20-brelok-harry-potter-harry.html', 'localhost:8443/index.php', '', '2024-12-05 18:48:55'),
+(1590, 105, 'https://localhost:8443/index.php', 'localhost:8443/index.php?id_product=20&rewrite=brelok-harry-potter-harry&controller=product', '', '2024-12-05 18:48:58'),
+(1591, 105, 'https://localhost:8443/breloki/20-brelok-harry-potter-harry.html', 'localhost:8443/index.php', '', '2024-12-05 18:49:02'),
+(1592, 105, 'https://localhost:8443/index.php?', 'localhost:8443/index.php?id_product=20&rewrite=brelok-harry-potter-harry&controller=product', '', '2024-12-05 18:50:35');
 
 -- --------------------------------------------------------
 
@@ -8715,7 +8777,7 @@ CREATE TABLE `ps_employee` (
 --
 
 INSERT INTO `ps_employee` (`id_employee`, `id_profile`, `id_lang`, `lastname`, `firstname`, `email`, `passwd`, `last_passwd_gen`, `stats_date_from`, `stats_date_to`, `stats_compare_from`, `stats_compare_to`, `stats_compare_option`, `preselect_date_range`, `bo_color`, `bo_theme`, `bo_css`, `default_tab`, `bo_width`, `bo_menu`, `active`, `optin`, `id_last_order`, `id_last_customer_message`, `id_last_customer`, `last_connection_date`, `reset_password_token`, `reset_password_validity`, `has_enabled_gravatar`) VALUES
-(1, 1, 1, 'Dziekański', 'Dziekan', 'presta@presta.com', '$2y$10$9FA73SQpoOomFYCEzKZyqeoPI6NjpIZN4Plhyx4FD0kt4QgNp8AXa', '2024-11-22 12:37:45', '2024-10-22', '2024-11-22', '0000-00-00', '0000-00-00', 1, NULL, NULL, 'default', 'theme.css', 1, 0, 1, 1, NULL, 7, 0, 2, '2024-12-04', NULL, '0000-00-00 00:00:00', 0);
+(1, 1, 1, 'Dziekański', 'Dziekan', 'presta@presta.com', '$2y$10$9FA73SQpoOomFYCEzKZyqeoPI6NjpIZN4Plhyx4FD0kt4QgNp8AXa', '2024-11-22 12:37:45', '2024-10-22', '2024-11-22', '0000-00-00', '0000-00-00', 1, NULL, NULL, 'default', 'theme.css', 1, 0, 1, 1, NULL, 7, 0, 2, '2024-12-05', NULL, '0000-00-00 00:00:00', 0);
 
 -- --------------------------------------------------------
 
@@ -9703,7 +9765,8 @@ INSERT INTO `ps_guest` (`id_guest`, `id_operating_system`, `id_web_browser`, `id
 (60, 8, 3, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'pl', 0),
 (61, 8, 3, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'pl', 0),
 (62, 8, 3, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'pl', 0),
-(63, 8, 3, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'pl', 0);
+(63, 8, 3, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'pl', 0),
+(64, 8, 3, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'pl', 0);
 
 -- --------------------------------------------------------
 
@@ -63308,7 +63371,7 @@ CREATE TABLE `ps_shop_url` (
 --
 
 INSERT INTO `ps_shop_url` (`id_shop_url`, `id_shop`, `domain`, `domain_ssl`, `physical_uri`, `virtual_uri`, `main`, `active`) VALUES
-(1, 1, 'localhost:8080', 'localhost:8080', '/', '', 1, 1);
+(1, 1, 'localhost:8443', 'localhost:8443', '/', '', 1, 1);
 
 -- --------------------------------------------------------
 
@@ -68259,7 +68322,7 @@ ALTER TABLE `ps_address`
 -- AUTO_INCREMENT for table `ps_admin_filter`
 --
 ALTER TABLE `ps_admin_filter`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=22;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=24;
 
 --
 -- AUTO_INCREMENT for table `ps_alias`
@@ -68319,7 +68382,7 @@ ALTER TABLE `ps_carrier`
 -- AUTO_INCREMENT for table `ps_cart`
 --
 ALTER TABLE `ps_cart`
-  MODIFY `id_cart` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
+  MODIFY `id_cart` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=14;
 
 --
 -- AUTO_INCREMENT for table `ps_cart_rule`
@@ -68385,13 +68448,13 @@ ALTER TABLE `ps_configuration_kpi`
 -- AUTO_INCREMENT for table `ps_connections`
 --
 ALTER TABLE `ps_connections`
-  MODIFY `id_connections` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=103;
+  MODIFY `id_connections` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=107;
 
 --
 -- AUTO_INCREMENT for table `ps_connections_source`
 --
 ALTER TABLE `ps_connections_source`
-  MODIFY `id_connections_source` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=1495;
+  MODIFY `id_connections_source` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=1593;
 
 --
 -- AUTO_INCREMENT for table `ps_contact`
@@ -68523,7 +68586,7 @@ ALTER TABLE `ps_group_reduction`
 -- AUTO_INCREMENT for table `ps_guest`
 --
 ALTER TABLE `ps_guest`
-  MODIFY `id_guest` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=64;
+  MODIFY `id_guest` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=65;
 
 --
 -- AUTO_INCREMENT for table `ps_homeslider`
