@@ -24,36 +24,35 @@
  *}
 <div class="col-md-6 links gray-long-line" style="width:100%">
   <div class="row">
-  {foreach $linkBlocks as $linkBlock}
-    <div class="col-md-6 wrapper linkblock-heading" style="width: calc(100% / 6); padding-left: 5px; padding-right: 5px;">
-      <p class="h3 hidden-sm-down harry-potter-font-class">{$linkBlock.title}</p>
-      <div class="title clearfix hidden-md-up" data-target="#footer_sub_menu_{$linkBlock.id}" data-toggle="collapse">
-        <span class="h3">{$linkBlock.title}</span>
-        <span class="float-xs-right">
-          <span class="navbar-toggler collapse-icons">
-            <i class="material-icons add">&#xE313;</i>
-            <i class="material-icons remove">&#xE316;</i>
+    {foreach $linkBlocks as $linkBlock}
+      <div class="col-md-6 wrapper linkblock-heading"
+        style="width: calc(100% / 6); padding-left: 5px; padding-right: 5px;">
+        <p class="h3 hidden-sm-down harry-potter-font-class">{$linkBlock.title}</p>
+        <div class="title clearfix hidden-md-up" data-target="#footer_sub_menu_{$linkBlock.id}" data-toggle="collapse">
+          <span class="h3">{$linkBlock.title}</span>
+          <span class="float-xs-right">
+            <span class="navbar-toggler collapse-icons">
+              <i class="material-icons add">&#xE313;</i>
+              <i class="material-icons remove">&#xE316;</i>
+            </span>
           </span>
-        </span>
+        </div>
+        <ul id="footer_sub_menu_{$linkBlock.id}" class="collapse">
+          {foreach $linkBlock.links as $link}
+            <li style="line-height: 30px;">
+              <a class="underline-link" id="{$link.id}-{$linkBlock.id}" class="{$link.class}" href="{$link.url}"
+                title="{$link.description}" {if !empty($link.target)} target="{$link.target}" {/if}>
+                {if $link.title == 'Nowe produkty'}
+                  Nowości
+                {else}
+                  {$link.title}
+                {/if}
+              </a>
+            </li>
+          {/foreach}
+        </ul>
       </div>
-      <ul id="footer_sub_menu_{$linkBlock.id}" class="collapse">
-        {foreach $linkBlock.links as $link}
-          <li style="line-height: 30px;">
-            <a class="underline-link"
-                id="{$link.id}-{$linkBlock.id}"
-                class="{$link.class}"
-                href="{$link.url}"
-                title="{$link.description}"
-                {if !empty($link.target)} target="{$link.target}" {/if}
-            >
-              {$link.title}
-            </a>
-          </li>
-        {/foreach}
-      </ul>
-    </div>
-  {/foreach}
+    {/foreach}
   </div>
-<hr style="height: 1px; background-color: #757575;; border: none; margin: 0;">
+  <hr style="height: 1px; background-color: #757575;; border: none; margin: 0;">
 </div>
-

@@ -1149,23 +1149,6 @@ a span {
   float: right;
 }
 
-.product-number-div {
-  padding-right: 20px;
-  width: 25%;
-  float: left;
-  margin: 0;
-  padding: 0;
-  border: 0;
-  outline: 0 none;
-  font-size: 100%;
-  background: transparent;
-  width: 40%;
-  line-height: 18px;
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-}
-
 .product-quantity .input-group-btn-vertical {
   width: auto;
   display: none;
@@ -1641,12 +1624,6 @@ p.towar-niedostepny {
   gap: 10px; 
 }
 
-.add {
-  display: flex;
-  align-items: center;
-  gap: 10px; 
-}
-
 .product-cover {
   position: relative;
   overflow: hidden; /* Zapobiegamy wystawaniu obrazu poza kontener */
@@ -1693,4 +1670,58 @@ p.towar-niedostepny {
   color: #bbb;
   text-decoration: none;
   cursor: pointer;
+}
+
+.add {
+  display: flex;
+  align-items: center;
+  gap: 10px; 
+  float: right;
+  clear: both;
+  width: 100%;
+}
+
+form.main-page-add-to-cart {
+  display: flex;
+  width: 100%;
+}
+
+.product-number-div {
+  display: flex;
+  width: 100%;
+  padding-right: 20px;
+  float: left;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0 none;
+  font-size: 100%;
+  background: transparent;
+  width: 40%;
+  line-height: 18px;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+.product-number-div input {
+  flex: 0 0 40%;
+}
+
+.product-page-add-to-cart {
+  flex: 0 0 60%;
+  text-transform: uppercase;
+  width: auto;
+  padding: 12px 50px;
+  font-size: 16px;
+  min-height: 40px;
+  margin-top: 0;
+  background-color: #c51515;
+  border: 1px solid #c51515;
+  border-radius: 4px;
+  color: #fff;
+  cursor: pointer;
+  text-decoration: none;
+  text-align: center;
+  float: right;
 }
