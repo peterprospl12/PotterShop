@@ -106,3 +106,42 @@ showSlide(currentSlide);
 
 // Nasłuchujemy zmian rozmiaru okna, aby dynamicznie dostosować liczbę wyświetlanych slajdów
 window.addEventListener("resize", updateSlidesPerView);
+
+const imageContainer = document.querySelector('.product-cover');
+const image = document.querySelector('.product-cover img');
+
+imageContainer.addEventListener('mousemove', (e) => {
+  // Pobieramy pozycję kursora w obrębie kontenera
+  const { left, top, width, height } = imageContainer.getBoundingClientRect();
+  const x = e.clientX - left; // Pozycja kursora w poziomie
+  const y = e.clientY - top; // Pozycja kursora w pionie
+
+  // Obliczamy procentowe położenie kursora
+  const xPercent = (x / width) * 100;
+  const yPercent = (y / height) * 100;
+
+  // Ustawiamy tło, które będzie powiększonym fragmentem obrazu
+  image.style.transform = `scale(3)`; // Powiększamy obraz 2 razy
+  image.style.transformOrigin = `${xPercent}% ${yPercent}%`; // Przesuwamy tło w kierunku kursora
+});
+
+imageContainer.addEventListener('mouseleave', () => {
+  // Resetowanie transformacji, gdy kursor opuści obrazek
+  image.style.transform = `scale(1)`; // Przywracamy oryginalny rozmiar
+});
+
+// Open the modal with the selected image
+function openModal(imageSrc) {
+  var modal = document.getElementById('imageModal');
+  var modalImage = document.getElementById('modalImage');
+  
+  // Set the modal image to the clicked image's source
+  modal.style.display = "block";
+  modalImage.src = imageSrc;
+}
+
+// Close the modal
+function closeModal() {
+  var modal = document.getElementById('imageModal');
+  modal.style.display = "none";
+}
