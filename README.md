@@ -24,8 +24,12 @@ The contents of the repository are divided into the following folders:
 4. **/scraper-results** -> results of the scraping;
 5. **/scripts** -> scripts used while developing and deploying the app;
 6. **/api** -> source code for the API, mainly used to add scraped products to the shop;
-7. **docker-compose.yml** -> Docker Compose file;
-8. **permissions.sh** -> script to set the necessary permissions for the project files;
+7. **/ssl** -> directory containing SSL certificates and related files;
+8. **/tests** -> directory containing automated test scripts written in Selenium;
+9. **docker-compose.yml** -> Docker Compose file;
+10. **permissions.sh** -> script to set the necessary permissions for the project files;
+
+
 
 ## Used Tools
 - [Prestashop 1.7.8 Docker Image](https://github.com/PrestaShop/PrestaShop/tree/1.7.8.x)
