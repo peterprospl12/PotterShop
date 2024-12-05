@@ -36,21 +36,64 @@ window.addEventListener("scroll", function () {
 });
 
 let currentSlide = 0;
+let slidesPerView = 2; // Domyślna liczba wyświetlanych slajdów (2)
 
-function showSlide(index) {
-  const slides = document.querySelectorAll(".slide");
-  const totalSlides = slides.length;
+function updateSlidesPerView() {
+  const windowWidth = window.innerWidth;
 
-  if (index >= totalSlides) {
-    currentSlide = 0; // Wracamy do pierwszego zdjęcia
-  } else if (index < 0) {
-    currentSlide = totalSlides - 1; // Przechodzimy na ostatnie zdjęcie
+  if (windowWidth <= 768) {
+    slidesPerView = 1; // Na małych ekranach (smartfony) wyświetlamy 1 slajd
+  } else if (windowWidth <= 979) {
+    slidesPerView = 2; // Na średnich ekranach (tablety) wyświetlamy 2 slajdy
+  } else if (windowWidth <= 1297) {
+    slidesPerView = 3; // Na większych ekranach wyświetlamy 3 slajdy
   } else {
-    currentSlide = index;
+    slidesPerView = 4; // Na dużych ekranach wyświetlamy 4 slajdy
   }
 
-  const slider = document.querySelector(".slider");
-  slider.style.transform = `translateX(-${currentSlide * 100}%)`; // Przesuwamy slider
+  // Po aktualizacji liczby slajdów na ekranie, resetujemy pozycję slidera
+  showSlide(currentSlide);
+}
+
+function showSlide(index) {
+  const slides = document.querySelectorAll(".custom-slide");
+  const totalSlides = slides.length;
+  const iconPages = totalSlides - slidesPerView + 1;
+
+  // Sprawdzamy, czy indeks nie przekracza granic
+  if (index >= iconPages) {
+    currentSlide = iconPages - 1;
+  } else if (index < 0) {
+    currentSlide = 0;
+  } else {
+    currentSlide = index;
+    const slider = document.querySelector(".custom-slider");
+    const slideWidth = slides[0].offsetWidth; // Szerokość jednego slajdu
+    slider.style.transform = `translateX(-${currentSlide * slideWidth}px)`; // Przesuwamy slider o odpowiednią szerokość
+  }
+
+  // Sprawdzamy, czy przyciski istnieją przed manipulowaniem nimi
+  const arrowLeft = document.querySelector(".custom-prev");
+  const arrowRight = document.querySelector(".custom-next");
+
+  // Jeśli przyciski istnieją, wykonujemy dalsze operacje
+  if (arrowLeft) {
+    if (index == 0) {
+      // Left arrow hide
+      arrowLeft.classList.add("hide-custom-arrow");
+    } else {
+      arrowLeft.classList.remove("hide-custom-arrow");
+    }
+  }
+
+  if (arrowRight) {
+    if (index == iconPages - 1) {
+      // Right arrow hide
+      arrowRight.classList.add("hide-custom-arrow");
+    } else {
+      arrowRight.classList.remove("hide-custom-arrow");
+    }
+  }
 }
 
 function moveSlide(step) {
@@ -58,4 +101,8 @@ function moveSlide(step) {
 }
 
 // Inicjalne ustawienie slidera
+updateSlidesPerView(); // Ustawiamy liczbę slajdów przy załadowaniu
 showSlide(currentSlide);
+
+// Nasłuchujemy zmian rozmiaru okna, aby dynamicznie dostosować liczbę wyświetlanych slajdów
+window.addEventListener("resize", updateSlidesPerView);

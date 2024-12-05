@@ -23,7 +23,9 @@
  * @copyright Since 2007 PrestaShop SA and Contributors
  * @license   https://opensource.org/licenses/OSL-3.0 Open Software License (OSL 3.0)
  */
-
+use PrestaShop\PrestaShop\Adapter\Presenter\AbstractLazyArray;
+use PrestaShop\PrestaShop\Adapter\Presenter\Product\ProductLazyArray;
+use PrestaShop\PrestaShop\Core\Product\ProductInterface;
 use PrestaShop\PrestaShop\Adapter\Presenter\Product\ProductListingPresenter;
 use PrestaShop\PrestaShop\Core\Addon\Module\ModuleManagerBuilder;
 use PrestaShop\PrestaShop\Adapter\Category\CategoryProductSearchProvider;
@@ -162,14 +164,14 @@ class ProductController extends ProductControllerCore
                             header('Location: ' . $this->context->link->getProductLink($this->product->id_type_redirected));
                             exit;
 
-                            break;
+                        break;
                         case ProductInterface::REDIRECT_TYPE_PRODUCT_FOUND:
                             header('HTTP/1.1 302 Moved Temporarily');
                             header('Cache-Control: no-cache');
                             header('Location: ' . $this->context->link->getProductLink($this->product->id_type_redirected));
                             exit;
 
-                            break;
+                        break;
                         case ProductInterface::REDIRECT_TYPE_CATEGORY_MOVED_PERMANENTLY:
                             header('HTTP/1.1 301 Moved Permanently');
                             header('Location: ' . $this->context->link->getCategoryLink($this->product->id_type_redirected));
@@ -214,10 +216,8 @@ class ProductController extends ProductControllerCore
                 }
                 // Load category
                 $id_category = false;
-                if (
-                    isset($_SERVER['HTTP_REFERER']) && $_SERVER['HTTP_REFERER'] == Tools::secureReferrer($_SERVER['HTTP_REFERER']) // Assure us the previous page was one of the shop
-                    && preg_match('~^.*(?<!\/content)\/([0-9]+)\-(.*[^\.])|(.*)id_(category|product)=([0-9]+)(.*)$~', $_SERVER['HTTP_REFERER'], $regs)
-                ) {
+                if (isset($_SERVER['HTTP_REFERER']) && $_SERVER['HTTP_REFERER'] == Tools::secureReferrer($_SERVER['HTTP_REFERER']) // Assure us the previous page was one of the shop
+                    && preg_match('~^.*(?<!\/content)\/([0-9]+)\-(.*[^\.])|(.*)id_(category|product)=([0-9]+)(.*)$~', $_SERVER['HTTP_REFERER'], $regs)) {
                     // If the previous page was a category and is a parent category of the product use this category as parent category
                     $id_object = false;
                     if (isset($regs[1]) && is_numeric($regs[1])) {
@@ -256,7 +256,6 @@ class ProductController extends ProductControllerCore
     public function initContent()
     {
         if (!$this->errors) {
-
             $manufacturers = Manufacturer::getManufacturers();
 
             $this->context->smarty->assign('manufacturers', $manufacturers);
@@ -269,8 +268,7 @@ class ProductController extends ProductControllerCore
 
             $this->context->smarty->assign('relatedProducts', $filteredProducts);
 
-            if (
-                Pack::isPack((int) $this->product->id)
+            if (Pack::isPack((int) $this->product->id)
                 && !Pack::isInStock((int) $this->product->id, $this->product->minimal_quantity, $this->context->cart)
             ) {
                 $this->product->quantity = 0;
@@ -320,8 +318,7 @@ class ProductController extends ProductControllerCore
 
             $this->context->smarty->assign([
                 'pictures' => $pictures,
-                'textFields' => $text_fields,
-            ]);
+                'textFields' => $text_fields, ]);
 
             $this->product->customization_required = false;
             $customization_fields = $this->product->customizable ? $this->product->getCustomizationFields($this->context->language->id) : false;
@@ -802,9 +799,9 @@ class ProductController extends ProductControllerCore
                     }
                     $id_attributes = Db::getInstance()->executeS('SELECT pac2.`id_attribute` FROM `' . _DB_PREFIX_ . 'product_attribute_combination` pac2' .
                         ((!Product::isAvailableWhenOutOfStock($this->product->out_of_stock) && 0 == Configuration::get('PS_DISP_UNAVAILABLE_ATTR')) ?
-                            ' INNER JOIN `' . _DB_PREFIX_ . 'stock_available` pa ON pa.id_product_attribute = pac2.id_product_attribute
+                        ' INNER JOIN `' . _DB_PREFIX_ . 'stock_available` pa ON pa.id_product_attribute = pac2.id_product_attribute
                         WHERE pa.quantity > 0 AND ' :
-                            ' WHERE ') .
+                        ' WHERE ') .
                         'pac2.`id_product_attribute` IN (' . implode(',', array_map('intval', $id_product_attributes)) . ')
                         AND pac2.id_attribute NOT IN (' . implode(',', array_map('intval', $current_selected_attributes)) . ')');
                     foreach ($id_attributes as $k => $row) {

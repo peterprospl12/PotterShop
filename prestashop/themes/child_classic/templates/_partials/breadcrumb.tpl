@@ -43,7 +43,7 @@
   </ol>
 </nav>
 <div class="free-shipping-info">
-  <div class="free-shipping-title">
+  <div class="custom-boxhead">
     <span>Darmowa dostawa</span>
   </div>
   <div class="free-shipping-content">
