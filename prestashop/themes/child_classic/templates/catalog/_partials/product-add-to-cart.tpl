@@ -25,25 +25,47 @@
 <div class="product-add-to-cart js-product-add-to-cart">
   {if !$configuration.is_catalog}
 
+    <script type="text/javascript">
+      document.addEventListener("DOMContentLoaded", function() {
+        var quantityInput = document.getElementById('quantity_wanted');
+        var addToCartButton = document.getElementById('add-to-cart-btn');
+
+        function checkQuantity() {
+          var enteredQuantity = parseInt(quantityInput.value);
+          if (enteredQuantity > {$product.quantity}) {
+          addToCartButton.disabled = true;
+        } else {
+          addToCartButton.disabled = false;
+        }
+      }
+
+      quantityInput.addEventListener('input', checkQuantity);
+
+      checkQuantity();
+      });
+    </script>
+
+
     {block name='product_quantity'}
       <div class="product-quantity clearfix">
-        {if $product.availability =='available'}
-          <div class="product-number-div">
-            <div class="qty">
-            </div>
+        {if $product.quantity > 0}
 
-            <span class="control-label szt-class">{l s='szt.' d='Shop.Theme.Catalog'}</span>
-          </div>
           <div class="add">
             <form action="{$urls.pages.cart}" method="POST" class="main-page-add-to-cart add-to-cart-or-refresh">
+              <div class="product-number-div">
+                <div class="qty">
+                  <input type="number" name="qty" id="quantity_wanted" inputmode="numeric" pattern="[0-9]*"
+                    value="{if $product.quantity_wanted}{$product.quantity_wanted}{else}1{/if}"
+                    min="{if $product.quantity_wanted}{$product.minimal_quantity}{else}1{/if}" class="input-group"
+                    aria-label="{l s='Quantity' d='Shop.Theme.Actions'}">
+                </div>
+                <span class="control-label szt-class">{l s='szt.' d='Shop.Theme.Catalog'}</span>
+              </div>
               <input type="hidden" name="token" value="{$static_token}">
               <input type="hidden" name="id_product" value="{$product.id}">
-              <input type="number" name="qty" id="quantity_wanted" inputmode="numeric" pattern="[0-9]*"
-                {if $product.quantity_wanted} value="{$product.quantity_wanted}" min="{$product.minimal_quantity}" 
-                {else}
-                value="1" min="1" {/if} class="input-group" aria-label="{l s='Quantity' d='Shop.Theme.Actions'}">
-              <button class="btn btn-primary add-to-cart product-page-add-to-cart" data-button-action="add-to-cart"
-                type="submit" {if !$product.add_to_cart_url} disabled {/if}>
+
+              <button class="btn btn-primary add-to-cart product-page-add-to-cart" id="add-to-cart-btn"
+                data-button-action="add-to-cart" type="submit" {if !$product.add_to_cart_url} disabled {/if}>
                 {l s='Do koszyka' d='Shop.Theme.Actions'}
               </button>
             </form>
@@ -79,10 +101,10 @@
       <p class="product-minimal-quantity js-product-minimal-quantity">
         {if $product.minimal_quantity > 1}
           {l
-                s='The minimum purchase order quantity for the product is %quantity%.'
-                d='Shop.Theme.Checkout'
-                sprintf=['%quantity%' => $product.minimal_quantity]
-                }
+                                  s='The minimum purchase order quantity for the product is %quantity%.'
+                                  d='Shop.Theme.Checkout'
+                                  sprintf=['%quantity%' => $product.minimal_quantity]
+                                  }
         {/if}
       </p>
     {/block}

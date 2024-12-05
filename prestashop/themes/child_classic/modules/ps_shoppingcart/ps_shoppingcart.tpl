@@ -23,16 +23,18 @@
  * @license   https://opensource.org/licenses/AFL-3.0 Academic Free License 3.0 (AFL-3.0)
  *}
 <div id="_desktop_cart">
-  <div class="blockcart cart-preview {if $cart.products_count > 0}active{else}inactive{/if}" data-refresh-url="{$refresh_url}">
+  <div class="blockcart cart-preview {if $cart.products_count > 0}active{else}inactive{/if}"
+    data-refresh-url="{$refresh_url}">
     <div class="header">
-      {if $cart.products_count > 0}
-        <a rel="nofollow" aria-label="{l s='Shopping cart link containing %nbProducts% product(s)' sprintf=['%nbProducts%' => $cart.products_count] d='Shop.Theme.Checkout'}" href="{$cart_url}">
-      {/if}
-        <img src="http://localhost:8080/themes/child_classic/modules/ps_shoppingcart/img/shopping-cart-icon.svg" alt="Shopping cart">
-      {if $cart.products_count > 0}
-        <b class ="more-than-one-product">
-          <span class="cart-products-count">{$cart.products_count}</span>
-        </b>
+      <a rel="nofollow"
+        aria-label="{l s='Shopping cart link containing %nbProducts% product(s)' sprintf=['%nbProducts%' => $cart.products_count] d='Shop.Theme.Checkout'}"
+        href="{$cart_url}">
+        <img src="http://localhost:8080/themes/child_classic/modules/ps_shoppingcart/img/shopping-cart-icon.svg"
+          alt="Shopping cart">
+        {if $cart.products_count > 0}
+          <b class="more-than-one-product">
+            <span class="cart-products-count">{$cart.products_count}</span>
+          </b>
         </a>
       {/if}
     </div>

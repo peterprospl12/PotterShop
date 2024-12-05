@@ -1634,3 +1634,15 @@ p.towar-niedostepny {
 .hide-custom-arrow {
   visibility: hidden !important;
 }
+
+.prod-page-carts {
+  display: flex;
+  align-items: center;
+  gap: 10px; 
+}
+
+.add {
+  display: flex;
+  align-items: center;
+  gap: 10px; 
+}
