@@ -14,7 +14,9 @@ services:
       - ./data/:/docker-entrypoint-initdb.d/
 
   prestashop:
-    image: prestashop/prestashop:1.7.8
+    build:
+      context: ./ssl
+      dockerfile: Dockerfile
     container_name: prestashop
     environment:
       DB_SERVER: mariadb
@@ -25,6 +27,7 @@ services:
       PS_DEV_MODE: 1
     ports:
       - "8080:80"
+      - "8443:443"
     networks:
       - prestashop-net
     depends_on:
