@@ -27,6 +27,8 @@
         {foreach from=$product.flags item=flag}
             {if $flag.type === 'new'}
                 <li class="product-flag {$flag.type}">NOWOŚĆ</li>
+            {else if $flag.type === 'discount'}
+                <li class="product-flag {$flag.type}">PROMOCJA</li>
             {/if}
         {/foreach}
     </ul>
