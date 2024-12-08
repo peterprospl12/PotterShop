@@ -36,7 +36,7 @@ use PrestaShop\PrestaShop\Core\Product\Search\ProductSearchContext;
 use PrestaShop\PrestaShop\Core\Product\Search\ProductSearchQuery;
 use PrestaShop\PrestaShop\Core\Product\Search\SortOrder;
 use PrestaShop\PrestaShop\Core\Product\ProductExtraContentFinder;
-
+use PrestaShop\PrestaShop\Adapter\PricesDrop\PricesDropProductSearchProvider;
 class ProductController extends ProductControllerCore
 {
     public $php_self = 'product';
@@ -262,11 +262,14 @@ class ProductController extends ProductControllerCore
 
             $products = $this->getProducts();
 
+            $promotionProducts = $this->getPromoProducts();
+
             $filteredProducts = array_filter($products, function ($product) {
                 return $product['id_product'] != $this->product->id;
             });
 
             $this->context->smarty->assign('relatedProducts', $filteredProducts);
+            $this->context->smarty->assign('promotionProducts', $promotionProducts);
 
             if (Pack::isPack((int) $this->product->id)
                 && !Pack::isInStock((int) $this->product->id, $this->product->minimal_quantity, $this->context->cart)
@@ -501,6 +504,64 @@ class ProductController extends ProductControllerCore
         return $products_for_template;
     }
 
+    protected function getPromoProducts()
+    {
+        $searchProvider = new PricesDropProductSearchProvider(
+            $this->context->getTranslator(),
+        );
+
+        $context = new ProductSearchContext($this->context);
+
+        $query = new ProductSearchQuery();
+        $query
+            ->setQueryType('prices-drop')
+            ->setSortOrder(new SortOrder('product', 'name', 'asc'));
+
+
+        $result = $searchProvider->runQuery(
+            $context,
+            $query
+        );
+
+        $assembler = new ProductAssembler($this->context);
+
+        $presenterFactory = new ProductPresenterFactory($this->context);
+        $presentationSettings = $presenterFactory->getPresentationSettings();
+        if (version_compare(_PS_VERSION_, '1.7.5', '>=')) {
+            $presenter = new \PrestaShop\PrestaShop\Adapter\Presenter\Product\ProductListingPresenter(
+                new ImageRetriever(
+                    $this->context->link
+                ),
+                $this->context->link,
+                new PriceFormatter(),
+                new ProductColorsRetriever(),
+                $this->context->getTranslator()
+            );
+        } else {
+            $presenter = new \PrestaShop\PrestaShop\Core\Product\ProductListingPresenter(
+                new ImageRetriever(
+                    $this->context->link
+                ),
+                $this->context->link,
+                new PriceFormatter(),
+                new ProductColorsRetriever(),
+                $this->context->getTranslator()
+            );
+        }
+
+        $products_for_template = [];
+
+        foreach ($result->getProducts() as $rawProduct) {
+            $products_for_template[] = $presenter->present(
+                $presentationSettings,
+                $assembler->assembleProduct($rawProduct),
+                $this->context->language
+            );
+        }
+
+        return $products_for_template;
+    }
+    
     public function displayAjaxQuickview()
     {
         $productForTemplate = $this->getTemplateVarProduct();

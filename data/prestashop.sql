@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: mariadb:3306
--- Generation Time: Dec 08, 2024 at 02:17 PM
+-- Generation Time: Dec 08, 2024 at 09:57 PM
 -- Wersja serwera: 11.5.2-MariaDB-ubu2404
 -- Wersja PHP: 8.2.8
 
@@ -3191,7 +3191,9 @@ INSERT INTO `ps_cart` (`id_cart`, `id_shop_group`, `id_shop`, `id_carrier`, `del
 (12, 1, 1, 0, '', 1, 0, 0, 1, 0, 63, '', 0, 0, '', 0, 0, '2024-12-04 22:56:43', '2024-12-05 12:28:56', NULL),
 (14, 1, 1, 24, '{\"12\":\"24,\"}', 1, 12, 12, 1, 8, 70, '2acbb571a565b27b7bae3d37c53bd390', 0, 0, '', 0, 0, '2024-12-06 00:18:30', '2024-12-06 00:19:12', '{\"checkout-personal-information-step\":{\"step_is_reachable\":true,\"step_is_complete\":true},\"checkout-addresses-step\":{\"step_is_reachable\":true,\"step_is_complete\":true,\"use_same_address\":true},\"checkout-delivery-step\":{\"step_is_reachable\":true,\"step_is_complete\":true},\"checkout-payment-step\":{\"step_is_reachable\":true,\"step_is_complete\":false},\"checksum\":\"59f1218755423e75c5a90761b686fd0392e7f1af\"}'),
 (15, 1, 1, 25, '{\"13\":\"25,\"}', 1, 13, 13, 1, 9, 71, '75837d875412fef87f1fa9b3d381429c', 0, 0, '', 0, 0, '2024-12-08 14:44:02', '2024-12-08 14:49:32', '{\"checkout-personal-information-step\":{\"step_is_reachable\":true,\"step_is_complete\":true},\"checkout-addresses-step\":{\"step_is_reachable\":true,\"step_is_complete\":true,\"use_same_address\":true},\"checkout-delivery-step\":{\"step_is_reachable\":true,\"step_is_complete\":true},\"checkout-payment-step\":{\"step_is_reachable\":true,\"step_is_complete\":false},\"checksum\":\"fab67cd42a8e139f365e7aca0bc4dd78223d7278\"}'),
-(16, 1, 1, 0, '', 1, 13, 13, 1, 9, 71, '75837d875412fef87f1fa9b3d381429c', 0, 0, '', 0, 0, '2024-12-08 14:51:21', '2024-12-08 15:12:21', NULL);
+(16, 1, 1, 0, '', 1, 13, 13, 1, 9, 71, '75837d875412fef87f1fa9b3d381429c', 0, 0, '', 0, 0, '2024-12-08 14:51:21', '2024-12-08 15:12:21', NULL),
+(17, 1, 1, 0, '', 1, 13, 13, 1, 9, 71, '75837d875412fef87f1fa9b3d381429c', 0, 0, '', 0, 0, '2024-12-08 21:32:23', '2024-12-08 22:46:05', NULL),
+(18, 1, 1, 0, '', 1, 0, 0, 1, 0, 79, '', 0, 0, '', 0, 0, '2024-12-08 22:55:23', '2024-12-08 22:55:36', NULL);
 
 -- --------------------------------------------------------
 
@@ -3235,7 +3237,11 @@ INSERT INTO `ps_cart_product` (`id_cart`, `id_product`, `id_address_delivery`, `
 (16, 520, 13, 1, 84, 0, 1, '2024-12-08 15:12:15'),
 (16, 520, 13, 1, 86, 0, 4, '2024-12-08 15:12:21'),
 (16, 521, 13, 1, 80, 0, 5, '2024-12-08 15:09:58'),
-(16, 521, 13, 1, 83, 0, 1, '2024-12-08 15:09:54');
+(16, 521, 13, 1, 83, 0, 1, '2024-12-08 15:09:54'),
+(17, 427, 13, 1, 0, 0, 1, '2024-12-08 22:46:05'),
+(17, 599, 13, 1, 0, 0, 1, '2024-12-08 22:46:01'),
+(18, 427, 0, 1, 0, 0, 3, '2024-12-08 22:55:23'),
+(18, 431, 0, 1, 0, 0, 5, '2024-12-08 22:55:36');
 
 -- --------------------------------------------------------
 
@@ -5653,7 +5659,7 @@ INSERT INTO `ps_configuration` (`id_configuration`, `id_shop_group`, `id_shop`, 
 (440, NULL, NULL, 'PS_ACCOUNTS_FIREBASE_ID_TOKEN', NULL, '2024-11-25 18:17:15', '2024-11-25 18:17:15'),
 (441, NULL, NULL, 'PS_ACCOUNTS_ACCESS_TOKEN', NULL, '2024-11-25 18:17:16', '2024-11-25 18:17:16'),
 (442, NULL, NULL, 'PS_SHOWCASECARD_CMS_PAGES_CLOSED', '1', '2024-11-25 18:35:02', '2024-11-25 18:35:02'),
-(443, NULL, NULL, 'PS_ACCOUNTS_FIREBASE_REFRESH_TOKEN', NULL, '2024-11-25 22:44:26', '2024-12-08 14:45:55'),
+(443, NULL, NULL, 'PS_ACCOUNTS_FIREBASE_REFRESH_TOKEN', NULL, '2024-11-25 22:44:26', '2024-12-08 22:51:23'),
 (444, NULL, NULL, 'PS_MAIL_EMAIL_MESSAGE', '2', '2024-11-29 18:19:00', '2024-11-29 18:19:00'),
 (445, NULL, NULL, 'PS_MAIL_DOMAIN', NULL, '2024-11-29 18:19:00', '2024-11-29 18:19:00'),
 (446, NULL, NULL, 'CONF_PS_CASHONDELIVERY_FIXED', '0.2', '2024-11-29 20:03:20', '2024-11-29 20:03:20'),
@@ -5952,7 +5958,15 @@ INSERT INTO `ps_connections` (`id_connections`, `id_shop_group`, `id_shop`, `id_
 (116, 1, 1, 69, 15, 2886860801, '2024-12-05 21:55:10', ''),
 (117, 1, 1, 70, 1, 2886860801, '2024-12-06 00:16:23', ''),
 (118, 1, 1, 71, 2, 2886860801, '2024-12-08 14:43:34', 'https://localhost:8443/historia-zamowien'),
-(119, 1, 1, 72, 16, 2886860801, '2024-12-08 15:04:01', '');
+(119, 1, 1, 72, 16, 2886860801, '2024-12-08 15:04:01', ''),
+(120, 1, 1, 71, 1, 2886860801, '2024-12-08 21:30:13', ''),
+(121, 1, 1, 71, 1, 2886860801, '2024-12-08 21:32:02', 'https://localhost:8443/'),
+(122, 1, 1, 74, 17, 2886860801, '2024-12-08 21:34:38', ''),
+(123, 1, 1, 75, 18, 2886860801, '2024-12-08 22:09:39', ''),
+(124, 1, 1, 76, 18, 2886860801, '2024-12-08 22:32:02', ''),
+(125, 1, 1, 77, 19, 2886860801, '2024-12-08 22:43:57', ''),
+(126, 1, 1, 78, 20, 2886860801, '2024-12-08 22:46:15', ''),
+(127, 1, 1, 79, 21, 2886860801, '2024-12-08 22:54:21', 'https://localhost:8443/koszyk?action=show');
 
 -- --------------------------------------------------------
 
@@ -7699,7 +7713,110 @@ INSERT INTO `ps_connections_source` (`id_connections_source`, `id_connections`, 
 (1746, 118, 'https://localhost:8443/?page=2', 'localhost:8443/breloki/430-brelok-harry-potter-hermiona.html', '', '2024-12-08 15:14:46'),
 (1747, 118, 'https://localhost:8443/breloki/430-brelok-harry-potter-hermiona.html', 'localhost:8443/', '', '2024-12-08 15:16:12'),
 (1748, 118, 'https://localhost:8443/', 'localhost:8443/content/1-czas-i-koszty-dostawy', '', '2024-12-08 15:16:19'),
-(1749, 118, 'https://localhost:8443/', 'localhost:8443/', '', '2024-12-08 15:16:49');
+(1749, 118, 'https://localhost:8443/', 'localhost:8443/', '', '2024-12-08 15:16:49'),
+(1750, 121, 'https://localhost:8443/', 'localhost:8443/', '', '2024-12-08 21:32:02'),
+(1751, 121, 'https://localhost:8443/', 'localhost:8443/koszyk?action=show', '', '2024-12-08 21:32:04'),
+(1752, 121, 'https://localhost:8443/koszyk?action=show', 'localhost:8443/', '', '2024-12-08 21:32:06'),
+(1753, 121, 'https://localhost:8443/', 'localhost:8443/?page=4', '', '2024-12-08 21:32:10'),
+(1754, 121, 'https://localhost:8443/?page=4', 'localhost:8443/artykuly-biurowe/437-dlugopis-harry-potter-rozdzka-hermiony-zakladka.html', '', '2024-12-08 21:32:15'),
+(1755, 121, 'https://localhost:8443/artykuly-biurowe/437-dlugopis-harry-potter-rozdzka-hermiony-zakladka.html', 'localhost:8443/koszyk?action=show', '', '2024-12-08 21:32:20'),
+(1756, 121, 'https://localhost:8443/koszyk?action=show', 'localhost:8443/logowanie?back=my-account', '', '2024-12-08 21:32:22'),
+(1757, 121, 'https://localhost:8443/logowanie?back=my-account', 'localhost:8443/moje-konto', '', '2024-12-08 21:32:24'),
+(1758, 121, 'https://localhost:8443/moje-konto', 'localhost:8443/koszyk?action=show', '', '2024-12-08 21:32:26'),
+(1759, 121, 'https://localhost:8443/koszyk?action=show', 'localhost:8443/', '', '2024-12-08 21:32:29'),
+(1760, 121, 'https://localhost:8443/', 'localhost:8443/?page=3', '', '2024-12-08 21:32:33'),
+(1761, 121, 'https://localhost:8443/?page=3', 'localhost:8443/breloki/435-brelok-harry-potter-peron-9-3-4.html', '', '2024-12-08 21:32:36'),
+(1762, 121, 'https://localhost:8443/?page=3', 'localhost:8443/breloki/435-brelok-harry-potter-peron-9-3-4.html', '', '2024-12-08 21:33:12'),
+(1763, 121, 'https://localhost:8443/?page=3', 'localhost:8443/breloki/435-brelok-harry-potter-peron-9-3-4.html', '', '2024-12-08 21:33:49'),
+(1764, 121, 'https://localhost:8443/?page=3', 'localhost:8443/breloki/435-brelok-harry-potter-peron-9-3-4.html', '', '2024-12-08 21:36:25'),
+(1765, 121, 'https://localhost:8443/?page=3', 'localhost:8443/breloki/435-brelok-harry-potter-peron-9-3-4.html', '', '2024-12-08 21:38:09'),
+(1766, 121, 'https://localhost:8443/?page=3', 'localhost:8443/breloki/435-brelok-harry-potter-peron-9-3-4.html', '', '2024-12-08 21:38:26'),
+(1767, 121, 'https://localhost:8443/?page=3', 'localhost:8443/breloki/435-brelok-harry-potter-peron-9-3-4.html', '', '2024-12-08 21:38:29'),
+(1768, 121, 'https://localhost:8443/?page=3', 'localhost:8443/breloki/435-brelok-harry-potter-peron-9-3-4.html', '', '2024-12-08 21:39:14'),
+(1769, 121, 'https://localhost:8443/?page=3', 'localhost:8443/breloki/435-brelok-harry-potter-peron-9-3-4.html', '', '2024-12-08 21:39:22'),
+(1770, 121, 'https://localhost:8443/?page=3', 'localhost:8443/breloki/435-brelok-harry-potter-peron-9-3-4.html', '', '2024-12-08 21:39:27'),
+(1771, 121, 'https://localhost:8443/?page=3', 'localhost:8443/breloki/435-brelok-harry-potter-peron-9-3-4.html', '', '2024-12-08 21:51:48'),
+(1772, 121, 'https://localhost:8443/?page=3', 'localhost:8443/breloki/435-brelok-harry-potter-peron-9-3-4.html', '', '2024-12-08 21:51:53'),
+(1773, 121, 'https://localhost:8443/?page=3', 'localhost:8443/breloki/435-brelok-harry-potter-peron-9-3-4.html', '', '2024-12-08 21:52:04'),
+(1774, 121, 'https://localhost:8443/?page=3', 'localhost:8443/breloki/435-brelok-harry-potter-peron-9-3-4.html', '', '2024-12-08 21:52:44'),
+(1775, 121, 'https://localhost:8443/?page=3', 'localhost:8443/breloki/435-brelok-harry-potter-peron-9-3-4.html', '', '2024-12-08 21:54:28'),
+(1776, 121, 'https://localhost:8443/?page=3', 'localhost:8443/breloki/435-brelok-harry-potter-peron-9-3-4.html', '', '2024-12-08 21:57:55'),
+(1777, 121, 'https://localhost:8443/?page=3', 'localhost:8443/breloki/435-brelok-harry-potter-peron-9-3-4.html', '', '2024-12-08 21:58:09'),
+(1778, 121, 'https://localhost:8443/?page=3', 'localhost:8443/breloki/435-brelok-harry-potter-peron-9-3-4.html', '', '2024-12-08 22:02:37'),
+(1779, 121, 'https://localhost:8443/?page=3', 'localhost:8443/breloki/435-brelok-harry-potter-peron-9-3-4.html', '', '2024-12-08 22:09:32'),
+(1780, 121, 'https://localhost:8443/breloki/435-brelok-harry-potter-peron-9-3-4.html', 'localhost:8443/promocje', '', '2024-12-08 22:09:36'),
+(1781, 121, 'https://localhost:8443/breloki/435-brelok-harry-potter-peron-9-3-4.html', 'localhost:8443/promocje', '', '2024-12-08 22:32:49'),
+(1782, 121, 'https://localhost:8443/breloki/435-brelok-harry-potter-peron-9-3-4.html', 'localhost:8443/promocje', '', '2024-12-08 22:32:57'),
+(1783, 121, 'https://localhost:8443/breloki/435-brelok-harry-potter-peron-9-3-4.html', 'localhost:8443/promocje', '', '2024-12-08 22:33:30'),
+(1784, 121, 'https://localhost:8443/promocje', 'localhost:8443/', '', '2024-12-08 22:33:37'),
+(1785, 121, 'https://localhost:8443/promocje', 'localhost:8443/', '', '2024-12-08 22:33:38'),
+(1786, 121, 'https://localhost:8443/', 'localhost:8443/breloki/425-brelok-harry-potter-harry.html', '', '2024-12-08 22:41:40'),
+(1787, 121, 'https://localhost:8443/', 'localhost:8443/breloki/425-brelok-harry-potter-harry.html', '', '2024-12-08 22:41:51'),
+(1788, 121, 'https://localhost:8443/', 'localhost:8443/breloki/425-brelok-harry-potter-harry.html', '', '2024-12-08 22:42:33'),
+(1789, 121, 'https://localhost:8443/', 'localhost:8443/breloki/425-brelok-harry-potter-harry.html', '', '2024-12-08 22:43:20'),
+(1790, 121, 'https://localhost:8443/breloki/425-brelok-harry-potter-harry.html', 'localhost:8443/artykuly-biurowe/597-dlugopis-harry-potter-rozdzka-albusa-dumbledora-czarna-rozdzka-zakladka.html', '', '2024-12-08 22:43:23'),
+(1791, 121, 'https://localhost:8443/artykuly-biurowe/597-dlugopis-harry-potter-rozdzka-albusa-dumbledora-czarna-rozdzka-zakladka.html', 'localhost:8443/artykuly-biurowe/604-dlugopis-harry-potter-rozdzka-snape-a-zakladka.html', '', '2024-12-08 22:43:41'),
+(1792, 121, 'https://localhost:8443/artykuly-biurowe/597-dlugopis-harry-potter-rozdzka-albusa-dumbledora-czarna-rozdzka-zakladka.html', 'localhost:8443/artykuly-biurowe/604-dlugopis-harry-potter-rozdzka-snape-a-zakladka.html', '', '2024-12-08 22:44:39'),
+(1793, 121, 'https://localhost:8443/artykuly-biurowe/597-dlugopis-harry-potter-rozdzka-albusa-dumbledora-czarna-rozdzka-zakladka.html', 'localhost:8443/artykuly-biurowe/604-dlugopis-harry-potter-rozdzka-snape-a-zakladka.html', '', '2024-12-08 22:44:49'),
+(1794, 121, 'https://localhost:8443/artykuly-biurowe/604-dlugopis-harry-potter-rozdzka-snape-a-zakladka.html', 'localhost:8443/', '', '2024-12-08 22:45:39'),
+(1795, 121, 'https://localhost:8443/', 'localhost:8443/?page=6', '', '2024-12-08 22:45:48'),
+(1796, 121, 'https://localhost:8443/?page=6', 'localhost:8443/hogwart-s-xmas/445-harry-potter-bombka-i-skarpetki-slytherin.html', '', '2024-12-08 22:45:50'),
+(1797, 121, 'https://localhost:8443/hogwart-s-xmas/445-harry-potter-bombka-i-skarpetki-slytherin.html', 'localhost:8443/', '', '2024-12-08 22:46:38'),
+(1798, 121, 'https://localhost:8443/hogwart-s-xmas/445-harry-potter-bombka-i-skarpetki-slytherin.html', 'localhost:8443/', '', '2024-12-08 22:49:27'),
+(1799, 121, 'https://localhost:8443/', 'localhost:8443/?page=2', '', '2024-12-08 22:49:38'),
+(1800, 121, 'https://localhost:8443/', 'localhost:8443/?page=2', '', '2024-12-08 22:49:55'),
+(1801, 121, 'https://localhost:8443/?page=2', 'localhost:8443/?page=1', '', '2024-12-08 22:50:00'),
+(1802, 121, 'https://localhost:8443/?page=2', 'localhost:8443/?page=1', '', '2024-12-08 22:50:09'),
+(1803, 121, 'https://localhost:8443/?page=1', 'localhost:8443/?page=3', '', '2024-12-08 22:50:13'),
+(1804, 121, 'https://localhost:8443/?page=3', 'localhost:8443/?page=5', '', '2024-12-08 22:50:19'),
+(1805, 121, 'https://localhost:8443/?page=5', 'localhost:8443/?page=1', '', '2024-12-08 22:50:28'),
+(1806, 121, 'https://localhost:8443/?page=5', 'localhost:8443/?page=1', '', '2024-12-08 22:50:32'),
+(1807, 121, 'https://localhost:8443/?page=1', 'localhost:8443/content/3-reklamacje', '', '2024-12-08 22:50:36'),
+(1808, 121, 'https://localhost:8443/?page=1', 'localhost:8443/content/3-reklamacje', '', '2024-12-08 22:50:45'),
+(1809, 121, 'https://localhost:8443/?page=1', 'localhost:8443/content/3-reklamacje', '', '2024-12-08 22:51:38'),
+(1810, 121, 'https://localhost:8443/content/3-reklamacje', 'localhost:8443/2-strona-glowna', '', '2024-12-08 22:51:40'),
+(1811, 121, 'https://localhost:8443/2-strona-glowna', 'localhost:8443/content/6-zwroty', '', '2024-12-08 22:51:43'),
+(1812, 121, 'https://localhost:8443/content/6-zwroty', 'localhost:8443/2-strona-glowna', '', '2024-12-08 22:51:44'),
+(1813, 121, 'https://localhost:8443/2-strona-glowna', 'localhost:8443/2-strona-glowna', '', '2024-12-08 22:51:46'),
+(1814, 121, 'https://localhost:8443/2-strona-glowna', 'localhost:8443/98-magic-box', '', '2024-12-08 22:51:46'),
+(1815, 121, 'https://localhost:8443/98-magic-box', 'localhost:8443/2-strona-glowna', '', '2024-12-08 22:51:49'),
+(1816, 121, 'https://localhost:8443/2-strona-glowna', 'localhost:8443/70-magiczne-prezenty', '', '2024-12-08 22:51:49'),
+(1817, 121, 'https://localhost:8443/70-magiczne-prezenty', 'localhost:8443/71-zestawy-prezentowe', '', '2024-12-08 22:51:50'),
+(1818, 121, 'https://localhost:8443/71-zestawy-prezentowe', 'localhost:8443/', '', '2024-12-08 22:51:53'),
+(1819, 121, 'https://localhost:8443/', 'localhost:8443/72-ksiazki', '', '2024-12-08 22:51:56'),
+(1820, 121, 'https://localhost:8443/72-ksiazki', 'localhost:8443/', '', '2024-12-08 22:51:58'),
+(1821, 121, 'https://localhost:8443/', 'localhost:8443/51-magic-box', '', '2024-12-08 22:52:00'),
+(1822, 121, 'https://localhost:8443/72-ksiazki', 'localhost:8443/', '', '2024-12-08 22:52:07'),
+(1823, 121, 'https://localhost:8443/', 'localhost:8443/98-magic-box', '', '2024-12-08 22:52:09'),
+(1824, 121, 'https://localhost:8443/72-ksiazki', 'localhost:8443/', '', '2024-12-08 22:52:11'),
+(1825, 121, 'https://localhost:8443/', 'localhost:8443/51-magic-box', '', '2024-12-08 22:52:37'),
+(1826, 121, 'https://localhost:8443/51-magic-box', 'localhost:8443/', '', '2024-12-08 22:52:40'),
+(1827, 121, 'https://localhost:8443/', 'localhost:8443/98-magic-box', '', '2024-12-08 22:52:41'),
+(1828, 121, 'https://localhost:8443/98-magic-box', 'localhost:8443/', '', '2024-12-08 22:52:43'),
+(1829, 121, 'https://localhost:8443/', 'localhost:8443/98-magic-box', '', '2024-12-08 22:52:44'),
+(1830, 121, 'https://localhost:8443/98-magic-box', 'localhost:8443/', '', '2024-12-08 22:52:47'),
+(1831, 121, 'https://localhost:8443/', 'localhost:8443/harry-potter-kalendarze-adwentowe', '', '2024-12-08 22:52:49'),
+(1832, 121, 'https://localhost:8443/harry-potter-kalendarze-adwentowe', 'localhost:8443/', '', '2024-12-08 22:53:15'),
+(1833, 121, 'https://localhost:8443/', 'localhost:8443/szukaj?controller=search&s=kalendarz+adwetowy', '', '2024-12-08 22:53:23'),
+(1834, 121, 'https://localhost:8443/szukaj?controller=search&s=kalendarz+adwetowy', 'localhost:8443/szukaj?controller=search&s=kalendarz+adwentowy', '', '2024-12-08 22:53:29'),
+(1835, 121, 'https://localhost:8443/szukaj?controller=search&s=kalendarz+adwentowy', 'localhost:8443/szukaj?controller=search&s=kalendarz', '', '2024-12-08 22:53:33'),
+(1836, 121, 'https://localhost:8443/szukaj?controller=search&s=kalendarz', 'localhost:8443/', '', '2024-12-08 22:53:42'),
+(1837, 121, 'https://localhost:8443/', 'localhost:8443/content/6-zwroty', '', '2024-12-08 22:53:59'),
+(1838, 121, 'https://localhost:8443/content/6-zwroty', 'localhost:8443/', '', '2024-12-08 22:54:01'),
+(1839, 121, 'https://localhost:8443/', 'localhost:8443/content/1-czas-i-koszty-dostawy', '', '2024-12-08 22:54:05'),
+(1840, 121, 'https://localhost:8443/content/1-czas-i-koszty-dostawy', 'localhost:8443/', '', '2024-12-08 22:54:08'),
+(1841, 121, 'https://localhost:8443/', 'localhost:8443/koszyk?action=show', '', '2024-12-08 22:54:18'),
+(1842, 127, 'https://localhost:8443/koszyk?action=show', 'localhost:8443/koszyk?action=show', '', '2024-12-08 22:54:21'),
+(1843, 127, 'https://localhost:8443/koszyk?action=show', 'localhost:8443/koszyk?page=4', '', '2024-12-08 22:54:24'),
+(1844, 127, 'https://localhost:8443/koszyk?page=4', 'localhost:8443/artykuly-biurowe/439-dlugopis-harry-potter-rozdzka-rona-zakladka.html', '', '2024-12-08 22:54:27'),
+(1845, 127, 'https://localhost:8443/koszyk?page=4', 'localhost:8443/artykuly-biurowe/439-dlugopis-harry-potter-rozdzka-rona-zakladka.html', '', '2024-12-08 22:54:49'),
+(1846, 127, 'https://localhost:8443/artykuly-biurowe/439-dlugopis-harry-potter-rozdzka-rona-zakladka.html', 'localhost:8443/artykuly-biurowe/439-dlugopis-harry-potter-rozdzka-rona-zakladka.html', '', '2024-12-08 22:55:09'),
+(1847, 127, 'https://localhost:8443/artykuly-biurowe/439-dlugopis-harry-potter-rozdzka-rona-zakladka.html', 'localhost:8443/', '', '2024-12-08 22:55:12'),
+(1848, 127, 'https://localhost:8443/', 'localhost:8443/breloki/427-brelok-harry-potter---mroczny-znak.html', '', '2024-12-08 22:55:15'),
+(1849, 127, 'https://localhost:8443/breloki/427-brelok-harry-potter---mroczny-znak.html', 'localhost:8443/breloki/431-brelok-harry-potter-hogwarts.html', '', '2024-12-08 22:55:32'),
+(1850, 127, 'https://localhost:8443/breloki/431-brelok-harry-potter-hogwarts.html', 'localhost:8443/breloki/426-brelok-3d-harry-potter-zloty-znicz.html', '', '2024-12-08 22:55:39'),
+(1851, 127, 'https://localhost:8443/breloki/426-brelok-3d-harry-potter-zloty-znicz.html', 'localhost:8443/kontakt', '', '2024-12-08 22:55:40'),
+(1852, 127, 'https://localhost:8443/breloki/431-brelok-harry-potter-hogwarts.html', 'localhost:8443/breloki/426-brelok-3d-harry-potter-zloty-znicz.html', '', '2024-12-08 22:55:43');
 
 -- --------------------------------------------------------
 
@@ -8752,8 +8869,7 @@ INSERT INTO `ps_customer_session` (`id_customer_session`, `id_customer`, `token`
 (13, 6, 'fa8a4299079caa53c4527d4d9d6e6e18c588951d'),
 (14, 6, '5eaf445756112e59122ad429169f8f3153dc66b9'),
 (15, 7, '8fcafd9ad21242434705f4a95ad646b86f0b97c9'),
-(16, 8, 'e2732d2fecce720c2b6046a2c7f4e3a70dce6ca8'),
-(17, 9, 'ac2e262694da574d5214102291aa880fe67cd073');
+(16, 8, 'e2732d2fecce720c2b6046a2c7f4e3a70dce6ca8');
 
 -- --------------------------------------------------------
 
@@ -10820,7 +10936,13 @@ INSERT INTO `ps_guest` (`id_guest`, `id_operating_system`, `id_web_browser`, `id
 (69, 8, 3, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'pl', 0),
 (70, 8, 3, 8, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'en', 0),
 (71, 8, 3, 9, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'pl', 0),
-(72, 8, 3, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'pl', 0);
+(72, 8, 3, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'pl', 0),
+(74, 8, 3, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'pl', 0),
+(75, 8, 3, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'pl', 0),
+(76, 8, 3, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'pl', 0),
+(77, 8, 3, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'pl', 0),
+(78, 8, 3, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'pl', 0),
+(79, 8, 3, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'pl', 0);
 
 -- --------------------------------------------------------
 
@@ -10889,7 +11011,7 @@ INSERT INTO `ps_homeslider_slides_lang` (`id_homeslider_slides`, `id_lang`, `tit
 (5, 1, '', '', '', 'harry-potter-kalendarze-adwentowe', 'e8e7054e6c64c19531a32d5c1d9523f9cd4d7705_slider2.jpg'),
 (7, 1, '', '', '', 'content/6-zwroty', 'bc8847ea54c7335b8589330cf3480445f3d3bd15_slider4.jpg'),
 (8, 1, '', '', '', 'content/1-czas-i-koszty-dostawy', 'f0eb1ddb4f3d578691d23d8c2cf9211871ced737_slider5.jpg'),
-(9, 1, '', '', '', '51-magic-box', '2a10765ba554a89654a66a098aad07170d4c03aa_slidermagicbox.jpg');
+(9, 1, '', '', '', '98-magic-box', '2a10765ba554a89654a66a098aad07170d4c03aa_slidermagicbox.jpg');
 
 -- --------------------------------------------------------
 
@@ -14830,7 +14952,11 @@ INSERT INTO `ps_layered_filter_block` (`hash`, `data`) VALUES
 ('a0518d2f4782b4cfb9befc16e9d4b911', 'a:1:{s:7:\"filters\";a:0:{}}'),
 ('a8fac588f27c750638759aea94904ca3', 'a:1:{s:7:\"filters\";a:0:{}}'),
 ('c0628308b51ac1273cb6b8df601b6fd4', 'a:1:{s:7:\"filters\";a:0:{}}'),
-('ccd6a73eb6e166546b6750ee94b9eb15', 'a:1:{s:7:\"filters\";a:0:{}}');
+('c9e12913a1ef1e90d307076733989987', 'a:1:{s:7:\"filters\";a:0:{}}'),
+('ccd6a73eb6e166546b6750ee94b9eb15', 'a:1:{s:7:\"filters\";a:0:{}}'),
+('e022079791ade8061981f18e71e8e445', 'a:1:{s:7:\"filters\";a:0:{}}'),
+('e4d1d1add177f2408775c5171a0089b4', 'a:1:{s:7:\"filters\";a:0:{}}'),
+('fd2ebb6999627ea522e526e5f03c4717', 'a:1:{s:7:\"filters\";a:0:{}}');
 
 -- --------------------------------------------------------
 
@@ -15942,7 +16068,7 @@ CREATE TABLE `ps_linksmenutop_lang` (
 --
 
 INSERT INTO `ps_linksmenutop_lang` (`id_linksmenutop`, `id_lang`, `id_shop`, `label`, `link`) VALUES
-(1, 1, 1, 'Wszystkie Produkty', '2-strona-glowna');
+(1, 1, 1, 'Wszystkie Produkty', '/2-strona-glowna');
 
 -- --------------------------------------------------------
 
@@ -17459,9 +17585,9 @@ INSERT INTO `ps_module_history` (`id`, `id_employee`, `id_module`, `date_add`, `
 (5, 1, 12, '2024-11-25 16:42:39', '2024-11-25 23:44:58'),
 (6, 1, 65, '2024-11-26 15:54:16', '2024-11-26 16:16:39'),
 (7, 1, 32, '2024-11-26 16:28:39', '2024-11-26 20:28:09'),
-(8, 1, 29, '2024-11-26 17:35:42', '2024-12-08 14:48:08'),
+(8, 1, 29, '2024-11-26 17:35:42', '2024-12-08 22:51:13'),
 (9, 1, 25, '2024-12-01 14:12:13', '2024-12-03 20:49:10'),
-(10, 1, 26, '2024-12-01 14:25:41', '2024-12-04 12:05:46'),
+(10, 1, 26, '2024-12-01 14:25:41', '2024-12-08 22:52:27'),
 (11, 1, 1, '2024-12-04 17:30:06', '2024-12-04 17:30:06');
 
 -- --------------------------------------------------------
@@ -18218,7 +18344,12 @@ INSERT INTO `ps_page` (`id_page`, `id_page_type`, `id_object`) VALUES
 (13, 6, 22),
 (14, 6, 25),
 (15, 6, 425),
-(16, 6, 518);
+(16, 6, 518),
+(17, 6, 435),
+(18, 10, NULL),
+(19, 6, 604),
+(20, 6, 445),
+(21, 11, NULL);
 
 -- --------------------------------------------------------
 
@@ -18252,6 +18383,7 @@ CREATE TABLE `ps_page_type` (
 
 INSERT INTO `ps_page_type` (`id_page_type`, `name`) VALUES
 (2, 'authentication'),
+(11, 'cart'),
 (8, 'category'),
 (4, 'cms'),
 (3, 'contact'),
@@ -18259,6 +18391,7 @@ INSERT INTO `ps_page_type` (`id_page_type`, `name`) VALUES
 (9, 'newproducts'),
 (7, 'orderconfirmation'),
 (5, 'pagenotfound'),
+(10, 'pricesdrop'),
 (6, 'product');
 
 -- --------------------------------------------------------
@@ -65804,7 +65937,15 @@ INSERT INTO `ps_statssearch` (`id_statssearch`, `id_shop`, `id_shop_group`, `key
 (15, 1, 1, 'kalendarz', 4, '2024-12-04 11:08:38'),
 (16, 1, 1, 'kalendarz adwent', 0, '2024-12-04 11:08:40'),
 (17, 1, 1, 'kalendarz adwentowy', 0, '2024-12-04 11:08:41'),
-(18, 1, 1, 'kalendarz adwentowy', 0, '2024-12-04 11:08:41');
+(18, 1, 1, 'kalendarz adwentowy', 0, '2024-12-04 11:08:41'),
+(19, 1, 1, 'kalendarz ad', 4, '2024-12-08 21:53:22'),
+(20, 1, 1, 'kalendarz adwetowy', 0, '2024-12-08 21:53:23'),
+(21, 1, 1, 'kalendarz adwetowy', 0, '2024-12-08 21:53:23'),
+(22, 1, 1, 'kalendarz adwentowy', 0, '2024-12-08 21:53:29'),
+(23, 1, 1, 'kalendarz adwentowy', 0, '2024-12-08 21:53:29'),
+(24, 1, 1, 'kalendarz ', 4, '2024-12-08 21:53:33'),
+(25, 1, 1, 'kalendarz', 4, '2024-12-08 21:53:33'),
+(26, 1, 1, 'kalendarz', 4, '2024-12-08 21:53:33');
 
 -- --------------------------------------------------------
 
@@ -70415,7 +70556,7 @@ ALTER TABLE `ps_carrier`
 -- AUTO_INCREMENT for table `ps_cart`
 --
 ALTER TABLE `ps_cart`
-  MODIFY `id_cart` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=17;
+  MODIFY `id_cart` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=19;
 
 --
 -- AUTO_INCREMENT for table `ps_cart_rule`
@@ -70481,13 +70622,13 @@ ALTER TABLE `ps_configuration_kpi`
 -- AUTO_INCREMENT for table `ps_connections`
 --
 ALTER TABLE `ps_connections`
-  MODIFY `id_connections` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=120;
+  MODIFY `id_connections` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=128;
 
 --
 -- AUTO_INCREMENT for table `ps_connections_source`
 --
 ALTER TABLE `ps_connections_source`
-  MODIFY `id_connections_source` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=1750;
+  MODIFY `id_connections_source` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=1853;
 
 --
 -- AUTO_INCREMENT for table `ps_contact`
@@ -70523,7 +70664,7 @@ ALTER TABLE `ps_customer_message`
 -- AUTO_INCREMENT for table `ps_customer_session`
 --
 ALTER TABLE `ps_customer_session`
-  MODIFY `id_customer_session` int(11) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=18;
+  MODIFY `id_customer_session` int(11) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=19;
 
 --
 -- AUTO_INCREMENT for table `ps_customer_thread`
@@ -70619,7 +70760,7 @@ ALTER TABLE `ps_group_reduction`
 -- AUTO_INCREMENT for table `ps_guest`
 --
 ALTER TABLE `ps_guest`
-  MODIFY `id_guest` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=73;
+  MODIFY `id_guest` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=80;
 
 --
 -- AUTO_INCREMENT for table `ps_homeslider`
@@ -70847,7 +70988,7 @@ ALTER TABLE `ps_order_state`
 -- AUTO_INCREMENT for table `ps_page`
 --
 ALTER TABLE `ps_page`
-  MODIFY `id_page` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=17;
+  MODIFY `id_page` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=22;
 
 --
 -- AUTO_INCREMENT for table `ps_pagenotfound`
@@ -70859,7 +71000,7 @@ ALTER TABLE `ps_pagenotfound`
 -- AUTO_INCREMENT for table `ps_page_type`
 --
 ALTER TABLE `ps_page_type`
-  MODIFY `id_page_type` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
+  MODIFY `id_page_type` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
 
 --
 -- AUTO_INCREMENT for table `ps_product`
@@ -71057,7 +71198,7 @@ ALTER TABLE `ps_state`
 -- AUTO_INCREMENT for table `ps_statssearch`
 --
 ALTER TABLE `ps_statssearch`
-  MODIFY `id_statssearch` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=19;
+  MODIFY `id_statssearch` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=27;
 
 --
 -- AUTO_INCREMENT for table `ps_stock`

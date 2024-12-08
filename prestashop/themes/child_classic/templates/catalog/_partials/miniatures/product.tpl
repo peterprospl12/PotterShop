@@ -24,7 +24,7 @@
  *}
 {block name='product_miniature_item'}
   <div class="js-product product{if !empty($productClasses)} {$productClasses}{/if}">
-  <article class="product-miniature js-product-miniature {if $product.availability !='available'}inactive-miniature{/if}" data-id-product="{$product.id_product}"
+  <article class="product-miniature js-product-miniature {if $product.quantity <= 0}inactive-miniature{/if}" data-id-product="{$product.id_product}"
       data-id-product-attribute="{$product.id_product_attribute}">
       <div class="thumbnail-container">
         <div class="thumbnail-top">
