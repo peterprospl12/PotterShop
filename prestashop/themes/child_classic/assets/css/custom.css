@@ -891,7 +891,7 @@ a.thumbnail.product-thumbnail {
 
 .custom-boxhead {
   font-family: "HarryP";
-  order: 0;
+  border: 0;
   position: relative;
   background: linear-gradient(
     180deg,
@@ -899,12 +899,10 @@ a.thumbnail.product-thumbnail {
     #ccc calc(50%),
     rgba(0, 0, 0, 0) calc(50% + 1px)
   );
-  margin-bottom: 10px;
   line-height: 40px;
   margin: 0;
   padding: 0;
   margin-bottom: 10px;
-  padding-bottom: 10px;
   outline: 0 none;
   font-size: 100%;
   color: #757575;
@@ -1760,4 +1758,44 @@ form.main-page-add-to-cart {
   text-decoration: none;
   text-align: center;
   float: right;
+}
+
+.custom-prev2, .custom-next2 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 40px;
+  width: 40px;
+}
+
+.custom-prev2 i, .custom-next2 i {
+  font-size: 24px;
+}
+
+.custom-slider2 {
+  display: flex;
+  transition: transform 0.5s ease;
+}
+
+.custom-slider2 .product-miniature .thumbnail-top {
+  max-width: 270px;
+}
+
+.custom-slide2 img {
+  width: 100%;
+  height: auto;
+}
+
+.custom-slide2 {
+  min-width: 100%;
+}
+
+.disable-on-half-screen {
+  margin-top: 50px;
+}
+
+@media (max-width: 998px) {
+  .disable-on-half-screen {
+    display: none;
+  }
 }

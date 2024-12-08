@@ -24,6 +24,26 @@
           }
         </script>
       </div>
+      <div class="container custom-slider-container disable-on-half-screen">
+        <div class="custom-boxhead">
+          <span>Promocje:</span>
+        </div>
+        <div class="custom-slider2">
+          {foreach from=$promotionProducts item=product}
+            <div class="custom-slide2">
+              {include file="catalog/_partials/miniatures/product.tpl" product=$product}
+            </div>
+          {/foreach}
+        </div>
+        <div class="custom-slider-direction" aria-label="Przyciski karuzeli">
+          <button class="custom-prev2 custom-slider-button" aria-label="Poprzedni" onclick="moveSlide2(-1)">
+            <i class="material-icons"></i>
+          </button>
+          <button class="custom-next2 custom-slider-button" aria-label="Następny" onclick="moveSlide2(1)">
+            <i class="material-icons"></i>
+          </button>
+        </div>
+      </div>
     {else}
       {hook h="displayLeftColumn"}
     {/if}
@@ -300,9 +320,9 @@
 
 {block name="footer"}
   <div class="container custom-slider-container">
-  <div class="custom-boxhead">
-    <span>Pottermaniacy kupili również:</span>
-  </div>
+    <div class="custom-boxhead">
+      <span>Pottermaniacy kupili również:</span>
+    </div>
     <div class="custom-slider">
       {foreach from=$relatedProducts item=product}
         <div class="custom-slide">

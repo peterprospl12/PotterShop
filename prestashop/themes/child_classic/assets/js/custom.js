@@ -145,3 +145,54 @@ function closeModal() {
   var modal = document.getElementById('imageModal');
   modal.style.display = "none";
 }
+
+///////////////////////////////////////////////////////////////////////////////
+
+let currentSlide2 = 0;
+
+function showSlide2(index) {
+  const slides = document.querySelectorAll(".custom-slide2");
+  const totalSlides = slides.length;
+  const iconPages = totalSlides;
+
+  // Sprawdzamy, czy indeks nie przekracza granic
+  if (index >= iconPages) {
+    currentSlide2 = iconPages - 1;
+  } else if (index < 0) {
+    currentSlide2 = 0;
+  } else {
+    currentSlide2 = index;
+    const slider = document.querySelector(".custom-slider2");
+    const slideWidth = slides[0].offsetWidth; // Szerokość jednego slajdu
+    slider.style.transform = `translateX(-${currentSlide2 * slideWidth}px)`; // Przesuwamy slider o odpowiednią szerokość
+  }
+
+  // Sprawdzamy, czy przyciski istnieją przed manipulowaniem nimi
+  const arrowLeft = document.querySelector(".custom-prev2");
+  const arrowRight = document.querySelector(".custom-next2");
+
+  // Jeśli przyciski istnieją, wykonujemy dalsze operacje
+  if (arrowLeft) {
+    if (index == 0) {
+      // Left arrow hide
+      arrowLeft.classList.add("hide-custom-arrow");
+    } else {
+      arrowLeft.classList.remove("hide-custom-arrow");
+    }
+  }
+
+  if (arrowRight) {
+    if (index == iconPages - 1) {
+      // Right arrow hide
+      arrowRight.classList.add("hide-custom-arrow");
+    } else {
+      arrowRight.classList.remove("hide-custom-arrow");
+    }
+  }
+}
+
+function moveSlide2(step) {
+  showSlide2(currentSlide2 + step); // Zmieniamy slajd o 1 w zależności od przycisku
+}
+
+showSlide2(currentSlide2);
