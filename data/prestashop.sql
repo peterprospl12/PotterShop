@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: mariadb:3306
--- Generation Time: Dec 08, 2024 at 09:57 PM
+-- Generation Time: Dec 09, 2024 at 12:24 PM
 -- Wersja serwera: 11.5.2-MariaDB-ubu2404
 -- Wersja PHP: 8.2.8
 
@@ -3193,7 +3193,8 @@ INSERT INTO `ps_cart` (`id_cart`, `id_shop_group`, `id_shop`, `id_carrier`, `del
 (15, 1, 1, 25, '{\"13\":\"25,\"}', 1, 13, 13, 1, 9, 71, '75837d875412fef87f1fa9b3d381429c', 0, 0, '', 0, 0, '2024-12-08 14:44:02', '2024-12-08 14:49:32', '{\"checkout-personal-information-step\":{\"step_is_reachable\":true,\"step_is_complete\":true},\"checkout-addresses-step\":{\"step_is_reachable\":true,\"step_is_complete\":true,\"use_same_address\":true},\"checkout-delivery-step\":{\"step_is_reachable\":true,\"step_is_complete\":true},\"checkout-payment-step\":{\"step_is_reachable\":true,\"step_is_complete\":false},\"checksum\":\"fab67cd42a8e139f365e7aca0bc4dd78223d7278\"}'),
 (16, 1, 1, 0, '', 1, 13, 13, 1, 9, 71, '75837d875412fef87f1fa9b3d381429c', 0, 0, '', 0, 0, '2024-12-08 14:51:21', '2024-12-08 15:12:21', NULL),
 (17, 1, 1, 0, '', 1, 13, 13, 1, 9, 71, '75837d875412fef87f1fa9b3d381429c', 0, 0, '', 0, 0, '2024-12-08 21:32:23', '2024-12-08 22:46:05', NULL),
-(18, 1, 1, 0, '', 1, 0, 0, 1, 0, 79, '', 0, 0, '', 0, 0, '2024-12-08 22:55:23', '2024-12-08 22:55:36', NULL);
+(18, 1, 1, 0, '', 1, 0, 0, 1, 0, 79, '', 0, 0, '', 0, 0, '2024-12-08 22:55:23', '2024-12-09 12:02:41', NULL),
+(19, 1, 1, 0, '', 1, 0, 0, 1, 0, 83, '', 0, 0, '', 0, 0, '2024-12-09 13:02:25', '2024-12-09 13:02:32', NULL);
 
 -- --------------------------------------------------------
 
@@ -3240,8 +3241,7 @@ INSERT INTO `ps_cart_product` (`id_cart`, `id_product`, `id_address_delivery`, `
 (16, 521, 13, 1, 83, 0, 1, '2024-12-08 15:09:54'),
 (17, 427, 13, 1, 0, 0, 1, '2024-12-08 22:46:05'),
 (17, 599, 13, 1, 0, 0, 1, '2024-12-08 22:46:01'),
-(18, 427, 0, 1, 0, 0, 3, '2024-12-08 22:55:23'),
-(18, 431, 0, 1, 0, 0, 5, '2024-12-08 22:55:36');
+(19, 427, 0, 1, 0, 0, 2, '2024-12-09 13:02:25');
 
 -- --------------------------------------------------------
 
@@ -5436,7 +5436,7 @@ INSERT INTO `ps_configuration` (`id_configuration`, `id_shop_group`, `id_shop`, 
 (208, NULL, NULL, 'BLOCKADVERT_LINK', 'https://www.prestashop.com', '0000-00-00 00:00:00', '0000-00-00 00:00:00'),
 (209, NULL, NULL, 'BLOCKSTORE_IMG', 'store.jpg', '0000-00-00 00:00:00', '0000-00-00 00:00:00'),
 (210, NULL, NULL, 'BLOCKADVERT_IMG_EXT', 'jpg', '0000-00-00 00:00:00', '0000-00-00 00:00:00'),
-(211, NULL, NULL, 'MOD_BLOCKTOPMENU_ITEMS', 'CAT2,LNK1,CAT98,CAT70', '0000-00-00 00:00:00', '2024-12-05 21:34:16'),
+(211, NULL, NULL, 'MOD_BLOCKTOPMENU_ITEMS', 'CAT2,CAT63,LNK1,CAT98,CAT76,CMS15,LNK4,LNK5,CMS13', '0000-00-00 00:00:00', '2024-12-09 13:23:33'),
 (212, NULL, NULL, 'MOD_BLOCKTOPMENU_SEARCH', '', '0000-00-00 00:00:00', '0000-00-00 00:00:00'),
 (213, NULL, NULL, 'BLOCKSOCIAL_FACEBOOK', NULL, '0000-00-00 00:00:00', '2024-11-22 18:37:52'),
 (214, NULL, NULL, 'BLOCKSOCIAL_TWITTER', NULL, '0000-00-00 00:00:00', '2024-11-22 18:37:52'),
@@ -5659,7 +5659,7 @@ INSERT INTO `ps_configuration` (`id_configuration`, `id_shop_group`, `id_shop`, 
 (440, NULL, NULL, 'PS_ACCOUNTS_FIREBASE_ID_TOKEN', NULL, '2024-11-25 18:17:15', '2024-11-25 18:17:15'),
 (441, NULL, NULL, 'PS_ACCOUNTS_ACCESS_TOKEN', NULL, '2024-11-25 18:17:16', '2024-11-25 18:17:16'),
 (442, NULL, NULL, 'PS_SHOWCASECARD_CMS_PAGES_CLOSED', '1', '2024-11-25 18:35:02', '2024-11-25 18:35:02'),
-(443, NULL, NULL, 'PS_ACCOUNTS_FIREBASE_REFRESH_TOKEN', NULL, '2024-11-25 22:44:26', '2024-12-08 22:51:23'),
+(443, NULL, NULL, 'PS_ACCOUNTS_FIREBASE_REFRESH_TOKEN', NULL, '2024-11-25 22:44:26', '2024-12-09 12:08:50'),
 (444, NULL, NULL, 'PS_MAIL_EMAIL_MESSAGE', '2', '2024-11-29 18:19:00', '2024-11-29 18:19:00'),
 (445, NULL, NULL, 'PS_MAIL_DOMAIN', NULL, '2024-11-29 18:19:00', '2024-11-29 18:19:00'),
 (446, NULL, NULL, 'CONF_PS_CASHONDELIVERY_FIXED', '0.2', '2024-11-29 20:03:20', '2024-11-29 20:03:20'),
@@ -5966,7 +5966,23 @@ INSERT INTO `ps_connections` (`id_connections`, `id_shop_group`, `id_shop`, `id_
 (124, 1, 1, 76, 18, 2886860801, '2024-12-08 22:32:02', ''),
 (125, 1, 1, 77, 19, 2886860801, '2024-12-08 22:43:57', ''),
 (126, 1, 1, 78, 20, 2886860801, '2024-12-08 22:46:15', ''),
-(127, 1, 1, 79, 21, 2886860801, '2024-12-08 22:54:21', 'https://localhost:8443/koszyk?action=show');
+(127, 1, 1, 79, 21, 2886860801, '2024-12-08 22:54:21', 'https://localhost:8443/koszyk?action=show'),
+(128, 1, 1, 79, 1, 2886860801, '2024-12-09 12:02:32', ''),
+(129, 1, 1, 80, 22, 2886860801, '2024-12-09 12:54:34', ''),
+(130, 1, 1, 81, 22, 2886860801, '2024-12-09 12:55:47', ''),
+(131, 1, 1, 82, 22, 2886860801, '2024-12-09 12:58:21', ''),
+(132, 1, 1, 83, 1, 2886860801, '2024-12-09 12:58:44', ''),
+(133, 1, 1, 84, 22, 2886860801, '2024-12-09 12:58:56', ''),
+(134, 1, 1, 85, 1, 2886860801, '2024-12-09 13:00:13', ''),
+(135, 1, 1, 86, 1, 2886860801, '2024-12-09 13:00:49', ''),
+(136, 1, 1, 87, 22, 2886860801, '2024-12-09 13:01:54', ''),
+(137, 1, 1, 88, 22, 2886860801, '2024-12-09 13:02:06', ''),
+(138, 1, 1, 89, 22, 2886860801, '2024-12-09 13:02:45', ''),
+(139, 1, 1, 90, 22, 2886860801, '2024-12-09 13:04:50', ''),
+(140, 1, 1, 91, 22, 2886860801, '2024-12-09 13:05:58', ''),
+(141, 1, 1, 92, 22, 2886860801, '2024-12-09 13:07:25', ''),
+(142, 1, 1, 93, 22, 2886860801, '2024-12-09 13:07:39', ''),
+(143, 1, 1, 94, 22, 2886860801, '2024-12-09 13:19:29', '');
 
 -- --------------------------------------------------------
 
@@ -7816,7 +7832,23 @@ INSERT INTO `ps_connections_source` (`id_connections_source`, `id_connections`, 
 (1849, 127, 'https://localhost:8443/breloki/427-brelok-harry-potter---mroczny-znak.html', 'localhost:8443/breloki/431-brelok-harry-potter-hogwarts.html', '', '2024-12-08 22:55:32'),
 (1850, 127, 'https://localhost:8443/breloki/431-brelok-harry-potter-hogwarts.html', 'localhost:8443/breloki/426-brelok-3d-harry-potter-zloty-znicz.html', '', '2024-12-08 22:55:39'),
 (1851, 127, 'https://localhost:8443/breloki/426-brelok-3d-harry-potter-zloty-znicz.html', 'localhost:8443/kontakt', '', '2024-12-08 22:55:40'),
-(1852, 127, 'https://localhost:8443/breloki/431-brelok-harry-potter-hogwarts.html', 'localhost:8443/breloki/426-brelok-3d-harry-potter-zloty-znicz.html', '', '2024-12-08 22:55:43');
+(1852, 127, 'https://localhost:8443/breloki/431-brelok-harry-potter-hogwarts.html', 'localhost:8443/breloki/426-brelok-3d-harry-potter-zloty-znicz.html', '', '2024-12-08 22:55:43'),
+(1853, 128, 'https://localhost:8443/', 'localhost:8443/koszyk?action=show', '', '2024-12-09 12:02:36'),
+(1854, 128, 'https://localhost:8443/koszyk?action=show', 'localhost:8443/', '', '2024-12-09 12:02:45'),
+(1855, 132, 'https://localhost:8443/', 'localhost:8443/breloki/427-brelok-harry-potter---mroczny-znak.html', '', '2024-12-09 12:58:51'),
+(1856, 132, 'https://localhost:8443/', 'localhost:8443/57-breloki', '', '2024-12-09 13:02:22'),
+(1857, 132, 'https://localhost:8443/57-breloki', 'localhost:8443/kontakt', '', '2024-12-09 13:02:28'),
+(1858, 132, 'https://localhost:8443/', 'localhost:8443/57-breloki', '', '2024-12-09 13:02:29'),
+(1859, 132, 'https://localhost:8443/57-breloki', 'localhost:8443/breloki/427-brelok-harry-potter---mroczny-znak.html', '', '2024-12-09 13:02:31'),
+(1860, 128, 'https://localhost:8443/', 'localhost:8443/promocje', '', '2024-12-09 13:13:48'),
+(1861, 128, 'https://localhost:8443/', 'localhost:8443/nowe-produkty', '', '2024-12-09 13:13:49'),
+(1862, 128, 'https://localhost:8443/', 'localhost:8443/nowe-produkty', '', '2024-12-09 13:14:30'),
+(1863, 128, 'https://localhost:8443/koszyk?action=show', 'localhost:8443/', '', '2024-12-09 13:14:57'),
+(1864, 128, 'https://localhost:8443/koszyk?action=show', 'localhost:8443/', '', '2024-12-09 13:15:27'),
+(1865, 128, 'https://localhost:8443/koszyk?action=show', 'localhost:8443/', '', '2024-12-09 13:16:00'),
+(1866, 128, 'https://localhost:8443/koszyk?action=show', 'localhost:8443/', '', '2024-12-09 13:23:07'),
+(1867, 128, 'https://localhost:8443/koszyk?action=show', 'localhost:8443/', '', '2024-12-09 13:23:09'),
+(1868, 128, 'https://localhost:8443/koszyk?action=show', 'localhost:8443/', '', '2024-12-09 13:23:37');
 
 -- --------------------------------------------------------
 
@@ -9081,7 +9113,7 @@ CREATE TABLE `ps_employee` (
 --
 
 INSERT INTO `ps_employee` (`id_employee`, `id_profile`, `id_lang`, `lastname`, `firstname`, `email`, `passwd`, `last_passwd_gen`, `stats_date_from`, `stats_date_to`, `stats_compare_from`, `stats_compare_to`, `stats_compare_option`, `preselect_date_range`, `bo_color`, `bo_theme`, `bo_css`, `default_tab`, `bo_width`, `bo_menu`, `active`, `optin`, `id_last_order`, `id_last_customer_message`, `id_last_customer`, `last_connection_date`, `reset_password_token`, `reset_password_validity`, `has_enabled_gravatar`) VALUES
-(1, 1, 1, 'Dziekański', 'Dziekan', 'presta@presta.com', '$2y$10$9FA73SQpoOomFYCEzKZyqeoPI6NjpIZN4Plhyx4FD0kt4QgNp8AXa', '2024-11-22 12:37:45', '2024-10-22', '2024-11-22', '0000-00-00', '0000-00-00', 1, NULL, NULL, 'default', 'theme.css', 1, 0, 1, 1, NULL, 7, 0, 2, '2024-12-08', NULL, '0000-00-00 00:00:00', 0);
+(1, 1, 1, 'Dziekański', 'Dziekan', 'presta@presta.com', '$2y$10$9FA73SQpoOomFYCEzKZyqeoPI6NjpIZN4Plhyx4FD0kt4QgNp8AXa', '2024-11-22 12:37:45', '2024-10-22', '2024-11-22', '0000-00-00', '0000-00-00', 1, NULL, NULL, 'default', 'theme.css', 1, 0, 1, 1, NULL, 7, 0, 2, '2024-12-09', NULL, '0000-00-00 00:00:00', 0);
 
 -- --------------------------------------------------------
 
@@ -10942,7 +10974,22 @@ INSERT INTO `ps_guest` (`id_guest`, `id_operating_system`, `id_web_browser`, `id
 (76, 8, 3, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'pl', 0),
 (77, 8, 3, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'pl', 0),
 (78, 8, 3, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'pl', 0),
-(79, 8, 3, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'pl', 0);
+(79, 8, 3, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'pl', 0),
+(80, 8, 11, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'pl', 0),
+(81, 8, 11, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'pl', 0),
+(82, 8, 11, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'pl', 0),
+(83, 8, 11, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'pl', 0),
+(84, 8, 11, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'pl', 0),
+(85, 8, 11, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'pl', 0),
+(86, 8, 11, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'pl', 0),
+(87, 8, 11, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'pl', 0),
+(88, 8, 11, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'pl', 0),
+(89, 8, 11, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'pl', 0),
+(90, 8, 11, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'pl', 0),
+(91, 8, 11, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'pl', 0),
+(92, 8, 11, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'pl', 0),
+(93, 8, 11, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'pl', 0),
+(94, 8, 11, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'pl', 0);
 
 -- --------------------------------------------------------
 
@@ -14951,11 +14998,13 @@ INSERT INTO `ps_layered_filter_block` (`hash`, `data`) VALUES
 ('84c7c5970d07fa25464915f9f2b08d14', 'a:1:{s:7:\"filters\";a:0:{}}'),
 ('a0518d2f4782b4cfb9befc16e9d4b911', 'a:1:{s:7:\"filters\";a:0:{}}'),
 ('a8fac588f27c750638759aea94904ca3', 'a:1:{s:7:\"filters\";a:0:{}}'),
+('bd7967320d35f81eda64a7ef8e6412e9', 'a:1:{s:7:\"filters\";a:0:{}}'),
 ('c0628308b51ac1273cb6b8df601b6fd4', 'a:1:{s:7:\"filters\";a:0:{}}'),
 ('c9e12913a1ef1e90d307076733989987', 'a:1:{s:7:\"filters\";a:0:{}}'),
 ('ccd6a73eb6e166546b6750ee94b9eb15', 'a:1:{s:7:\"filters\";a:0:{}}'),
 ('e022079791ade8061981f18e71e8e445', 'a:1:{s:7:\"filters\";a:0:{}}'),
 ('e4d1d1add177f2408775c5171a0089b4', 'a:1:{s:7:\"filters\";a:0:{}}'),
+('e70f49f9608d821ab264f03f6a377cd4', 'a:1:{s:7:\"filters\";a:0:{}}'),
 ('fd2ebb6999627ea522e526e5f03c4717', 'a:1:{s:7:\"filters\";a:0:{}}');
 
 -- --------------------------------------------------------
@@ -16047,7 +16096,9 @@ CREATE TABLE `ps_linksmenutop` (
 --
 
 INSERT INTO `ps_linksmenutop` (`id_linksmenutop`, `id_shop`, `new_window`) VALUES
-(1, 1, 0);
+(1, 1, 0),
+(4, 1, 0),
+(5, 1, 0);
 
 -- --------------------------------------------------------
 
@@ -16068,7 +16119,9 @@ CREATE TABLE `ps_linksmenutop_lang` (
 --
 
 INSERT INTO `ps_linksmenutop_lang` (`id_linksmenutop`, `id_lang`, `id_shop`, `label`, `link`) VALUES
-(1, 1, 1, 'Wszystkie Produkty', '/2-strona-glowna');
+(1, 1, 1, 'Wszystkie Produkty', '/2-strona-glowna'),
+(4, 1, 1, 'Promocje', '/promocje'),
+(5, 1, 1, 'Nowości', '/nowe-produkty');
 
 -- --------------------------------------------------------
 
@@ -17585,7 +17638,7 @@ INSERT INTO `ps_module_history` (`id`, `id_employee`, `id_module`, `date_add`, `
 (5, 1, 12, '2024-11-25 16:42:39', '2024-11-25 23:44:58'),
 (6, 1, 65, '2024-11-26 15:54:16', '2024-11-26 16:16:39'),
 (7, 1, 32, '2024-11-26 16:28:39', '2024-11-26 20:28:09'),
-(8, 1, 29, '2024-11-26 17:35:42', '2024-12-08 22:51:13'),
+(8, 1, 29, '2024-11-26 17:35:42', '2024-12-09 13:11:38'),
 (9, 1, 25, '2024-12-01 14:12:13', '2024-12-03 20:49:10'),
 (10, 1, 26, '2024-12-01 14:25:41', '2024-12-08 22:52:27'),
 (11, 1, 1, '2024-12-04 17:30:06', '2024-12-04 17:30:06');
@@ -18349,7 +18402,8 @@ INSERT INTO `ps_page` (`id_page`, `id_page_type`, `id_object`) VALUES
 (18, 10, NULL),
 (19, 6, 604),
 (20, 6, 445),
-(21, 11, NULL);
+(21, 11, NULL),
+(22, 8, 72);
 
 -- --------------------------------------------------------
 
@@ -70556,7 +70610,7 @@ ALTER TABLE `ps_carrier`
 -- AUTO_INCREMENT for table `ps_cart`
 --
 ALTER TABLE `ps_cart`
-  MODIFY `id_cart` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=19;
+  MODIFY `id_cart` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=20;
 
 --
 -- AUTO_INCREMENT for table `ps_cart_rule`
@@ -70622,13 +70676,13 @@ ALTER TABLE `ps_configuration_kpi`
 -- AUTO_INCREMENT for table `ps_connections`
 --
 ALTER TABLE `ps_connections`
-  MODIFY `id_connections` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=128;
+  MODIFY `id_connections` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=144;
 
 --
 -- AUTO_INCREMENT for table `ps_connections_source`
 --
 ALTER TABLE `ps_connections_source`
-  MODIFY `id_connections_source` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=1853;
+  MODIFY `id_connections_source` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=1869;
 
 --
 -- AUTO_INCREMENT for table `ps_contact`
@@ -70760,7 +70814,7 @@ ALTER TABLE `ps_group_reduction`
 -- AUTO_INCREMENT for table `ps_guest`
 --
 ALTER TABLE `ps_guest`
-  MODIFY `id_guest` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=80;
+  MODIFY `id_guest` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=95;
 
 --
 -- AUTO_INCREMENT for table `ps_homeslider`
@@ -70838,7 +70892,7 @@ ALTER TABLE `ps_layered_filter`
 -- AUTO_INCREMENT for table `ps_linksmenutop`
 --
 ALTER TABLE `ps_linksmenutop`
-  MODIFY `id_linksmenutop` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `id_linksmenutop` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 
 --
 -- AUTO_INCREMENT for table `ps_link_block`
@@ -70988,7 +71042,7 @@ ALTER TABLE `ps_order_state`
 -- AUTO_INCREMENT for table `ps_page`
 --
 ALTER TABLE `ps_page`
-  MODIFY `id_page` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=22;
+  MODIFY `id_page` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=23;
 
 --
 -- AUTO_INCREMENT for table `ps_pagenotfound`
