@@ -35,8 +35,8 @@
           <b class="more-than-one-product">
             <span class="cart-products-count">{$cart.products_count}</span>
           </b>
-        </a>
       {/if}
+      </a>
     </div>
   </div>
 </div>
