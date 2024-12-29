@@ -8,23 +8,16 @@ from selenium.webdriver.common.by import By
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 
-
-
 TIME_SLEEP = 0
-
 
 website_addr = "https://localhost:8443/"
 service = Service(executable_path='/usr/bin/chromedriver')
-
 
 chrome_options = Options()
 chrome_options.add_argument("--ignore-certificate-errors")
 chrome_options.add_argument("--ignore-ssl-errors")
 
 browser = webdriver.Chrome(service=service, options=chrome_options)
-
-
-
 
 def Z1(website_addr, browser):
     def products_links(url):
@@ -36,8 +29,7 @@ def Z1(website_addr, browser):
         for i in range(len(products)):
              product_links.append(products[i].get_attribute("href"))
         return product_links
-        
-        
+
     def add_to_the_cart(url):
         browser.get(url)
         time.sleep(TIME_SLEEP)
@@ -54,10 +46,10 @@ def Z1(website_addr, browser):
             dostepne = 2
         b = random.randint(1, int(dostepne))
         
-        D_ile = browser.find_element(By.NAME, 'qty')
+        D_ile = browser.find_element(By.ID, 'quantity_wanted')
         D_ile.send_keys(Keys.DELETE)
         D_ile.send_keys(b)
-        B_dodaj = browser.find_element(By.CLASS_NAME, 'add-to-cart')
+        B_dodaj = browser.find_element(By.ID, 'add-to-cart-btn')
         B_dodaj.click()
         WebDriverWait(browser, 10).until(EC.presence_of_element_located((By.CLASS_NAME, 'cart-products-count')))
         return 2
@@ -75,10 +67,6 @@ def Z1(website_addr, browser):
         if ile2[1] == 0: break
     time.sleep(TIME_SLEEP)
 
-
-
-
-
 def Z2(website_addr, browser, name):
     def add_to_the_cart(products):
         browser.get(random.choice(products))
@@ -91,7 +79,7 @@ def Z2(website_addr, browser, name):
             add_to_the_cart(products)
             return
         
-        B_dodaj = browser.find_element(By.CLASS_NAME, 'add-to-cart')
+        B_dodaj = browser.find_element(By.ID, 'add-to-cart-btn')
         B_dodaj.click()
         WebDriverWait(browser, 10).until(EC.presence_of_element_located((By.CLASS_NAME, 'cart-products-count')))
 
@@ -108,10 +96,6 @@ def Z2(website_addr, browser, name):
         dostepne_produkty.append(products[i].get_attribute("href"))
     add_to_the_cart(dostepne_produkty)
 
-            
-        
-
-
 def Z3(website_addr, browser):
     browser.get(website_addr)
     time.sleep(TIME_SLEEP)
@@ -127,10 +111,6 @@ def Z3(website_addr, browser):
         browser.get(link)
         time.sleep(TIME_SLEEP)
 
-
-
-
-
 def Z4(website_addr, browser):
     browser.get(website_addr)
     time.sleep(TIME_SLEEP)
@@ -140,14 +120,10 @@ def Z4(website_addr, browser):
     browser.find_element(By.CSS_SELECTOR, "input[name=\"lastname\"]").send_keys("Surname")
     browser.find_element(By.CSS_SELECTOR, "input[name=\"email\"]").send_keys("test" + str(random.randint(0, 99999999)) + "@gmail.com")
     browser.find_element(By.CSS_SELECTOR, "input[name=\"password\"]").send_keys("password")
-    browser.find_element(By.CSS_SELECTOR, "input[name=\"customer_privacy\"]").click()
-    browser.find_element(By.CSS_SELECTOR, "input[name=\"psgdpr\"]").click()
+    browser.execute_script("arguments[0].click();", browser.find_element(By.CSS_SELECTOR, "input[name=\"customer_privacy\"]"))
+    browser.execute_script("arguments[0].click();", browser.find_element(By.CSS_SELECTOR, "input[name=\"psgdpr\"]"))
     time.sleep(TIME_SLEEP)
-    browser.find_element(By.CLASS_NAME, 'form-control-submit').click()
-
-
-
-
+    browser.execute_script("arguments[0].click();", browser.find_element(By.CLASS_NAME, "form-control-submit"))
 
 def Z5(website_addr, browser):
     browser.get(website_addr)
@@ -171,10 +147,6 @@ def Z5(website_addr, browser):
     WebDriverWait(browser, 10).until(EC.element_to_be_clickable((By.CSS_SELECTOR, ".btn.btn-primary.center-block")))
     time.sleep(TIME_SLEEP)
     browser.find_element(By.CSS_SELECTOR, ".btn.btn-primary.center-block").click()
-
-
-
-
 
 def Z6(website_addr, browser):
     browser.get(website_addr)
@@ -204,38 +176,25 @@ def Z6(website_addr, browser):
         except NoSuchElementException as e:
             continue
 
-
-
-
-
-
 start_time = time.time()
 
 print("Dodanie do koszyka 10 produktów (w różnych ilościach) z dwóch różnych kategorii")
 Z1(website_addr, browser)
 
-
 print("Wyszukanie produktu po nazwie i dodanie do koszyka losowego produktu spośród znalezionych")
 Z2(website_addr, browser, "Kamień")
-
 
 print("Usunięcie z koszyka 3 produktów")
 Z3(website_addr + 'koszyk', browser)
 
-
 print("Rejestracja nowego użytkownika")
 Z4(website_addr + 'logowanie?create_account=1', browser)
-
 
 print("Wykonanie zamówienia zawartości koszyka, wybór metody płatności: przy odbiorze, wybór jednego z dwóch przekaźników, zatwierdzenie zamówienia")
 Z5(website_addr + 'zamówienie', browser)
 
-
 print("Sprawdzenie statusu zamówienia, pobranie faktury VAT")
 Z6(website_addr, browser)
-
-
-
 
 end_time = time.time()
 czas = end_time - start_time
