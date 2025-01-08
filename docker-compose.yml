@@ -17,6 +17,7 @@ services:
     build:
       context: ./ssl
       dockerfile: Dockerfile
+    image: potter-shop:latest
     container_name: prestashop
     environment:
       DB_SERVER: mariadb
