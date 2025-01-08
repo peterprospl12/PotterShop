@@ -4,7 +4,7 @@ Project PotterShop aims to copy internet shop [Pottermania.pl](https://potterman
 
 ---
 
-## Content
+## Conten
 - [About Project](#about-project)
 - [Repository Structure](#repository-structure)
 - [Used Tools](#used-tools)
