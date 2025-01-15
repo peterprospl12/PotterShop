@@ -1,51 +1,54 @@
 services:
-  mariadb:
-    image: mariadb
-    container_name: mariadb
-    environment:
-      MYSQL_ROOT_PASSWORD: root
-      MYSQL_DATABASE: prestashop
-    ports:
-      - "3306:3306"
+  memcache:
+    container_name: memcached
+    image: memcached
+    user: 1000:1000
+    deploy:
+      restart_policy:
+        condition: on-failure
+        delay: 10s
+        max_attempts: 2
+        window: 140s
+      resources:
+        limits:
+          cpus: '0.5'
+          memory: 256M
     networks:
-      - prestashop-net
-    volumes:
-      - ./mariadb:/var/lib/mysql
-      - ./data/:/docker-entrypoint-initdb.d/
+      - prestashop_and_cache
 
   prestashop:
     build:
-      context: ./ssl
+      context: .
       dockerfile: Dockerfile
     container_name: prestashop
-    environment:
-      DB_SERVER: mariadb
-      DB_NAME: prestashop
-      DB_USER: root
-      DB_PASSWORD: root
-      PS_INSTALL_AUTO: 0
-      PS_DEV_MODE: 1
     ports:
-      - "8080:80"
-      - "8443:443"
-    networks:
-      - prestashop-net
-    depends_on:
-      - mariadb
+      - "18866:443" # SPRAWDZAĆ CZY NIE ZAJĘTY!!
+    deploy:
+      restart_policy:
+        condition: on-failure
+        delay: 10s
+        max_attempts: 2
+        window: 100s
+      resources:
+        limits:
+          cpus: '0.5'
+          memory: 512M
+    environment:
+      DB_SERVER: admin-mysql_db
+      DB_NAME: BE_188667
+      DB_USER: root
+      DB_PASSWD: student
+      ADMIN_MAIL: presta@presta.com 
+      ADMIN_PASSWD: Qpalzm123!
+      PS_DEV_MODE: 1
+      PS_INSTALL_AUTO: 0
+      CACHE_SYSTEM: Memcached
     volumes:
       - ./prestashop:/var/www/html
-
-  phpmyadmin:
-    image: phpmyadmin/phpmyadmin
-    container_name: phpmyadmin
-    environment:
-      PMA_HOST: mariadb
-      PMA_PORT: 3306
-      MYSQL_ROOT_PASSWORD: prestashop
-    ports:
-      - "8081:80"
     networks:
-      - prestashop-net
-
+      - admin-mysql_default
+      - prestashop_and_cache
 networks:
-  prestashop-net:
+  prestashop_and_cache:
+  admin-mysql_default:
+    external: true

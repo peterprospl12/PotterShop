@@ -29,7 +29,7 @@
       <a rel="nofollow"
         aria-label="{l s='Shopping cart link containing %nbProducts% product(s)' sprintf=['%nbProducts%' => $cart.products_count] d='Shop.Theme.Checkout'}"
         href="{$cart_url}">
-        <img src="http://localhost:8080/themes/child_classic/modules/ps_shoppingcart/img/shopping-cart-icon.svg"
+        <img src="https://localhost:18866/themes/child_classic/modules/ps_shoppingcart/img/shopping-cart-icon.svg"
           alt="Shopping cart">
         {if $cart.products_count > 0}
           <b class="more-than-one-product">

@@ -68,9 +68,9 @@
               {if $conditions}
                 <p style="font-size: 13px">
                   Twoje dane będą przetwarzane zgodnie z naszą
-                  <a class="underline-link" href="http://localhost:8080/content/polityka-prywatnosci" title="Polityka Prywatności">polityką prywatności</a>
+                  <a class="underline-link" href="https://localhost:18866/content/polityka-prywatnosci" title="Polityka Prywatności">polityką prywatności</a>
                   . Pamiętaj, że zapisując się do newslettera akceptujesz postanowienia
-                  <a class="underline-link" href="http://localhost:8080/content/regulamin-sklepu" title="Regulamin Sklepu"> regulaminu sklepu</a>
+                  <a class="underline-link" href="https://localhost:18866/content/regulamin-sklepu" title="Regulamin Sklepu"> regulaminu sklepu</a>
                   .
                 </p>
               {/if}

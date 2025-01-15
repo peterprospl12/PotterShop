@@ -197,7 +197,7 @@ function testGenerateUsesAbsoluteUrlWithGivenPort() {
 }
 
 function testGenerateUsesAbsoluteUrlWithGivenPortAndHostWithPort() {
-    var router = new fos.Router({base_url: '/foo', host: "localhost:8080", scheme: "http", port: "8080"}, {
+    var router = new fos.Router({base_url: '/foo', host: "localhost:18866", scheme: "http", port: "8080"}, {
         homepage: {
             tokens: [['text', '/bar']],
             defaults: {},
@@ -206,7 +206,7 @@ function testGenerateUsesAbsoluteUrlWithGivenPortAndHostWithPort() {
         }
     });
 
-    assertEquals('http://localhost:8080/foo/bar', router.generate('homepage', [], true));
+    assertEquals('https://localhost:18866/foo/bar', router.generate('homepage', [], true));
 }
 
 function testGenerateUsesAbsoluteUrlWhenSchemeRequirementGiven() {
@@ -232,11 +232,11 @@ function testGenerateUsesAbsoluteUrlWithGivenPortWhenSchemeRequirementGiven() {
         }
     });
 
-    assertEquals('http://localhost:8080/foo/bar', router.generate('homepage', [], true));
+    assertEquals('https://localhost:18866/foo/bar', router.generate('homepage', [], true));
 }
 
 function testGenerateUsesAbsoluteUrlWithGivenPortWhenSchemeRequirementAndHostWithPortGiven() {
-    var router = new fos.Router({base_url: '/foo', host: "localhost:8080", scheme: "http", port: "8080"}, {
+    var router = new fos.Router({base_url: '/foo', host: "localhost:18866", scheme: "http", port: "8080"}, {
         homepage: {
             tokens: [['text', '/bar']],
             defaults: {},
@@ -245,7 +245,7 @@ function testGenerateUsesAbsoluteUrlWithGivenPortWhenSchemeRequirementAndHostWit
         }
     });
 
-    assertEquals('http://localhost:8080/foo/bar', router.generate('homepage', [], true));
+    assertEquals('https://localhost:18866/foo/bar', router.generate('homepage', [], true));
 }
 
 function testGenerateUsesAbsoluteUrlWhenSchemeGiven() {
@@ -279,7 +279,7 @@ function testGenerateUsesAbsoluteUrlWithGivenPortWhenSchemeGiven() {
 }
 
 function testGenerateUsesAbsoluteUrlWithGivenPortWhenSchemeAndHostWithPortGiven() {
-    var router = new fos.Router({base_url: '/foo', host: "localhost:8080", scheme: "http", port:"8080"}, {
+    var router = new fos.Router({base_url: '/foo', host: "localhost:18866", scheme: "http", port:"8080"}, {
         homepage: {
             tokens: [['text', '/bar']],
             defaults: {},
@@ -290,7 +290,7 @@ function testGenerateUsesAbsoluteUrlWithGivenPortWhenSchemeAndHostWithPortGiven(
         }
     });
 
-    assertEquals('http://localhost:8080/foo/bar', router.generate('homepage', [], true));
+    assertEquals('https://localhost:18866/foo/bar', router.generate('homepage', [], true));
 }
 
 function testGenerateWithOptionalTrailingParam() {

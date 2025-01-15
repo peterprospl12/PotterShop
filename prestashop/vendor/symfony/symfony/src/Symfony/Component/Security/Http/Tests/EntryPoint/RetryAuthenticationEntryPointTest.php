@@ -58,7 +58,7 @@ class RetryAuthenticationEntryPointTest extends TestCase
                 8080,
                 443,
                 Request::create('https://localhost/foo/bar?baz=bat'),
-                'http://localhost:8080/foo/bar?baz=bat',
+                'https://localhost:18866/foo/bar?baz=bat',
             ],
         ];
     }

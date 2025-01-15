@@ -41,7 +41,7 @@ class UrlGeneratorTest extends TestCase
         $routes = $this->getRoutes('test', new Route('/testing'));
         $url = $this->getGenerator($routes, ['httpPort' => 8080])->generate('test', [], UrlGeneratorInterface::ABSOLUTE_URL);
 
-        $this->assertEquals('http://localhost:8080/app.php/testing', $url);
+        $this->assertEquals('https://localhost:18866/app.php/testing', $url);
     }
 
     public function testAbsoluteSecureUrlWithNonStandardPort()
@@ -49,7 +49,7 @@ class UrlGeneratorTest extends TestCase
         $routes = $this->getRoutes('test', new Route('/testing'));
         $url = $this->getGenerator($routes, ['httpsPort' => 8080, 'scheme' => 'https'])->generate('test', [], UrlGeneratorInterface::ABSOLUTE_URL);
 
-        $this->assertEquals('https://localhost:8080/app.php/testing', $url);
+        $this->assertEquals('https://localhost:18866/app.php/testing', $url);
     }
 
     public function testRelativeUrlWithoutParameters()
