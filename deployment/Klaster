@@ -1,0 +1,63 @@
+cd /etc/openvpn
+sudo openvpn --config vpnWETI.ovpn
+email: indeks@student.pg.edu.pl hasło: moje
+
+W nowym terminalu:
+ssh rsww@172.20.83.101
+hasło: qwe123
+
+W bastionie:
+ssh hdoop@student-swarm01.maas
+hasło: qwe123
+
+foldery:
+cd /opt/storage/actina15-20/block-storage/students/projects/students-swarm-services/BE_188667
+
+docker node ls -> działające serwery
+
+Prefix powoływanego obiektu: BE_188667, np BE_188667_prestashop
+
+PORT 18866
+
+1. Przyjmij, że modyfikator jest równy 0.
+2. Weź wszystkie numery albumów członków Twojego 
+zespołu. 
+3. Weź najmniejszy numer albumu z tego zbioru
+4. Usuń ostatnią cyfrę i dodaj wartość modyfikatora.
+5. Sprawdź czy port o podanym numerze jest wolny 
+(docker service ls)
+6. Jeśli port o podanym numerze jest zajęty to numer 
+albumu kolejnej osoby w zespole i wróć do kroku 4.
+7. Jeśli port jest wolny to możesz go zająć. [Koniec 
+algorytmu]
+8. Jeśli sprawdziłeś/sprawdziłaś wszystkie numery 
+członków zespołu i nie znalazłeś/znalazłaś wolnego 
+portu, to zwiększ modyfikator o 1 (modyfikator++) i 
+przejdź do kroku 3.
+9. [Koniec algorytmu]
+
+PREFIX:  BE_188667
+
+Wszystkie wdrażane usługi muszą być opisane za pomocą docker-compose.yml:
+docker stack deploy -c docker-compose.yml PREFIX --withregistry-auth 
+
+wszystkie pliki projektowe muszą być w obbrazie/obrazach tkóry załączamy do docker-compose.yaml (właściwie to na klastrze tylko compose powinien być)
+Bodwa obrazu:
+ docker build . -t <adres registry>/PREFIX_nazwa 
+Wysłanie obrazu do rejestru:
+ docker push <adres registry>/PREFIX_nazwa 
+
+NIE TWORZYĆ WŁASNEJ BAZY - używać gotowych usług:
+POSTRESQL (port 5432), MYSQL (port 3306) oraz MongoDB (port 27017)
+
+oferowane portu i usługi: docker service ls
+
+hasło do PostGreSQL: student
+MongoDB: user: root hasło: student
+
+pamiętaj po updatach usuwać swoje stare kontener i obrazy
+dostępne obrazy: docker image ps
+dostępne kontenery: docker service ps nazwa_usługi
+
+w naszym folderze:
+docker stack deploy -c docker-compose.yml be_188667 --with-registry-auth

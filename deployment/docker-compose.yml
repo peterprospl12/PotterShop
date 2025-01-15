@@ -17,7 +17,7 @@ services:
       - prestashop_and_cache
 
   prestashop:
-    image: be_188667_prestashop
+    image: piotreczek481/be_188667_prestashop
     ports:
       - "18866:443" # SPRAWDZAĆ CZY NIE ZAJĘTY!!
     deploy:
@@ -31,14 +31,14 @@ services:
           cpus: '0.5'
           memory: 512M
     environment:
-      DB_SERVER: admin-mysql_db
+      DB_SERVER: admin-mysql_db.1.l98q1e4h4cnparwuxzj1eqk2r
       DB_NAME: BE_188667
       DB_USER: root
       DB_PASSWD: student
       ADMIN_MAIL: presta@presta.com 
       ADMIN_PASSWD: Qpalzm123!
       PS_DEV_MODE: 1
-      PS_INSTALL_AUTO: 0
+      PS_INSTALL_AUTO: 1
       CACHE_SYSTEM: Memcached
     networks:
       - admin-mysql_default

@@ -1,0 +1,13 @@
+Zrzut bazy danych lokalnie:
+docker exec -i admin-mysql_db mysqldump -u root -pstudent BE_188667 > ~/Pulpit/prestashop.sql
+
+Pobranie obrazu Pitera:
+docker pull piotreczek481/be_188667_prestashop
+
+Pobranie 3 plików na klaster:
+wget "https://raw.githubusercontent.com/peterprospl12/PotterShop/refs/heads/main/deployment/docker-compose.yml" -O docker-compose.yml
+wget "https://raw.githubusercontent.com/peterprospl12/PotterShop/refs/heads/main/deployment/prestashop.sql" -O prestashop.sql
+wget "https://raw.githubusercontent.com/peterprospl12/PotterShop/refs/heads/main/deployment/init-db.sh" -O initdb.sh
+
+Ściąginj obraz i 3 pliki, odpal initdb.sh, który tworyz baze i można odpalać kontener:
+docker stack deploy -c docer-compose.yml BE_188667 --with-registry-auth
