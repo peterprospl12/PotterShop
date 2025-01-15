@@ -17,10 +17,7 @@ services:
       - prestashop_and_cache
 
   prestashop:
-    build:
-      context: .
-      dockerfile: Dockerfile
-    container_name: prestashop
+    image: be_188667_prestashop
     ports:
       - "18866:443" # SPRAWDZAĆ CZY NIE ZAJĘTY!!
     deploy:
@@ -43,8 +40,6 @@ services:
       PS_DEV_MODE: 1
       PS_INSTALL_AUTO: 0
       CACHE_SYSTEM: Memcached
-    volumes:
-      - ./prestashop:/var/www/html
     networks:
       - admin-mysql_default
       - prestashop_and_cache
