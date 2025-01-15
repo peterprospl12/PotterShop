@@ -1,0 +1,49 @@
+services:
+  memcache:
+    container_name: memcached
+    image: memcached
+    user: 1000:1000
+    deploy:
+      restart_policy:
+        condition: on-failure
+        delay: 10s
+        max_attempts: 2
+        window: 140s
+      resources:
+        limits:
+          cpus: '0.5'
+          memory: 256M
+    networks:
+      - prestashop_and_cache
+
+  prestashop:
+    image: be_188667_prestashop
+    ports:
+      - "18866:443" # SPRAWDZAĆ CZY NIE ZAJĘTY!!
+    deploy:
+      restart_policy:
+        condition: on-failure
+        delay: 10s
+        max_attempts: 2
+        window: 100s
+      resources:
+        limits:
+          cpus: '0.5'
+          memory: 512M
+    environment:
+      DB_SERVER: admin-mysql_db
+      DB_NAME: BE_188667
+      DB_USER: root
+      DB_PASSWD: student
+      ADMIN_MAIL: presta@presta.com 
+      ADMIN_PASSWD: Qpalzm123!
+      PS_DEV_MODE: 1
+      PS_INSTALL_AUTO: 0
+      CACHE_SYSTEM: Memcached
+    networks:
+      - admin-mysql_default
+      - prestashop_and_cache
+networks:
+  prestashop_and_cache:
+  admin-mysql_default:
+    external: true
