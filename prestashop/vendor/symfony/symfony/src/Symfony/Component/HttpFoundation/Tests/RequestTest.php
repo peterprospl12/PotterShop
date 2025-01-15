@@ -2378,10 +2378,10 @@ class RequestTest extends TestCase
 
         $request = Request::create('/');
         $request->server->set('REMOTE_ADDR', '1.1.1.1');
-        $request->headers->set('Forwarded', 'host=localhost:8080');
-        $request->headers->set('X-Forwarded-Host', 'localhost:8080');
+        $request->headers->set('Forwarded', 'host=localhost:18866');
+        $request->headers->set('X-Forwarded-Host', 'localhost:18866');
 
-        $this->assertSame('localhost:8080', $request->getHttpHost());
+        $this->assertSame('localhost:18866', $request->getHttpHost());
         $this->assertSame(8080, $request->getPort());
 
         $request = Request::create('/');
@@ -2400,7 +2400,7 @@ class RequestTest extends TestCase
 
         $request = Request::create('/');
         $request->server->set('REMOTE_ADDR', '1.1.1.1');
-        $request->headers->set('Forwarded', 'host=localhost:8080');
+        $request->headers->set('Forwarded', 'host=localhost:18866');
         $request->headers->set('X-Forwarded-Port', 8080);
 
         $this->assertSame(8080, $request->getPort());

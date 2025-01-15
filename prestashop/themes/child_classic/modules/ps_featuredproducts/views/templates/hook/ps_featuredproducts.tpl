@@ -31,13 +31,13 @@
     <div class="custom-pagination">
       {if $current_page > 1}
         <a href="?page={$current_page - 1}" class="btn btn-direction">
-          <img src="http://localhost:8080/themes/child_classic/modules/ps_featuredproducts/img/custom-pagination-left.svg"
+          <img src="https://localhost:18866/themes/child_classic/modules/ps_featuredproducts/img/custom-pagination-left.svg"
             alt="Shopping cart">
         </a>
       {/if}
       {if $current_page <= 1}
         <a href="?page=1" class="btn btn-direction">
-          <img src="http://localhost:8080/themes/child_classic/modules/ps_featuredproducts/img/custom-pagination-left.svg"
+          <img src="https://localhost:18866/themes/child_classic/modules/ps_featuredproducts/img/custom-pagination-left.svg"
             alt="Shopping cart">
         </a>
       {/if}
@@ -49,7 +49,7 @@
 
       {if $current_page < $total_pages}
         <a href="?page={$current_page + 1}" class="btn btn-direction">
-          <img src="http://localhost:8080/themes/child_classic/modules/ps_featuredproducts/img/custom-pagination-right.svg"
+          <img src="https://localhost:18866/themes/child_classic/modules/ps_featuredproducts/img/custom-pagination-right.svg"
             alt="Shopping cart">
         </a>
       {/if}
