@@ -10,7 +10,7 @@ from selenium.webdriver.support import expected_conditions as EC
 
 TIME_SLEEP = 0
 
-website_addr = "https://localhost:8443/"
+website_addr = "https://localhost:18866/"
 service = Service(executable_path='/usr/bin/chromedriver')
 
 chrome_options = Options()
